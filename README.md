@@ -1,2 +1,2 @@
 # Dota2Overflow
-Library of Lua Abilities and Items
+Library of Lua Abilities and Items.
