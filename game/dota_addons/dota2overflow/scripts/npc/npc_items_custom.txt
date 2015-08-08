@@ -1,134 +1,102 @@
 "DOTAAbilities"
 {
-  //Shield
-  "item_example_item"
-  {
-    "ID"              "1836"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
-    "BaseClass"           "item_datadriven"
-    "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
-    "AbilityTextureName"      "item_example_item"
-
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"        "900"
-    "AbilityCastPoint"        "0.2"
-    "AbilityCooldown"       "13.0"
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"       "100"
-    "ItemCost"            "750"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    "precache"
-    {
-      "particle"              "particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
-      "particle_folder"       "particles/test_particle"
-      "soundfile"             "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
-    }
-    "OnSpellStart"
-    {
-      "LinearProjectile"
-      {
-        "EffectName"      "particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
-        "MoveSpeed"       "%speed"
-        //"StartPosition"   "attach_attack1"
-        "FixedDistance"   "%distance"
-        "StartRadius"     "%radius"
-        "EndRadius"       "%radius"
-        "TargetTeams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "TargetTypes"     "DOTA_UNIT_TARGET_HERO"
-        "TargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
-        "HasFrontalCone"    "0"
-        "ProvidesVision"    "0"
-        "VisionRadius"      "0"
-      }
-      "FireSound"
-      {
-        "EffectName"    "Hero_Abaddon.AphoticShield.Cast"
-        "Target"        "CASTER"
-      }
-      "ApplyModifier"
-      {
-        "Target"      "CASTER"
-        "ModifierName"  "modifier_item_shield"
-      }
-    }
-    
-    "OnProjectileHitUnit"
-    {     
-      "DeleteOnHit" "0"
-      "Damage"
-      {
-        "Target"      "TARGET"
-        "Type"    "DAMAGE_TYPE_PURE"
-        "Damage"  "%damage"
-      }
-    }
-    
-    "Modifiers"
-    {
-      "modifier_item_shield"
-      {
-        "EffectName"    "particles/test_particle/damage_immunity.vpcf"
-        "EffectAttachType"  "follow_origin"
-        "Target"      "CASTER"
-        
-        "Duration" "%duration"
-        "TextureName" "abaddon_aphotic_shield"
-        "Properties"
-        {
-          "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"    "%damage_reduction"
-        }
-      }
-    }
-    
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "duration"        "4.0"
-      }
-      
-      "02"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "damage_reduction"    "-50"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "radius"          "150"
-      }
-      "04"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "speed"           "1800"
-      }
-      "05"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "distance"        "900"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "damage"          "125"
-      }
-    }
-  }
+	"item_blink_staff"
+	{
+		"ID"							"1250"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/blink_staff/blink_staff.lua"
+		"AbilityTextureName"			"item_blink_staff"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"50"
+		"MaxLevel"	"4"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3900"
+		"ItemShopTags"					"blink;staff"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"blink;staff"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_blink"				"1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_clamp"			"960"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"help_range"			"3000 2500 2000 1500 1000"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"help_duration"			"5.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hurt_cooldown"			"3.0"
+			}
+			
+			// Stats from the recipe items
+			
+			"06" // Quarterstaff
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"10"
+			}
+			
+			"07" // Quarterstaff
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"			"10"
+			}
+			
+			"08" // Robe Of Magi
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_int"			"6"
+			}
+			
+			// extra testing
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_level"				"5"
+			}
+		}
+	}
+	
+	"item_recipe_blink_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1251"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"325"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_blink_staff"
+		"ItemRequirements"
+		{
+			"01"						"item_quarterstaff;item_robe;item_blink"
+			"02"						"item_blink_staff"
+		}
+	}
 }
