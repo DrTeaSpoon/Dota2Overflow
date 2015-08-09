@@ -266,4 +266,9 @@
   //"item_guardian_greaves"     "REMOVE"  
   //"item_recipe_glimmer_cape"      "REMOVE"  
   //"item_glimmer_cape"     "REMOVE"  
+  "item_nightfall_striders"
+  {
+"ItemPurchasable" "1"
+"ItemDroppable" "1"
+  }
 }

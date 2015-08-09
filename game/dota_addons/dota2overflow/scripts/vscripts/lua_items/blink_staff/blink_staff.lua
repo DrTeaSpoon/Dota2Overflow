@@ -19,7 +19,11 @@ function item_blink_staff:GetManaCost()
 end
 
 function item_blink_staff:GetCooldown( nLevel )
-	return self.BaseClass.GetCooldown( self, nLevel )
+	if self:GetCaster():HasScepter() then
+		return self:GetSpecialValueFor( "cooldown_scepter" )
+	else
+		return self.BaseClass.GetCooldown( self, nLevel )
+	end
 end
 
 function item_blink_staff:GetCastAnimation( )

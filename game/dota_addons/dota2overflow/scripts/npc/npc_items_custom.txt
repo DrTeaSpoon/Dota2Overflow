@@ -12,7 +12,8 @@
 		"AbilityCastPoint"				"0.3"
 		"AbilityCooldown"				"10.0"
 		"AbilityManaCost"				"50"
-		"MaxLevel"	"4"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"5"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"3900"
@@ -74,6 +75,12 @@
 				"var_type"				"FIELD_INTEGER"
 				"max_level"				"5"
 			}
+			
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cooldown_scepter"		"7.0"
+			}
 		}
 	}
 	
@@ -97,6 +104,86 @@
 		{
 			"01"						"item_quarterstaff;item_robe;item_blink"
 			"02"						"item_blink_staff"
+		}
+	}
+	
+	"item_multicast"
+	{
+		"ID"							"1252"  //Valve's version of this item uses the ID "171".
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/multicast/multicast.lua"
+		"AbilityTextureName"			"item_multicast"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemPurchasable" "1"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"7000"
+		"ItemShopTags"					"multicast;scepter"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"multicast;scepter"
+		"precache"
+		{
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mult_x2"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mult_x3"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mult_x4"			"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"			"300"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"delay"			"0.1"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"delay"			"0.1"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all_stats"			"25"
+			}
+		}
+	}
+	"item_recipe_multicast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1253"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1300"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_multicast"
+		"ItemRequirements"
+		{
+			"01"						"item_ultimate_orb;item_ultimate_orb;item_ghost"
 		}
 	}
 }

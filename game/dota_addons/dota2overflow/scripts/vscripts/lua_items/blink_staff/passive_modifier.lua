@@ -20,7 +20,7 @@ end
 function item_blink_staff_passive_modifier:OnTakeDamage( params ) --When ever the unit takes damage this is called
 	if IsServer() then --this should be only run on server.
 		local hAbility = self:GetAbility() --we get the ability where this modifier is from
-		if params.attacker ~= self:GetParent() and params.unit == self:GetParent() then
+		if params.attacker ~= self:GetParent() and params.unit == self:GetParent() and not self:GetParent():HasScepter() then
 		hAbility:StartCooldown(hAbility:GetSpecialValueFor( "hurt_cooldown" )) --we start the cooldown
 		end
 	end
