@@ -186,4 +186,63 @@
 			"01"						"item_ultimate_orb;item_ultimate_orb;item_ghost"
 		}
 	}
+	
+	
+	"item_balls"
+	{
+		"ID"							"1254"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/balls/balls.lua"
+		"AbilityTextureName"			"item_balls"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"5.0"
+		"AbilityManaCost"				"50"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10"
+		"ItemShopTags"					"balls"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"balls"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"				"1200"
+			}
+		}
+	}
+	
+	"item_glass"
+	{
+		"ID"							"1255"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/glass/glass.lua"
+		"AbilityTextureName"			"item_glass"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_RUNE_TARGET | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"0.3"
+		"AbilityManaCost"				"0"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10"
+		"ItemShopTags"					"glass"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"glass"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"				"1200"
+			}
+		}
+	}
 }

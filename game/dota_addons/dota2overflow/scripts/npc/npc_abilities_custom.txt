@@ -207,18 +207,63 @@
     }
   }
   
-  "barebones_empty1"
+  "aa_ice_path"
   {
     // General
     //-------------------------------------------------------------------------------------------------------------
-    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-    "MaxLevel"            "0"
-    "BaseClass"           "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"lua_abilities/AA/ice_path"
+    "MaxLevel"            "7"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"ice_path"
+	"AbilityCastRange"				"1100 1320 1540 1760 1980 2200 2420"
+	"AbilityCastPoint"				"0.65"
+	"AbilityCooldown"				"10.0"
+	"AbilityDuration"				"1.0 1.5 2.0 2.5 3.0 3.5 4.0"
+	"AbilityDamage"					"50"
+	"AbilityManaCost"				"90"
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
+		"particle"					"particles/units/heroes/hero_jakiro/jakiro_ice_path.vpcf"
+		"particle"					"particles/units/heroes/hero_jakiro/jakiro_ice_path_b.vpcf"
+		"particle"					"particles/jakiro_ice_path_blob.vpcf"
+		"particle"					"particles/units/heroes/hero_jakiro/jakiro_icepath_debuff.vpcf"
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"path_delay"				"0.5"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"1.0 1.5 2.0 2.5 3.0 3.5 4.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"path_radius"				"110"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"50"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"range_tooltip"					"1100 1320 1540 1760 1980 2200 2420"
+		}
+	}
   }
   
-  "barebones_empty2"
+  "aa_ice_aura"
   {
     // General
     //-------------------------------------------------------------------------------------------------------------
@@ -226,10 +271,10 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
     "MaxLevel"            "0"
     "BaseClass"           "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+    "AbilityTextureName"            "ice_aura"
   }
   
-  "barebones_empty3"
+  "aa_ice_trap"
   {
     // General
     //-------------------------------------------------------------------------------------------------------------
@@ -237,10 +282,10 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
     "MaxLevel"            "0"
     "BaseClass"           "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+    "AbilityTextureName"            "ice_trap"
   }
   
-  "barebones_empty4"
+  "aa_ice_spray"
   {
     // General
     //-------------------------------------------------------------------------------------------------------------
@@ -248,21 +293,79 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
     "MaxLevel"            "0"
     "BaseClass"           "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+    "AbilityTextureName"            "ice_spray"
   }
   
-  "barebones_empty5"
+  "aa_ice_feet"
   {
     // General
     //-------------------------------------------------------------------------------------------------------------
-    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-    "MaxLevel"            "0"
-    "BaseClass"           "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"lua_abilities/AA/ice_feet"
+    "MaxLevel"            "7"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"            "ice_feet"
+	
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.01"
+	"AbilityCooldown"				"15"
+	"AbilityDuration"				"4.0"
+	"AbilityManaCost"				"150"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
+		"particle"			"particles/units/heroes/hero_ancient_apparition/ancient_apparition_cold_feet.vpcf"
+		"particle"			"particles/units/heroes/hero_ancient_apparition/ancient_apparition_cold_feet_frozen.vpcf"
+		"particle"			"particles/units/heroes/hero_ancient_apparition/ancient_apparition_cold_feet_marker.vpcf"
+		"particle"  		"particles/generic_gameplay/generic_stunned.vpcf"	
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"37.5 50 62.5 75"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"break_distance"		"740 740 740 740"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"1.25 2.0 2.75 3.5"
+		}
+		// Extra
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_interval"		"0.8"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"leash_interval"		"0.1"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"4.1"
+		}
+	}
   }
   
-  "barebones_empty6"
+  "aa_ice_tower"
   {
     // General
     //-------------------------------------------------------------------------------------------------------------
@@ -270,7 +373,7 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
     "MaxLevel"            "0"
     "BaseClass"           "ability_datadriven"
-    "AbilityTextureName"            "rubick_empty1"
+    "AbilityTextureName"            "ice_tower"
   }
 	 //=================================================================================================================
     // Dummy unit spell -- Taken from reflex github.com/bmddota/reflexdota
@@ -298,5 +401,33 @@
           }
         }
     }
+	
+	
+	//=================================================================================================================
+	// Ability: Attribute Bonus
+	//=================================================================================================================
+	"lua_attribute"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"lua_abilities/attribute/attribute"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"100"
+		"LevelsBetweenUpgrades" "1"
+		//"RequiredLevel"        "-100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"attribute_bonus_per_level"		"1.0"
+			}
+		}
+	}
 }
 

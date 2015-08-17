@@ -36,6 +36,7 @@ function Precache( context )
   --PrecacheItemByNameSync("item_multicast", context)
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts", context)
   PrecacheResource("particle", "particles/multicast_item/multicast.vpcf", context)
+  PrecacheResource("particle", "particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012.vpcf", context)
   
 
   -- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync

@@ -3,6 +3,9 @@
     <include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
   </styles>
   <Panel class="AddonLoadingRoot">
+    <Panel id="CustomBgEffect_A" >
+      <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode_effects_a.png" />
+    </Panel>
     <Panel id="CustomBg" >
       <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode.png" />
     </Panel>

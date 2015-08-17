@@ -69,6 +69,9 @@ end
 ]]
 function GameMode:OnAllPlayersLoaded()
   --DebugPrint("[BAREBONES] All Players have loaded into the game")
+	print(":::GAME_RULES:::")
+	DeepPrintTable(GameRules)
+	print(":::GAME_RULES:::")
 end
 
 --[[

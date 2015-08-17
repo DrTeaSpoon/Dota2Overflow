@@ -1,17 +1,17 @@
 "DOTAHeroes"
 {
-  "npc_dota_hero_ancient_apparition_barebones"
+  "npc_dota_hero_ancient_apparition_overhaul"
   {
     "AbilityLayout"     "6"
     "override_hero"     "npc_dota_hero_ancient_apparition"
     "SoundSet"          "0" 
-    "Ability1"        "example_ability" 
-    "Ability2"        "barebones_empty2" 
-    "Ability3"        "barebones_empty3" 
-    "Ability4"        "barebones_empty4"
-    "Ability5"        "barebones_empty5"
-    "Ability6"        "barebones_empty6"
-    "Ability7"        ""
+    "Ability1"        "aa_ice_path" 
+    "Ability2"        "aa_ice_aura" 
+    "Ability3"        "aa_ice_trap" 
+    "Ability4"        "aa_ice_spray"
+    "Ability5"        "aa_ice_feet"
+    "Ability6"        "aa_ice_tower"
+    "Ability7"        "lua_attribute"
     "Ability8"        ""
     "Ability9"        ""
     "Ability10"       ""
@@ -22,38 +22,30 @@
     "Ability15"       ""
     "Ability16"       ""
 
-    "ArmorPhysical"       "0"                 // Physical protection.
-    "MagicalResistance"       "0"                 // Magical protection (percentage).
-
-    "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
-    "AttackDamageMin"     "1"                   // Damage range min.
-    "AttackDamageMax"     "1"                   // Damage range max.
-
-    //"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-    "AttributeBaseStrength"   "0"                   // Base strength
-    "AttributeStrengthGain"   "0"                   // Strength bonus per level.
-    "AttributeBaseIntelligence" "0"                   // Base intelligence
-    "AttributeIntelligenceGain" "0"                   // Intelligence bonus per level.
-    "AttributeBaseAgility"    "0"                   // Base agility
-    "AttributeAgilityGain"    "0"                   // Agility bonus per level.
-
-    "BountyXP"          "0"                 // Experience earn.
-    "BountyGoldMin"       "0"                   // Gold earned min.
-    "BountyGoldMax"       "0"                   // Gold earned max.
+    "ArmorPhysical"       "2"                 // Physical protection.
+    "MagicalResistance"       "25"                 // Magical protection (percentage).
+    "AttackDamageMin"     "5"                   // Damage range min.
+    "AttackDamageMax"     "10"                   // Damage range max.
+    "AttributeBaseStrength"   "20"                   // Base strength
+    "AttributeStrengthGain"   "2"                   // Strength bonus per level.
+    "AttributeBaseIntelligence" "22"                   // Base intelligence
+    "AttributeIntelligenceGain" "3.6"                   // Intelligence bonus per level.
+    "AttributeBaseAgility"    "20"                   // Base agility
+    "AttributeAgilityGain"    "2"                   // Agility bonus per level.
 
     //"BoundsHullName"      "DOTA_HULL_SIZE_HERO"
     //"RingRadius"        "70"
 
     "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-    "MovementSpeed"       "360"                 // Speed.
+    "MovementSpeed"       "290"                 // Speed.
     "MovementTurnRate"      "1.0"                 // Turning rate.
 
-    "StatusHealth"        "1000"                 // Base health.
+    "StatusHealth"        "100"                 // Base health.
     "StatusHealthRegen"     "0.0"                 // Health regeneration rate.
-    "StatusMana"        "400"                   // Base mana.
-    "StatusManaRegen"     "100.0"                 // Mana regeneration rate.
+    "StatusMana"        "0"                   // Base mana.
+    "StatusManaRegen"     "0.0"                 // Mana regeneration rate.
 
-    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
-    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
+    "VisionDaytimeRange"    "1000"                  // Range of vision at night time.
+    "VisionNighttimeRange"    "500"                  // Range of vision at night time.
   }
 }

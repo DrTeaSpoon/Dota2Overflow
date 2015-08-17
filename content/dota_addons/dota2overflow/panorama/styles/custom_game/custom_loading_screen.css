@@ -50,6 +50,19 @@
   animation-iteration-count: IterationCount;
 }
 
+#CustomBgEffect_A
+{
+
+  margin-top: 350px;
+    overflow: clip;
+  pre-transform-scale2d: 1.0;
+  animation-name: gamemode_anim_fx_a;
+  animation-delay: AnimationDelay;
+  animation-duration: TotalLength;
+  animation-timing-function: TimingFunc;
+  animation-iteration-count: IterationCount;
+}
+
 #gamemode
 {
   margin-left: 160px;
@@ -68,5 +81,19 @@
   100%
   {
     transform: translateX( 0px ) translateY( -200px );
+  }
+}
+
+@keyframes 'gamemode_anim_fx_a'
+{
+  0%
+  {
+    transform: translateX( 0px ) translateY( 0px );
+    pre-transform-scale2d: .8;
+  }
+
+  100%
+  {
+    transform: translateX( 0px ) translateY( -100px );
   }
 }
