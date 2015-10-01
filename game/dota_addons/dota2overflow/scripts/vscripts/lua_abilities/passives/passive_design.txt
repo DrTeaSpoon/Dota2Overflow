@@ -1,0 +1,38 @@
+Burner
+Desc: Radiance! Every level more damage.
+
+Shocker
+Desc: Shock closest. Every level chains + 1
+
+Freezer
+Desc: Slows and disables regen.
+
+Creeping Doom
+Desc: Applies stacks. If reach treshold then unit is cursed and this passive goes to cooldown. Only works on heroes.
+
+Healer
+Desc: Heal nearby units per second.
+
+Mana Well
+Desc: Give mana to nearby allies every second.
+
+Spell Block
+Desc: Block next targeted spell, goes on cooldown.
+
+Reactive Armor
+Desc: Gain Armor and Magic Resistance on every damage instance taken. Refreshes duration on every hit.
+
+Collapsing Armor
+Desc: Lose Armor and Magic Resistance on every damage instance taken. Out of combat regain stacks of both back.
+
+Critical
+Desc: Basic attacks have chance to crit.
+
+Evasion
+Desc: Chance to evade attacks.
+
+Spell Resistance
+Desc: Resistance to Magical damage.
+
+Dash
+Desc: 

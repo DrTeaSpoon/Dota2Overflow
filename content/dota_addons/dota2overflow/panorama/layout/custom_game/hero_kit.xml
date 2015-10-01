@@ -1,0 +1,55 @@
+<root>
+	<styles>
+	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	<include src="file://{resources}/styles/custom_game/hero_kit.css" />
+	</styles>
+	<scripts>
+	<include src="file://{resources}/scripts/custom_game/hero_buttons_kit.js" /> 
+	</scripts>
+	<Panel class="HeroKit_Root">
+		<Panel id="HeroKit_Listing_All">
+		
+		<Panel id="HeroKit_Abilities"></Panel> <Panel id="HeroKit_Traits"> </Panel> <Panel id="HeroKit_UltsList"> </Panel>
+		
+		</Panel>
+		
+		<Panel id="HeroKit_Tooltip">
+		<Panel id="HeroKit_Tooltip_Ab_Name">
+		<Label id="tool_tip_name" text="Ability" />
+		</Panel>
+		<Panel id="HeroKit_Tooltip_Ab_Desc">
+		<Label id="tool_tip_desc" text="Description" />
+		</Panel>
+		</Panel>
+		
+		
+		
+		<Panel id="HeroKit_Selection">
+		
+			<Panel id="HeroKit_AbSelect_A" class="lable_text_p">
+				<Label text="Actives" id="traits_label" class="lable_text"/>
+				<Panel id="HeroKit_AbSelect">
+					<Button id="HeroKit_Ability_Q" onactivate="OnRemoveSkill('#HeroKit_Ability_Q')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+					<Button id="HeroKit_Ability_W" onactivate="OnRemoveSkill('#HeroKit_Ability_W')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+					<Button id="HeroKit_Ability_E" onactivate="OnRemoveSkill('#HeroKit_Ability_E')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+				</Panel>
+			</Panel>
+			
+			<Panel id="HeroKit_AbSelect_B" class="lable_text_p">
+				<Label text="Passives" id="traits_label" class="lable_text"/>
+				<Panel id="HeroKit_TrSelect">
+					<Button id="HeroKit_Ability_D" onactivate="OnRemoveSkill('#HeroKit_Ability_D')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+					<Button id="HeroKit_Ability_F" onactivate="OnRemoveSkill('#HeroKit_Ability_F')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+				</Panel>
+			</Panel>
+			
+			<Panel id="HeroKit_AbSelect_C" class="lable_text_p">
+				<Label text="Ultimate" id="traits_label" class="lable_text"/>
+				<Panel id="HeroKit_UlSelect">
+					<Button id="HeroKit_Ability_R" onactivate="OnRemoveSkill('#HeroKit_Ability_R')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+				</Panel>
+			</Panel>
+		</Panel>
+		<Button id="HeroKit_Done" onactivate="OnDone()" class="ab_button_done"><Image src="file://{images}/custom_game/done.png" /></Button>
+	</Panel>
+</root>

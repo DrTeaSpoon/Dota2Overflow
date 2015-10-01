@@ -1,0 +1,34 @@
+if hex_6_gon == nil then
+	hex_6_gon = class({})
+end
+
+LinkLuaModifier( "hex_6_gon_effect_modifier", "lua_abilities/dev/effect_modifier.lua", LUA_MODIFIER_MOTION_NONE )
+
+function hex_6_gon:GetBehavior() 
+	local behav = DOTA_ABILITY_BEHAVIOR_UNIT_TARGET
+	return behav
+end
+
+function hex_6_gon:GetManaCost()
+	return self.BaseClass.GetManaCost( self, 1 )
+end
+
+function hex_6_gon:GetCooldown( nLevel )
+	return self.BaseClass.GetCooldown( self, nLevel )
+end
+
+function hex_6_gon:GetCastAnimation( )
+	local anim = ACT_DOTA_FLAIL
+	return anim
+end
+
+function hex_6_gon:OnSpellStart()
+	local hCaster = self:GetCaster() --We will always have Caster.
+	if not self:GetCursorTargetingNothing() then
+		hTarget = self:GetCursorTarget()
+	end
+	local mod = "hex_6_gon_effect_modifier"
+	if hTarget then
+		hTarget:AddNewModifier( hCaster, self, mod, {} ) 
+	end
+end

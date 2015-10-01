@@ -1,0 +1,7 @@
+"vecs"
+{
+	"ice_path"
+	{
+		"VectorTarget" "1"
+	}
+}

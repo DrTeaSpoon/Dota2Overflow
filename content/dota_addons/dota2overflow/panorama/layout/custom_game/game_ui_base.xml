@@ -1,0 +1,23 @@
+<root>
+	<styles>
+	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	<include src="file://{resources}/styles/custom_game/Game_UI_base.css" />
+	</styles>
+	<scripts>
+	<include src="file://{resources}/scripts/custom_game/Vectors.js" /> 
+	<include src="file://{resources}/scripts/custom_game/game_ui_settings.js" /> 
+	</scripts>
+	<Panel class="Game_UI_base" hittest="false">
+		<Panel id="Top" hittest="false">
+			<Panel id="Left" hittest="false">
+			</Panel>
+			<Panel id="Center" hittest="false">
+				<Image src="file://{images}/custom_ui/hud_over.png" scaling="stretch" hittest="false"/>
+			</Panel>
+			<Panel id="Right" hittest="false">
+			</Panel>
+		</Panel>
+		<Panel id="Bottom" hittest="false">
+		</Panel>
+	</Panel>
+</root>

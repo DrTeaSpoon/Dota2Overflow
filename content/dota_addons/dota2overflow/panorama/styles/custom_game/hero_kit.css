@@ -1,0 +1,238 @@
+.HeroKit_Root
+{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    horizontal-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    border: 0px solid black;
+    background-color: #111111;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #222222 ) );
+    border-radius: 5px;
+    flow-children: down;
+	z-index:5;
+}
+.ab_button
+{
+    width: 64px;
+    height: 64px;
+    border: 2px solid black;
+	margin:2px;
+	border-radius: 5px;
+}
+.ab_button:hover
+{
+    border: 2px solid white;
+	border-radius: 5px;
+}
+.ab_button_selection
+{
+    width: 80px;
+    height: 80px;
+    border: 0px solid black;
+    horizontal-align: center;
+	margin:2px;
+	border-radius: 5px;
+}
+
+.ab_button_done
+{
+    width: 323px;
+    height: 58px;
+    border: 0px solid black;
+    horizontal-align: center;
+	margin:2px;
+}
+
+.ab_button_selection:hover
+{
+    border: 4px solid white;
+	border-radius: 5px;
+}
+.ab_button_done:hover
+{
+	wash-color: #00ff00;
+}
+
+#HeroKit_Listing_All
+{
+    width: 100%;
+    height: 700px;
+	overflow: clip clip;
+    border: 0px solid black;
+}
+#HeroKit_Abilities
+{
+    vertical-align: top;
+    horizontal-align: left;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
+    border-radius: 5px;
+    flow-children: down;
+    width: 30%;
+    height: 650px;
+	padding-top:10px;
+	margin-top:15px;
+    margin-left:15px;
+    margin-right:0px;
+	overflow: clip scroll;
+}
+
+#HeroKit_Traits
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #555555 ), to( #111111 ) );
+    border-radius: 5px;
+    flow-children: down;
+    width: 30%;
+    height: 650px;
+	padding-top:10px;
+	margin-top:15px;
+    margin-left:0px;
+    margin-right:0px;
+	overflow: clip scroll;
+}
+
+#HeroKit_UltsList
+{
+    vertical-align: top;
+    horizontal-align: right;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
+    border-radius: 5px;
+    flow-children: down;
+    width: 30%;
+    height: 650px;
+	padding-top:10px;
+	margin-top:15px;
+    margin-left:0px;
+    margin-right:15px;
+	overflow: clip scroll;
+}
+.Ability_row
+{
+    flow-children: right;
+    horizontal-align: left;
+    vertical-align: center;
+	margin-left:15px;
+}
+
+.ab_span
+{
+    width: 10px;
+}
+
+#HeroKit_Selection
+{
+    vertical-align: bottom;
+    horizontal-align: center;
+    border: 0px solid black;
+    border-radius: 5px;
+    flow-children: right;
+	margin-top:5px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.kit_labels
+{
+	width:200px;
+    vertical-align: center;
+    horizontal-align: center;
+    margin-left: 30px;
+}
+
+.WhatA_Drag
+{
+	wash-color: #39b0d325;
+    border: 2px solid red;
+}
+
+.lable_text
+{
+	color:#000000;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+    horizontal-align: center;
+}
+
+#HeroKit_AbSelect
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
+    border-radius: 5px;
+    flow-children: right;
+}
+#HeroKit_TrSelect
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222222 ) );
+    border-radius: 5px;
+    flow-children: right;
+}
+#HeroKit_UlSelect
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
+    border-radius: 5px;
+    flow-children: right;
+}
+
+.lable_text_p
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #888888 ), to( #333333 ) );
+    border-radius: 5px;
+    flow-children: down;
+	margin-left:5px;
+	padding-left:5px;
+	padding-right:5px;
+}
+#HeroKit_Tooltip
+{
+	width:80%;
+	height:150px;
+    background-color: #333553;
+    border-radius: 5px;
+    horizontal-align: center;
+	margin-left:15px;
+	margin-bottom:15px;
+    flow-children: down;
+}
+
+#HeroKit_Tooltip_Ab_Name
+{
+	width:99%;
+    background-color: #333553;
+    border-radius: 5px;
+    horizontal-align: center;
+	margin-left:15px;
+}
+
+#HeroKit_Tooltip_Ab_Desc
+{
+	width:99%;
+    background-color: #333553;
+    border-radius: 5px;
+    horizontal-align: center;
+	margin-left:5px;
+}

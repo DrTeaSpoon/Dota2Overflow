@@ -1,0 +1,38 @@
+"abilities"
+{
+"1"	"abaddon_soul_rip"
+"2"	"ice_path"
+"3"	"earthshaker_enchant_totem_lua"
+"4"	"zuus_arc_lightning_lua"
+"5"	"blink_support"
+
+"6" "hex_6_gon"
+"7" "fire_wall"
+"8" "winds"
+"9" "teleport_basic"
+//"10" "shadow_walk" //invisibility with greater speed at night time
+//
+//"11" "holy_word" //Aoe heal, more heal at day time
+"12" "summon_basic"
+//"13" "power_leap"
+//"14" "land_mine"
+//"15" "water_canon"
+//
+//"16" "alertillery" //target half way point. friendly fire possible.
+//"17" "magic_missile"
+//"18" "pray" //Random effect more likely to be positive if at low health. Hidden extra if lot of players pray at same time.
+//"19" "blink"
+//"20" "ball_lightning"
+//
+//"21" "flame_spray"
+//"22" "ice_trap" //trip wire!!!
+//"23" "boulder"
+//"24" "holy_rage"
+//"25" "unholy_rage"
+//
+//"26" "natures_wall"
+//"27" "demand_silence"
+//"28" "totem"
+//"29" "chaos_mode"
+//"30" "war_drum"
+}

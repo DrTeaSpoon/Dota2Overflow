@@ -1,0 +1,29 @@
+
+"traits"
+{
+"1" "swift" //half done (effect needed)
+"2"	"nth_attack" //done (needs name)
+"3"	"earthshaker_aftershock_lua" //done
+//"4"	"battle_rythm" // 
+"5"	"zuus_static_field_lua" //done
+
+"6" "collapsing_armor" // done
+"7" "reactive_armor" // done
+"8" "burner" // effects needed
+"9" "healer" // effects needed
+"10" "mana_well" // effects needed
+
+"11" "evasion" // effects needed
+"12" "critical" // effects needed
+//"13" "toxic_blood"
+//"14" "greed_m"
+//"15" "greed_s"
+//
+//"16" "venom"
+//"17" "contract" //fire orb
+//"18" "runner"
+//"19" "reflexes"
+//"20" "overload"
+}
+
+ 

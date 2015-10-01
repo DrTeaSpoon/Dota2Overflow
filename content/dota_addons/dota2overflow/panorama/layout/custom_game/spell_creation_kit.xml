@@ -1,0 +1,39 @@
+<root>
+	<styles>
+	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	<include src="file://{resources}/styles/custom_game/spell_creation_kit.css" />
+	</styles><!-- 
+	<scripts>
+	<include src="file://{resources}/scripts/custom_game/barebones_hud_base.js" /> 
+	</scripts> -->
+	<Panel hittest="false" class="SpellCreationKit_Root">
+		<Panel hittest="false" id="SpellCreationKit_ShapeMenu">
+			<!-- <DropDown oninputsubmit="OnDropDownChanged()"> -->
+			<DropDown>
+			<Label text="Zap!" id="spell_shape_1"/>
+			<Label text="Projectile!" id="spell_shape_2"/>
+			<Label text="Ground Zap!" id="spell_shape_3"/>
+			<Label text="Area!" id="spell_shape_4"/>
+			<Label text="Self!" id="spell_shape_5"/>
+			<Label text="6" id="spell_shape_6"/>
+			<Label text="7" id="spell_shape_7"/>
+			<Label text="8" id="spell_shape_8"/>
+			</DropDown>
+			<Label text="Shape" id="shape_lable" class="kit_labels"/>
+		</Panel>
+		<Panel hittest="false" id="SpellCreationKit_ElementMenu">
+			<!-- <DropDown oninputsubmit="OnDropDownChanged()"> -->
+			<DropDown>
+			<Label text="Zap!" id="spell_element_1"/>
+			<Label text="Projectile!" id="spell_element_2"/>
+			<Label text="Ground Zap!" id="spell_element_3"/>
+			<Label text="Area!" id="spell_element_4"/>
+			<Label text="Self!" id="spell_element_5"/>
+			<Label text="6" id="spell_element_6"/>
+			<Label text="7" id="spell_element_7"/>
+			<Label text="8" id="spell_element_8"/>
+			</DropDown>
+			<Label text="Element" id="element_lable" class="kit_labels"/>
+		</Panel>
+	</Panel>
+</root>

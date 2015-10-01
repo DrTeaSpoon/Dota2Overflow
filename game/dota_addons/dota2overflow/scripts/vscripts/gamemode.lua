@@ -60,7 +60,33 @@ end
   It can be used to initialize state that isn't initializeable in InitGameMode() but needs to be done before everyone loads in.
 ]]
 function GameMode:OnFirstPlayerLoaded()
-  --DebugPrint("[BAREBONES] First Player has loaded")
+  GameRules.AbilityListing = {}
+  local tAbilityListTemp = LoadKeyValues("scripts/kv/abilities.txt")
+  local n = 1
+  for k,v in pairs(tAbilityListTemp) do
+	GameRules.AbilityListing[n] = v
+	CustomNetTables:SetTableValue( "ability_list", tostring(k), { name = tostring(v) } )
+	n = n + 1
+  end
+  
+  GameRules.TraitListing = {}
+  local tTraitsListTemp = LoadKeyValues("scripts/kv/traits.txt")
+  n = 1
+  for k,v in pairs(tTraitsListTemp) do
+	GameRules.TraitListing[n] = v
+	CustomNetTables:SetTableValue( "trait_list", tostring(k), { name = tostring(v) } )
+	n = n + 1
+  end
+  
+  GameRules.UltimateListing = {}
+  local tUltsListTemp = LoadKeyValues("scripts/kv/ults.txt")
+  n = 1
+  for k,v in pairs(tUltsListTemp) do
+	GameRules.UltimateListing[n] = v
+	print(v)
+	CustomNetTables:SetTableValue( "ult_list", tostring(k), { name = tostring(v) } )
+	n = n + 1
+  end
 end
 
 --[[
@@ -69,9 +95,9 @@ end
 ]]
 function GameMode:OnAllPlayersLoaded()
   --DebugPrint("[BAREBONES] All Players have loaded into the game")
-	print(":::GAME_RULES:::")
-	DeepPrintTable(GameRules)
-	print(":::GAME_RULES:::")
+	--print(":::GAME_RULES:::")
+	--DeepPrintTable(GameRules)
+	--print(":::GAME_RULES:::")
 end
 
 --[[
@@ -82,27 +108,58 @@ end
   The hero parameter is the hero entity that just spawned in
 ]]
 function GameMode:OnHeroInGame(hero)
-  --DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
+	DebugPrint("[ARCHIVIST] Hero spawned in game for first time -- " .. hero:GetUnitName())
 
   -- This line for example will set the starting gold of every hero to 500 unreliable gold
-  --hero:SetGold(500, false)
-
-  -- These lines will create an item and add it to the player, effectively ensuring they start with the item
-  --local item = CreateItem("item_example_item", hero, hero)
-  --hero:AddItem(item)
-
---Notifications:TopToAll({image="file://{images}/status_icons/dota_generic.psd", duration=5.0})
---Notifications:TopToAll({ability="nyx_assassin_mana_burn", continue=true})
---Notifications:TopToAll({ability="lina_fiery_soul", continue=true})
---Notifications:TopToAll({item="item_force_staff", continue=true})
-  --[[ --These lines if uncommented will replace the W ability of any hero that loads into the game
-    --with the "example_ability" ability
-
-  local abil = hero:GetAbilityByIndex(1)
-  hero:RemoveAbility(abil:GetAbilityName())
-  hero:AddAbility("example_ability")]]
+	local pID = hero:GetPlayerID()
+	if hero:IsRealHero() and pID then
+	hero:SetGold(500, false)
+	
+			hero:AddNewModifier( hero, nil, "heroes_base_mod", {} ) 
+	-- AddDarkCheck(hero)
+	local tAbTempList = GameRules.AbilityListing
+	for i = 1,6 do
+		local pID = hero:GetPlayerID()
+		if not GameRules.PlayerAbs[pID] or GameRules.PlayerAbs[pID][i] == "random" then
+			self:RandomSkill(hero,i)
+		else
+			print("Adding to hero: " .. GameRules.PlayerAbs[pID][i])
+			Timers:CreateTimer(0.5*i, -- Start this timer 30 game-time seconds later
+			function()
+				PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][i], function()
+					hero:AddAbility(GameRules.PlayerAbs[pID][i])
+				end)
+			end)
+		end
+	end
+		Timers:CreateTimer(10, -- Start this timer 30 game-time seconds later
+		function()
+			PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][7], function()
+				hero:AddAbility("lua_attribute")
+			end)
+		end)
+	end
 end
-
+function GameMode:RandomSkill(hero,slot)
+	local tList = {}
+	if slot < 4 then
+		tList = GameRules.AbilityListing
+	elseif slot < 6 then
+		tList = GameRules.TraitListing
+	else
+		tList = GameRules.UltimateListing
+	end
+	
+	local nRand = RandomInt(1,#tList)
+	local sAbility = tList[nRand]
+	print("Adding to hero: " .. sAbility)
+		Timers:CreateTimer(0.5*slot, -- Start this timer 30 game-time seconds later
+		function()
+			PrecacheItemByNameAsync(sAbility, function()
+				hero:AddAbility(sAbility)
+			end)
+		end)
+end
 --[[
   This function is called once and only once when the game completely begins (about 0:00 on the clock).  At this point,
   gold will begin to go up in ticks if configured, creeps will spawn, towers will become damageable etc.  This function
@@ -130,7 +187,7 @@ function GameMode:InitGameMode()
   -- This also sets up event hooks for all event handlers in events.lua
   -- Check out internals/gamemode to see/modify the exact code
   GameMode:_InitGameMode()
-
+  VectorTarget:Init({ kv = "scripts/kv/vector_target.txt" })
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
   --Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
 

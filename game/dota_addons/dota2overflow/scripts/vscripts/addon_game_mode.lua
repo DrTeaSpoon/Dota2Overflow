@@ -2,6 +2,7 @@
 
 require('internal/util')
 require('gamemode')
+require("libraries.vector_target")
 
 function Precache( context )
 --[[
@@ -37,8 +38,11 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts", context)
   PrecacheResource("particle", "particles/multicast_item/multicast.vpcf", context)
   PrecacheResource("particle", "particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012.vpcf", context)
+	PrecacheResource("particle", "particles/base_attacks/generic_projectile.vpcf", context)
+	PrecacheResource("particle","particles/econ/generic/generic_buff_1/generic_buff_1.vpcf", context)
   
 
+    VectorTarget:Precache( context )
   -- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
   -- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
   --PrecacheUnitByNameSync("npc_dota_hero_ancient_apparition", context)

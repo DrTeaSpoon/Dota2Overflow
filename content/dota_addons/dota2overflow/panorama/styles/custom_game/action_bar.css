@@ -1,0 +1,171 @@
+.AbilityOverlayRoot
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-top: 40px;
+	flow-children: down;
+}
+
+#ability_list
+{
+	flow-children: right;
+	border: 2px solid black;
+	background-color: #272823;
+	border-radius: 10px;
+}
+
+.AbilityPanel
+{
+	margin-left: 2px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+
+.AbilityPanel.no_ability
+{
+	visibility: collapse;
+}
+
+#LevelUpButton
+{
+	horizontal-align: center;
+	border: 1px solid black;
+    background-color: #c4a529;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 0px;
+	visibility: collapse;
+	border-radius: 50%;
+}
+
+.could_level_up #LevelUpButton
+{
+	visibility: visible;
+}
+
+#LevelUpButton:hover
+{
+    background-color: #9e8b2c;
+}
+
+#LevelUpButtonInset
+{
+	width: 100%;
+	height: 100%;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffff ), color-stop( 0.1, #c4a529 ), color-stop( 0.75, #9e8b2c ), color-stop( 0.9, #c4a529 ), to( #ffffff ) );
+	margin: 1px;
+}
+
+#LevelUpButton:hover #LevelUpButtonInset
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffff ), color-stop( 0.2, #c4a529 ), color-stop( 0.75, #9e8b2c ), color-stop( 0.8, #c4a529 ), to( #ffffff ) );
+}
+
+#LevelUpButton Label
+{
+	text-transform: uppercase;
+	text-shadow: 0px 1px 3px 2.5 #000000;
+	color: white;
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#ButtonAndLevel
+{
+	flow-children: down;
+}
+
+#AbilityButton
+{
+	width: 60px;
+	height: 60px;
+	border-radius: 20%;
+}
+
+.is_passive #AbilityButton
+{
+	border: 2px solid #00000000;
+}
+
+#UpgradeBorder
+{
+	background-color: transparent;
+	border-radius: 20%;
+}
+
+.learnable_ability #UpgradeBorder
+{
+   background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffff ), color-stop( 0.1, #c4a529 ), color-stop( 0.75, #9e8b2c ), color-stop( 0.9, #c4a529 ), to( #ffffff ) );
+}
+
+#AbilityButton:hover
+{
+	border: 2px solid white;
+}
+
+#AbilityButton:active
+{
+	border: 4px solid white;
+}
+
+.no_level DOTAAbilityImage
+{
+	desaturation: 1;
+	wash-color: #303030;
+}
+
+.insufficient_mana DOTAAbilityImage
+{
+	desaturation: 1;
+	wash-color: #1569be;
+}
+
+.potential_upgrade.no_level DOTAAbilityImage
+{
+	desaturation: 0;
+	wash-color: white;
+}
+
+#AbilityStatusBorder
+{
+	border: 3px solid transparent;
+	border-radius: 20%;
+}
+
+.auto_cast_enabled #AbilityStatusBorder
+{
+	border: 3px solid orange;
+}
+
+.toggle_enabled #AbilityStatusBorder
+{
+	border: 3px solid green;
+}
+
+#AbilityLevelContainer
+{
+	horizontal-align: center;
+	flow-children: right;
+}
+
+.LevelPanel
+{
+	width: 10px;
+	height: 10px;
+	margin-left: 1px;
+	margin-right: 1px;
+
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2e2716 ), to( #020302 ) );
+	border: 1px solid #ffffff05;
+	border-radius: 50%;
+}
+
+.active_level.LevelPanel
+{
+	background-color: #ceaa31;
+	border: 1px solid #734918;
+}
+
+

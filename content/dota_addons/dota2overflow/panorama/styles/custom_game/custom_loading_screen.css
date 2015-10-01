@@ -3,6 +3,14 @@
 @define IterationCount: 1;
 @define AnimationDelay: 0s;
 
+#HiddenPrecompiler
+{
+  horizontal-align: left;
+  vertical-align: bottom;
+    width: 0px;
+    height: 0px;
+    overflow: clip;
+}
 .AddonLoadingRoot
 {
     width: 100%;

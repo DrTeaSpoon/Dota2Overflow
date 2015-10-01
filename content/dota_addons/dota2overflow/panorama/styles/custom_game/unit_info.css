@@ -1,0 +1,165 @@
+.UnitInfo
+{
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-bottom:300px;
+	width:300px;
+	height:300px;
+}
+#UnitHPMANA
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: 85px;
+	width:300px;
+	height:60px;
+	border: 2px solid black;
+	background-color: #272823;
+	flow-children: down;
+	border-radius: 10px;
+}
+#HealthB
+{
+	width:100%;
+	height:25px;
+	background-color: #440000;
+	border: 1px solid black;
+	margin-bottom: 2px;
+	margin-left:2px;
+	margin-right:2px;
+	margin-top:2px;
+	border-radius: 10px;
+}
+
+#Health
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff4444 ), color-stop( 0.2, #ff0000 ), color-stop( 0.75, #ff4444 ), color-stop( 0.8, #ff0000 ), to( #ff4444 ) );
+	width:100%;
+	height:100%;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#ManaB
+{
+	width:100%;
+	height:25px;
+	background-color: #000044;
+	border: 1px solid black;
+	margin-left:2px;
+	margin-right:2px;
+	margin-bottom: 2px;
+	margin-top:2px;
+	border-radius: 10px;
+}
+
+#Mana
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #4444ff ), color-stop( 0.2, #0000ff ), color-stop( 0.75, #4444ff ), color-stop( 0.8, #0000ff ), to( #4444ff ) );
+	width:100%;
+	height:100%;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#HealthNum
+{
+	horizontal-align: center;
+	vertical-align: center;
+	text-shadow: 0px 1px 3px 2.5 #000000;
+}
+#ManaNum
+{
+	horizontal-align: center;
+	vertical-align: center;
+	text-shadow: 0px 1px 3px 2.5 #000000;
+}
+
+#HealthRegen
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+#ManaRegen
+{
+	horizontal-align: right;
+	vertical-align: center;
+}
+
+#UnitDetailStats_Border
+{
+	horizontal-align: right;
+	width:100px;
+	background-color: #272823;
+	flow-children: down;
+	border-radius: 10px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+}
+
+
+#UnitDetailStats_Border
+{
+	horizontal-align: right;
+	width:100px;
+	background-color: #272823;
+	flow-children: down;
+	border-radius: 10px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+}
+
+#UnitDetailStats
+{
+	horizontal-align: right;
+	width:100%;
+	background-color: #272823;
+	flow-children: down;
+	border-radius: 10px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #333333 ), to( #666666 ) );
+	margin:5px;
+}
+
+#Damage
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+	border-radius: 10px;
+	width:100%;
+	text-align: center;
+}
+#ArmorP
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+	border-radius: 10px;
+	width:100%;
+	text-align: center;
+}
+#ArmorM
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+	border-radius: 10px;
+	width:100%;
+	text-align: center;
+}
+#AttackR
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+	border-radius: 10px;
+	width:100%;
+	text-align: center;
+}
+#AttackS
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #333333 ) );
+	border-radius: 10px;
+	width:100%;
+	text-align: center;
+}

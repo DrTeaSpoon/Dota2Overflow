@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/research_main.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/research_main.js" />
+	</scripts>
+	<Panel class="ResearchRoot">
+		<Panel id="RTreeCol_1">
+		</Panel>
+		<Panel id="RTreeCol_2">
+		</Panel>
+		<Panel id="RTreeCol_3">
+		</Panel>
+		<Panel id="RTreeCol_4">
+		</Panel>
+		<Panel id="RTreeCol_5">
+		</Panel>
+		<Panel id="RTreeCol_6">
+		</Panel>
+	</Panel>
+</root>

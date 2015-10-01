@@ -1,5 +1,19 @@
 -- This function initializes the game mode and is called before anyone loads into the game
 -- It can be used to pre-initialize any values/tables that will be needed later
+function GameMode:AbilityChoise(choises)
+	if not GameRules.PlayerAbs then
+	GameRules.PlayerAbs = {}
+	end
+	local pID = choises.PlayerID
+	GameRules.PlayerAbs[pID] = {}
+	DeepPrintTable(choises)
+	GameRules.PlayerAbs[pID][1] = choises.ability_q
+	GameRules.PlayerAbs[pID][2] = choises.ability_w
+	GameRules.PlayerAbs[pID][3] = choises.ability_e
+	GameRules.PlayerAbs[pID][4] = choises.ability_d
+	GameRules.PlayerAbs[pID][5] = choises.ability_f
+	GameRules.PlayerAbs[pID][6] = choises.ability_r
+end
 function GameMode:_InitGameMode()
   -- Setup rules
   GameRules:SetHeroRespawnEnabled( ENABLE_HERO_RESPAWN )
@@ -88,6 +102,7 @@ function GameMode:_InitGameMode()
   ListenToGameEvent("dota_tower_kill", Dynamic_Wrap(GameMode, 'OnTowerKill'), self)
   ListenToGameEvent("dota_player_selected_custom_team", Dynamic_Wrap(GameMode, 'OnPlayerSelectedCustomTeam'), self)
   ListenToGameEvent("dota_npc_goal_reached", Dynamic_Wrap(GameMode, 'OnNPCGoalReached'), self)
+  CustomGameEventManager:RegisterListener("ability_choise", Dynamic_Wrap(GameMode, 'AbilityChoise'))
   
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 

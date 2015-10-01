@@ -5,6 +5,7 @@
   </styles>
   <scripts>
     <include src="file://{resources}/scripts/custom_game/barebones_hud_base.js" /> 
+      <include src="file://{resources}/scripts/vector_target.js" />
   </scripts>
   <Panel hittest="false" class="BarebonesBaseHud">
     <Panel hittest="false" class="BarebonesTopNotifications">

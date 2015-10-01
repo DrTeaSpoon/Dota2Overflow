@@ -1,0 +1,12 @@
+"CustomEvents"
+{
+	"ability_choise"
+	{
+		"ability_q"	"string"
+		"ability_w"	"string"
+		"ability_e"	"string"
+		"ability_d"	"string"
+		"ability_f"	"string"
+		"ability_r"	"string"
+	}
+}

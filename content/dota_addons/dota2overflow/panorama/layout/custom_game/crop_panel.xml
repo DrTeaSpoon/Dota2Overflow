@@ -1,0 +1,10 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/crop_panel.css" />
+	</styles>
+	<Panel class="CropPanel">
+	</Panel>
+</root>
+
+

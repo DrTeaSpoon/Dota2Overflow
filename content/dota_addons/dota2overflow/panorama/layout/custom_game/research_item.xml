@@ -1,0 +1,12 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/research_main.css" />
+	</styles><!-- 
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/research_main.js" />
+	</scripts> -->
+	<Panel class="RTreeItem">
+		<Image src="file://{images}/custom_game/runes-blue-1.png" />
+	</Panel>
+</root>

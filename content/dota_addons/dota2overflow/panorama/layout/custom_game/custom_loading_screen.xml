@@ -9,8 +9,9 @@
     <Panel id="CustomBg" >
       <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode.png" />
     </Panel>
-<!--     <Panel id="TitlePanel">
-      <Label id="AddonTitle" text="#addon_game_name" style="" />
-    </Panel> -->
+	<Panel id="HiddenPrecompiler">
+<Image src="file://{images}/spellicons/summon_basic.png" />
+
+	</Panel>
   </Panel>
 </root>

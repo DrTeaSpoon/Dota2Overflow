@@ -2,6 +2,9 @@
 {
   custom_net_tables =
   [
-//    "game_state",
+  "ability_list",
+  "ult_list",
+  "trait_list"
+  //"new_skills_list",
   ]
 }

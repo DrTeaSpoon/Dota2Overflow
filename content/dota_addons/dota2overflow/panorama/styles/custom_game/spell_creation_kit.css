@@ -1,0 +1,43 @@
+.SpellCreationKit_Root
+{
+    width: 32%;
+    height: 60%;
+    vertical-align: top;
+    horizontal-align: left;
+    margin-top: 50px;
+    margin-left: 5px;
+    border: 0px solid black;
+    background-color: #111111;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #42494e ), to( #252525 ) );
+    border-radius: 5px;
+    flow-children: down;
+}
+#SpellCreationKit_ShapeMenu
+{
+    vertical-align: top;
+    horizontal-align: left;
+    border: 0px solid black;
+    background-color: #333333;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #42494e ), to( #252525 ) );
+    border-radius: 5px;
+    flow-children: right;
+}
+
+.kit_labels
+{
+	width:200px;
+    vertical-align: center;
+    horizontal-align: center;
+    margin-left: 30px;
+}
+
+#SpellCreationKit_ElementMenu
+{
+    vertical-align: top;
+    horizontal-align: left;
+    border: 0px solid black;
+    background-color: #333333;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #42494e ), to( #252525 ) );
+    border-radius: 5px;
+    flow-children: right;
+}

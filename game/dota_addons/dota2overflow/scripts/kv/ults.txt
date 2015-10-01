@@ -1,0 +1,15 @@
+
+"ults"
+{
+"1"	"earthshaker_echo_slam_lua"
+"2"	"light_blade"
+"3"	"dark_blade"
+//"4"	"metamorphosis"
+//"5"	"seer"
+//
+//"6" "recall"
+//"7" "hell_gate"
+//"8" "spectral_form"
+//"9" "essence_swap"
+//"10" "soul_reaver"
+}

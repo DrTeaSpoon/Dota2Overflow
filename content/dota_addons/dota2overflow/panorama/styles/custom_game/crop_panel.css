@@ -1,0 +1,13 @@
+.CropPanel
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-top: 0px;
+	margin-right: 0px;
+	width:100%;
+	height:164px;
+	z-index: -5;
+	background-color: #111111;
+	background-image: url("file://{images}/custom_game/bg_material_rough.png");
+	border: 2px solid black;
+}
