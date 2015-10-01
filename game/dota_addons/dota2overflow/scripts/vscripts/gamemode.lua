@@ -120,28 +120,30 @@ function GameMode:OnHeroInGame(hero)
 	local tAbTempList = GameRules.AbilityListing
 	for i = 1,6 do
 		local pID = hero:GetPlayerID()
-		if not GameRules.PlayerAbs[pID] or GameRules.PlayerAbs[pID][i] == "random" then
-			self:RandomSkill(hero,i)
-		else
-			print("Adding to hero: " .. GameRules.PlayerAbs[pID][i])
-			Timers:CreateTimer(0.5*i, -- Start this timer 30 game-time seconds later
-			function()
-				PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][i], function()
-					hero:AddAbility(GameRules.PlayerAbs[pID][i])
-				end)
-			end)
-		end
-	end
-		Timers:CreateTimer(10, -- Start this timer 30 game-time seconds later
+		if not GameRules.PlayerAbs[pID] then GameRules.PlayerAbs[pID] = {} end
+			if not GameRules.PlayerAbs[pID][i] or GameRules.PlayerAbs[pID][i] == "random" then
+				GameRules.PlayerAbs[pID][i] = self:RandomSkill(hero,i)
+			end
+		print("Adding to hero: " .. GameRules.PlayerAbs[pID][i])
+		Timers:CreateTimer(0.5*i, -- Start this timer 30 game-time seconds later
 		function()
-			PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][7], function()
-				hero:AddAbility("lua_attribute")
+			PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][i], function()
+				hero:AddAbility(GameRules.PlayerAbs[pID][i])
 			end)
 		end)
 	end
+		--Timers:CreateTimer(10, -- Start this timer 30 game-time seconds later
+		--function()
+		--	PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][7], function()
+		--		hero:AddAbility("lua_attribute")
+		--	end)
+		--end)
+	end
 end
 function GameMode:RandomSkill(hero,slot)
+	local pID = hero:GetPlayerID()
 	local tList = {}
+	local found = false
 	if slot < 4 then
 		tList = GameRules.AbilityListing
 	elseif slot < 6 then
@@ -149,16 +151,21 @@ function GameMode:RandomSkill(hero,slot)
 	else
 		tList = GameRules.UltimateListing
 	end
-	
 	local nRand = RandomInt(1,#tList)
 	local sAbility = tList[nRand]
-	print("Adding to hero: " .. sAbility)
-		Timers:CreateTimer(0.5*slot, -- Start this timer 30 game-time seconds later
-		function()
-			PrecacheItemByNameAsync(sAbility, function()
-				hero:AddAbility(sAbility)
-			end)
-		end)
+	while not found do
+		local check = false
+		for i = 1,6 do
+			if GameRules.PlayerAbs[pID][i] and GameRules.PlayerAbs[pID][i] == sAbility then
+				nRand = RandomInt(1,#tList)
+				sAbility = tList[nRand]
+				check = true
+			end
+		end
+		if not check then found = true end
+	end
+	print("randoming: " .. sAbility)
+	return sAbility
 end
 --[[
   This function is called once and only once when the game completely begins (about 0:00 on the clock).  At this point,
