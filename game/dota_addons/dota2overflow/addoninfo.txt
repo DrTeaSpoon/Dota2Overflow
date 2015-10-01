@@ -1,9 +1,9 @@
 "AddonInfo"
 {
-  "TeamCount" "10"
-  "maps"      "template_map"
+  "TeamCount" "2"
+  "maps"      "dota2overflow"
   "IsPlayable"  "1"
-  "template_map"
+  "dota2overflow"
   {
           "MaxPlayers"                    "10"
   }
