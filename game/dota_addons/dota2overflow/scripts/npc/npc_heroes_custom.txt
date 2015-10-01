@@ -19,8 +19,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_antimage_empty"             
  {
@@ -42,8 +42,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_axe_empty"                  
  {
@@ -65,8 +65,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_bane_empty"                 
  {
@@ -88,8 +88,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_beastmaster_empty"          
  {
@@ -111,8 +111,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_bloodseeker_empty"          
  {
@@ -134,8 +134,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_chen_empty"                 
  {
@@ -157,8 +157,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_crystal_maiden_empty"       
  {
@@ -180,8 +180,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_dark_seer_empty"            
  {
@@ -203,8 +203,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_dazzle"                 
  {
@@ -226,8 +226,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_dragon_knight_empty"        
  {
@@ -249,8 +249,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_doom_bringer_empty"         
  {
@@ -272,8 +272,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_drow_ranger_empty"          
  {
@@ -295,8 +295,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_earthshaker_empty"          
  {
@@ -318,8 +318,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_enchantress_empty"          
  {
@@ -341,8 +341,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_enigma_empty"               
  {
@@ -364,8 +364,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_faceless_void_empty"        
  {
@@ -387,8 +387,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_furion_empty"               
  {
@@ -410,8 +410,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_juggernaut_empty"           
  {
@@ -433,8 +433,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_kunkka_empty"               
  {
@@ -456,8 +456,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_leshrac_empty"              
  {
@@ -479,8 +479,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_lich_empty"                 
  {
@@ -502,8 +502,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_life_stealer_empty"         
  {
@@ -525,8 +525,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_lina_empty"                 
  {
@@ -548,8 +548,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_lion_empty"                 
  {
@@ -571,8 +571,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_mirana_empty"               
  {
@@ -594,8 +594,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_morphling_empty"            
  {
@@ -617,8 +617,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_necrolyte_empty"            
  {
@@ -640,8 +640,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_nevermore_empty"            
  {
@@ -663,8 +663,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_night_stalker_empty"        
  {
@@ -686,8 +686,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_omniknight_empty"           
  {
@@ -709,8 +709,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_puck_empty"                 
  {
@@ -732,8 +732,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_pudge_empty"                
  {
@@ -755,8 +755,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_pugna_empty"                
  {
@@ -778,8 +778,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_rattletrap_empty"           
  {
@@ -801,8 +801,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_razor_empty"                
  {
@@ -824,8 +824,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_riki_empty"                 
  {
@@ -847,8 +847,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_sand_king_empty"            
  {
@@ -870,8 +870,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_shadow_shaman_empty"        
  {
@@ -893,8 +893,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_slardar_empty"              
  {
@@ -916,8 +916,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_sniper_empty"               
  {
@@ -939,8 +939,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_spectre_empty"              
  {
@@ -962,8 +962,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_storm_spirit_empty"         
  {
@@ -985,8 +985,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_sven_empty"                 
  {
@@ -1008,8 +1008,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_tidehunter_empty"           
  {
@@ -1031,8 +1031,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_tinker_empty"               
  {
@@ -1054,8 +1054,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_tiny_empty"                 
  {
@@ -1077,8 +1077,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_vengefulspirit_empty"       
  {
@@ -1100,8 +1100,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_venomancer"             
  {
@@ -1123,8 +1123,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_viper_empty"                
  {
@@ -1146,8 +1146,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_weaver_empty"               
  {
@@ -1169,8 +1169,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_windrunner_empty"           
  {
@@ -1192,8 +1192,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_witch_doctor_empty"         
  {
@@ -1215,8 +1215,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_zuus_empty"                 
  {
@@ -1238,8 +1238,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_broodmother_empty"          
  {
@@ -1261,8 +1261,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_skeleton_king_empty"        
  {
@@ -1284,8 +1284,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_queenofpain_empty"          
  {
@@ -1307,8 +1307,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_huskar_empty"               
  {
@@ -1330,8 +1330,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_jakiro_empty"               
  {
@@ -1353,8 +1353,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_batrider_empty"             
  {
@@ -1376,8 +1376,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_warlock_empty"              
  {
@@ -1399,8 +1399,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_alchemist_empty"            
  {
@@ -1422,8 +1422,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_death_prophet_empty"        
  {
@@ -1445,8 +1445,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_ursa_empty"                 
  {
@@ -1468,8 +1468,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_bounty_hunter_empty"        
  {
@@ -1491,8 +1491,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_silencer_empty"             
  {
@@ -1514,8 +1514,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_spirit_breaker_empty"       
  {
@@ -1537,8 +1537,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_invoker_empty"              
  {
@@ -1560,8 +1560,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_clinkz_empty"               
  {
@@ -1583,8 +1583,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_obsidian_destroyer_empty"   
  {
@@ -1606,8 +1606,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_shadow_demon_empty"         
  {
@@ -1629,8 +1629,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_lycan_empty"                
  {
@@ -1652,8 +1652,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_lone_druid_empty"           
  {
@@ -1675,8 +1675,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_brewmaster_empty"           
  {
@@ -1698,8 +1698,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_phantom_lancer_empty"       
  {
@@ -1721,8 +1721,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_treant_empty"               
  {
@@ -1744,8 +1744,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_ogre_magi_empty"            
  {
@@ -1767,8 +1767,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_chaos_knight_empty"         
  {
@@ -1790,8 +1790,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_phantom_assassin_empty"     
  {
@@ -1813,8 +1813,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_gyrocopter_empty"           
  {
@@ -1836,8 +1836,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_rubick_empty"               
  {
@@ -1859,8 +1859,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_luna_empty"                 
  {
@@ -1882,8 +1882,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_wisp_empty"                 
  {
@@ -1905,8 +1905,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_disruptor_empty"            
  {
@@ -1928,8 +1928,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_undying_empty"              
  {
@@ -1951,8 +1951,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_templar_assassin_empty"     
  {
@@ -1974,8 +1974,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_naga_siren_empty"           
  {
@@ -1997,8 +1997,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_nyx_assassin_empty"         
  {
@@ -2020,8 +2020,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_keeper_of_the_light_empty"  
  {
@@ -2043,8 +2043,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_visage_empty"               
  {
@@ -2066,8 +2066,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_meepo_empty"                
  {
@@ -2089,8 +2089,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_magnataur_empty"            
  {
@@ -2112,8 +2112,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_centaur_empty"              
  {
@@ -2135,8 +2135,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_slark_empty"                
  {
@@ -2158,8 +2158,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_shredder_empty"             
  {
@@ -2181,8 +2181,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_medusa_empty"               
  {
@@ -2204,8 +2204,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_troll_warlord_empty"        
  {
@@ -2227,8 +2227,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_tusk_empty"                 
  {
@@ -2250,8 +2250,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_bristleback_empty"          
  {
@@ -2273,8 +2273,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_skywrath_mage_empty"        
  {
@@ -2296,8 +2296,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_elder_titan_empty"          
  {
@@ -2319,8 +2319,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_abaddon_empty"              
  {
@@ -2342,8 +2342,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_earth_spirit_empty"         
  {
@@ -2365,8 +2365,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_ember_spirit_empty"         
  {
@@ -2388,8 +2388,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_legion_commander_empty"     
  {
@@ -2411,8 +2411,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_phoenix_empty"              
  {
@@ -2434,8 +2434,8 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 "npc_dota_hero_terrorblade_empty"          
  {
@@ -2457,7 +2457,7 @@
  "Ability14""" 
  "Ability15""" 
  "Ability16""" 
- "ProjectileSpeed""1000" 
- "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
+// "ProjectileSpeed""1000" 
+// "ProjectileModel""particles/base_attacks/generic_projectile.vpcf"
 }
 }

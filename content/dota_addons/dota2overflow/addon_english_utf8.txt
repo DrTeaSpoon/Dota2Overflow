@@ -6,6 +6,17 @@
 		"game_mode_15"				"Dota 2 Overflow"
 		"addon_game_name"			"Dota 2 Overflow"
 		
+		"addonname"			"Dota 2 Overflow"
+		"info_header_objective"	"Dota 2 with twists."
+		"overflow_brief_description"	"Create your hero from three basic abilities, two passives and one ultimate."
+		"header_how_to_play"	""
+		"tips_header"	"Notable features:"
+		"tip01"	"<font color='#FF7800'>Fire damage</font>: Fire damage is magical damage that stacks up to 100. Every 0.5 second the stack deals damage equal to stack count multiplied by two and then stack is reduced by one."
+		"tip02"	"<font color='#0078FF'>Shock damage</font>: Deals magic damage equal to target's armor multiplied by 10. If ammor is lower than 1 then it defaults to 1 for the damage calculation."
+		"tip03"	""
+		"tip04"	""
+		"tip05"	""
+		
 		//"DOTA_Basics"							"ABILITIES"
 		//"DOTA_Upgrades"							"ITEMS"
 		//"DOTA_Shop_Category_Basics"				"ABILITIES"
@@ -288,7 +299,7 @@
 		"DOTA_Tooltip_ability_burner"                                                     "Burner"
 		"DOTA_Tooltip_ability_burner_Description"                                         "Deals fire damage every second to enemies in radius."
 		"DOTA_Tooltip_ability_burner_radius"                                              "Radius:"
-		"DOTA_Tooltip_ability_burner_damage"                                              "Fire Damage:"
+		"DOTA_Tooltip_ability_burner_damage"                                              "<font color='#FF7800'>Fire damage</font>:"
 
 		"DOTA_Tooltip_ability_healer"                                                     "Healer"
 		"DOTA_Tooltip_ability_healer_Description"                                         "Heals allies every second in radius."
@@ -339,7 +350,7 @@
 		"DOTA_Tooltip_ability_fire_wall_effect_duration"                                  "Duration:"
 		"DOTA_Tooltip_ability_fire_wall_effect_radius"                                    "Radius:"
 		"DOTA_Tooltip_ability_fire_wall_effect_length"                                    "Wall Lenght:"
-		"DOTA_Tooltip_ability_fire_wall_stack_actual"                                     "Fire Damage:"
+		"DOTA_Tooltip_ability_fire_wall_stack_actual"                                     "<font color='#FF7800'>Fire damage</font>:"
 
 		"DOTA_Tooltip_ability_abaddon_soul_rip"                                           "Life Rip"
 		"DOTA_Tooltip_ability_abaddon_soul_rip_Description"                               "Steal portion of target foe's life force. Stuns the target for short duration."
@@ -420,14 +431,14 @@
 		"DOTA_Tooltip_ability_earthshaker_fissure_lua_stun_duration"                      "STUN DURATION:"
 
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua"                                     "Arc Lightning"
-		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_Description"                         "Hurls a bolt of lightning that leaps through nearby enemy units."
+		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_Description"                         "Hurls a bolt of lightning that leaps through nearby enemy units. Deals <font color='#0078FF'>Shock damage</font>."
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_radius"                              "Bounce Distance:"
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_jump_count"                          "Number Of Bounces:"
 
 		"DOTA_Tooltip_ability_zuus_static_field_lua"                                      "Static Field"
-		"DOTA_Tooltip_ability_zuus_static_field_lua_Description"                          "You shock all nearby enemy units whenever you casts a spell, causing damage proportional to their current health."
+		"DOTA_Tooltip_ability_zuus_static_field_lua_Description"                          "You shock all nearby enemy units whenever you casts a spell."
 		"DOTA_Tooltip_ability_zuus_static_field_lua_radius"                               "Radius:"
-		"DOTA_Tooltip_ability_zuus_static_field_lua_damage_health_pct"                    "Current Health as Damage:%"
+		"DOTA_Tooltip_ability_zuus_static_field_lua_damage"									"<font color='#0078FF'>Shock damage</font>:"
 
 		"DOTA_Tooltip_ability_mult_dummy_unit"                                            "Mult Dummy Unit"
 		"DOTA_Tooltip_ability_mult_dummy_unit_Description"                                ""
@@ -535,11 +546,44 @@
 		"DOTA_Tooltip_ability_winds_radius"                                               "Radius:"
 
 		"DOTA_Tooltip_ability_summon_basic"                                               "Summon Suicide Squad"
-		"DOTA_Tooltip_ability_summon_basic_Description"                                   "Summons group of fire demons with only one goal: Blow up in magnificent fire!\nDeals fire damage and that damage * 20 as magical damage."
+		"DOTA_Tooltip_ability_summon_basic_Description"                                   "Summons group of fire demons with only one goal: Blow up in magnificent fire!\nDeals fire damage."
 		"DOTA_Tooltip_ability_summon_basic_duration"                                      "Duration:"
 		"DOTA_Tooltip_ability_summon_basic_radius"                                        "Radius:"
-		"DOTA_Tooltip_ability_summon_basic_damage"                                        "Fire Damage:"
+		"DOTA_Tooltip_ability_summon_basic_damage"                                        "<font color='#FF7800'>Fire damage</font>:"
+		"DOTA_Tooltip_ability_summon_basic_m_damage"                                      "Magic Damage:"
 		"DOTA_Tooltip_ability_summon_basic_units"                                         "Units:"
+		
+		
+		
+		
+		"DOTA_Tooltip_earthshaker_aftershock_lua_stun"                                             "Aftershock Stun"
+		"DOTA_Tooltip_earthshaker_aftershock_lua_stun_Description"                                 "Stunned"
+		"DOTA_Tooltip_generic_lua_stun"                                             "Stun"
+		"DOTA_Tooltip_generic_lua_stun_Description"                                 "Stunned"
+		
+		
+		"DOTA_Tooltip_earthshaker_enchant_totem_lua_modifier"                                             "Enchanted Weapon"
+		"DOTA_Tooltip_earthshaker_enchant_totem_lua_modifier_Description"                                 "Bonus damage on next attack."
+		"DOTA_Tooltip_react_arm_mod"                                             "Reactive Armor"
+		"DOTA_Tooltip_react_arm_mod_Description"                                 "Armor and Magic Resistance for each layer."
+		"DOTA_Tooltip_collapse_arm_mod"                                             "Collapsing Armor"
+		"DOTA_Tooltip_collapse_arm_mod_Description"                                 "Armor and Magic Resistance for each layer."
 
+		"DOTA_Tooltip_modifier_dark_blade_curse"					"Curse: Dark Spell Blade"
+		"DOTA_Tooltip_modifier_dark_blade_curse_Description"  		"Reduced magic resistance."
+		"DOTA_Tooltip_element_fire"					"Fire Damage"
+		"DOTA_Tooltip_element_fire_Description"  		"2 Damage per stack every 0.5 seconds. Stack reduced by 1 after the damage."
+		"DOTA_Tooltip_hex_6_gon_effect_modifier"                             "Hexed"
+		"DOTA_Tooltip_ice_path_stun"                                         "Stun"
+		"DOTA_Tooltip_modifer_abaddon_soul_rip_lift"                         "Stun"
+		"DOTA_Tooltip_modifer_abaddon_soul_rip_heal"                         "Healing"
+		"DOTA_Tooltip_hex_6_gon_effect_modifier_Description"                 "Being harmlesss animal is cool."
+		"DOTA_Tooltip_ice_path_stun_Description"                             "Stunned"
+		"DOTA_Tooltip_modifer_abaddon_soul_rip_lift_Description"             "Stunned"
+		"DOTA_Tooltip_modifer_abaddon_soul_rip_heal_Description"             "Stolen health"
+		
+		"DOTA_Tooltip_metamorphosis_mod"                                             "Morphed into Roshan"
+		"DOTA_Tooltip_metamorphosis_mod_Description"                                 "May Roshan be with you."
+		
 	}
 }
