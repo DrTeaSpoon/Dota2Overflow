@@ -17,8 +17,10 @@ MODIFIER_EVENT_ON_ABILITY_EXECUTED
 	return funcs
 end
 
-function earthshaker_aftershock_lua_passive:OnAbilityExecuted()
+function earthshaker_aftershock_lua_passive:OnAbilityExecuted(params)
 	if IsServer() then
+		--DeepPrintTable(params)
+		if params.unit == self:GetParent() and not params.ability.IsProcBanned then
 		local hAbility = self:GetAbility()
 		if hAbility:IsItem() then return end
 		local iAoE = hAbility:GetSpecialValueFor( "aftershock_range" )
@@ -47,6 +49,7 @@ function earthshaker_aftershock_lua_passive:OnAbilityExecuted()
 					enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "earthshaker_aftershock_lua_stun", { duration = fDuration } )
 				end
 			end
+		end
 		end
 	end
 end

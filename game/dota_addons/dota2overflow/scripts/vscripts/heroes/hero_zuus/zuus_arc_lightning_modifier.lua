@@ -65,14 +65,17 @@ end
 
 function zuus_arc_lightning_lua_modifier:DamageParent()
 	if IsServer() then
+		local armor = self:GetParent():GetPhysicalArmorValue()
+		if armor < 1 then armor = 1 end
 		local damage = {
 			victim = self:GetParent(),
 			attacker = self:GetCaster(),
-			damage = self.dmg,
+			damage = self.dmg * armor ,
 			damage_type = self.dmgtype,
 			ability = self:GetAbility()
 		}
 		ApplyDamage( damage )
+		
 	end
 end
 

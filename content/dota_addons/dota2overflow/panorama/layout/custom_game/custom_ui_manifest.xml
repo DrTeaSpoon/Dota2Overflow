@@ -68,5 +68,6 @@
 		<CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/hero_kit.xml" />
 		<CustomUIElement type="HeroSelection" 		layoutfile="file://{resources}/layout/custom_game/multiteam_hero_select_overlay.xml" />
 		<CustomUIElement type="EndScreen" 			layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
+		<CustomUIElement type="GameInfo" 			layoutfile="file://{resources}/layout/custom_game/overflow_info.xml" />
   </Panel>
 </root>

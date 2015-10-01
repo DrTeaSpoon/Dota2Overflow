@@ -160,3 +160,8 @@ function blink_support:CCastFilter( hTarget, bError )
 		end
 	end
 end
+
+
+function blink_support:OnUpgrade()
+	self.IsProcBanned = true
+end

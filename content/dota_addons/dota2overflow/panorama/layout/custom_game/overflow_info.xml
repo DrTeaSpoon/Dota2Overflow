@@ -1,0 +1,22 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/game_info.css" />
+	</styles>
+	<Panel class="OverflowInfo">
+		<Panel id="Title">
+			<Label id="TitleName" text="#addonname" />
+		</Panel>
+		<Label id="ObjectiveHeader" class="Header" html="true" text="#info_header_objective" />
+		<Label id="BriefDescription" text="#overflow_brief_description" />
+		<!--<Label id="HowToPlayHeader" class="Header" html="true" text="#header_how_to_play" />-->
+		<!--<Label id="TipsHeader" class="Header" html="true" text="#tips_header" />-->
+		<Panel id="TipsRow" class="InfoRow">
+			<Label id="TipText01" class="TipText" html="true" text="#tip01" />
+			<Label id="TipText02" class="TipText" html="true" text="#tip02" />
+			<Label id="TipText03" class="TipText" html="true" text="#tip03" />
+			<Label id="TipText04" class="TipText" html="true" text="#tip04" />
+		</Panel>
+	</Panel>
+</root>
+

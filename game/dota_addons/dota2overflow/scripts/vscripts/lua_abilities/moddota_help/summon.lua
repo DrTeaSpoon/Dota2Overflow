@@ -17,7 +17,7 @@ function summon_basic:OnSpellStart()
 	PrecacheUnitByNameAsync(sUnit,
 	function()
 	for i = 1 , iNum do
-	local hUnit = CreateUnitByName(sUnit, vPoint, true, self:GetCaster():GetPlayerOwner(), self:GetCaster(), self:GetCaster():GetPlayerOwnerID() ) 
+	local hUnit = CreateUnitByName(sUnit, vPoint, true, self:GetCaster():GetPlayerOwner(), self:GetCaster(), self:GetCaster():GetTeam() ) 
                 hUnit:AddNewModifier(self:GetCaster(), self, "modifier_kill", {
                     duration = self:GetSpecialValueFor("duration")
                 })
