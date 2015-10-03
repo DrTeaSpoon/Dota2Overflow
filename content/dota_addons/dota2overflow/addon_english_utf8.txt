@@ -581,9 +581,17 @@
 		"DOTA_Tooltip_ice_path_stun_Description"                             "Stunned"
 		"DOTA_Tooltip_modifer_abaddon_soul_rip_lift_Description"             "Stunned"
 		"DOTA_Tooltip_modifer_abaddon_soul_rip_heal_Description"             "Stolen health"
+		"npc_suicide_unit"                                                                "Suicide Squad"
 		
 		"DOTA_Tooltip_metamorphosis_mod"                                             "Morphed into Roshan"
 		"DOTA_Tooltip_metamorphosis_mod_Description"                                 "May Roshan be with you."
 		
+		"DOTA_Tooltip_ability_metamorphosis"                                              "Roshanify"
+		"DOTA_Tooltip_ability_metamorphosis_Description"                                  "For the limited duration you take form of Mighty Roshan! Provides base damage bonus and chance to stun on every attack."
+		"DOTA_Tooltip_ability_metamorphosis_base_damage"                                  "Base Damage Bonus:"
+		"DOTA_Tooltip_ability_metamorphosis_stun_chance"                                  "Bash Chance:"
+		"DOTA_Tooltip_ability_metamorphosis_stun_duration"                                "Bash Duration:"
+		"DOTA_Tooltip_ability_metamorphosis_attack_range"                                 "Attack Range:"
+		"DOTA_Tooltip_ability_metamorphosis_move_speed"                                   "Move Speed:"
 	}
 }

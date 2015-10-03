@@ -15,6 +15,7 @@ function teleport_basic:OnSpellStart()
 	ParticleManager:SetParticleControl( self.start_fx, 0, hCaster:GetAbsOrigin()  )
 		EmitSoundOnLocationWithCaster(self:GetCaster():GetAbsOrigin() , "Hero_Wisp.Relocate", hCaster )
 		EmitSoundOnLocationWithCaster(self.point, "Hero_Wisp.Relocate", hCaster )
+		self:StartCooldown(self:GetCooldown(self:GetLevel()))
 end
 
 function teleport_basic:GetBehavior() 

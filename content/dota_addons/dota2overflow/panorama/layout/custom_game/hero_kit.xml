@@ -9,6 +9,31 @@
 	<Panel class="HeroKit_Root">
 		<Panel id="HeroKit_Listing_All">
 		
+		<Panel id="HeroKit_Attributes">
+			<Panel id="HeroKit_AttPoints" class="atr_point"><Label text="10" id="point_val"/></Panel>
+			<Panel id="HeroKit_StrStat">
+				<Button id="HeroKit_StrMinus" onactivate="StatMinus(0)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
+				<Button id="HeroKit_StrVal" class="atr_val" onactivate="StatPrimeChoose(0)"><Label text="22" id="str_val" /></Button>
+				<Button id="HeroKit_StrPlus" onactivate="StatPlus(0)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
+			</Panel>
+			
+			<Panel id="HeroKit_AgiStat">
+				<Button id="HeroKit_AgiMinus" onactivate="StatMinus(1)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
+				<Button id="HeroKit_AgiVal" onactivate="StatPrimeChoose(1)" class="atr_val"><Label text="22" id="agi_val"/></Button>
+				<Button id="HeroKit_AgiPlus" onactivate="StatPlus(1)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
+			</Panel>
+			
+			<Panel id="HeroKit_IntStat">
+				<Button id="HeroKit_IntMinus" onactivate="StatMinus(2)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
+				<Button id="HeroKit_IntVal" class="atr_val" onactivate="StatPrimeChoose(2)"><Label text="22" id="int_val"/></Button>
+				<Button id="HeroKit_IntPlus" onactivate="StatPlus(2)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
+			</Panel>
+			
+			<Panel id="HeroKit_Attributes_Info">
+				<Label text="#Dota_Atr_Info" id="atr_info"/>
+			</Panel>
+			
+		</Panel>
 		<Panel id="HeroKit_Abilities"></Panel> <Panel id="HeroKit_Traits"> </Panel> <Panel id="HeroKit_UltsList"> </Panel>
 		
 		</Panel>
@@ -18,7 +43,9 @@
 		<Label id="tool_tip_name" text="Ability" />
 		</Panel>
 		<Panel id="HeroKit_Tooltip_Ab_Desc">
-		<Label id="tool_tip_desc" text="Description" />
+		<Label id="tool_tip_desc" text="Description" html="true" />
+		<!--<Label id="tool_tip_cd" text="Description" html="true" />
+		<Label id="tool_tip_mana" text="Description" html="true" />-->
 		</Panel>
 		</Panel>
 		
@@ -50,6 +77,7 @@
 				</Panel>
 			</Panel>
 		</Panel>
+		
 		<Button id="HeroKit_Done" onactivate="OnDone()" class="ab_button_done"><Image src="file://{images}/custom_game/done.png" /></Button>
 	</Panel>
 </root>

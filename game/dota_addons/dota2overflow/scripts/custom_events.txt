@@ -8,5 +8,13 @@
 		"ability_d"	"string"
 		"ability_f"	"string"
 		"ability_r"	"string"
+		"hero_points" "short"
+		//"hero_pri" "short"
+		"hero_str" "short"
+		"hero_str_g" "float"
+		"hero_agi" "short"
+		"hero_agi_g" "float"
+		"hero_int" "short"
+		"hero_int_g" "float"
 	}
 }

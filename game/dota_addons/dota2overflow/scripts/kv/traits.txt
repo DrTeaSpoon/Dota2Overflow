@@ -4,7 +4,7 @@
 "1" "swift" //half done (effect needed)
 "2"	"nth_attack" //done (needs name)
 "3"	"earthshaker_aftershock_lua" //done
-//"4"	"battle_rythm" // 
+"4"	"military" // 
 "5"	"zuus_static_field_lua" //done
 
 "6" "collapsing_armor" // done
@@ -24,6 +24,8 @@
 //"18" "runner"
 //"19" "reflexes"
 //"20" "overload"
+
+"21" "vampiric"
 }
 
  

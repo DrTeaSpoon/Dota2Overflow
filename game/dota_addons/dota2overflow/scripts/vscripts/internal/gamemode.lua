@@ -3,16 +3,26 @@
 function GameMode:AbilityChoise(choises)
 	if not GameRules.PlayerAbs then
 	GameRules.PlayerAbs = {}
+	GameRules.PlayerCustomHero = {}
 	end
 	local pID = choises.PlayerID
 	GameRules.PlayerAbs[pID] = {}
-	DeepPrintTable(choises)
+	--DeepPrintTable(choises)
 	GameRules.PlayerAbs[pID][1] = choises.ability_q
 	GameRules.PlayerAbs[pID][2] = choises.ability_w
 	GameRules.PlayerAbs[pID][3] = choises.ability_e
 	GameRules.PlayerAbs[pID][4] = choises.ability_d
 	GameRules.PlayerAbs[pID][5] = choises.ability_f
 	GameRules.PlayerAbs[pID][6] = choises.ability_r
+	GameRules.PlayerCustomHero[pID] = {}
+	GameRules.PlayerCustomHero[pID].points =	choises.hero_points
+	--GameRules.PlayerCustomHero[pID].pri =	choises.hero_pri
+	GameRules.PlayerCustomHero[pID].str =	choises.hero_str
+	GameRules.PlayerCustomHero[pID].str_g =	choises.hero_str_g
+	GameRules.PlayerCustomHero[pID].agi =	choises.hero_agi
+	GameRules.PlayerCustomHero[pID].agi_g =	choises.hero_agi_g
+	GameRules.PlayerCustomHero[pID].int =	choises.hero_int
+	GameRules.PlayerCustomHero[pID].int_g =	choises.hero_int_g
 end
 function GameMode:_InitGameMode()
   -- Setup rules

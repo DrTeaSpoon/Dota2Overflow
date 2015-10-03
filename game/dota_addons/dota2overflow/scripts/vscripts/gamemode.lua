@@ -87,6 +87,7 @@ function GameMode:OnFirstPlayerLoaded()
 	CustomNetTables:SetTableValue( "ult_list", tostring(k), { name = tostring(v) } )
 	n = n + 1
   end
+	LinkLuaModifier( "heroes_base_mod", "lua_mods/heroes_base_mod.lua", LUA_MODIFIER_MOTION_NONE )
 end
 
 --[[
@@ -110,16 +111,21 @@ end
 function GameMode:OnHeroInGame(hero)
 	DebugPrint("[ARCHIVIST] Hero spawned in game for first time -- " .. hero:GetUnitName())
 
-  -- This line for example will set the starting gold of every hero to 500 unreliable gold
 	local pID = hero:GetPlayerID()
 	if hero:IsRealHero() and pID then
-	hero:SetGold(500, false)
-	
-			hero:AddNewModifier( hero, nil, "heroes_base_mod", {} ) 
+	hero:SetGold(700, false)
+	--STATS
+	if GameRules.PlayerCustomHero and GameRules.PlayerCustomHero[pID] then
+	hero:SetGold(100 * GameRules.PlayerCustomHero[pID].points, true)
+	hero:SetBaseStrength(GameRules.PlayerCustomHero[pID].str)
+	hero:SetBaseAgility(GameRules.PlayerCustomHero[pID].agi) 
+	hero:SetBaseIntellect(GameRules.PlayerCustomHero[pID].int) 
+	--hero:SetPrimaryAttribute(GameRules.PlayerCustomHero[pID].pri) 
+	hero:AddNewModifier( hero, nil, "heroes_base_mod", {gain_agi = GameRules.PlayerCustomHero[pID].agi_g,gain_str = GameRules.PlayerCustomHero[pID].str_g,gain_int = GameRules.PlayerCustomHero[pID].int_g} ) 
+	end
 	-- AddDarkCheck(hero)
 	local tAbTempList = GameRules.AbilityListing
 	for i = 1,6 do
-		local pID = hero:GetPlayerID()
 		if not GameRules.PlayerAbs[pID] then GameRules.PlayerAbs[pID] = {} end
 			if not GameRules.PlayerAbs[pID][i] or GameRules.PlayerAbs[pID][i] == "random" then
 				GameRules.PlayerAbs[pID][i] = self:RandomSkill(hero,i)

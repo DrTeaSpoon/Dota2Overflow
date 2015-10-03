@@ -10,7 +10,9 @@ end
 
 function hex_6_gon_effect_modifier:DeclareFunctions()
 	local funcs = {
-MODIFIER_PROPERTY_MODEL_CHANGE
+MODIFIER_PROPERTY_MODEL_CHANGE,
+MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE,
+MODIFIER_PROPERTY_MOVESPEED_MAX
 	}
  
 	return funcs
@@ -34,3 +36,7 @@ end
 function hex_6_gon_effect_modifier:IsHidden()
 	return false
 end
+
+
+function hex_6_gon_effect_modifier:GetModifierMoveSpeedOverride() return self:GetAbility():GetSpecialValueFor("move_speed") end
+function hex_6_gon_effect_modifier:GetModifierMoveSpeedMax() return self:GetAbility():GetSpecialValueFor("move_speed") end

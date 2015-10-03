@@ -61,17 +61,19 @@
     height: 700px;
 	overflow: clip clip;
     border: 0px solid black;
+    flow-children: right;
+    horizontal-align: right;
 }
 #HeroKit_Abilities
 {
-    vertical-align: top;
-    horizontal-align: left;
+   /* vertical-align: bottom;
+    horizontal-align: left; */
     border: 0px solid black;
     background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
     border-radius: 5px;
     flow-children: down;
-    width: 30%;
+    width: 23%;
     height: 650px;
 	padding-top:10px;
 	margin-top:15px;
@@ -82,14 +84,14 @@
 
 #HeroKit_Traits
 {
-    vertical-align: top;
-    horizontal-align: center;
+   /* vertical-align: bottom;
+    horizontal-align: left; */
     border: 0px solid black;
     background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #555555 ), to( #111111 ) );
     border-radius: 5px;
     flow-children: down;
-    width: 30%;
+    width: 23%;
     height: 650px;
 	padding-top:10px;
 	margin-top:15px;
@@ -100,14 +102,14 @@
 
 #HeroKit_UltsList
 {
-    vertical-align: top;
-    horizontal-align: right;
+   /* vertical-align: bottom;
+    horizontal-align: left; */
     border: 0px solid black;
     background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
     border-radius: 5px;
     flow-children: down;
-    width: 30%;
+    width: 23%;
     height: 650px;
 	padding-top:10px;
 	margin-top:15px;
@@ -118,9 +120,8 @@
 .Ability_row
 {
     flow-children: right;
-    horizontal-align: left;
+    horizontal-align: center;
     vertical-align: center;
-	margin-left:15px;
 }
 
 .ab_span
@@ -235,4 +236,208 @@
     border-radius: 5px;
     horizontal-align: center;
 	margin-left:5px;
+}
+
+
+ /* ATTRIBUTES */
+#HeroKit_Attributes
+{
+   /* vertical-align: bottom;
+    horizontal-align: left; */
+	width:250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flow-children: down;
+	margin-top:5px;
+    margin-left:50px;
+    margin-right:15px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #333333 ) );
+    horizontal-align: center;
+	
+}
+#HeroKit_AttPoints
+{
+	width:50px;
+	height:50px;
+    border-radius: 5px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #777700 ), to( #444400 ) );
+    horizontal-align: center;
+}
+
+#HeroKit_Attributes_Info
+{
+	width:100%;
+	height:450px;
+    horizontal-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	/*font-weight: bold;*/
+}
+#atr_info
+{
+	color:#FFFFFF;
+    font-size: 16px;
+	font-family: "Lucida Console";
+	text-align:center;
+}
+
+#point_val
+{
+	
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+}
+
+
+.atr_plus
+{
+	
+	width:50px;
+	height:50px;
+    border: 1px solid black;
+    border-radius: 5px 20px 20px 5px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+.atr_minus
+{
+	
+	width:50px;
+	height:50px;
+    border: 1px solid black;
+    border-radius: 20px 5px 5px 20px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+.atr_point
+{
+	width:100px;
+	height:50px;
+    border-radius: 5px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.atr_val
+{
+	width:100px;
+	height:50px;
+    border-radius: 5px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.prime
+{
+    border: 4px solid yellow;
+    border-radius: 0px;
+    padding-top:5px;
+	text-align:center;
+	width:100%;
+	height:100%;
+}
+
+    /* Str */
+#HeroKit_StrStat
+{
+    flow-children: right;
+    horizontal-align: center;
+}
+#HeroKit_StrMinus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #550000 ), to( #000000 ) );
+	
+}
+#HeroKit_StrVal
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #550000 ), to( #000000 ) );
+	
+}
+#HeroKit_StrPlus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #550000 ), to( #000000 ) );
+	
+}
+#str_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+    /* Agi */
+#HeroKit_AgiStat
+{
+    flow-children: right;
+    horizontal-align: center;
+	
+}
+#HeroKit_AgiMinus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #005500 ), to( #000000 ) );
+	
+}
+#HeroKit_AgiVal
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #005500 ), to( #000000 ) );
+	
+}
+#HeroKit_AgiPlus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #005500 ), to( #000000 ) );
+	
+}
+#agi_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+
+
+    /* Int */
+#HeroKit_IntStat
+{
+    flow-children: right;
+    horizontal-align: center;
+	
+}
+#HeroKit_IntMinus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	
+}
+#HeroKit_IntVal
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	
+}
+#HeroKit_IntPlus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	
+}
+#int_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
 }

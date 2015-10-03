@@ -40,8 +40,6 @@ function element_fire:OnIntervalThink()
 		end
 		ApplyDamage(damageTable)
 		self:DecrementStackCount()
-		local scale = math.ceil(self:GetStackCount()/4)
-		ParticleManager:SetParticleControl( self.nFXIndex, 14, Vector( 1, 0.1*scale, 1 ) )
 		if self:GetStackCount() > 0 then
 			self:SetDuration( 0.5, true )
 		else
