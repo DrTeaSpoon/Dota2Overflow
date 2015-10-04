@@ -135,6 +135,10 @@ function GameMode:OnHeroInGame(hero)
 		function()
 			PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][i], function()
 				hero:AddAbility(GameRules.PlayerAbs[pID][i])
+                local ab = hero:FindAbilityByName(multV)
+                if ab then
+                    ab:SetActivated(true)
+                end
 			end)
 		end)
 	end

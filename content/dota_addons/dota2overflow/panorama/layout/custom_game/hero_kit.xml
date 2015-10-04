@@ -29,6 +29,11 @@
 				<Button id="HeroKit_IntPlus" onactivate="StatPlus(2)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
 			</Panel>
 			
+			<Panel id="HeroKit_Compiled">
+				<Panel id="HeroKit_HpVal" class="hero_val"><Label text="618" id="hp_val"/></Panel>
+				<Panel id="HeroKit_ManaVal" class="hero_val"><Label text="286" id="mp_val"/></Panel>
+			</Panel>
+			
 			<Panel id="HeroKit_Attributes_Info">
 				<Label text="#Dota_Atr_Info" id="atr_info"/>
 			</Panel>
@@ -44,8 +49,8 @@
 		</Panel>
 		<Panel id="HeroKit_Tooltip_Ab_Desc">
 		<Label id="tool_tip_desc" text="Description" html="true" />
-		<!--<Label id="tool_tip_cd" text="Description" html="true" />
-		<Label id="tool_tip_mana" text="Description" html="true" />-->
+		<Label id="tool_tip_cd" text="Cooldown" html="true" />
+		<Label id="tool_tip_mana" text="Mana Cost" html="true" />
 		</Panel>
 		</Panel>
 		

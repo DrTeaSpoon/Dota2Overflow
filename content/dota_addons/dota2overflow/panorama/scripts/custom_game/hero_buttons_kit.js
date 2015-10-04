@@ -206,12 +206,17 @@ function SetKitTooltip(abilityName)
 {
 	var tooltip_name = $.FindChildInContext('#tool_tip_name');
 	var tooltip_desc = $.FindChildInContext('#tool_tip_desc');
-	//var tooltip_cd = $.FindChildInContext('#tool_tip_cd');
-	//var tooltip_mana = $.FindChildInContext('#tool_tip_mana');
-	tooltip_name.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName )
-	tooltip_desc.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName+"_Description" )
-	//tooltip_cd.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName+"_HK_Cooldown" )
-	//tooltip_mana.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName+"_HK_ManaCost" )
+	var tooltip_cd = $.FindChildInContext('#tool_tip_cd');
+	var tooltip_mana = $.FindChildInContext('#tool_tip_mana');
+	tooltip_name.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName );
+	tooltip_desc.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName+"_Description" );
+	if ($.Localize( "#DOTA_HeroKit_"+abilityName+"_Cooldown" ) == "DOTA_HeroKit_"+abilityName+"_Cooldown"){
+	tooltip_cd.text = "Cooldown: N/A";
+	tooltip_mana.text = "Mana Cost: N/A";
+	} else {
+	tooltip_cd.text = "Cooldown: " + $.Localize( "#DOTA_HeroKit_"+abilityName+"_Cooldown" ) + " seconds";
+	tooltip_mana.text = "Mana Cost: " + $.Localize( "#DOTA_HeroKit_"+abilityName+"_ManaCost" );
+	}
 }
 function OnRemoveSkill(slot)
 {
@@ -243,7 +248,8 @@ function StatPlus(stat)
 	HStat[2].Val = Number(HStat[2].Panel.text);
 	if (PointsVal > 0) {
 		if (HStat[0].Val + HStat[1].Val + HStat[2].Val + PointsVal == 76) {
-			HStat[stat].Panel.text = String(HStat[stat].Val + 1)
+			HStat[stat].Val = HStat[stat].Val + 1
+			HStat[stat].Panel.text = String(HStat[stat].Val)
 			PointsPanel.text = String(PointsVal - 1)
 		} else {
 			HStat[0].Panel.text = "1";
@@ -252,6 +258,14 @@ function StatPlus(stat)
 			PointsPanel.text = "-666"
 		}
 	}
+	
+	var HpPanel = $.FindChildInContext('#hp_val');
+	var MpPanel = $.FindChildInContext('#mp_val');
+	HpPanel.text = String(HStat[0].Val * 19 + 200);
+	MpPanel.text = String(HStat[2].Val * 13);
+	
+	
+	
 }
 //
 function StatMinus(stat)
@@ -270,7 +284,8 @@ function StatMinus(stat)
 	HStat[2].Val = Number(HStat[2].Panel.text);
 	if (HStat[stat].Val > 1) {
 		if (HStat[0].Val + HStat[1].Val + HStat[2].Val + PointsVal == 76) {
-		HStat[stat].Panel.text = String(HStat[stat].Val - 1)
+			HStat[stat].Val = HStat[stat].Val - 1
+		HStat[stat].Panel.text = String(HStat[stat].Val)
 		PointsPanel.text = String(PointsVal + 1)
 	} else {
 		HStat[0].Panel.text = "1";
@@ -279,6 +294,10 @@ function StatMinus(stat)
 		PointsPanel.text = "-666"
 	}
 	}
+	var HpPanel = $.FindChildInContext('#hp_val');
+	var MpPanel = $.FindChildInContext('#mp_val');
+	HpPanel.text = String(HStat[0].Val * 19 + 200);
+	MpPanel.text = String(HStat[2].Val * 13);
 }
 //
 //function StatGainPlus()

@@ -1,0 +1,89 @@
+"DOTA_HeroKit_abaddon_soul_rip_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_ice_path_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_earthshaker_enchant_totem_lua_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_zuus_arc_lightning_lua_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_blink_support_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_hex_6_gon_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_fire_wall_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_winds_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_teleport_basic_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_summon_basic_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_earthshaker_echo_slam_lua_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_light_blade_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_dark_blade_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_metamorphosis_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_seer_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_spectral_form_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_vampiric_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_swift_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_nth_attack_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_earthshaker_aftershock_lua_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_military_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_zuus_static_field_lua_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_collapsing_armor_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_reactive_armor_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_burner_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_healer_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_mana_well_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_evasion_ManaCost" "0/0/0/0"
+"DOTA_HeroKit_critical_ManaCost" "0/0/0/0"
+
+"DOTA_HeroKit_abaddon_soul_rip_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_ice_path_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_earthshaker_enchant_totem_lua_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_zuus_arc_lightning_lua_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_blink_support_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_hex_6_gon_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_fire_wall_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_winds_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_teleport_basic_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_summon_basic_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_earthshaker_echo_slam_lua_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_light_blade_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_dark_blade_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_metamorphosis_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_seer_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_spectral_form_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_vampiric_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_swift_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_nth_attack_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_earthshaker_aftershock_lua_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_military_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_zuus_static_field_lua_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_collapsing_armor_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_reactive_armor_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_burner_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_healer_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_mana_well_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_evasion_Cooldown" "0/0/0/0"
+"DOTA_HeroKit_critical_Cooldown" "0/0/0/0"
+
+"DOTA_HeroKit_abaddon_soul_rip_%
+"DOTA_HeroKit_ice_path_%
+"DOTA_HeroKit_earthshaker_enchant_totem_lua_%
+"DOTA_HeroKit_zuus_arc_lightning_lua_%
+"DOTA_HeroKit_blink_support_%
+"DOTA_HeroKit_hex_6_gon_%
+"DOTA_HeroKit_fire_wall_%
+"DOTA_HeroKit_winds_%
+"DOTA_HeroKit_teleport_basic_%
+"DOTA_HeroKit_summon_basic_%
+"DOTA_HeroKit_earthshaker_echo_slam_lua_%
+"DOTA_HeroKit_light_blade_%
+"DOTA_HeroKit_dark_blade_%
+"DOTA_HeroKit_metamorphosis_%
+"DOTA_HeroKit_seer_%
+"DOTA_HeroKit_spectral_form_%
+"DOTA_HeroKit_vampiric_%
+"DOTA_HeroKit_swift_%
+"DOTA_HeroKit_nth_attack_%
+"DOTA_HeroKit_earthshaker_aftershock_lua_%
+"DOTA_HeroKit_military_%
+"DOTA_HeroKit_zuus_static_field_lua_%
+"DOTA_HeroKit_collapsing_armor_%
+"DOTA_HeroKit_reactive_armor_%
+"DOTA_HeroKit_burner_%
+"DOTA_HeroKit_healer_%
+"DOTA_HeroKit_mana_well_%
+"DOTA_HeroKit_evasion_%
+"DOTA_HeroKit_critical_%
