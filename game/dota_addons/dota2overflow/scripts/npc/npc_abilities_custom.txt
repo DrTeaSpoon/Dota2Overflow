@@ -2121,5 +2121,55 @@
 			}
 		}
 	}
+	
+	"shadow_walk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/shadow_walk/ability.lua"
+		"AbilityTextureName"			"shadow_walk"
+		"AbilityCastPoint"              "0.1"
+		"AbilityCooldown"               "20"
+		"AbilityManaCost"               "60"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			//"model"	"models/heroes/spectre/spectre.vmdl"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_slark.vsndevts" //Hero_Slark.ShadowDance
+		"soundfile" "soundevents/game_sounds_hero_pick.vsndevts" //Hero_Nevermore.Pick 
+		"particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+		"particle"	"particles/econ/items/nightstalker/nightstalker_black_nihility/nightstalker_nihility_darkness_hero_effect.vpcf"
+		"particle"	"particles/shadow_raze_gen/raze.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"			"20 24 28 32"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"poison_damage"			"75 150 225 300"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed_bonus"			"20 30 40 50"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"			"150"
+			}
+		}
+	}
+	
+	
+	
 }
 

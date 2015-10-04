@@ -17,6 +17,9 @@ end
 function metamorphosis_mod:OnDestroy()
 	if IsServer() then
 		self:GetParent():SetAttackCapability(self.OriginalAtkCap) 
+		self.nFXIndex = ParticleManager:CreateParticle( "particles/neutral_fx/roshan_spawn.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
+		ParticleManager:SetParticleControl(self.nFXIndex, 0, self:GetCaster():GetOrigin()) 
+		ParticleManager:ReleaseParticleIndex(self.nFXIndex)
 	end
 end
  

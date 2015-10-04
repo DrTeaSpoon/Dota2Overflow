@@ -12,11 +12,11 @@
 		"header_how_to_play"	""
 		"tips_header"	"Notable features:"
 		"tip01"	"<font color='#FF7800'>Fire damage</font>: Fire damage is magical damage that stacks up to 100. Every 0.5 second the stack deals damage equal to stack count multiplied by two and then stack is reduced by one."
-		"tip02"	"<font color='#0078FF'>Shock damage</font>: Deals magic damage equal to target's armor multiplied by 10. If ammor is lower than 1 then it defaults to 1 for the damage calculation."
+		"tip02"	"<font color='#0078FF'>Shock damage</font>: Deals magic damage equal to target's armor multiplied by the shock damage. If ammor is lower than 1 then it defaults to 1 for the damage calculation."
 		"tip03"	""
 		"tip04"	""
 		"tip05"	""
-		"Dota_Atr_Info" "Here you set your base stats.\nUnspent gold is given at start.\nStat Gain: (Stat/10)\nStat cost increase by 50 for every 10 points."
+		"Dota_Atr_Info" "Here you set your base stats.\nUnspent gold is given at start.\nStat Gain: (Stat/10)\nStat cost increase by 50g for every 10 points."
 		//"DOTA_Basics"							"ABILITIES"
 		//"DOTA_Upgrades"							"ITEMS"
 		//"DOTA_Shop_Category_Basics"				"ABILITIES"
@@ -297,7 +297,7 @@
 
 		// ******************** ABILITIES ********************
 		"DOTA_Tooltip_ability_burner"                                                     "Burner"
-		"DOTA_Tooltip_ability_burner_Description"                                         "Deals fire damage every second to enemies in radius."
+		"DOTA_Tooltip_ability_burner_Description"                                         "Deals <font color='#FF7800'>Fire damage</font> every second to enemies in radius."
 		"DOTA_Tooltip_ability_burner_radius"                                              "Radius:"
 		"DOTA_Tooltip_ability_burner_damage"                                              "<font color='#FF7800'>Fire damage</font>:"
 
@@ -346,7 +346,7 @@
 		"DOTA_Tooltip_ability_teleport_basic_Description"                                 "Teleport anywhere on the map."
 
 		"DOTA_Tooltip_ability_fire_wall"                                                  "Fire Wall"
-		"DOTA_Tooltip_ability_fire_wall_Description"                                      "Creates Wall of Fire along drawn line. Deals fire damage."
+		"DOTA_Tooltip_ability_fire_wall_Description"                                      "Creates Wall of Fire along drawn line. Deals <font color='#FF7800'>Fire damage</font>."
 		"DOTA_Tooltip_ability_fire_wall_effect_duration"                                  "Duration:"
 		"DOTA_Tooltip_ability_fire_wall_effect_radius"                                    "Radius:"
 		"DOTA_Tooltip_ability_fire_wall_effect_length"                                    "Wall Lenght:"
@@ -431,12 +431,14 @@
 		"DOTA_Tooltip_ability_earthshaker_fissure_lua_stun_duration"                      "STUN DURATION:"
 
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua"                                     "Arc Lightning"
-		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_Description"                         "Hurls a bolt of lightning that leaps through nearby enemy units. Deals <font color='#0078FF'>Shock damage</font>."
+		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_Description"                         "Hurls a bolt of lightning that leaps through nearby enemy units. Deals <font color='#0078FF'>Shock damage</font> and Magic Damge."
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_radius"                              "Bounce Distance:"
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_jump_count"                          "Number Of Bounces:"
+		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_magic_damage"                        "Magic Damage:"
 
+		"DOTA_Tooltip_ability_zuus_static_field_lua_magic_damage"                         "Magic Damage:"
 		"DOTA_Tooltip_ability_zuus_static_field_lua"                                      "Static Field"
-		"DOTA_Tooltip_ability_zuus_static_field_lua_Description"                          "You shock all nearby enemy units whenever you casts a spell."
+		"DOTA_Tooltip_ability_zuus_static_field_lua_Description"                          "You shock all nearby enemy units whenever you casts a spell. Deals <font color='#0078FF'>Shock damage</font> and Magic Damge."
 		"DOTA_Tooltip_ability_zuus_static_field_lua_radius"                               "Radius:"
 		"DOTA_Tooltip_ability_zuus_static_field_lua_damage"									"<font color='#0078FF'>Shock damage</font>:"
 
@@ -546,7 +548,7 @@
 		"DOTA_Tooltip_ability_winds_radius"                                               "Radius:"
 
 		"DOTA_Tooltip_ability_summon_basic"                                               "Summon Suicide Squad"
-		"DOTA_Tooltip_ability_summon_basic_Description"                                   "Summons group of fire demons with only one goal: Blow up in magnificent fire!\nDeals fire damage."
+		"DOTA_Tooltip_ability_summon_basic_Description"                                   "Summons group of fire demons with only one goal: Blow up in magnificent fire!\nDeals <font color='#FF7800'>Fire damage</font>."
 		"DOTA_Tooltip_ability_summon_basic_duration"                                      "Duration:"
 		"DOTA_Tooltip_ability_summon_basic_radius"                                        "Radius:"
 		"DOTA_Tooltip_ability_summon_basic_damage"                                        "<font color='#FF7800'>Fire damage</font>:"
@@ -594,6 +596,7 @@
 		"DOTA_Tooltip_ability_metamorphosis_attack_range"                                 "Attack Range:"
 		"DOTA_Tooltip_ability_metamorphosis_move_speed"                                   "Move Speed:"
 		"DOTA_Tooltip_ability_metamorphosis_tool_tip_duration"                            "Duration:"
+		"DOTA_Tooltip_ability_zuus_static_field_lua_Duration"							"Duration:"
 		
 		"DOTA_Tooltip_ability_seer"                                                       "Seer"
 		"DOTA_Tooltip_ability_seer_Description"                                           "While channelling gain vision of all enemy heroes.\nDoes not include enemies who are invisible or dead at the start of the channel."
