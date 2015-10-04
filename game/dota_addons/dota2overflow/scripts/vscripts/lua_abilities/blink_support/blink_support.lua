@@ -21,10 +21,6 @@ function blink_support:GetCooldown( nLevel )
 	end
 end
 
-function blink_support:GetCastAnimation( )
-	local anim = ACT_DOTA_FLAIL
-	return anim
-end
 
 function blink_support:OnSpellStart()
 	local hCaster = self:GetCaster() --We will always have Caster.
@@ -36,7 +32,7 @@ function blink_support:OnSpellStart()
 	local vOrigin = hCaster:GetAbsOrigin() --Our caster's location
 	local nMaxBlink = self:GetSpecialValueFor( "max_blink" ) --How far can we actually blink?
 	local nClamp = self:GetSpecialValueFor( "blink_clamp" ) --If we try to over reach we use this value instead. (this is mechanic from blink dagger.)
-	if hTarget then
+	if hTarget and hCaster:GetTeamNumber() == hTarget:GetTeamNumber() and not hTarget:IsBuilding() then
 		if hCaster == hTarget then
 			if not self.hFountain and not self.bNoFountain then --We check if we have ever tried finding the fountain before.
 			local hFountain = Entities:FindByClassname(nil, "ent_dota_fountain") --Find first fountain
@@ -132,13 +128,13 @@ function blink_support:CCastFilter( hTarget, bError )
 		local vDiff = vPoint - vOrigin --Difference between the points
 		local nTargetID = hTarget:GetPlayerOwnerID() --getting targets owner id
 		local nCasterID = hCaster:GetPlayerOwnerID() --getting casters owner id
-		if hCaster:GetTeamNumber() ~= hTarget:GetTeamNumber() then
-			if bError then
-				return "#dota_hud_error_cant_cast_on_enemy"
-			else
-				return UF_FAIL_CUSTOM
-			end
-		end
+		--if hCaster:GetTeamNumber() ~= hTarget:GetTeamNumber() then
+		--	if bError then
+		--		return "#dota_hud_error_cant_cast_on_enemy"
+		--	else
+		--		return UF_FAIL_CUSTOM
+		--	end
+		--end
 		if nTargetID and nCasterID then --making sure they both exist
 			if PlayerResource:IsDisableHelpSetForPlayerID(nTargetID, nCasterID) then --target hates having caster help him out.
 				if bError then

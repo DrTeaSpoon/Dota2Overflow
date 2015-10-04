@@ -8,6 +8,7 @@ end
 
 function modifier_light_blade_fade:OnCreated( kv )
 	self.fade_id = kv.fade_id or GameRules:GetGameTime()
+	self.fade_id = kv.heal_count or 0
 end
 --------------------------------------------------------------------------------
 

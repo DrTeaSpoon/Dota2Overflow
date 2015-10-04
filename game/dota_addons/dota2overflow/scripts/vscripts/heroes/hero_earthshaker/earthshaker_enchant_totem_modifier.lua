@@ -39,7 +39,7 @@ function earthshaker_enchant_totem_lua_modifier:IsHidden()
 end
 
 function earthshaker_enchant_totem_lua_modifier:GetModifierBaseDamageOutgoing_Percentage()
-	return 100
+	return self:GetAbility():GetSpecialValueFor( "totem_damage_percentage" )
 end
 
 function earthshaker_enchant_totem_lua_modifier:OnAttackLanded( params )

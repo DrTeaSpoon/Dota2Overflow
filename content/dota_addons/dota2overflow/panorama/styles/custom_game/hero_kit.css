@@ -34,6 +34,7 @@
     horizontal-align: center;
 	margin:2px;
 	border-radius: 5px;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 
 .ab_button_done
@@ -58,7 +59,7 @@
 #HeroKit_Listing_All
 {
     width: 100%;
-    height: 700px;
+    height: 600px;
 	overflow: clip clip;
     border: 0px solid black;
     flow-children: right;
@@ -68,54 +69,57 @@
 {
    /* vertical-align: bottom;
     horizontal-align: left; */
-    border: 0px solid black;
+    border: 4px solid black;
     background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
-    height: 650px;
+    height: 550px;
 	padding-top:10px;
 	margin-top:15px;
     margin-left:15px;
     margin-right:0px;
 	overflow: clip scroll;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 
 #HeroKit_Traits
 {
    /* vertical-align: bottom;
     horizontal-align: left; */
-    border: 0px solid black;
+    border: 4px solid black;
     background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #555555 ), to( #111111 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
-    height: 650px;
+    height: 550px;
 	padding-top:10px;
 	margin-top:15px;
-    margin-left:0px;
+    margin-left:5px;
     margin-right:0px;
 	overflow: clip scroll;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 
 #HeroKit_UltsList
 {
    /* vertical-align: bottom;
     horizontal-align: left; */
-    border: 0px solid black;
+    border: 4px solid black;
     background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
-    height: 650px;
+    height: 550px;
 	padding-top:10px;
 	margin-top:15px;
-    margin-left:0px;
+    margin-left:5px;
     margin-right:15px;
 	overflow: clip scroll;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 .Ability_row
 {
@@ -169,10 +173,10 @@
     vertical-align: top;
     horizontal-align: center;
     border: 0px solid black;
-    background-color: #333553;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
     border-radius: 5px;
     flow-children: right;
+	padding:10px;
 }
 #HeroKit_TrSelect
 {
@@ -183,6 +187,7 @@
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222222 ) );
     border-radius: 5px;
     flow-children: right;
+	padding:10px;
 }
 #HeroKit_UlSelect
 {
@@ -193,6 +198,7 @@
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
     border-radius: 5px;
     flow-children: right;
+	padding:10px;
 }
 
 .lable_text_p
@@ -210,9 +216,10 @@
 }
 #HeroKit_Tooltip
 {
+    border: 2px solid black;
 	width:80%;
-	height:150px;
-    background-color: #333553;
+	height:200px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #222222 ) );
     border-radius: 5px;
     horizontal-align: center;
 	margin-left:15px;
@@ -223,7 +230,6 @@
 #HeroKit_Tooltip_Ab_Name
 {
 	width:99%;
-    background-color: #333553;
     border-radius: 5px;
     horizontal-align: center;
 	margin-left:15px;
@@ -233,11 +239,23 @@
 {
 	width:99%;
 	height:100%;
-    background-color: #333553;
     border-radius: 5px;
     horizontal-align: center;
 	margin-left:5px;
     flow-children: down;
+}
+
+#tool_tip_name
+{
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+}
+#tool_tip_desc
+{
+	color:#FFFFFF;
+    font-size: 20px;
+	font-family: "Lucida Console";
 }
 
 #tool_tip_cd
@@ -263,7 +281,7 @@
    /* vertical-align: bottom;
     horizontal-align: left; */
 	width:250px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     flow-children: down;
 	margin-top:5px;
@@ -275,17 +293,18 @@
 }
 #HeroKit_AttPoints
 {
-	width:50px;
+	width:100px;
 	height:50px;
     border-radius: 5px;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #777700 ), to( #444400 ) );
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #777700 ), to( #444400 ) );*/
+	background-image: url("file://{images}/custom_game/gold_vak.png");
     horizontal-align: center;
 }
 
 #HeroKit_Attributes_Info
 {
 	width:100%;
-	height:450px;
+	height:300px;
     horizontal-align: center;
 	color:#FFFFFF;
     font-size: 30px;
@@ -370,17 +389,19 @@
 }
 #HeroKit_StrMinus
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #550000 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
 	
 }
 #HeroKit_StrVal
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #550000 ), to( #000000 ) );
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	*/
+	background-image: url("file://{images}/custom_game/str_vak.png");
 	
 }
 #HeroKit_StrPlus
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #550000 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
 	
 }
 #str_val
@@ -403,17 +424,19 @@
 }
 #HeroKit_AgiMinus
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #005500 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #00ff00 ), to( #000000 ) );
 	
 }
 #HeroKit_AgiVal
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #005500 ), to( #000000 ) );
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	*/
+	background-image: url("file://{images}/custom_game/agi_vak.png");
 	
 }
 #HeroKit_AgiPlus
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #005500 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #00ff00 ), to( #000000 ) );
 	
 }
 #agi_val
@@ -438,17 +461,18 @@
 }
 #HeroKit_IntMinus
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #016dff ), to( #000000 ) );
 	
 }
 #HeroKit_IntVal
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
-	
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	*/
+	background-image: url("file://{images}/custom_game/int_vak.png");
 }
 #HeroKit_IntPlus
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #016dff ), to( #000000 ) );
 	
 }
 #int_val
@@ -475,7 +499,7 @@
     border-radius: 5px;
     flow-children: down;
     horizontal-align: center;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #DD0000 ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
 }
 #HeroKit_ManaVal
 {
@@ -484,7 +508,7 @@
     border-radius: 5px;
     flow-children: down;
     horizontal-align: center;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #0000DD ), to( #000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #016dff ), to( #000000 ) );
 }
 
 #hp_val

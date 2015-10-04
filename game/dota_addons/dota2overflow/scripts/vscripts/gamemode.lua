@@ -113,10 +113,10 @@ function GameMode:OnHeroInGame(hero)
 
 	local pID = hero:GetPlayerID()
 	if hero:IsRealHero() and pID then
-	hero:SetGold(700, false)
+	hero:SetGold(0, false)
 	--STATS
 	if GameRules.PlayerCustomHero and GameRules.PlayerCustomHero[pID] then
-	hero:SetGold(100 * GameRules.PlayerCustomHero[pID].points, true)
+	hero:SetGold( GameRules.PlayerCustomHero[pID].points, true)
 	hero:SetBaseStrength(GameRules.PlayerCustomHero[pID].str)
 	hero:SetBaseAgility(GameRules.PlayerCustomHero[pID].agi) 
 	hero:SetBaseIntellect(GameRules.PlayerCustomHero[pID].int) 

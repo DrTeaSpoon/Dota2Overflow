@@ -10,7 +10,7 @@
 		<Panel id="HeroKit_Listing_All">
 		
 		<Panel id="HeroKit_Attributes">
-			<Panel id="HeroKit_AttPoints" class="atr_point"><Label text="10" id="point_val"/></Panel>
+			<Panel id="HeroKit_AttPoints" class="atr_point"><Label text="3300" id="point_val"/></Panel>
 			<Panel id="HeroKit_StrStat">
 				<Button id="HeroKit_StrMinus" onactivate="StatMinus(0)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
 				<Button id="HeroKit_StrVal" class="atr_val" onactivate="StatPrimeChoose(0)"><Label text="22" id="str_val" /></Button>

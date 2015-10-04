@@ -84,7 +84,7 @@ function modifier_light_blade:OnDestroy()
 		end
 		if hTarget ~= nil and hTarget ~= self:GetParent() then
 			if ( not hTarget:TriggerSpellAbsorb( self ) ) then
-				hTarget:AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade", { duration = damage_delay, fade_id = self.fade_id } )
+				hTarget:AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade", { duration = damage_delay, fade_id = self.fade_id , heal_count = self.heal_count} )
 				EmitSoundOnLocationWithCaster(hTarget:GetOrigin(),  "Brewmaster_Storm.DispelMagic", self:GetCaster()) 
 			end
 	

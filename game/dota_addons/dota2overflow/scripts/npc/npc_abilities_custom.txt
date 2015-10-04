@@ -1067,6 +1067,11 @@
 				"var_type"				"FIELD_FLOAT"
 				"jump_delay"			"0.25 0.25 0.25 0.25"
 			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_damage"				"80 100 120 140"
+			}
 		}
 	}
 	
@@ -1172,6 +1177,11 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"damage"			"2 3 4 5 6 7 8"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_damage"				"20 30 40 50 60 70 80"
 			}
 		}
 	}
@@ -1955,6 +1965,11 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"move_speed"	"370"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tool_tip_duration"	"30.0 45.0 60.0"
 			}
 		}
 	}

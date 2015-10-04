@@ -8,7 +8,7 @@
 		
 		"addonname"			"Dota 2 Overflow"
 		"info_header_objective"	"Dota 2 with twists."
-		"overflow_brief_description"	"Create your hero from three basic abilities, two passives and one ultimate."
+		"overflow_brief_description"	"Create your hero from three active abilities, two passives and one ultimate.\nYou can also define your base stats and stat gain."
 		"header_how_to_play"	""
 		"tips_header"	"Notable features:"
 		"tip01"	"<font color='#FF7800'>Fire damage</font>: Fire damage is magical damage that stacks up to 100. Every 0.5 second the stack deals damage equal to stack count multiplied by two and then stack is reduced by one."
@@ -16,7 +16,7 @@
 		"tip03"	""
 		"tip04"	""
 		"tip05"	""
-		
+		"Dota_Atr_Info" "Here you set your base stats.\nUnspent gold is given at start.\nStat Gain: (Stat/10)\nStat cost increase by 50 for every 10 points."
 		//"DOTA_Basics"							"ABILITIES"
 		//"DOTA_Upgrades"							"ITEMS"
 		//"DOTA_Shop_Category_Basics"				"ABILITIES"
@@ -315,13 +315,13 @@
 		"DOTA_Tooltip_ability_collapsing_armor_Description"                               "Provides armor and magic resistance per layer. You recieve hero damage you lose one stack. Recovered over time."
 		"DOTA_Tooltip_ability_collapsing_armor_max"                                       "Max Stacks:"
 		"DOTA_Tooltip_ability_collapsing_armor_p_bonus"                                   "Armor:+"
-		"DOTA_Tooltip_ability_collapsing_armor_m_bonus"                                   "Magic Resistance:%"
+		"DOTA_Tooltip_ability_collapsing_armor_m_bonus"                                   "%Magic Resistance:"
 
 		"DOTA_Tooltip_ability_reactive_armor"                                             "Reactive Armor"
 		"DOTA_Tooltip_ability_reactive_armor_Description"                                 "Provides armor and magic resistance per layer. You recieve hero damage you gain one stack. Stacks are lost over time."
 		"DOTA_Tooltip_ability_reactive_armor_max"                                         "Max Stacks:"
 		"DOTA_Tooltip_ability_reactive_armor_p_bonus"                                     "Armor:"
-		"DOTA_Tooltip_ability_reactive_armor_m_bonus"                                     "Magic Resistance:%"
+		"DOTA_Tooltip_ability_reactive_armor_m_bonus"                                     "%Magic Resistance:"
 
 		"DOTA_Tooltip_ability_spell_react"                                                "Spell React"
 		"DOTA_Tooltip_ability_spell_react_Description"                                    ""
@@ -331,12 +331,12 @@
 
 		"DOTA_Tooltip_ability_evasion"                                                    "Evasion"
 		"DOTA_Tooltip_ability_evasion_Description"                                        "Chance to evade basic attacks."
-		"DOTA_Tooltip_ability_evasion_bonus"                                              "Chance:"
+		"DOTA_Tooltip_ability_evasion_bonus"                                              "%Chance:"
 
 		"DOTA_Tooltip_ability_critical"                                                   "Critical"
 		"DOTA_Tooltip_ability_critical_Description"                                       "Chance to deal critical damage."
-		"DOTA_Tooltip_ability_critical_bonus"                                             "Critical Damage:"
-		"DOTA_Tooltip_ability_critical_chance"                                            "Chance:"
+		"DOTA_Tooltip_ability_critical_bonus"                                             "%Critical Damage:"
+		"DOTA_Tooltip_ability_critical_chance"                                            "%Chance:"
 
 		"DOTA_Tooltip_ability_swift"                                                      "Swift"
 		"DOTA_Tooltip_ability_swift_Description"                                          "Provides movement speed bonus."
@@ -408,7 +408,7 @@
 		"DOTA_Tooltip_ability_mult_dummy_unit_Description"                                ""
 
 		"DOTA_Tooltip_ability_earthshaker_aftershock_lua"                                 "Aftershock"
-		"DOTA_Tooltip_ability_earthshaker_aftershock_lua_Description"                     "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when you cast your abilities."
+		"DOTA_Tooltip_ability_earthshaker_aftershock_lua_Description"                     "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when you cast your abilities.\nDoesn't work with Blink Support."
 		"DOTA_Tooltip_ability_earthshaker_aftershock_lua_aftershock_range"                "Radius:"
 		"DOTA_Tooltip_ability_earthshaker_aftershock_lua_tooltip_duration"                "Stun Duration:"
 
@@ -420,7 +420,7 @@
 
 		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua"                              "Enchant Weapon"
 		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua_Description"                  "Empowers your weapon of choise, causing it to deal extra damage on the next attack."
-		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua_totem_damage_percentage"      "Attack Damage Bonus:"
+		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua_totem_damage_percentage"      "%Attack Damage Bonus:"
 		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua_tooltip_duration"             "Damage Bonus Duration:"
 
 		"DOTA_Tooltip_ability_earthshaker_fissure_lua"                                    "Earthshaker Fissure Lua"
@@ -468,7 +468,7 @@
 		"DOTA_Tooltip_ability_dark_blade_scepter_fade"                                    "Scepter Safe Time:"
 
 		"DOTA_Tooltip_ability_light_blade"                                                "Light Spell Blade"
-		"DOTA_Tooltip_ability_light_blade_Description"                                    "Bouncing magic that deals damage to enemies and heals allies. Victims recieve safe time that makes them immune to bounce from this instance of spell. The safe time is increased with each enemy bounce. The increased safe time is reduced on ally bounces."
+		"DOTA_Tooltip_ability_light_blade_Description"                                    "Bouncing magic that deals damage to enemies and heals allies. Victims recieve safe time that makes them immune to bounce from this instance of spell. The safe time is increased with each ally bounce. The increased safe time is reduced on enemy bounces."
 		"DOTA_Tooltip_ability_light_blade_damage"                                         "Damage/Heal:"
 		"DOTA_Tooltip_ability_light_blade_aoe_range"                                      "Jump Radius:"
 		"DOTA_Tooltip_ability_light_blade_chain_fade"                                     "Safe Time:"
@@ -593,5 +593,65 @@
 		"DOTA_Tooltip_ability_metamorphosis_stun_duration"                                "Bash Duration:"
 		"DOTA_Tooltip_ability_metamorphosis_attack_range"                                 "Attack Range:"
 		"DOTA_Tooltip_ability_metamorphosis_move_speed"                                   "Move Speed:"
+		"DOTA_Tooltip_ability_metamorphosis_tool_tip_duration"                            "Duration:"
+		
+		"DOTA_Tooltip_ability_seer"                                                       "Seer"
+		"DOTA_Tooltip_ability_seer_Description"                                           "While channelling gain vision of all enemy heroes.\nDoes not include enemies who are invisible or dead at the start of the channel."
+
+		"DOTA_Tooltip_ability_spectral_form"                                              "Spectral Form"
+		"DOTA_Tooltip_ability_spectral_form_Description"                                  "You wrap the etheral around you becoming difficult to physically strike but weak against magic. While spectral you regenerate health and mana. Also you basic attack deals magic damage instead of physical."
+		"DOTA_Tooltip_ability_spectral_form_health_regen"                                 "Health regen:"
+		"DOTA_Tooltip_ability_spectral_form_mana_regen"                                   "Mana regen:"
+		"DOTA_Tooltip_ability_spectral_form_evasion"                                      "%Evasion"
+		"DOTA_Tooltip_ability_spectral_form_magic_weak"                                   "Magic weakness:"
+		
+		"DOTA_Tooltip_spectral_form_mod"                                              "Spectral Form"
+		"DOTA_Tooltip_spectral_form_mod_Description"                                  "You wrap the etheral around you."
+
+		"DOTA_Tooltip_ability_military"                                                   "Military Training"
+		"DOTA_Tooltip_ability_military_Description"                                       "You are part of the military, there for you get paid. Depending on your devotion to the training regimen you get paid on every hero level up.\nGold gain is multiplied by your hero level.\nAs fruit of the training you also strike faster."
+		"DOTA_Tooltip_ability_military_attack_speed"                                      "Attack Speed:"
+		"DOTA_Tooltip_ability_military_gold"                                              "Levelup Gold:"
+
+		"DOTA_Tooltip_ability_vampiric"                                                   "Vampiric"
+		"DOTA_Tooltip_ability_vampiric_Description"                                       "Gain percentage of all damage you deal as healing.\nStacks with other sources of lifesteal."
+		"DOTA_Tooltip_ability_vampiric_vamp"       "%+Vampirisim"
+		
+"DOTA_HeroKit_abaddon_soul_rip_ManaCost" "140"
+"DOTA_HeroKit_ice_path_ManaCost" "80/100/120/140"
+"DOTA_HeroKit_earthshaker_enchant_totem_lua_ManaCost" "50"
+"DOTA_HeroKit_zuus_arc_lightning_lua_ManaCost" "65/70/75/80"
+"DOTA_HeroKit_blink_support_ManaCost" "175"
+"DOTA_HeroKit_hex_6_gon_ManaCost" "75"
+"DOTA_HeroKit_fire_wall_ManaCost" "200/250/300/350"
+"DOTA_HeroKit_winds_ManaCost" "150"
+"DOTA_HeroKit_teleport_basic_ManaCost" "50"
+"DOTA_HeroKit_summon_basic_ManaCost" "350"
+"DOTA_HeroKit_earthshaker_echo_slam_lua_ManaCost" "145/205/265"
+"DOTA_HeroKit_light_blade_ManaCost" "200/250/300"
+"DOTA_HeroKit_dark_blade_ManaCost" "200/250/300"
+"DOTA_HeroKit_metamorphosis_ManaCost" "0"
+"DOTA_HeroKit_seer_ManaCost" "140"
+"DOTA_HeroKit_spectral_form_ManaCost" "140"
+
+"DOTA_HeroKit_abaddon_soul_rip_Cooldown" "18/16/14/12"
+"DOTA_HeroKit_ice_path_Cooldown" "10"
+"DOTA_HeroKit_earthshaker_enchant_totem_lua_Cooldown" "5"
+"DOTA_HeroKit_zuus_arc_lightning_lua_Cooldown" "2"
+"DOTA_HeroKit_blink_support_Cooldown" "10"
+"DOTA_HeroKit_hex_6_gon_Cooldown" "20/18/16/14"
+"DOTA_HeroKit_fire_wall_Cooldown" "35"
+"DOTA_HeroKit_winds_Cooldown" "30/25/20/15"
+"DOTA_HeroKit_teleport_basic_Cooldown" "120/90/60/30"
+"DOTA_HeroKit_summon_basic_Cooldown" "60"
+"DOTA_HeroKit_earthshaker_echo_slam_lua_Cooldown" "150/130/110"
+"DOTA_HeroKit_light_blade_Cooldown" "100/80/60"
+"DOTA_HeroKit_dark_blade_Cooldown" "100/80/60"
+"DOTA_HeroKit_metamorphosis_Cooldown" "120"
+"DOTA_HeroKit_seer_Cooldown" "60/40/20"
+"DOTA_HeroKit_spectral_form_Cooldown" "60/40/20"
+
+		
+		
 	}
 }

@@ -24,6 +24,7 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 		if hAbility:IsItem() then return end
 		local iAoE = hAbility:GetSpecialValueFor( "radius" )
 		local iDamage = hAbility:GetSpecialValueFor( "damage" )
+		local iMDamage = hAbility:GetSpecialValueFor( "magic_damage" )
 		--sounds/weapons/hero/zuus/static_field.vsnd
 		
 		local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetOrigin(), self:GetParent(), iAoE, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
@@ -35,7 +36,7 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 					local damage = {
 						victim = enemy,
 						attacker = self:GetCaster(),
-						damage = iDamage * armor ,
+						damage = iDamage * armor + iMDamage,
 						damage_type = hAbility:GetAbilityDamageType(),
 						ability = self:GetAbility()
 					}

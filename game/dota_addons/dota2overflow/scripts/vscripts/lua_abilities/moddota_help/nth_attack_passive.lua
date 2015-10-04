@@ -33,7 +33,6 @@ function nth_attack_modifier:OnAttackLanded( kv )
 end
 
 function nth_attack_modifier:OnRefresh(old)
-	print("refresh!")
 	self.UpdateNeeded = true
 	self.UpdateDone = false
 end

@@ -22,7 +22,7 @@ function earthshaker_aftershock_lua_passive:OnAbilityExecuted(params)
 		--DeepPrintTable(params)
 		if params.unit == self:GetParent() and not params.ability.IsProcBanned then
 		local hAbility = self:GetAbility()
-		if hAbility:IsItem() then return end
+		if params.ability:IsItem() then return end
 		local iAoE = hAbility:GetSpecialValueFor( "aftershock_range" )
 		local fDuration = hAbility:GetSpecialValueFor( "tooltip_duration" )
 		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_earthshaker/earthshaker_aftershock.vpcf", PATTACH_WORLDORIGIN, nil )

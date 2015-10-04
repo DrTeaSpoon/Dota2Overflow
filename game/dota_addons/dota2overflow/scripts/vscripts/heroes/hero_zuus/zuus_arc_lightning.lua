@@ -14,6 +14,7 @@ function zuus_arc_lightning_lua:OnSpellStart()
 	self.JumpDelay = self:GetSpecialValueFor("jump_delay")
 	self.JumpCount = self:GetSpecialValueFor("jump_count")
 	self.JumpRadius = self:GetSpecialValueFor("radius")
+	self.iMDamage = self:GetSpecialValueFor( "magic_damage" )
 	self.JumpDamage = self:GetAbilityDamage()
 	self.JumpDmgType = self:GetAbilityDamageType()
 	self.InsProtect = self.JumpCount --We use this so the chain lightning can't circle back.
@@ -27,8 +28,6 @@ function zuus_arc_lightning_lua:OnSpellStart()
 		hTarget:TriggerSpellReflect( self )
 		local absorb = hTarget:TriggerSpellAbsorb( self )
 		if not absorb then
-		print("absorb")
-		print(absorb)
 			local nFXIndex = ParticleManager:CreateParticle( self.Effect, PATTACH_CUSTOMORIGIN, nil );
 			ParticleManager:SetParticleControlEnt( nFXIndex, 0, hCaster, PATTACH_POINT_FOLLOW, "attach_attack1", hCaster:GetOrigin() + Vector( 0, 0, 50 ), true );
 			ParticleManager:SetParticleControlEnt( nFXIndex, 1, hTarget, PATTACH_POINT_FOLLOW, "attach_hitloc", hTarget:GetOrigin(), true );
@@ -40,6 +39,7 @@ function zuus_arc_lightning_lua:OnSpellStart()
 			,jumps = self.JumpCount
 			,radius = self.JumpRadius
 			,dmg = self.JumpDamage
+			,mdmg = self.iMDamage
 			,dmgtype = self.JumpDmgType
 			,instance = GameRules:GetGameTime()
 			} )

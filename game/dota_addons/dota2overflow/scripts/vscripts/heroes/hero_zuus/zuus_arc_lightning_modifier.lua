@@ -7,6 +7,7 @@ function zuus_arc_lightning_lua_modifier:OnCreated( kv )
 		self.jumps = kv.jumps - 1
 		self.radius = kv.radius
 		self.dmg = kv.dmg
+		self.mdmg = kv.mdmg
 		self.dmgtype = kv.dmgtype
 		self.instance = kv.instance
 	end
@@ -50,6 +51,7 @@ function zuus_arc_lightning_lua_modifier:OnDestroy()
 							,jumps = self.jumps
 							,radius = self.radius
 							,dmg = self.dmg
+							,mdmg = self.mdmg
 							,dmgtype = self.dmgtype
 							,instance = self.instance
 							} )
@@ -70,7 +72,7 @@ function zuus_arc_lightning_lua_modifier:DamageParent()
 		local damage = {
 			victim = self:GetParent(),
 			attacker = self:GetCaster(),
-			damage = self.dmg * armor ,
+			damage = self.dmg * armor + self.mdmg ,
 			damage_type = self.dmgtype,
 			ability = self:GetAbility()
 		}

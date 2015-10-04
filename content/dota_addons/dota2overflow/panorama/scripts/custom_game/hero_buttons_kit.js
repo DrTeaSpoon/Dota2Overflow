@@ -246,11 +246,16 @@ function StatPlus(stat)
 	HStat[0].Val = Number(HStat[0].Panel.text);
 	HStat[1].Val = Number(HStat[1].Panel.text);
 	HStat[2].Val = Number(HStat[2].Panel.text);
-	if (PointsVal > 0) {
-		if (HStat[0].Val + HStat[1].Val + HStat[2].Val + PointsVal == 76) {
+	var PCost = 50
+	if (HStat[stat].Val + 1 > 10) { PCost = 100 }
+	if (HStat[stat].Val + 1 > 20) { PCost = 150 }
+	if (HStat[stat].Val + 1 > 30) { PCost = 200 }
+	if (HStat[stat].Val + 1 > 40) { PCost = 250 }
+	if (PointsVal > PCost - 1) {
+		if (HStat[0].Val + HStat[1].Val + HStat[2].Val < 100 ) {
 			HStat[stat].Val = HStat[stat].Val + 1
 			HStat[stat].Panel.text = String(HStat[stat].Val)
-			PointsPanel.text = String(PointsVal - 1)
+			PointsPanel.text = String(PointsVal - PCost)
 		} else {
 			HStat[0].Panel.text = "1";
 			HStat[1].Panel.text = "1";
@@ -282,11 +287,16 @@ function StatMinus(stat)
 	HStat[0].Val = Number(HStat[0].Panel.text);
 	HStat[1].Val = Number(HStat[1].Panel.text);
 	HStat[2].Val = Number(HStat[2].Panel.text);
+	var PCost = 50
+	if (HStat[stat].Val > 10) { PCost = 100 }
+	if (HStat[stat].Val > 20) { PCost = 150 }
+	if (HStat[stat].Val > 30) { PCost = 200 }
+	if (HStat[stat].Val > 40) { PCost = 250 }
 	if (HStat[stat].Val > 1) {
-		if (HStat[0].Val + HStat[1].Val + HStat[2].Val + PointsVal == 76) {
+		if (HStat[0].Val + HStat[1].Val + HStat[2].Val < 100 ) {
 			HStat[stat].Val = HStat[stat].Val - 1
 		HStat[stat].Panel.text = String(HStat[stat].Val)
-		PointsPanel.text = String(PointsVal + 1)
+		PointsPanel.text = String(PointsVal + PCost)
 	} else {
 		HStat[0].Panel.text = "1";
 		HStat[1].Panel.text = "1";
@@ -379,7 +389,7 @@ function OnDone()
 	var HInt = HStat[2].Val
 	var HInt_G = HStat[2].Val*0.1
 	
-	if (HStat[0].Val + HStat[1].Val + HStat[2].Val + PointsVal == 76) {
+		if (HStat[0].Val + HStat[1].Val + HStat[2].Val < 100 ) {
 		GameEvents.SendCustomGameEventToServer( "ability_choise", {ability_q: Ability[1], ability_w: Ability[2], ability_e: Ability[3], ability_d: Ability[4], ability_f: Ability[5], ability_r: Ability[6], hero_pri: Prime, hero_str: HStr, hero_str_g: HStr_G, hero_agi: HAgi, hero_agi_g: HAgi_G, hero_int: HInt, hero_int_g: HInt_G, hero_points: PointsVal} )
 	}
 	//GameEvents.SendCustomGameEventToServer( "ability_choise", {ability_q: Ability[1], ability_w: Ability[2], ability_e: Ability[3], ability_d: Ability[4], ability_f: Ability[5], ability_r: Ability[6]} )
