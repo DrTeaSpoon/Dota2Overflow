@@ -19,7 +19,7 @@ end
 function shadow_walk_modifier:OnAbilityExecuted(params)
 	if IsServer() then
 		--DeepPrintTable(params)
-		if params.unit == self:GetParent() then
+		if params.unit == self:GetParent() and GameRules:IsDaytime() then
 	EmitSoundOnLocationWithCaster( self:GetCaster():GetOrigin(), "Hero_Nevermore.Pick", self:GetCaster() )
 	local hAbility = self:GetAbility()
 	local hTarget = self:GetParent()
@@ -59,8 +59,14 @@ function shadow_walk_modifier:OnAbilityExecuted(params)
 end
 
 function shadow_walk_modifier:CheckState()
+	local hAbility = self:GetAbility()
+	local invis = false
+	if self:GetElapsedTime() > hAbility:GetSpecialValueFor("fade_time") then invis = true end
+	if IsServer() then
+	if not GameRules:IsDaytime() then invis = true end
+	end
 	local state = {
-	[MODIFIER_STATE_INVISIBLE] = true
+	[MODIFIER_STATE_INVISIBLE] = invis
 	}
 	return state
 end

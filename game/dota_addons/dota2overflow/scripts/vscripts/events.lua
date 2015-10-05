@@ -271,10 +271,32 @@ end
 
 -- This function is called whenever illusions are created and tells you which was/is the original entity
 function GameMode:OnIllusionsCreated(keys)
-  DebugPrint('[BAREBONES] OnIllusionsCreated')
-  DebugPrintTable(keys)
-
-  local originalEntity = EntIndexToHScript(keys.original_entindex)
+	DebugPrint('[BAREBONES] OnIllusionsCreated')
+	--DeepPrintTable(keys)
+	local originalEntity = EntIndexToHScript(keys.original_entindex)
+	local pID = originalEntity:GetPlayerID()
+	if pID then
+	local ability_levels = {}
+	for i = 1,6 do
+	ability_levels[i] = originalEntity:FindAbilityByName(GameRules.PlayerAbs[pID][i]):GetLevel()
+	end
+	local all_illusions = Entities:FindAllByName(originalEntity:GetName())
+	for k,illusion in pairs(all_illusions) do
+		if illusion ~= originalEntity and illusion:GetPlayerID() == pID and illusion:GetAbilityByIndex(5) == nil then
+		for i = 1,6 do
+			illusion:AddAbility(GameRules.PlayerAbs[pID][i])
+			local ability = illusion:FindAbilityByName(GameRules.PlayerAbs[pID][i]) 
+			ability:SetLevel(ability_levels[i])
+		end
+		if GameRules.PlayerCustomHero[pID] then
+		illusion:ModifyStrength(GameRules.PlayerCustomHero[pID].str - illusion:GetBaseStrength()) 
+		illusion:ModifyAgility(GameRules.PlayerCustomHero[pID].agi - illusion:GetBaseAgility())
+		illusion:ModifyIntellect(GameRules.PlayerCustomHero[pID].int - illusion:GetBaseIntellect())
+		illusion:AddNewModifier( hero, nil, "heroes_base_mod", {gain_agi = GameRules.PlayerCustomHero[pID].agi_g,gain_str = GameRules.PlayerCustomHero[pID].str_g,gain_int = GameRules.PlayerCustomHero[pID].int_g} ) 
+		end
+	end
+	end
+	end
 end
 
 -- This function is called whenever an item is combined to create a new item

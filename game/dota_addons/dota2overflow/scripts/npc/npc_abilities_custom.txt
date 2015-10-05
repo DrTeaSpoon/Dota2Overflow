@@ -554,17 +554,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"150 200 250 300 350 400 450"
+				"radius"				"350"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_duration"				"0.2"
+				"stun_duration"				"0.1 0.2 0.3 0.4 0.5 0.6 0.7"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attacks_to_proc"			"8 7 6 5 4 3 2"
+				"attacks_to_proc"			"5"
 			}
 		}
 	}
@@ -2166,10 +2166,47 @@
 				"var_type"					"FIELD_INTEGER"
 				"radius"			"150"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"			"1.0"
+			}
 		}
 	}
 	
 	
+	"holy_word"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/holy_word/ability.lua"
+		"AbilityTextureName"			"holy_word"
+		"AbilityCastPoint"              "0.1"
+		"AbilityCooldown"               "25"
+		"AbilityManaCost"               "150 170 190 210"
+		 "AbilityCastRange"              "500"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts" //Hero_Nevermore.Pick 
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"heal"			"75 150 225 300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"			"500"
+			}
+		}
+	}
 	
 }
 

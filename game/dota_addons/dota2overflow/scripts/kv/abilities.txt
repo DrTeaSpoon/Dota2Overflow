@@ -12,7 +12,7 @@
 "9" "teleport_basic"
 "10" "shadow_walk" //invisibility with greater speed at night time
 //
-//"11" "holy_word" //Aoe heal, more heal at day time
+"11" "holy_word" //Aoe heal, more heal at day time
 "12" "summon_basic"
 //"13" "power_leap"
 //"14" "land_mine"

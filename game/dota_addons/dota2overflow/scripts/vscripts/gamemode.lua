@@ -119,7 +119,7 @@ function GameMode:OnHeroInGame(hero)
 	hero:SetGold( GameRules.PlayerCustomHero[pID].points, true)
 	hero:SetBaseStrength(GameRules.PlayerCustomHero[pID].str)
 	hero:SetBaseAgility(GameRules.PlayerCustomHero[pID].agi) 
-	hero:SetBaseIntellect(GameRules.PlayerCustomHero[pID].int) 
+	hero:SetBaseIntellect(GameRules.PlayerCustomHero[pID].int)
 	--hero:SetPrimaryAttribute(GameRules.PlayerCustomHero[pID].pri) 
 	hero:AddNewModifier( hero, nil, "heroes_base_mod", {gain_agi = GameRules.PlayerCustomHero[pID].agi_g,gain_str = GameRules.PlayerCustomHero[pID].str_g,gain_int = GameRules.PlayerCustomHero[pID].int_g} ) 
 	end
@@ -128,19 +128,10 @@ function GameMode:OnHeroInGame(hero)
 	for i = 1,6 do
 		if not GameRules.PlayerAbs[pID] then GameRules.PlayerAbs[pID] = {} end
 			if not GameRules.PlayerAbs[pID][i] or GameRules.PlayerAbs[pID][i] == "random" then
-				GameRules.PlayerAbs[pID][i] = self:RandomSkill(hero,i)
+				GameRules.PlayerAbs[pID][i] = self:RandomSkill(pID,i)
 			end
 		print("Adding to hero: " .. GameRules.PlayerAbs[pID][i])
-		Timers:CreateTimer(0.5*i, -- Start this timer 30 game-time seconds later
-		function()
-			PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][i], function()
 				hero:AddAbility(GameRules.PlayerAbs[pID][i])
-                local ab = hero:FindAbilityByName(multV)
-                if ab then
-                    ab:SetActivated(true)
-                end
-			end)
-		end)
 	end
 		--Timers:CreateTimer(10, -- Start this timer 30 game-time seconds later
 		--function()
@@ -149,33 +140,6 @@ function GameMode:OnHeroInGame(hero)
 		--	end)
 		--end)
 	end
-end
-function GameMode:RandomSkill(hero,slot)
-	local pID = hero:GetPlayerID()
-	local tList = {}
-	local found = false
-	if slot < 4 then
-		tList = GameRules.AbilityListing
-	elseif slot < 6 then
-		tList = GameRules.TraitListing
-	else
-		tList = GameRules.UltimateListing
-	end
-	local nRand = RandomInt(1,#tList)
-	local sAbility = tList[nRand]
-	while not found do
-		local check = false
-		for i = 1,6 do
-			if GameRules.PlayerAbs[pID][i] and GameRules.PlayerAbs[pID][i] == sAbility then
-				nRand = RandomInt(1,#tList)
-				sAbility = tList[nRand]
-				check = true
-			end
-		end
-		if not check then found = true end
-	end
-	print("randoming: " .. sAbility)
-	return sAbility
 end
 --[[
   This function is called once and only once when the game completely begins (about 0:00 on the clock).  At this point,

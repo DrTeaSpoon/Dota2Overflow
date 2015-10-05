@@ -655,6 +655,15 @@
 "DOTA_HeroKit_spectral_form_Cooldown" "60/40/20"
 
 		
+		"DOTA_Tooltip_ability_shadow_walk"                                                "Dark Path"
+		"DOTA_Tooltip_ability_shadow_walk_Description"                                    "You become instantly invisible.\nAlso your next attack deals pure damage in small area around the target.\nIf the ability is ended by spell cast, you deal the damage to yourself and to foes around you instead.\nYou can deny yourself with this ability."
+		"DOTA_Tooltip_ability_shadow_walk_duration"                                       "Duration:"
+		"DOTA_Tooltip_ability_shadow_walk_poison_damage"                                  "Pure Damage:"
+		"DOTA_Tooltip_ability_shadow_walk_radius"                                         "Blast Radius:"
+"DOTA_HeroKit_shadow_walk_ManaCost" "60"
+"DOTA_HeroKit_shadow_walk_Cooldown" "20"
+		"DOTA_Tooltip_shadow_walk_modifier"                                              "Dark Path"
+		"DOTA_Tooltip_shadow_walk_modifier_Description"                                  "Invisible."
 		
 	}
 }

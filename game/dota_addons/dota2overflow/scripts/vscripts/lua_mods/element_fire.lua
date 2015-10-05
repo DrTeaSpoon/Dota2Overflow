@@ -16,7 +16,7 @@ end
 function element_fire:OnRefresh( kv )	
 	if IsServer() then
 		local stacks = self:GetStackCount() + kv.stacks
-		if stacks > 100 then stacks = 100 end
+		if stacks > 200 then stacks = 200 end
 		self:SetStackCount(stacks)
 	end
 end

@@ -14,7 +14,9 @@ end
 
 function burner_mod:OnIntervalThink()
 	if IsServer() then
+		if not self:GetParent():IsAlive() then return end
 		local dmg = self:GetAbility():GetSpecialValueFor("damage")
+		if self:GetParent():IsIllusion() then dmg = math.ceil(dmg/2) end
 		local aoe = self:GetAbility():GetSpecialValueFor("radius")
 		local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetOrigin(), self:GetParent(), aoe, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
 		if #enemies > 0 then

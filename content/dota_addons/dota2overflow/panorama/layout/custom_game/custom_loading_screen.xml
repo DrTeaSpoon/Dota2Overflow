@@ -10,7 +10,7 @@
       <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode.png" />
     </Panel>
 	<Panel id="HiddenPrecompiler">
-<Image src="file://{images}/spellicons/shadow_walk.png" />
+<Image src="file://{images}/spellicons/holy_word.png" />
 	</Panel>
   </Panel>
 </root>

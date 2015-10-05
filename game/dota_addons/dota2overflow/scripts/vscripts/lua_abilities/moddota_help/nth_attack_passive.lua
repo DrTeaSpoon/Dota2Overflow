@@ -27,14 +27,11 @@ function nth_attack_modifier:OnAttackLanded( kv )
 			self:SetStackCount(nMaxStacks)
 			end 
 			self:DecrementStackCount()
-			self:ForceRefresh()
 		end
 	end
 end
 
 function nth_attack_modifier:OnRefresh(old)
-	self.UpdateNeeded = true
-	self.UpdateDone = false
 end
 
 function nth_attack_modifier:ProcSpecial(hTarget)
@@ -80,20 +77,7 @@ function  nth_attack_modifier:IsPurgable()
 end
 
 function nth_attack_modifier:IsHidden()
-	local hAbility = self:GetAbility()
-	if self.UpdateNeeded or hAbility:GetLevel()  < 1 then
-		if hAbility:GetLevel()  < 1 then
-			if self.UpdateDone then
-				self.UpdateNeeded = false
-			end
-			if self.UpdateNeeded then
-				self.UpdateDone = true
-			end
-		end
-		return true
-	else
-		return false
-	end
+	return true
 end
 
 function nth_attack_modifier:GetTexture()

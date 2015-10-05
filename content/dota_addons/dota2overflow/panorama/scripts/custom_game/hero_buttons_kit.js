@@ -162,6 +162,7 @@ function AddSkill(abilityName,type)
 			}
 			SelectionImage.SetImage( image_path );
 			AbilitySelection[i].SetPanelEvent( 'onmouseover', Tooltip(abilityName))
+		Game.EmitSound("ui.npe_objective_given");
 			break;
 			}
 		}
@@ -179,6 +180,7 @@ function AddSkill(abilityName,type)
 			}
 			SelectionImage.SetImage( image_path );
 			AbilitySelection[i].SetPanelEvent( 'onmouseover', Tooltip(abilityName))
+		Game.EmitSound("ui.npe_objective_given");
 			break;
 			}
 		}
@@ -195,6 +197,7 @@ function AddSkill(abilityName,type)
 			}
 			SelectionImage.SetImage( image_path );
 			AbilitySelection[i].SetPanelEvent( 'onmouseover', Tooltip(abilityName))
+		Game.EmitSound("ui.npe_objective_given");
 			break;
 			}
 		}
@@ -228,6 +231,7 @@ function OnRemoveSkill(slot)
 		var image_path = "file://{images}/spellicons/empty.png";
 		SelectionImage.SetImage( image_path );
 		Slot.SetPanelEvent( 'onmouseover', function(){})
+		Game.EmitSound("compendium_levelup");
 	}
 }
 
@@ -268,6 +272,7 @@ function StatPlus(stat)
 	var MpPanel = $.FindChildInContext('#mp_val');
 	HpPanel.text = String(HStat[0].Val * 19 + 200);
 	MpPanel.text = String(HStat[2].Val * 13);
+		Game.EmitSound("Tutorial.Next");
 	
 	
 	
@@ -308,6 +313,7 @@ function StatMinus(stat)
 	var MpPanel = $.FindChildInContext('#mp_val');
 	HpPanel.text = String(HStat[0].Val * 19 + 200);
 	MpPanel.text = String(HStat[2].Val * 13);
+		Game.EmitSound("Tutorial.Next");
 }
 //
 //function StatGainPlus()
@@ -353,18 +359,34 @@ function OnDone()
 	AbilitySelection[5] = $.FindChildInContext('#HeroKit_Ability_F');
 	AbilitySelection[6] = $.FindChildInContext('#HeroKit_Ability_R');
 	var Ability = {};
+	var RanN = 0;
 	for (i = 1; i < 7; i++) { 
 		if (AbilitySelection[i].data().ability != null)
 		{
 		Ability[i] = AbilitySelection[i].data().ability
-		$.Msg(AbilitySelection[i].data().ability);
+		//$.Msg(AbilitySelection[i].data().ability);
 		} else {
 		Ability[i] = 'random'
-		$.Msg("Random");
+		RanN = RanN + 1
+		//$.Msg("Random");
 		}
 	}
+	
+		
+	
 	var PointsPanel = $.FindChildInContext('#point_val');
 	var PointsVal = Number(PointsPanel.text);
+	
+	if (RanN > 5) {
+		Game.EmitSound("Hero_OgreMagi.Fireblast.x3");
+		PointsVal = PointsVal + 400;
+	} else if (RanN > 3) {
+		Game.EmitSound("Hero_OgreMagi.Fireblast.x2");
+		PointsVal = PointsVal + 200;
+	} else if (RanN > 1) {
+		Game.EmitSound("Hero_OgreMagi.Fireblast.x1");
+		PointsVal = PointsVal + 100;
+	}
 	var HStat = {};
 	HStat[0] = {};
 	HStat[1] = {};

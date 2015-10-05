@@ -21,7 +21,7 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 	if IsServer() then
 		if params.unit == self:GetParent() and not params.ability.IsProcBanned then
 		local hAbility = self:GetAbility()
-		if hAbility:IsItem() then return end
+		if params.ability:IsItem() then return end
 		local iAoE = hAbility:GetSpecialValueFor( "radius" )
 		local iDamage = hAbility:GetSpecialValueFor( "damage" )
 		local iMDamage = hAbility:GetSpecialValueFor( "magic_damage" )

@@ -7,9 +7,11 @@
     margin-top: 0px;
     margin-left: 0px;
     border: 0px solid black;
-    background-color: #111111;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #222222 ) );
-    border-radius: 5px;
+    /*background-color: #111111;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #222222 ) );*/
+	background-image: url("file://{images}/custom_game/Pure_Skill.png");
+	background-size: 100% 100%;
+   /* border-radius: 5px; */
     flow-children: down;
 	z-index:5;
 }
@@ -71,7 +73,7 @@
     horizontal-align: left; */
     border: 4px solid black;
     background-color: #333553;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #22222255 ), to( #22226655 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
@@ -90,7 +92,7 @@
     horizontal-align: left; */
     border: 4px solid black;
     background-color: #333553;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #555555 ), to( #111111 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #55555555 ), to( #11111155 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
@@ -109,7 +111,7 @@
     horizontal-align: left; */
     border: 4px solid black;
     background-color: #333553;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #22222255 ), to( #66222255 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
@@ -161,11 +163,12 @@
 
 .lable_text
 {
-	color:#000000;
+	color:#ffffff;
     font-size: 30px;
 	font-family: "Lucida Console";
 	font-weight: bold;
     horizontal-align: center;
+	text-shadow: 2px 2px 4px 4.0 #000000ff;
 }
 
 #HeroKit_AbSelect
@@ -210,9 +213,10 @@
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #888888 ), to( #333333 ) );
     border-radius: 5px;
     flow-children: down;
-	margin-left:5px;
-	padding-left:5px;
-	padding-right:5px;
+	margin-left:20px;
+	padding-left:7px;
+	padding-right:7px;
+	padding-bottom:7px;
 }
 #HeroKit_Tooltip
 {
@@ -258,20 +262,44 @@
 	font-family: "Lucida Console";
 }
 
+#tool_tip_bot_wrap
+{
+	vertical-align: bottom;
+	width:100%;
+    flow-children: right;
+	margin-bottom:4px;
+}
 #tool_tip_cd
 {
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #222222 ) );
+    background-color: #000000;
     border-radius: 10px;
-	padding-left:5px;
-	padding-right:5px;
+	padding-left:7px;
+	padding-right:7px;
+    horizontal-align: left;
+	color:#FFFFFF;
+    font-size: 25px;
+	font-family: "Lucida Console";
+	width:400px;
+	text-align:left;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
+	margin:6px;
+	box-shadow: #ffffff80 0px 0px 6px 0px;
 }
 
 #tool_tip_mana
 {
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #000066 ) );
     border-radius: 10px;
-	padding-left:5px;
-	padding-right:5px;
+	padding-left:7px;
+	padding-right:7px;
+    horizontal-align: right;
+	color:#FFFFFF;
+    font-size: 25px;
+	font-family: "Lucida Console";
+	width:400px;
+	text-align:left;
+	margin:6px;
+	box-shadow: #ffffff80 0px 0px 6px 0px;
 }
 
 
@@ -284,6 +312,7 @@
     border: 2px solid black;
     border-radius: 5px;
     flow-children: down;
+	padding-top:10px;
 	margin-top:5px;
     margin-left:50px;
     margin-right:15px;

@@ -23,6 +23,42 @@ function GameMode:AbilityChoise(choises)
 	GameRules.PlayerCustomHero[pID].agi_g =	choises.hero_agi_g
 	GameRules.PlayerCustomHero[pID].int =	choises.hero_int
 	GameRules.PlayerCustomHero[pID].int_g =	choises.hero_int_g
+	local tAbTempList = GameRules.AbilityListing
+	for i = 1,6 do
+		if not GameRules.PlayerAbs[pID] then GameRules.PlayerAbs[pID] = {} end
+			if not GameRules.PlayerAbs[pID][i] or GameRules.PlayerAbs[pID][i] == "random" then
+				GameRules.PlayerAbs[pID][i] = GameMode:RandomSkill(pID,i)
+			end
+			PrecacheItemByNameAsync(GameRules.PlayerAbs[pID][i], function()
+		end)
+	end
+end
+
+function GameMode:RandomSkill(pID,slot)
+	local tList = {}
+	local found = false
+	if slot < 4 then
+		tList = GameRules.AbilityListing
+	elseif slot < 6 then
+		tList = GameRules.TraitListing
+	else
+		tList = GameRules.UltimateListing
+	end
+	local nRand = RandomInt(1,#tList)
+	local sAbility = tList[nRand]
+	while not found do
+		local check = false
+		for i = 1,6 do
+			if GameRules.PlayerAbs[pID][i] and GameRules.PlayerAbs[pID][i] == sAbility then
+				nRand = RandomInt(1,#tList)
+				sAbility = tList[nRand]
+				check = true
+			end
+		end
+		if not check then found = true end
+	end
+	print("randoming: " .. sAbility)
+	return sAbility
 end
 function GameMode:_InitGameMode()
   -- Setup rules
