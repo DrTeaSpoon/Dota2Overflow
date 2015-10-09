@@ -2208,5 +2208,104 @@
 		}
 	}
 	
+	"magic_missile"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/magic_missile/ability.lua"
+		"AbilityTextureName"			"magic_missile"
+		"AbilityCastPoint"              "0.1"
+		"AbilityCooldown"               "23"
+		"AbilityManaCost"               "100"
+		 "AbilityCastRange"              "750"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts" //Hero_VengefulSpirit.MagicMissile
+		"particle"	"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			"90 160 230 300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"			"250"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun"			"1.0 1.5 2.0 2.5"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"push_time"			"0.8"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"push_range"			"260 380 500 620"
+			}
+			
+		}
+	}
+	
+	"war_drum"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/war_drum/ability.lua"
+		"AbilityTextureName"			"war_drum"
+		"AbilityCastPoint"              "0"
+		"AbilityCooldown"               "50"
+		"AbilityManaCost"               "10"
+		 "AbilityCastRange"              "1200"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts" //Hero_VengefulSpirit.MagicMissile
+		"particle"	"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"health_regen"			"2 4 6 8"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"			"1200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"window"			"0.2"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"beat"			"1.0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_aura"			"20 40 60 80"
+			}
+			
+		}
+	}
+	
+	
 }
 

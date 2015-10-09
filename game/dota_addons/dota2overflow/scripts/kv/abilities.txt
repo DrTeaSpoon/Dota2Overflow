@@ -16,7 +16,7 @@
 "12" "summon_basic"
 //"13" "power_leap"
 //"14" "land_mine"
-//"15" "water_canon"
+//"15" "hodurs_arrow" //Cold damamage. 
 //
 //"16" "alertillery" //target half way point. friendly fire possible.
 //"17" "magic_missile"

@@ -1,0 +1,9 @@
+"bans"
+{
+	"item_blink"	"1"
+	"blink_support"	"1"
+	"teleport_basic"	"1"
+	"item_tpscroll"		"1"
+	"item_travel_boots"		"1"
+	"item_travel_boots_2" 		"1"
+}

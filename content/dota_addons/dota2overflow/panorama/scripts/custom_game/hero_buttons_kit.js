@@ -1,3 +1,5 @@
+
+
 function Ability_Listing(tAbListS) {
 	var max_row = 5;
 	var abs = tAbListS.length;
@@ -24,18 +26,22 @@ function Ability_Listing(tAbListS) {
 					AddSkill(name,type);
 				}
 			});
-		var Tooltip = ( function(name) { 
+		var HoverIn = ( function(name,id) { 
 				return function(){
-					SetKitTooltip(name);
+					Tooltip(name,id);
 				}
 			});
-		ability_item.SetPanelEvent( 'onactivate', AbilityPressed(abilityName,1))
-		ability_item.SetPanelEvent( 'onmouseover', Tooltip(abilityName))
-		var ability_image = $.CreatePanel( 'Image', ability_item, '' );
-		var image_path = "file://{images}/spellicons/"+abilityName+".png"
-		image_path = image_path.replace("_datadriven", "");
-		ability_image.SetImage( image_path );
-		//$.Msg(image_path)
+		var HoverOut = ( function(name) { 
+				return function(){
+					HideTooltip(name);
+				}
+			});
+		ability_item.SetPanelEvent( 'onmouseover', HoverIn(abilityName,ability_item));
+		ability_item.SetPanelEvent( 'onmouseout', HoverOut(ability_item));
+		ability_item.SetPanelEvent( 'onactivate', AbilityPressed(abilityName,1));
+		var ability_image = $.CreatePanel( 'DOTAAbilityImage', ability_item, '' );
+		ability_image.abilityname = abilityName;
+		
 		n_e++;
 	}
 }
@@ -66,17 +72,21 @@ function Ult_Listing(_arg) {
 					AddSkill(name,type)
 				}
 			});
-		var Tooltip = ( function(name) { 
+		var HoverIn = ( function(name,id) { 
 				return function(){
-					SetKitTooltip(name);
+					Tooltip(name,id);
 				}
 			});
-		ability_item.SetPanelEvent( 'onactivate', AbilityPressed(abilityName,3))
-		ability_item.SetPanelEvent( 'onmouseover', Tooltip(abilityName))
-		var ability_image = $.CreatePanel( 'Image', ability_item, '' );
-		var image_path = "file://{images}/spellicons/"+abilityName+".png"
-		image_path = image_path.replace("_datadriven", "");
-		ability_image.SetImage( image_path );
+		var HoverOut = ( function(name) { 
+				return function(){
+					HideTooltip(name);
+				}
+			});
+		ability_item.SetPanelEvent( 'onmouseover', HoverIn(abilityName,ability_item));
+		ability_item.SetPanelEvent( 'onmouseout', HoverOut(ability_item));
+		ability_item.SetPanelEvent( 'onactivate', AbilityPressed(abilityName,3));
+		var ability_image = $.CreatePanel( 'DOTAAbilityImage', ability_item, '' );
+		ability_image.abilityname = abilityName;
 		n_e++;
 	}
 }
@@ -109,17 +119,21 @@ function Trait_Listing(_arg) {
 					AddSkill(name,type)
 				}
 			});
-		var Tooltip = ( function(name) { 
+		var HoverIn = ( function(name,id) { 
 				return function(){
-					SetKitTooltip(name);
+					Tooltip(name,id);
 				}
 			});
-		ability_item.SetPanelEvent( 'onactivate', AbilityPressed(abilityName,2))
-		ability_item.SetPanelEvent( 'onmouseover', Tooltip(abilityName))
-		var ability_image = $.CreatePanel( 'Image', ability_item, '' );
-		var image_path = "file://{images}/spellicons/"+abilityName+".png"
-		image_path = image_path.replace("_datadriven", "");
-		ability_image.SetImage( image_path );
+		var HoverOut = ( function(name) { 
+				return function(){
+					HideTooltip(name);
+				}
+			});
+		ability_item.SetPanelEvent( 'onmouseover', HoverIn(abilityName,ability_item));
+		ability_item.SetPanelEvent( 'onmouseout', HoverOut(ability_item));
+		ability_item.SetPanelEvent( 'onactivate', AbilityPressed(abilityName,2));
+		var ability_image = $.CreatePanel( 'DOTAAbilityImage', ability_item, '' );
+		ability_image.abilityname = abilityName;
 		n_e++;
 	}
 }
@@ -156,13 +170,9 @@ function AddSkill(abilityName,type)
 			{
 			AbilitySelection[i].data().ability = abilityName;
 			var SelectionImage = AbilitySelection[i].GetChild(0);
-			var image_path = "file://{images}/spellicons/"+abilityName+".png";
-			if (image_path.indexOf("_datadriven") > -1) {
-				image_path = image_path.replace("_datadriven", "");
-			}
-			SelectionImage.SetImage( image_path );
-			AbilitySelection[i].SetPanelEvent( 'onmouseover', Tooltip(abilityName))
-		Game.EmitSound("ui.npe_objective_given");
+			SelectionImage.abilityname = abilityName
+			PutToSlot(SelectionImage.abilityname,AbilitySelection[i])
+			SendSkill(SelectionImage.abilityname,i);
 			break;
 			}
 		}
@@ -174,13 +184,9 @@ function AddSkill(abilityName,type)
 			{
 			AbilitySelection[i].data().ability = abilityName;
 			var SelectionImage = AbilitySelection[i].GetChild(0);
-			var image_path = "file://{images}/spellicons/"+abilityName+".png";
-			if (image_path.indexOf("_datadriven") > -1) {
-				image_path = image_path.replace("_datadriven", "");
-			}
-			SelectionImage.SetImage( image_path );
-			AbilitySelection[i].SetPanelEvent( 'onmouseover', Tooltip(abilityName))
-		Game.EmitSound("ui.npe_objective_given");
+			SelectionImage.abilityname = abilityName
+			PutToSlot(SelectionImage.abilityname,AbilitySelection[i])
+			SendSkill(SelectionImage.abilityname,3+i);
 			break;
 			}
 		}
@@ -191,13 +197,9 @@ function AddSkill(abilityName,type)
 			{
 			AbilitySelection[i].data().ability = abilityName;
 			var SelectionImage = AbilitySelection[i].GetChild(0);
-			var image_path = "file://{images}/spellicons/"+abilityName+".png";
-			if (image_path.indexOf("_datadriven") > -1) {
-				image_path = image_path.replace("_datadriven", "");
-			}
-			SelectionImage.SetImage( image_path );
-			AbilitySelection[i].SetPanelEvent( 'onmouseover', Tooltip(abilityName))
-		Game.EmitSound("ui.npe_objective_given");
+			SelectionImage.abilityname = abilityName
+			PutToSlot(SelectionImage.abilityname,AbilitySelection[i])
+			SendSkill(SelectionImage.abilityname,6);
 			break;
 			}
 		}
@@ -205,34 +207,84 @@ function AddSkill(abilityName,type)
 	}
 }
 
-function SetKitTooltip(abilityName)
-{
-	var tooltip_name = $.FindChildInContext('#tool_tip_name');
-	var tooltip_desc = $.FindChildInContext('#tool_tip_desc');
-	var tooltip_cd = $.FindChildInContext('#tool_tip_cd');
-	var tooltip_mana = $.FindChildInContext('#tool_tip_mana');
-	tooltip_name.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName );
-	tooltip_desc.text = $.Localize( "#DOTA_Tooltip_ability_"+abilityName+"_Description" );
-	if ($.Localize( "#DOTA_HeroKit_"+abilityName+"_Cooldown" ) == "DOTA_HeroKit_"+abilityName+"_Cooldown"){
-	tooltip_cd.text = "Cooldown: N/A";
-	tooltip_mana.text = "Mana Cost: N/A";
-	} else {
-	tooltip_cd.text = "Cooldown: " + $.Localize( "#DOTA_HeroKit_"+abilityName+"_Cooldown" ) + " seconds";
-	tooltip_mana.text = "Mana Cost: " + $.Localize( "#DOTA_HeroKit_"+abilityName+"_ManaCost" );
-	}
+
+function PutToSlot(abilityName,slot){
+	var AbilitySelection = {};
+		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_Q');
+		AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_W');
+		AbilitySelection[3] = $.FindChildInContext('#HeroKit_Ability_E');
+		AbilitySelection[4] = $.FindChildInContext('#HeroKit_Ability_D');
+		AbilitySelection[5] = $.FindChildInContext('#HeroKit_Ability_F');
+		AbilitySelection[6] = $.FindChildInContext('#HeroKit_Ability_R');
+		var HoverIn = ( function(name,id) { 
+				return function(){
+					Tooltip(name,id);
+				}
+			});
+		var HoverOut = ( function(name) { 
+				return function(){
+					HideTooltip(name);
+				}
+			});
+		slot.SetPanelEvent( 'onmouseover', HoverIn(abilityName,slot));
+		slot.SetPanelEvent( 'onmouseout', HoverOut(slot));
+		Game.EmitSound("ui.npe_objective_given");
 }
+
+
+
+function Tooltip(abilityName,abilityButton){
+	$.DispatchEvent( "DOTAShowAbilityTooltip", abilityButton, abilityName );
+}
+function HideTooltip(abilityButton){
+	$.DispatchEvent( "DOTAHideAbilityTooltip", abilityButton );
+}
+
+function SendSkill(skill,slot){
+	//$.Msg("Player Send!")
+			GameEvents.SendCustomGameEventToServer( "hero_kit_skill", {change: skill, target: slot} );
+}
+function SendStat(num,stat,val){
+	//$.Msg("Player Send!")
+			GameEvents.SendCustomGameEventToServer( "hero_kit_stats", {change: num, target: stat,gold: val} );
+}
+
+
 function OnRemoveSkill(slot)
 {
-	var Slot = $.FindChildInContext(slot);
+	var AbilitySelection = {};
+		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_Q');
+		AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_W');
+		AbilitySelection[3] = $.FindChildInContext('#HeroKit_Ability_E');
+		AbilitySelection[4] = $.FindChildInContext('#HeroKit_Ability_D');
+		AbilitySelection[5] = $.FindChildInContext('#HeroKit_Ability_F');
+		AbilitySelection[6] = $.FindChildInContext('#HeroKit_Ability_R');
+	var Slot = AbilitySelection[slot];
 	if (Slot.data().ability != null)
 	{
 		Slot.data().ability = null;
 		var SelectionImage = Slot.GetChild(0);
-		var image_path = "file://{images}/spellicons/empty.png";
-		SelectionImage.SetImage( image_path );
+		SelectionImage.abilityname = "rubick_empty1";
+		SendSkill("rubick_empty1",slot)
 		Slot.SetPanelEvent( 'onmouseover', function(){})
 		Game.EmitSound("compendium_levelup");
+		HideTooltip(Slot)
 	}
+}
+
+function StatTooltip(stat){
+	var HStat = {};
+	HStat[0] = {};
+	HStat[1] = {};
+	HStat[2] = {};
+	HStat[0].Panel = $.FindChildInContext('#str_val');
+	HStat[1].Panel = $.FindChildInContext('#agi_val');
+	HStat[2].Panel = $.FindChildInContext('#int_val');
+	HStat[0].Val = Number(HStat[0].Panel.text);
+	HStat[1].Val = Number(HStat[1].Panel.text);
+	HStat[2].Val = Number(HStat[2].Panel.text);
+	var tool_text = $.Localize( "#DOTA_HeroKit_Stat_" + stat ) + "\n" + $.Localize( "#DOTA_HeroKit_Stat_" + stat + "_gain" ) + (HStat[stat].Val/10);
+	$.DispatchEvent( "DOTAShowTextTooltip", HStat[stat].Panel, tool_text );
 }
 
 function StatPlus(stat)
@@ -273,7 +325,7 @@ function StatPlus(stat)
 	HpPanel.text = String(HStat[0].Val * 19 + 200);
 	MpPanel.text = String(HStat[2].Val * 13);
 		Game.EmitSound("Tutorial.Next");
-	
+	SendStat(HStat[stat].Val,stat,Number(PointsPanel.text));
 	
 	
 }
@@ -314,43 +366,13 @@ function StatMinus(stat)
 	HpPanel.text = String(HStat[0].Val * 19 + 200);
 	MpPanel.text = String(HStat[2].Val * 13);
 		Game.EmitSound("Tutorial.Next");
-}
-//
-//function StatGainPlus()
-//{
-//	var HStr_G = $.FindChildInContext('#HeroKit_HStr_G').data().num;
-//	var HAgi_G = $.FindChildInContext('#HeroKit_HAgi_G').data().num;
-//	var HInt_G = $.FindChildInContext('#HeroKit_HInt_g').data().num;
-//}
-//
-//function StatGainMinus()
-//{
-//	var HStr_G = $.FindChildInContext('#HeroKit_HStr_G').data().num;
-//	var HAgi_G = $.FindChildInContext('#HeroKit_HAgi_G').data().num;
-//	var HInt_G = $.FindChildInContext('#HeroKit_HInt_g').data().num;
-//}
-//
-function StatPrimeChoose(stat)
-{
-	/*
-	var HStat = {};
-	HStat[0] = {};
-	HStat[1] = {};
-	HStat[2] = {};
-	HStat[0].Panel = $.FindChildInContext('#str_val');
-	HStat[1].Panel = $.FindChildInContext('#agi_val');
-	HStat[2].Panel = $.FindChildInContext('#int_val');
-	for (i = 0; i < 3; i++) {
-		if (HStat[i].Panel.BHasClass("prime")){
-			HStat[i].Panel.RemoveClass( "prime" );
-		}
-	}		
-	HStat[stat].Panel.AddClass( "prime" );
-	*/
+	SendStat(HStat[stat].Val,stat,Number(PointsPanel.text));
 }
 
-function OnDone()
-{
+function StatPrimeChoose(stat){
+}
+
+function OnDone(){
 	var AbilitySelection = {};
 	AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_Q');
 	AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_W');
@@ -414,9 +436,6 @@ function OnDone()
 		if (HStat[0].Val + HStat[1].Val + HStat[2].Val < 100 ) {
 		GameEvents.SendCustomGameEventToServer( "ability_choise", {ability_q: Ability[1], ability_w: Ability[2], ability_e: Ability[3], ability_d: Ability[4], ability_f: Ability[5], ability_r: Ability[6], hero_pri: Prime, hero_str: HStr, hero_str_g: HStr_G, hero_agi: HAgi, hero_agi_g: HAgi_G, hero_int: HInt, hero_int_g: HInt_G, hero_points: PointsVal} )
 	}
-	//GameEvents.SendCustomGameEventToServer( "ability_choise", {ability_q: Ability[1], ability_w: Ability[2], ability_e: Ability[3], ability_d: Ability[4], ability_f: Ability[5], ability_r: Ability[6]} )
-	
-	//GameEvents.SendCustomGameEventToServer( "ability_choise", {ability_q: Ability[1], ability_w: Ability[2], ability_e: Ability[3], ability_d: Ability[4], ability_f: Ability[5], ability_r: Ability[6], hero_pri: Prime, hero_str: HStr, hero_str_g: HStr_G, hero_agi: HAgi, hero_agi_g: HAgi_G, hero_int: HInt, hero_int_g: HInt_G} )
 	$.GetContextPanel().DeleteAsync( 0 );
 }
 
@@ -452,13 +471,30 @@ function OnDragStart( panelId, dragCallbacks )
 	return true;
 }
 
-function OnDragEnd( panelId, draggedPanel )
-{
+function OnDragEnd( panelId, draggedPanel ){
 	var imageButton = $.FindChildInContext( "#"+panelId )
 	var imagePanel = draggedPanel.GetChild(0)
 	imagePanel.SetParent(imageButton)
 	draggedPanel.DeleteAsync( 0 );
 	return true;
+}
+
+
+function ShowTeam() {
+	var TeamPanel = $.FindChildInContext( "#HeroKit_Team")
+	var LocalPlayer = Game.GetLocalPlayerID();
+	var LocalInfo = Game.GetPlayerInfo( LocalPlayer )
+	var TeamId = LocalInfo.player_team_id
+	var Players = Game.GetPlayerIDsOnTeam( TeamId );
+	for (k in Players){
+		/*if(Players[k] != LocalPlayer){*/
+			var TeamPlayer = $.CreatePanel( "Panel", TeamPanel, "" );
+			var PlayerInfo = Game.GetPlayerInfo( Players[k] )
+			TeamPlayer.data.sID = PlayerInfo.player_steamid
+			TeamPlayer.BLoadLayout( "file://{resources}/layout/custom_game/hero_kit_team.xml", false, false );
+			//$.Msg("Creating panel for: " + TeamPlayer.data.sID)
+		/*}*/
+	}
 }
 
 (function () {
@@ -485,4 +521,5 @@ function OnDragEnd( panelId, draggedPanel )
 	}
 	tUlListS.sort();
 	Ult_Listing(tUlListS);
+	ShowTeam();
 })();

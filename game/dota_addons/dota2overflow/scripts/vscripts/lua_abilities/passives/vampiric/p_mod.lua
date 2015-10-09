@@ -16,7 +16,7 @@ end
 
 function vampiric_mod:OnTakeDamage (keys)
 	if IsServer() then
-	if keys.attacker == self:GetParent() then
+	if keys.attacker == self:GetParent() and not self:GetParent():IsIllusion() then
 	self:GetParent():Heal(self:GetAbility():GetSpecialValueFor("vamp")/100 * keys.damage, self:GetAbility())
 		self.nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_skeletonking/wraith_king_vampiric_aura_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
 		ParticleManager:SetParticleControl(self.nFXIndex, 0, self:GetCaster():GetOrigin()) 

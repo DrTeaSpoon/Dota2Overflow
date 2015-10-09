@@ -34,6 +34,21 @@ function GameMode:AbilityChoise(choises)
 	end
 end
 
+function GameMode:TeamComStat(keys)
+	local pID = keys.PlayerID
+	local team = PlayerResource:GetTeam(pID)
+	--print("server recieve and send")
+	CustomGameEventManager:Send_ServerToTeam(team, 'team_hero_kit_stats', {player=pID, change=keys.change, target=keys.target, gold=keys.gold}) 
+end
+function GameMode:TeamComSkill(keys)
+	local pID = keys.PlayerID
+	local team = PlayerResource:GetTeam(pID)
+	--print("server recieve and send")
+	--print("skill: " .. keys.change)
+	--print("to slot: " .. keys.target)
+	CustomGameEventManager:Send_ServerToTeam(team ,"team_hero_kit_skills", {player=pID, change=keys.change, target=keys.target}) 
+end
+
 function GameMode:RandomSkill(pID,slot)
 	local tList = {}
 	local found = false
@@ -149,6 +164,8 @@ function GameMode:_InitGameMode()
   ListenToGameEvent("dota_player_selected_custom_team", Dynamic_Wrap(GameMode, 'OnPlayerSelectedCustomTeam'), self)
   ListenToGameEvent("dota_npc_goal_reached", Dynamic_Wrap(GameMode, 'OnNPCGoalReached'), self)
   CustomGameEventManager:RegisterListener("ability_choise", Dynamic_Wrap(GameMode, 'AbilityChoise'))
+  CustomGameEventManager:RegisterListener("hero_kit_stats", Dynamic_Wrap(GameMode, 'TeamComStat'))
+  CustomGameEventManager:RegisterListener("hero_kit_skill", Dynamic_Wrap(GameMode, 'TeamComSkill'))
   
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 

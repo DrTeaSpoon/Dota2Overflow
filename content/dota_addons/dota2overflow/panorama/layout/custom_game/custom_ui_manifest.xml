@@ -69,5 +69,6 @@
 		<CustomUIElement type="FlyoutScoreboard"	layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml" />-->
 		<CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/hero_kit.xml" />
 		<CustomUIElement type="GameInfo" 			layoutfile="file://{resources}/layout/custom_game/overflow_info.xml" />
+		<!--<CustomUIElement type="GameSetup" layoutfile="file://{resources}/layout/custom_game/voting.xml" />-->
   </Panel>
 </root>

@@ -251,4 +251,35 @@
 			}
 		}
 	}
+	"item_ctf_red"
+	{
+		"ID"							"1255"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/gamemode/flag_red.lua"
+		"AbilityTextureName"			"item_glass"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ITEM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"0.3"
+		"AbilityManaCost"				"0"
+		"ItemPurchasable" "0"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10"
+		"ItemShopTags"					"glass"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"glass"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_slow"				"-200"
+			}
+		}
+	}
 }

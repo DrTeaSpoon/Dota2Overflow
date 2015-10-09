@@ -1,0 +1,37 @@
+<root>
+	<styles>
+	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	<include src="file://{resources}/styles/custom_game/voting.css" />
+	</styles>
+	<scripts>
+	<include src="file://{resources}/scripts/custom_game/voting.js" /> 
+	</scripts>
+	<Panel class="Voting_Root">
+		<Panel id="vote_option_level" class="vote_panel">
+			<Label text="Level" id="vote_option_level_desc"/>
+			<DropDown id="level_select" oninputsubmit="LevelVoteSelected()">
+				<Label text="#level_a" id="level_option_1"/>
+				<Label text="#level_b" id="level_option_2"/>
+				<Label text="#level_c" id="level_option_3"/>
+				<Label text="#level_d" id="level_option_4"/>
+			</DropDown>
+		</Panel>
+		<Panel id="vote_option_time" class="vote_panel">
+			<Label text="Game Time" id="vote_option_time_desc"/>
+			<TextEntry id="time_input" maxchars="3" placeholder="120" oninputsubmit="TimeVote()" />
+		</Panel>
+		<Panel id="vote_option_exp" class="vote_panel">
+			<Label text="Experience" />
+			<Button onactivate="ExpDown()">
+				<Label text="<" />
+			</Button>
+				<Label text="100" id="exp_value"/><Label text="%" id="exp_sign"/>
+			<Button onactivate="ExpUp()">
+				<Label text=">" />
+			</Button>
+		</Panel>
+			<Button onactivate="LockVotes()">
+				<Label text="Lock Votes" />
+			</Button>
+	</Panel>
+</root>

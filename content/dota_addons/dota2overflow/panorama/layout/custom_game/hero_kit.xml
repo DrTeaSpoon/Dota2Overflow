@@ -7,25 +7,26 @@
 	<include src="file://{resources}/scripts/custom_game/hero_buttons_kit.js" /> 
 	</scripts>
 	<Panel class="HeroKit_Root">
+	
 		<Panel id="HeroKit_Listing_All">
 		
 		<Panel id="HeroKit_Attributes">
-			<Panel id="HeroKit_AttPoints" class="atr_point"><Label text="750" id="point_val"/></Panel>
+			<Panel id="HeroKit_AttPoints" class="atr_point" onmouseover="DOTAShowTextTooltip(#DOTA_HeroKit_Gold)" onmouseout="DOTAHideTextTooltip()"><Label text="750" id="point_val"/></Panel>
 			<Panel id="HeroKit_StrStat">
 				<Button id="HeroKit_StrMinus" onactivate="StatMinus(0)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
-				<Button id="HeroKit_StrVal" class="atr_val" onactivate="StatPrimeChoose(0)"><Label text="27" id="str_val" /></Button>
+				<Button id="HeroKit_StrVal" class="atr_val" onactivate="StatPrimeChoose(0)" onmouseover="StatTooltip(0)" onmouseout="DOTAHideTextTooltip()"><Label text="27" id="str_val" /></Button>
 				<Button id="HeroKit_StrPlus" onactivate="StatPlus(0)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
 			</Panel>
 			
 			<Panel id="HeroKit_AgiStat">
 				<Button id="HeroKit_AgiMinus" onactivate="StatMinus(1)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
-				<Button id="HeroKit_AgiVal" onactivate="StatPrimeChoose(1)" class="atr_val"><Label text="27" id="agi_val"/></Button>
+				<Button id="HeroKit_AgiVal" onactivate="StatPrimeChoose(1)" class="atr_val"  onmouseover="StatTooltip(1)" onmouseout="DOTAHideTextTooltip()"><Label text="27" id="agi_val"/></Button>
 				<Button id="HeroKit_AgiPlus" onactivate="StatPlus(1)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
 			</Panel>
 			
 			<Panel id="HeroKit_IntStat">
 				<Button id="HeroKit_IntMinus" onactivate="StatMinus(2)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>
-				<Button id="HeroKit_IntVal" class="atr_val" onactivate="StatPrimeChoose(2)"><Label text="27" id="int_val"/></Button>
+				<Button id="HeroKit_IntVal" class="atr_val" onactivate="StatPrimeChoose(2)" onmouseover="StatTooltip(2)" onmouseout="DOTAHideTextTooltip()"><Label text="27" id="int_val"/></Button>
 				<Button id="HeroKit_IntPlus" onactivate="StatPlus(2)" class="atr_plus"><Image src="file://{images}/custom_game/plus.png" /></Button>
 			</Panel>
 			
@@ -42,7 +43,7 @@
 		<Panel id="HeroKit_Abilities"></Panel> <Panel id="HeroKit_Traits"> </Panel> <Panel id="HeroKit_UltsList"> </Panel>
 		
 		</Panel>
-		
+		<!--
 		<Panel id="HeroKit_Tooltip">
 		<Panel id="HeroKit_Tooltip_Ab_Name">
 		<Label id="tool_tip_name" text="Ability" />
@@ -55,7 +56,7 @@
 		</Panel>
 		</Panel>
 		</Panel>
-		
+		-->
 		
 		
 		<Panel id="HeroKit_Selection">
@@ -63,28 +64,31 @@
 			<Panel id="HeroKit_AbSelect_A" class="lable_text_p">
 				<Label text="Actives" id="traits_label" class="lable_text"/>
 				<Panel id="HeroKit_AbSelect">
-					<Button id="HeroKit_Ability_Q" onactivate="OnRemoveSkill('#HeroKit_Ability_Q')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
-					<Button id="HeroKit_Ability_W" onactivate="OnRemoveSkill('#HeroKit_Ability_W')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
-					<Button id="HeroKit_Ability_E" onactivate="OnRemoveSkill('#HeroKit_Ability_E')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+					<Button id="HeroKit_Ability_Q" onactivate="OnRemoveSkill(1)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
+					<Button id="HeroKit_Ability_W" onactivate="OnRemoveSkill(2)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
+					<Button id="HeroKit_Ability_E" onactivate="OnRemoveSkill(3)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
 				</Panel>
 			</Panel>
 			
 			<Panel id="HeroKit_AbSelect_B" class="lable_text_p">
 				<Label text="Passives" id="traits_label" class="lable_text"/>
 				<Panel id="HeroKit_TrSelect">
-					<Button id="HeroKit_Ability_D" onactivate="OnRemoveSkill('#HeroKit_Ability_D')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
-					<Button id="HeroKit_Ability_F" onactivate="OnRemoveSkill('#HeroKit_Ability_F')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+					<Button id="HeroKit_Ability_D" onactivate="OnRemoveSkill(4)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
+					<Button id="HeroKit_Ability_F" onactivate="OnRemoveSkill(5)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
 				</Panel>
 			</Panel>
 			
 			<Panel id="HeroKit_AbSelect_C" class="lable_text_p">
 				<Label text="Ultimate" id="traits_label" class="lable_text"/>
 				<Panel id="HeroKit_UlSelect">
-					<Button id="HeroKit_Ability_R" onactivate="OnRemoveSkill('#HeroKit_Ability_R')" class="ab_button_selection"><Image src="file://{images}/spellicons/empty.png" /></Button>
+					<Button id="HeroKit_Ability_R" onactivate="OnRemoveSkill(6)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
 				</Panel>
 			</Panel>
 		</Panel>
 		
+		
 		<Button id="HeroKit_Done" onactivate="OnDone()" class="ab_button_done"><Image src="file://{images}/custom_game/done.png" /></Button>
+		<Panel id="HeroKit_Team">
+		</Panel>
 	</Panel>
 </root>

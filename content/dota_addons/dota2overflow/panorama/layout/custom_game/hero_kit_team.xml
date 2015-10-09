@@ -1,0 +1,28 @@
+<root>
+	<styles>
+	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	<include src="file://{resources}/styles/custom_game/hero_kit.css" />
+	</styles>
+	<scripts>
+	<include src="file://{resources}/scripts/custom_game/hero_kit_team.js" /> 
+	</scripts>
+	<Panel class="PlayerWrap">
+		<Panel id="player_steam_profile_wrap">
+			<DOTAAvatarImage id="player_steam_profile" />
+			<Panel id="player_gold"><Label id="TeamGoldVal" class="team_stat_val" text="750"/></Panel>
+		</Panel>
+		<Panel id="TeamStWrap">
+			<Panel id="TeamStr" class="team_stat"><Label id="TeamStrVal" class="team_stat_val" text="27"/></Panel>
+			<Panel id="TeamAgi" class="team_stat"><Label id="TeamAgiVal" class="team_stat_val" text="27"/></Panel>
+			<Panel id="TeamInt" class="team_stat"><Label id="TeamIntVal" class="team_stat_val" text="27"/></Panel>
+		</Panel>
+		<Panel id="TeamAbWrap">
+		<Panel  class="ability_slot_team"> <DOTAAbilityImage id="player_slot_1" abilityname="rubick_empty1" /> </Panel>
+		<Panel  class="ability_slot_team"> <DOTAAbilityImage id="player_slot_2" abilityname="rubick_empty1" /> </Panel>
+		<Panel  class="ability_slot_team"> <DOTAAbilityImage id="player_slot_3" abilityname="rubick_empty1" /> </Panel>
+		<Panel  class="ability_slot_team"> <DOTAAbilityImage id="player_slot_4" abilityname="rubick_empty1" /> </Panel>
+		<Panel  class="ability_slot_team"> <DOTAAbilityImage id="player_slot_5" abilityname="rubick_empty1" /> </Panel>
+		<Panel  class="ability_slot_team"> <DOTAAbilityImage id="player_slot_6" abilityname="rubick_empty1" /> </Panel>
+		</Panel>
+	</Panel>
+</root>

@@ -130,7 +130,7 @@ function GameMode:OnHeroInGame(hero)
 			if not GameRules.PlayerAbs[pID][i] or GameRules.PlayerAbs[pID][i] == "random" then
 				GameRules.PlayerAbs[pID][i] = self:RandomSkill(pID,i)
 			end
-		print("Adding to hero: " .. GameRules.PlayerAbs[pID][i])
+		--print("Adding to hero: " .. GameRules.PlayerAbs[pID][i])
 				hero:AddAbility(GameRules.PlayerAbs[pID][i])
 	end
 		--Timers:CreateTimer(10, -- Start this timer 30 game-time seconds later

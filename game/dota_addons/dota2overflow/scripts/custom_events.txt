@@ -17,4 +17,34 @@
 		"hero_int" "short"
 		"hero_int_g" "float"
 	}
+	"vote_event"
+	{
+		"vote_string"	"string"
+		"vote_small_number"	"short"
+		"vote_desimal_number"	"float"
+	}
+	"team_hero_kit_stats"
+	{
+		"player"	"short"
+		"change"	"short"
+		"target"	"short"
+		"gold"	"short"
+	}
+	"team_hero_kit_skills"
+	{
+		"player"	"short"
+		"change"	"string"
+		"target"	"short"
+	}
+	"hero_kit_stats"
+	{
+		"change"	"short"
+		"target"	"short"
+		"gold"	"short"
+	}
+	"hero_kit_skill"
+	{
+		"change"	"string"
+		"target"	"short"
+	}
 }

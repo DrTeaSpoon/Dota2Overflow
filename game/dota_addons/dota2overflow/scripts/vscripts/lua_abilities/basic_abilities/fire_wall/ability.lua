@@ -2,7 +2,6 @@
 if fire_wall == nil then
 	fire_wall = class({})
 end
-LinkLuaModifier("element_fire", "lua_mods/element_fire", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("fire_wall_hidden", "lua_abilities/basic_abilities/fire_wall/modifier.lua", LUA_MODIFIER_MOTION_NONE)
 
 function fire_wall:GetCastAnimation()
