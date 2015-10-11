@@ -36,10 +36,12 @@ function Precache( context )
   --PrecacheItemByNameSync("example_ability", context)
   --PrecacheItemByNameSync("item_multicast", context)
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts", context)
-  PrecacheResource("particle", "particles/multicast_item/multicast.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_chaos_knight/chaos_knight_bolt_msg.vpcf", context)
   PrecacheResource("particle", "particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012.vpcf", context)
 	PrecacheResource("particle", "particles/base_attacks/generic_projectile.vpcf", context)
 	PrecacheResource("particle","particles/econ/generic/generic_buff_1/generic_buff_1.vpcf", context)
+	PrecacheResource("model","models/heroes/oracle/crystal_ball.vmdl",context)
+	PrecacheResource("particle","particles/dark_smoke_test.vpcf", context)
   
 
     VectorTarget:Precache( context )

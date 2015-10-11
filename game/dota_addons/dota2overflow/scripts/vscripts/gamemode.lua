@@ -59,7 +59,26 @@ end
   This function is called once and only once as soon as the first player (almost certain to be the server in local lobbies) loads in.
   It can be used to initialize state that isn't initializeable in InitGameMode() but needs to be done before everyone loads in.
 ]]
+
+function GameMode:BallGameMode()
+	LinkLuaModifier( "ball_mod", "lua_mods/ball_mod.lua", LUA_MODIFIER_MOTION_NONE )
+	local hTheBall_Start = Entities:FindByName(nil, "gamemode_ball_start")
+	local unit_name = "npc_game_ball"
+	if hTheBall_Start then
+	PrecacheUnitByNameAsync(unit_name, function( )
+	local hTheBall = CreateUnitByName(unit_name, hTheBall_Start:GetAbsOrigin(), false, nil, nil, DOTA_TEAM_NEUTRALS ) 
+	Physics:Unit(hTheBall)
+	hTheBall:SetPhysicsFriction (0.01)
+	hTheBall:SetPhysicsVelocityMax (2500)
+	hTheBall:SetGroundBehavior (PHYSICS_GROUND_LOCK)
+	hTheBall:AddNewModifier( hTheBall, nil, "ball_mod", {} )
+	end
+	,0)
+	end
+end
+
 function GameMode:OnFirstPlayerLoaded()
+	Physics:GenerateAngleGrid()
   GameRules.AbilityListing = {}
   local tAbilityListTemp = LoadKeyValues("scripts/kv/abilities.txt")
   local n = 1
@@ -147,6 +166,7 @@ end
   is useful for starting any game logic timers/thinkers, beginning the first round, etc.
 ]]
 function GameMode:OnGameInProgress()
+--self:BallGameMode()
  -- --DebugPrint("[BAREBONES] The game has officially begun")
  --
  -- Timers:CreateTimer(30, -- Start this timer 30 game-time seconds later

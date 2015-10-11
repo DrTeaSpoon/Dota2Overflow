@@ -10,6 +10,7 @@
 		{
 			_class = "C_OP_InterpolateRadius"
 			m_flEndScale = 0.100000
+			m_flStartScale = 20.000000
 		},
 		{
 			_class = "C_OP_PositionLock"
@@ -38,7 +39,7 @@
 			m_flSelfIllumAmount = 0.900000
 			m_flDiffuseAmount = 0.000000
 			m_bAdditive = true
-			m_hTexture = resource:"materials/particle/basic_glow.vtex"
+			m_hTexture = resource:"materials/particle/electrical_arc_white/electrical_arc_white.vtex"
 		},
 	]
 	m_Initializers =
@@ -77,27 +78,27 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
-			[
-				193,
-				115,
-				10,
-				255,
-			]
 			m_ColorMax =
 			[
-				255,
-				196,
 				0,
 				255,
+				255,
+				255,
 			]
+		},
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 3
+		},
+		{
+			_class = "C_INIT_RandomRotation"
 		},
 	]
 	m_Emitters =
 	[
 		{
 			_class = "C_OP_ContinuousEmitter"
-			m_flEmitRate = 64.000000
+			m_flEmitRate = 84.100000
 		},
 	]
 }

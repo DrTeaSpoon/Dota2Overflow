@@ -21,6 +21,7 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 	if IsServer() then
 		if params.unit == self:GetParent() and not params.ability.IsProcBanned then
 		local hAbility = self:GetAbility()
+		if hAbility:GetLevel() < 1 then return end
 		if params.ability:IsItem() then return end
 		local iAoE = hAbility:GetSpecialValueFor( "radius" )
 		local iDamage = hAbility:GetSpecialValueFor( "damage" )
@@ -45,7 +46,13 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 					ParticleManager:SetParticleControl( nFXIndex, 1, Vector( iAoE, 1, 1 ) )
 					ParticleManager:SetParticleControl( nFXIndex, 0, enemy:GetOrigin()+Vector(0,0,100) )
 					ParticleManager:ReleaseParticleIndex( nFXIndex )
-					ApplyDamage( damage )
+					local dmg = ApplyDamage( damage )
+					local life_time = 2.0
+					local digits = string.len( math.floor( dmg ) ) + 1
+					local numParticle = ParticleManager:CreateParticle( "particles/msg_fx/msg_crit.vpcf", PATTACH_OVERHEAD_FOLLOW, enemy )
+					ParticleManager:SetParticleControl( numParticle, 1, Vector( 0, dmg, 4 ) )
+					ParticleManager:SetParticleControl( numParticle, 2, Vector( life_time, digits, 0 ) )
+					ParticleManager:SetParticleControl( numParticle, 3, Vector( 0, 150, 255 ) )
 				end
 			end
 		end

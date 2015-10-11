@@ -10,7 +10,7 @@
 			m_fDrag = 0.050000
 		},
 		{
-			_class = "C_OP_InterpolateRadius"
+_class = "C_OP_InterpolateRadius"
 			m_flEndScale = 0.000000
 		},
 		{
@@ -66,24 +66,24 @@
 			m_fLifetimeMax = 0.500000
 		},
 		{
-			_class = "C_INIT_RandomRadius"
-			m_flRadiusMin = 8.000000
-			m_flRadiusMax = 14.000000
+_class = "C_INIT_RandomRadius"
+m_flRadiusMin = 8.000000
+m_flRadiusMax = 14.000000
 		},
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMin =
-			[
-				244,
-				232,
-				90,
+[
+0,
+255,
+255,
 				255,
 			]
 			m_ColorMax =
-			[
-				255,
-				196,
-				0,
+[
+0,
+255,
+255,
 				255,
 			]
 		},

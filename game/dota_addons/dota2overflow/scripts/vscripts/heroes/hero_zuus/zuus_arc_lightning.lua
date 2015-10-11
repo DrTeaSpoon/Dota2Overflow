@@ -15,7 +15,7 @@ function zuus_arc_lightning_lua:OnSpellStart()
 	self.JumpCount = self:GetSpecialValueFor("jump_count")
 	self.JumpRadius = self:GetSpecialValueFor("radius")
 	self.iMDamage = self:GetSpecialValueFor( "magic_damage" )
-	self.JumpDamage = self:GetAbilityDamage()
+	self.JumpDamage = self:GetSpecialValueFor( "damage" )
 	self.JumpDmgType = self:GetAbilityDamageType()
 	self.InsProtect = self.JumpCount --We use this so the chain lightning can't circle back.
 	

@@ -4,8 +4,12 @@ end
 
 
 function holy_word:GetBehavior() 
-	local behav = DOTA_ABILITY_BEHAVIOR_NO_TARGET
+	local behav = DOTA_ABILITY_BEHAVIOR_NO_TARGET + DOTA_ABILITY_BEHAVIOR_AOE
 	return behav
+end
+
+function holy_word:GetAOERadius()
+	return self:GetSpecialValueFor("radius")
 end
 
 function holy_word:OnSpellStart()

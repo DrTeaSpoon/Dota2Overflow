@@ -1033,7 +1033,6 @@
 	
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"			"8 12 16 20"
 	
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -1071,6 +1070,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"magic_damage"				"80 100 120 140"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"8 12 16 20"
 			}
 		}
 	}
@@ -1843,10 +1847,10 @@
 				"var_type"				"FIELD_FLOAT"
 				"duration"			"2.0 2.5 3.0 3.5"
 			}
-			"01"
+			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"move_speed"			"200"
+				"move_speed"			"90"
 			}
 			
 		}
@@ -1915,7 +1919,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.69 0.69 0.69 0.69"
+		"AbilityCastPoint"				"0.69 0.69 0.69"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"metamorphosis"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -2217,14 +2221,20 @@
 		"AbilityTextureName"			"magic_missile"
 		"AbilityCastPoint"              "0.1"
 		"AbilityCooldown"               "23"
-		"AbilityManaCost"               "100"
+		"AbilityManaCost"               "100 120 140 160"
 		 "AbilityCastRange"              "750"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts" //Hero_VengefulSpirit.MagicMissile
+		"particle"	"particles/units/heroes/hero_templar_assassin/templar_assassin_psi_blade.vpcf"
 		"particle"	"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"
+		"particle"	"particles/econ/events/ti4/blink_dagger_start_ti4.vpcf"
+		"particle"	"particles/econ/events/ti4/blink_dagger_end_ti4.vpcf"
 		}
 		"AbilitySpecial"
 		{
@@ -2236,7 +2246,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"			"250"
+				"radius"			"333 444 555 666"
 			}
 			"03"
 			{
@@ -2246,14 +2256,56 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"push_time"			"0.8"
+				"speed"			"1000"
 			}
-			"05"
+		}
+	}
+	
+	"vortex_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/vortex_blink/ability.lua"
+		"AbilityTextureName"			"vortex_blink"
+		"AbilityCastPoint"              "0.1"
+		"AbilityCooldown"               "30.0 27.0 24.0 21.0"
+		"AbilityManaCost"               "150"
+		 "AbilityCastRange"              "0"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts" //Hero_VengefulSpirit.MagicMissile
+		"particle"	"particles/units/heroes/hero_dark_seer/dark_seer_vacuum.vpcf"
+		"particle"	"particles/units/heroes/hero_riki/riki_blink_strike.vpcf"
+		"particle"	"particles/units/heroes/hero_riki/riki_blink_strike_end.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"push_range"			"260 380 500 620"
+				"var_type"				"FIELD_INTEGER"
+				"max_blink"				"1000 1200 1400 1600"
 			}
-			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_clamp"			"900 1100 1300 1500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"			"200 250 300 350"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cooldown_scepter"		"24.0 21.0 18.0 15.0"
+			}
 		}
 	}
 	
@@ -2306,6 +2358,212 @@
 		}
 	}
 	
+	"ball_lightning"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "FightRecapLevel"               "1"
+    "BaseClass"                     "ability_lua"
+    "AbilityTextureName"            "ball_lightning"
+    "ScriptFile"                    "lua_abilities/basic_abilities/ball_lightning/ability.lua"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "1500"
+    "AbilityCastPoint"              "0.2"
+    "AbilityCooldown"               "30 25 20 15"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+    "AbilityManaCost"               "150"
+    
+    "VectorTarget"                  "1"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "range"                    "1200 1400 1600 1800"
+        }
+        "02"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "speed"           "1800 2200 2600 3000"
+        }           
+        "03"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "radius"             "200"
+        }   
+        "04"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "damage"             "20 25 30 35"
+        }   
+        "05"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "magic_damage"             "100 150 200 250"
+        }
+    }
+    
+    "precache"
+    {
+        "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+        "particle"                  "particles/econ/generic/generic_projectile_linear_1/generic_projectile_linear_1.vpcf"
+    }
+}
+"sun_ray"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "FightRecapLevel"               "1"
+    "BaseClass"                     "ability_lua"
+    "AbilityTextureName"            "sun_ray"
+    "ScriptFile"                    "lua_abilities/basic_abilities/sun_ray/ability.lua"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityCastPoint"              "0.2"
+    "AbilityCooldown"               "40"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+    "AbilityManaCost"               "150"
+	"AbilityChannelTime"      "1.7"
+    
+    "VectorTarget"                  "1"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "radius"             "200"
+        }   
+        "02"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "fire_damage"             "10 20 30 40"
+        }   
+        "03"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "magic_damage"             "100 150 200 250"
+        }
+        "04"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "delay"             "1.7"
+        }   
+    }
+    
+    "precache"
+    {
+        "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+        "particle"                  "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+		"particle"					"particles/units/heroes/hero_invoker/invoker_sun_strike_team.vpcf"
+    }
+}
 	
+	
+	"zombie_ambush"
+	{
+		"FightRecapLevel"               "1"
+		"BaseClass"                     "ability_lua"
+		"AbilityTextureName"            "zombie_ambush"
+		"ScriptFile"                    "lua_abilities/basic_abilities/zombie_ambush/ability.lua"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"              "3000"
+		"AbilityCastPoint"              "0.2"
+		"AbilityCooldown"               "25.0 23.0 21.0 19.0"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"AbilityManaCost"               "150"
+		//"AbilityChannelTime"      "1.7"
+		
+		"VectorTarget"                  "1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"             "300"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"zombie_damage"             "42 62 82 102"
+			}   
+			"03"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"             "10.0"
+			}   
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"zombie_damage_tooltip"             "70 90 110 130"
+			}   
+		}
+		
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+			"particle"                  "particles/units/heroes/hero_undying/undying_zombie_spawn.vpcf"
+			"model"						"models/heroes/furion/treant.vmdl"
+		}
+	}
+	
+	"ult_burrow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/ultimates/burrow/ability.lua"
+		"AbilityTextureName"			"ult_burrow"
+		"AbilityCastPoint"              "0.7"
+		"AbilityCooldown"               "15.0"
+		"AbilityManaCost"               "150"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"model"	"models/heroes/nerubian_assassin/mound.vmdl"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts" //Hero_Slark.ShadowDance
+		"particle"	"particles/units/heroes/hero_nyx_assassin/nyx_assassin_burrow.vpcf"
+		"particle"	"particles/units/heroes/hero_nyx_assassin/nyx_assassin_burrow_inground.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"			"1.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_out"			"40 70 100"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_in"			"-35 -55 -75"
+			}
+		}
+	}
 }
 

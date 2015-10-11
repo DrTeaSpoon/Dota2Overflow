@@ -22,6 +22,8 @@ function earthshaker_aftershock_lua_passive:OnAbilityExecuted(params)
 		--DeepPrintTable(params)
 		if params.unit == self:GetParent() and not params.ability.IsProcBanned then
 		local hAbility = self:GetAbility()
+		
+		if hAbility:GetLevel() < 1 then return end
 		if params.ability:IsItem() then return end
 		local iAoE = hAbility:GetSpecialValueFor( "aftershock_range" )
 		local fDuration = hAbility:GetSpecialValueFor( "tooltip_duration" )

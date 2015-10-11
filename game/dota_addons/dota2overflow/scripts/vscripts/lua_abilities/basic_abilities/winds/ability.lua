@@ -44,7 +44,7 @@ function winds:OnSpellStart()
 end
 
 function winds:OnProjectileHit( hTarget, vLocation )
-	if hTarget then
+	if hTarget and ( not hTarget:IsMagicImmune() ) and ( not hTarget:IsInvulnerable() ) then
 	local caster_location = hTarget:GetAbsOrigin()
 	local speed = self:GetSpecialValueFor("speed") * 0.03
 	local distance = (self.vPoint - caster_location):Length2D()

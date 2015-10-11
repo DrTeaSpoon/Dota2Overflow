@@ -7,6 +7,17 @@ function generic_lua_stun:OnCreated( kv )
 	end
 end
 
+function generic_lua_stun:OnRefresh( kv )	
+	if IsServer() then
+		local iDur = self:GetRemainingTime() or 0.04
+		local iNDur = kv.duration or 0.05
+		if iDur > iNDur then
+			self:SetDuration(iDur, true)
+		else
+			self:SetDuration(iNDur, true)
+		end
+	end
+end
 
 function generic_lua_stun:IsDebuff()
 	return true

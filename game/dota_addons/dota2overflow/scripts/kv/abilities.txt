@@ -16,13 +16,13 @@
 "12" "summon_basic"
 //"13" "power_leap"
 //"14" "land_mine"
-//"15" "hodurs_arrow" //Cold damamage. 
+"15" "zombie_ambush"
 //
 //"16" "alertillery" //target half way point. friendly fire possible.
-//"17" "magic_missile"
+"17" "magic_missile"
 //"18" "pray" //Random effect more likely to be positive if at low health. Hidden extra if lot of players pray at same time.
-//"19" "blink"
-//"20" "ball_lightning"
+"19" "vortex_blink"
+"20" "sun_ray"
 //
 //"21" "flame_spray"
 //"22" "ice_trap" //trip wire!!!

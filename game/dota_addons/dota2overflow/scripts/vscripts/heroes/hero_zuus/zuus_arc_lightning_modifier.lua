@@ -76,7 +76,13 @@ function zuus_arc_lightning_lua_modifier:DamageParent()
 			damage_type = self.dmgtype,
 			ability = self:GetAbility()
 		}
-		ApplyDamage( damage )
+		local dmg = ApplyDamage( damage )
+		local life_time = 2.0
+		local digits = string.len( math.floor( dmg ) ) + 1
+		local numParticle = ParticleManager:CreateParticle( "particles/msg_fx/msg_crit.vpcf", PATTACH_OVERHEAD_FOLLOW, self:GetParent() )
+		ParticleManager:SetParticleControl( numParticle, 1, Vector( 0, dmg, 4 ) )
+		ParticleManager:SetParticleControl( numParticle, 2, Vector( life_time, digits, 0 ) )
+		ParticleManager:SetParticleControl( numParticle, 3, Vector( 0, 150, 255 ) )
 		
 	end
 end

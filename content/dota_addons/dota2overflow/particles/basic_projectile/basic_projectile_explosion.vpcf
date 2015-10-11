@@ -34,7 +34,7 @@
 			m_flSelfIllumAmount = 0.900000
 			m_flDiffuseAmount = 0.100000
 			m_bAdditive = true
-			m_hTexture = resource:"materials/particle/basic_glow.vtex"
+			m_hTexture = resource:"materials/particle/electrical_arc_white/electrical_arc_white.vtex"
 		},
 	]
 	m_Initializers =
@@ -64,25 +64,32 @@
 		},
 		{
 			_class = "C_INIT_RandomRadius"
-			m_flRadiusMin = 2.500000
-			m_flRadiusMax = 4.000000
+			m_flRadiusMin = 10.000000
+			m_flRadiusMax = 20.000000
 		},
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMin =
 			[
-				255,
-				196,
 				0,
+				255,
+				255,
 				255,
 			]
 			m_ColorMax =
 			[
-				193,
-				115,
-				10,
+				0,
+				255,
+				255,
 				255,
 			]
+		},
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 3
+		},
+		{
+			_class = "C_INIT_RandomRotation"
 		},
 	]
 	m_Emitters =
