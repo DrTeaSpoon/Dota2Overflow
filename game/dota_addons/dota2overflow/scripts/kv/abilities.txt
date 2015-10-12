@@ -26,7 +26,7 @@
 //
 //"21" "flame_spray"
 //"22" "ice_trap" //trip wire!!!
-//"23" "boulder"
+"23" "spike_hide"
 //"24" "holy_rage"
 //"25" "unholy_rage"
 //

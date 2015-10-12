@@ -2377,8 +2377,6 @@
     "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
     "AbilityManaCost"               "150"
     
-    "VectorTarget"                  "1"
-    
     // Special
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
@@ -2436,8 +2434,6 @@
     "AbilityManaCost"               "150"
 	"AbilityChannelTime"      "1.7"
     
-    "VectorTarget"                  "1"
-    
     // Special
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
@@ -2488,8 +2484,6 @@
 		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
 		"AbilityManaCost"               "150"
 		//"AbilityChannelTime"      "1.7"
-		
-		"VectorTarget"                  "1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2563,6 +2557,53 @@
 				"var_type"					"FIELD_INTEGER"
 				"damage_in"			"-35 -55 -75"
 			}
+		}
+	}
+	
+	
+	"spike_hide"
+	{
+		"FightRecapLevel"               "1"
+		"BaseClass"                     "ability_lua"
+		"AbilityTextureName"            "spike_hide"
+		"ScriptFile"                    "lua_abilities/basic_abilities/spike_hide/ability.lua"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"              "800"
+		"AbilityCastPoint"              "0.0"
+		"AbilityCooldown"               "20.0 16.0 12.0 8.0"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"AbilityManaCost"               "60"
+		//"AbilityChannelTime"      "1.7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"damage_return"             "50 75 100 125"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"stun"             "1.0 1.4 1.8 2.2"
+			}   
+			"03"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"             "3.0"
+			}  
+		}	
+		
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts" // Hero_Disruptor.KineticField.End
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+			"particle"                  "particles/spike_shield_rock.vpcf"
+			"particle"					"particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
 		}
 	}
 }

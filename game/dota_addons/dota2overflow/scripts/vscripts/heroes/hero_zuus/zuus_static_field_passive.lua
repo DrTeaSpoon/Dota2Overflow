@@ -26,7 +26,6 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 		local iAoE = hAbility:GetSpecialValueFor( "radius" )
 		local iDamage = hAbility:GetSpecialValueFor( "damage" )
 		local iMDamage = hAbility:GetSpecialValueFor( "magic_damage" )
-		--sounds/weapons/hero/zuus/static_field.vsnd
 		
 		local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetOrigin(), self:GetParent(), iAoE, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
 		if #enemies > 0 then
@@ -42,8 +41,7 @@ function zuus_static_field_lua_passive:OnAbilityExecuted(params)
 						ability = self:GetAbility()
 					}
 					local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_zuus/zuus_static_field.vpcf", PATTACH_WORLDORIGIN, nil )
-					--ParticleManager:SetParticleControlEnt( nFXIndex, 0, enemy, PATTACH_POINT_FOLLOW, "attach_hitloc", enemy:GetOrigin(), true );
-					ParticleManager:SetParticleControl( nFXIndex, 1, Vector( iAoE, 1, 1 ) )
+					ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 4, 1, 1 ) )
 					ParticleManager:SetParticleControl( nFXIndex, 0, enemy:GetOrigin()+Vector(0,0,100) )
 					ParticleManager:ReleaseParticleIndex( nFXIndex )
 					local dmg = ApplyDamage( damage )
