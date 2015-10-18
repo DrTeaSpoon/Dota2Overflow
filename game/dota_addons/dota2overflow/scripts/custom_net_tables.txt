@@ -4,7 +4,7 @@
   [
   "ability_list",
   "ult_list",
-  "trait_list"
-  //"new_skills_list",
+  "trait_list",
+  "shop_a_list"
   ]
 }

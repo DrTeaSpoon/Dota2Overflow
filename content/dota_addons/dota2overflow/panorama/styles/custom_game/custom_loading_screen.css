@@ -17,6 +17,8 @@
     height: 100%;
     background-color: black;
     overflow: clip;
+	background-image: url("file://{images}/custom_game/loading_screen/overflow_v09.png");
+	background-size: 100% 100%;
 }
 
 #TitlePanel
@@ -48,8 +50,8 @@
 #CustomBg
 {
 
-  margin-top: 350px;
-    overflow: clip;
+   overflow: clip;
+  margin-top: 600px;
   pre-transform-scale2d: 1.0;
   animation-name: gamemode_anim;
   animation-delay: AnimationDelay;
@@ -61,8 +63,8 @@
 #CustomBgEffect_A
 {
 
-  margin-top: 350px;
     overflow: clip;
+  margin-top: 200px;
   pre-transform-scale2d: 1.0;
   animation-name: gamemode_anim_fx_a;
   animation-delay: AnimationDelay;
@@ -82,7 +84,7 @@
 {
   0%
   {
-    transform: translateX( -50px ) translateY( 200px );
+    transform: translateX( -10px ) translateY( 50px );
     pre-transform-scale2d: .8;
   }
 
@@ -96,7 +98,7 @@
 {
   0%
   {
-    transform: translateX( 50px ) translateY( -100px );
+    transform: translateX( 10px ) translateY( -50px );
     pre-transform-scale2d: .8;
   }
 

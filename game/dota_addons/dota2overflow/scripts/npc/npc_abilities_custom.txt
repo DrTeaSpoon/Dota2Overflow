@@ -23,12 +23,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"			"350"
+				"radius"			"300 350 350 400 400 450 450"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"			"1 2 3 4 5 6 7"
+				"damage"			"3 3 4 4 5 5 6"
 			}
 		}
 	}
@@ -148,7 +148,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max"			"3 5 7 10"
+				"max"			"10"
 			}
 			"02"
 			{
@@ -216,7 +216,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"5 10 15 20 25 30 35"
+				"bonus"						"5 15 25 35 45 65 75"
 			}
 		}
 	}
@@ -245,7 +245,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"chance"					"5 10 15 20 25 30 35"
+				"bonus"						"5 15 25 35 45 65 75"
 			}
 		}
 	}
@@ -269,7 +269,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"5 10 15 20 25 30 35"
+				"bonus"						"5 15 25 35 45 65 75"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max"						"20000"
 			}
 		}
 	}
@@ -1456,7 +1461,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"ability_lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"							// Changes dynamically with scepter	
@@ -1485,17 +1490,17 @@
 		"precache"
 		{
 			"particle"          "particles/lina_spell_laguna_chain.vpcf"
-			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
 		}
 
 		// Special
-		//-------------------------------------------------------------------------------------------------------------
+		//------------------------------------	-------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"30 45 60"
+				"damage"					"5 10 15"
 			}
 			"02"
 			{
@@ -1510,7 +1515,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"chain_fade"				"0.30"
+				"chain_fade"				"0.35"
 			}
 			"07"
 			{
@@ -1968,7 +1973,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"move_speed"	"370"
+				"move_speed"	"-25"
 			}
 			"06"
 			{
@@ -2121,7 +2126,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"vamp"			"10 25 40 55 70 85 100"
+				"vamp"						"5 15 25 35 45 65 75"
 			}
 		}
 	}
@@ -2432,7 +2437,7 @@
     "AbilityCooldown"               "40"
     "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
     "AbilityManaCost"               "150"
-	"AbilityChannelTime"      "1.7"
+	"AbilityChannelTime"      "2"
     
     // Special
     //-------------------------------------------------------------------------------------------------------------
@@ -2446,17 +2451,17 @@
         "02"
         {
             "var_type"                  "FIELD_INTEGER"
-            "fire_damage"             "10 20 30 40"
+            "fire_damage"             "10 15 20 25"
         }   
         "03"
         {
             "var_type"                  "FIELD_INTEGER"
-            "magic_damage"             "100 150 200 250"
+            "magic_damage"             "75 100 125 150"
         }
         "04"
         {
             "var_type"                  "FIELD_FLOAT"
-            "delay"             "1.7"
+            "delay"             "2"
         }   
     }
     
@@ -2604,6 +2609,190 @@
 			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
 			"particle"                  "particles/spike_shield_rock.vpcf"
 			"particle"					"particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+		}
+	}
+	
+	
+	"power_purge"
+	{
+		"FightRecapLevel"               "1"
+		"BaseClass"                     "ability_lua"
+		"AbilityTextureName"            "power_purge"
+		"ScriptFile"                    "lua_abilities/basic_abilities/power_purge/ability.lua"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"              "800"
+		"AbilityCastPoint"              "0.0"
+		"AbilityCooldown"               "22.0 20.0 18.0 16.0"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+		"AbilityManaCost"               "30"
+		//"AbilityChannelTime"      "1.7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"damage"             "50 75 100 125"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"stun"             "0.5 0.75 1.0 1.25"
+			}   
+			"03"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"delay"             "1.5"
+			}  
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"             "350"
+			}  
+		}	
+		
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts" // Hero_Disruptor.KineticField.End
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+			"particle"                  "particles/units/heroes/hero_slark/slark_dark_pact_start.vpcf"
+			"particle"					"particles/units/heroes/hero_slark/slark_dark_pact_pulses.vpcf"
+		}
+	}
+	
+	"black_dust"
+	{
+		"FightRecapLevel"               "1"
+		"BaseClass"                     "ability_lua"
+		"AbilityTextureName"            "black_dust"
+		"ScriptFile"                    "lua_abilities/basic_abilities/black_dust/ability.lua"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"              "800"
+		"AbilityCastPoint"              "0.3"
+		"AbilityCooldown"               "60.0"
+		"AbilityManaCost"               "50"
+		//"AbilityChannelTime"      "1.7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"             "5.0 7.0 9.0 11.0"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"             "1300"
+			}  
+			"03"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"slow"             "-50 -100 -150 -200"
+			}  
+		}	
+		
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts" // Hero_Disruptor.KineticField.End
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+			"particle"                  "particles/black_dust.vpcf"
+			"particle"					"particles/black_dust_debuff.vpcf"
+		}
+	}
+	
+	
+	"chi_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/chi_strike/passive.lua"
+		"AbilityTextureName"			"chi_strike"
+		"AbilityCooldown"               "5.0 4.5 4.0 3.5 3.0 2.5 2.0"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"range"			"700"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed"			"1300"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_burn"			"5 15 25 35 45 55 65"
+			}
+		}
+	}
+	
+	"day_mana"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/day_mana/passive.lua"
+		"AbilityTextureName"			"day_mana"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana"			"50 100 150 200 250 300 350"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"penalty"			"-25 -50 -75 -100 -125 -150 -175"
+			}
+		}
+	}
+	
+	"night_mana"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/night_mana/passive.lua"
+		"AbilityTextureName"			"night_mana"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana"			"50 100 150 200 250 300 350"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"penalty"			"-25 -50 -75 -100 -125 -150 -175"
+			}
 		}
 	}
 }

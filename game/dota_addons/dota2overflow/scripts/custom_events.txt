@@ -47,4 +47,16 @@
 		"change"	"string"
 		"target"	"short"
 	}
+	"custom_shop_buy"
+	{
+		"item"	"string"
+	}
+	"custom_chat_cts"
+	{
+		"msg"	"string"
+	}
+	"custom_chat_stc"
+	{
+		"msg"	"string"
+	}
 }

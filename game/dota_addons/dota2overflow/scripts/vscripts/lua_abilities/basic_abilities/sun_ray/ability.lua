@@ -12,7 +12,8 @@ function sun_ray:OnSpellStart()
 	ParticleManager:SetParticleControl( self.end_fx, 1, Vector(self:GetSpecialValueFor("radius"),0,0) )
 	EmitSoundOnLocationForAllies(self:GetCursorPosition() , "Hero_Invoker.SunStrike.Charge", hCaster)
 	AddFOWViewer(self:GetCaster():GetTeam(), self.point, self:GetSpecialValueFor("radius")+40, 4, false) 
-	--Add temporary vision for a given team ( nTeamID, vLocation, flRadius, flDuration, bObstructedVision) 
+	--Add temporary vision for a given team ( nTeamID, vLocation, flRadius, flDuration, bObstructedVision)
+	self.start_time = GameRules:GetGameTime()
 end
 
 function sun_ray:GetAOERadius()
@@ -25,19 +26,20 @@ function sun_ray:GetBehavior()
 end
 
 function sun_ray:OnChannelFinish( bInterrupted )
-	if not bInterrupted then
-		--teleport!
+		self.end_time = GameRules:GetGameTime()
+		local mult = self.end_time - self.start_time
+		--print(mult)
 		local hCaster = self:GetCaster()
 		local particleName = "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 		local expl = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN, hCaster )
 		ParticleManager:SetParticleControl( expl, 0, self.point )
 	ParticleManager:SetParticleControl( expl, 1, Vector(self:GetSpecialValueFor("radius"),0,0) )
 		EmitSoundOnLocationWithCaster(self.point, "Hero_Invoker.SunStrike.Ignite", hCaster )
-		local dmg = self:GetSpecialValueFor("fire_damage")
+		local dmg = math.floor(self:GetSpecialValueFor("fire_damage") * mult)
 		local aoe = self:GetSpecialValueFor("radius")
 					local damage = {
 						attacker = self:GetCaster(),
-						damage = self:GetSpecialValueFor("magic_damage"),
+						damage = math.floor(self:GetSpecialValueFor("magic_damage") * mult),
 						damage_type = self:GetAbilityDamageType(),
 						ability = self
 					}
@@ -54,8 +56,6 @@ function sun_ray:OnChannelFinish( bInterrupted )
 				end
 			end
 		end
-	end
-	--end effect
 	ParticleManager:DestroyParticle(self.end_fx, false) 
 	self.point = nil
 end

@@ -497,6 +497,31 @@ function ShowTeam() {
 	}
 }
 
+
+function UpdateTimer() {
+	var time =  Game.GetDOTATime( true, true );
+	time = Math.floor(time) * -1;
+	var Timer = $.FindChildInContext( "#kit_timer");
+	if( time > 0 ){
+	var mins = 0;
+	while(time > 60) {
+		time = time - 60;
+		mins = mins + 1;
+	}
+	/*$.Msg(String(mins) + ":" + String(time));*/
+	if( mins < 10 ){
+		mins = "0" + String(mins);
+	}
+	if( time < 10 ){
+		time = "0" + String(time);
+	}
+	Timer.text = String(mins) + ":" + String(time);
+	$.Schedule(0.5,UpdateTimer);
+	} else {
+	Timer.text = "Game In Progress";
+	}
+}
+
 (function () {
 	var tAbList = CustomNetTables.GetAllTableValues( "ability_list" );
 	var tAbListS = [];
@@ -522,4 +547,5 @@ function ShowTeam() {
 	tUlListS.sort();
 	Ult_Listing(tUlListS);
 	ShowTeam();
+	$.Schedule(0.5,UpdateTimer);
 })();

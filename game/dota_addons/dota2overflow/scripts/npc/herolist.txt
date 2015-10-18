@@ -102,7 +102,7 @@
   // "npc_dota_hero_shredder" "1"
   "npc_dota_hero_medusa" "1"
   "npc_dota_hero_troll_warlord" "1"
-  "npc_dota_hero_tusk" "1"
+  //"npc_dota_hero_tusk" "1"
   "npc_dota_hero_bristleback" "1"
   "npc_dota_hero_skywrath_mage" "1"
   "npc_dota_hero_elder_titan" "1"

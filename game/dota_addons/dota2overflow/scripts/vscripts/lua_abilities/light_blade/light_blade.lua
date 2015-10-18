@@ -1,6 +1,7 @@
 light_blade = class({})
 LinkLuaModifier( "modifier_light_blade", "lua_abilities/light_blade/modifier_light_blade.lua", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_light_blade_fade", "lua_abilities/light_blade/modifier_light_blade_fade.lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("element_fire", "lua_mods/element_fire", LUA_MODIFIER_MOTION_NONE)
 
 --------------------------------------------------------------------------------
 
@@ -38,14 +39,14 @@ function light_blade:OnSpellStart()
 			--end
 		
 			hTarget:AddNewModifier( self:GetCaster(), self, "modifier_light_blade", { duration = damage_delay, fade_id = GameRules:GetGameTime() } )
-			EmitSoundOn( "Brewmaster_Storm.DispelMagic", hTarget )
+			EmitSoundOn( "Hero_Phoenix.FireSpirits.Launch", hTarget )
 		end
 
 		local nFXIndex = ParticleManager:CreateParticle( "particles/lina_spell_laguna_chain.vpcf", PATTACH_CUSTOMORIGIN, nil );
 		ParticleManager:SetParticleControlEnt( nFXIndex, 0, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_attack1", self:GetCaster():GetOrigin() + Vector( 0, 0, 96 ), true );
 		ParticleManager:SetParticleControlEnt( nFXIndex, 1, hTarget, PATTACH_POINT_FOLLOW, "attach_hitloc", hTarget:GetOrigin(), true );
 		
-			local Colour = {200,255,150}
+			local Colour = {255,150,50}
 			if hTarget:HasModifier("modifier_light_blade_curse") then
 				local hMod = hTarget:FindModifierByName("modifier_light_blade_curse")
 				local nStack = hMod:GetStackCount()

@@ -79,6 +79,21 @@ end
 
 function GameMode:OnFirstPlayerLoaded()
 	Physics:GenerateAngleGrid()
+	
+	---CUSTOM SHOP :
+	
+  GameRules.ShopAList = {}
+  local tShopAListTemp = LoadKeyValues("scripts/kv/shop_a_list.txt")
+  local n = 1
+  for k,v in pairs(tShopAListTemp) do
+	GameRules.ShopAList[n] = v
+	CustomNetTables:SetTableValue( "shop_a_list", tostring(k), { name = tostring(v) } )
+	n = n + 1
+  end
+	
+	
+	---HeroKit : 
+	
   GameRules.AbilityListing = {}
   local tAbilityListTemp = LoadKeyValues("scripts/kv/abilities.txt")
   local n = 1

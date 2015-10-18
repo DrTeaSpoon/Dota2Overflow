@@ -43,21 +43,6 @@
 		<Panel id="HeroKit_Abilities"></Panel> <Panel id="HeroKit_Traits"> </Panel> <Panel id="HeroKit_UltsList"> </Panel>
 		
 		</Panel>
-		<!--
-		<Panel id="HeroKit_Tooltip">
-		<Panel id="HeroKit_Tooltip_Ab_Name">
-		<Label id="tool_tip_name" text="Ability" />
-		</Panel>
-		<Panel id="HeroKit_Tooltip_Ab_Desc">
-		<Label id="tool_tip_desc" text="Description" html="true" />
-		<Panel id="tool_tip_bot_wrap">
-		<Label id="tool_tip_cd" text="Cooldown" html="true" />
-		<Label id="tool_tip_mana" text="Mana Cost" html="true" />
-		</Panel>
-		</Panel>
-		</Panel>
-		-->
-		
 		
 		<Panel id="HeroKit_Selection">
 		
@@ -88,6 +73,7 @@
 		
 		
 		<Button id="HeroKit_Done" onactivate="OnDone()" class="ab_button_done"><Image src="file://{images}/custom_game/done.png" /></Button>
+		<Panel id="HeroKit_Time"><Label text="00:00" id="kit_timer"/></Panel>
 		<Panel id="HeroKit_Team">
 		</Panel>
 	</Panel>

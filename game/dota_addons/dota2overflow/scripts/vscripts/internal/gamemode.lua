@@ -34,6 +34,44 @@ function GameMode:AbilityChoise(choises)
 	end
 end
 
+function GameMode:CustomChat(keys)
+	local TO_WHO_MSG_HELP = -3
+	local TO_WHO_MSG_TEAM = -2
+	local TO_WHO_MSG_ALL = -1
+	local pID = keys.PlayerID
+	local team = PlayerResource:GetTeam(pID)
+	local player = PlayerResource:GetPlayer(pID) 
+	--print("server recieve and send")
+	local Msg = keys.msg
+	local nToWho = TO_WHO_MSG_TEAM
+	if string.find(Msg, "/all ") then
+		local i, j = string.find(Msg, "/all ")
+		if i == 1 then
+		print(Msg)
+		Msg = string.sub(Msg, j)
+		print(Msg)
+		nToWho = TO_WHO_MSG_ALL
+		end
+	elseif string.find(Msg, "/help") then
+		local i, j = string.find(Msg, "/help")
+		if i == 1  and string.len(Msg) == 5 then
+		nToWho = TO_WHO_MSG_HELP
+		end
+	end
+	if nToWho == TO_WHO_MSG_ALL then
+		Msg = "All> " .. Msg
+		CustomGameEventManager:Send_ServerToAllClients('custom_chat_stc', {player=pID, msg=Msg}) 
+	elseif nToWho == TO_WHO_MSG_TEAM then
+		Msg = "Team> " .. Msg
+		CustomGameEventManager:Send_ServerToTeam(team,'custom_chat_stc', {player=pID, msg=Msg})
+	elseif nToWho == TO_WHO_MSG_HELP then
+		Msg = "by default this chat sends to allies only. You can use '/all <text>' to chat with your foes."
+		CustomGameEventManager:Send_ServerToPlayer(player,'custom_chat_stc', {player=pID, msg=Msg})
+	end
+end
+
+
+
 function GameMode:TeamComStat(keys)
 	local pID = keys.PlayerID
 	local team = PlayerResource:GetTeam(pID)
@@ -166,6 +204,8 @@ function GameMode:_InitGameMode()
   CustomGameEventManager:RegisterListener("ability_choise", Dynamic_Wrap(GameMode, 'AbilityChoise'))
   CustomGameEventManager:RegisterListener("hero_kit_stats", Dynamic_Wrap(GameMode, 'TeamComStat'))
   CustomGameEventManager:RegisterListener("hero_kit_skill", Dynamic_Wrap(GameMode, 'TeamComSkill'))
+  
+  CustomGameEventManager:RegisterListener("custom_chat_cts", Dynamic_Wrap(GameMode, 'CustomChat'))
   
   --ListenToGameEvent("dota_tutorial_shop_toggled", Dynamic_Wrap(GameMode, 'OnShopToggled'), self)
 

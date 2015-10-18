@@ -1,0 +1,75 @@
+#CShop_OPEN
+{
+    width: 70px;
+    height: 50px;
+    vertical-align: bottom;
+    horizontal-align: left;
+    border: 0px solid black;
+    flow-children: down;
+}
+#CShop_OPEN_button
+{
+    width: 70px;
+    height: 50px;
+    vertical-align: bottom;
+    horizontal-align: left;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #222222 ) );
+    flow-children: down;
+    border-radius: 5px 0px 0px 5px;
+}
+#CShop_A
+{
+    width: 500px;
+    height: 100%;
+    vertical-align: bottom;
+    horizontal-align: right;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #222222 ) );
+   overflow: clip scroll;
+    flow-children: down;
+	
+}
+.CShop_Root
+{
+    width: 600px;
+    height: 80%;
+    vertical-align: top;
+    horizontal-align: right;
+    margin-top: 40px;
+    margin-left: 0px;
+    border: 0px solid black;
+   /* border-radius: 5px; */
+   overflow: clip clip;
+    flow-children: right;
+	z-index:5;
+	transform: translatex( 530px );
+}
+
+.item_row
+{
+    width: 500px;
+    height: 38px;
+    vertical-align: top;
+    margin-top: 0px;
+    margin-left: 0px;
+    horizontal-align: center;
+    border: 0px solid black;
+   overflow: clip clip;
+   /* border-radius: 5px; */
+    flow-children: right;
+}
+.item_button
+{
+    width: 50px;
+    height: 38px;
+    vertical-align: top;
+    horizontal-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    border: 0px solid black;
+   /* border-radius: 5px; */
+    flow-children: down;
+}
+.shop_open
+{
+	transform: translatex( 0px );
+}

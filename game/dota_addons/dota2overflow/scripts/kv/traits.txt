@@ -26,6 +26,10 @@
 //"20" "overload"
 
 "21" "vampiric"
+"22" "chi_strike"
+
+"23" "day_mana"
+"24" "night_mana"	
 }
 
  

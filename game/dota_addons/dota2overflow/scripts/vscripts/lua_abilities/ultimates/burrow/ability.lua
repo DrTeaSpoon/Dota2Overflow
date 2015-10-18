@@ -19,7 +19,7 @@ end
 
 function ult_burrow:GetManaCost(iLevel)
 	local cost = 150
-	if self:GetCaster():HasModifier("ult_burrow_modifier") then cost = 0 end
+	if iLevel < 1 or self:GetCaster():HasModifier("ult_burrow_modifier") then cost = 0 end
 	return cost
 end
 

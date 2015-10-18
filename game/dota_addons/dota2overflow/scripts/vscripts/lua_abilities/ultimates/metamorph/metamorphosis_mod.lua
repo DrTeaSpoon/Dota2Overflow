@@ -27,8 +27,7 @@ function metamorphosis_mod:DeclareFunctions()
 	local funcs = {
 MODIFIER_PROPERTY_MODEL_CHANGE,
 MODIFIER_PROPERTY_MODEL_SCALE,
-MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE,
-MODIFIER_PROPERTY_MOVESPEED_LIMIT,
+MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
 MODIFIER_PROPERTY_ATTACK_RANGE_BONUS,
 MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE,
 MODIFIER_EVENT_ON_ATTACK_LANDED
@@ -61,8 +60,7 @@ function metamorphosis_mod:OnAttackLanded( params )
 end
 function metamorphosis_mod:GetModifierModelChange() return "models/creeps/roshan/roshan.vmdl" end
 function metamorphosis_mod:GetModifierModelScale() return self:GetAbility():GetLevel()*0.5 end
-function metamorphosis_mod:GetModifierMoveSpeedOverride() return self:GetAbility():GetSpecialValueFor("move_speed") end
-function metamorphosis_mod:GetModifierMoveSpeedLimit() return self:GetAbility():GetSpecialValueFor("move_speed") end
+function metamorphosis_mod:GetModifierMoveSpeedBonus_Constant() return self:GetAbility():GetSpecialValueFor("move_speed") end
 function metamorphosis_mod:GetModifierAttackRangeBonus() return self.AttackBonus end
 function metamorphosis_mod:GetModifierBaseAttack_BonusDamage() return self:GetAbility():GetSpecialValueFor("base_damage") end
 

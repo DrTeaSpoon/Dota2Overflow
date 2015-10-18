@@ -4,13 +4,14 @@
   </styles>
   <Panel class="AddonLoadingRoot">
     <Panel id="CustomBgEffect_A" >
-      <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode_effects_a.png" />
+      <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/overflow_name.png" />
     </Panel>
     <Panel id="CustomBg" >
-      <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode.png" />
+      <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/overflow_tagline.png" />
     </Panel>
 	<Panel id="HiddenPrecompiler">
-<Image src="file://{images}/spellicons/spike_hide.png" />
+<Image src="file://{images}/spellicons/day_mana.png" />
+<Image src="file://{images}/spellicons/night_mana.png" />
 	</Panel>
   </Panel>
 </root>

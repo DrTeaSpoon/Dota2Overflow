@@ -3,10 +3,10 @@
 	"Language"		"English"
 	"Tokens"
 	{		
-		"game_mode_15"				"Dota 2 Overflow"
-		"addon_game_name"			"Dota 2 Overflow"
+		"game_mode_15"				"Overflow"
+		"addon_game_name"			"Overflow"
 		
-		"addonname"			"Dota 2 Overflow"
+		"addonname"			"Overflow"
 		"info_header_objective"	"Dota 2 with twists."
 		"overflow_brief_description"	"Create your hero from three active abilities, two passives and one ultimate.\nYou can also define your base stats and stat gain."
 		"header_how_to_play"	""

@@ -16,5 +16,5 @@
 	"DOTA_Custom7"    								"Olive"
 	"DOTA_Custom8"    								"Purple"
 	
-	"addonname"										"Dota 2 Overflow"
+	"addonname"										"Overflow"
 }

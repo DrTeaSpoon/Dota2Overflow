@@ -21,7 +21,6 @@ end
 --------------------------------------------------------------------------------
 function modifier_light_blade:OnCreated( kv )
 	self.fade_id = kv.fade_id or GameRules:GetGameTime()
-	self.heal_count = kv.heal_count or 1
 end
 
 function modifier_light_blade:OnDestroy()
@@ -29,21 +28,16 @@ function modifier_light_blade:OnDestroy()
 		local nDamageType = DAMAGE_TYPE_MAGICAL
 		local hCaster = self:GetCaster()
 		local hAbility = self:GetAbility()
-		local tDamage = {
-			victim = self:GetParent(),
-			attacker = hCaster,
-			damage = hAbility:GetSpecialValueFor( "damage" ),
-			damage_type = nDamageType,
-			ability = hAbility
-		}
-		
-		if self:GetParent():GetTeam() ~= hCaster:GetTeam() then
-			if self.heal_count > 2 then
-			self.heal_count = self.heal_count - 1
-			end
-		else
-			self.heal_count = self.heal_count + 1
-		end
+		--local tDamage = {
+		--	victim = self:GetParent(),
+		--	attacker = hCaster,
+		--	damage = hAbility:GetSpecialValueFor( "damage" ),
+		--	damage_type = nDamageType,
+		--	ability = hAbility
+		--}
+		self:GetParent():AddNewModifier(self:GetCaster(), self:GetAbility(), "element_fire", {
+			stacks = hAbility:GetSpecialValueFor( "damage" )
+		})
 		local chain_fade = hAbility:GetSpecialValueFor( "chain_fade" )
 		local damage_delay = hAbility:GetSpecialValueFor( "damage_delay" )
 		
@@ -53,7 +47,7 @@ function modifier_light_blade:OnDestroy()
 		end
 		
 		if self:GetParent():IsAlive() then
-			self:GetParent():AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade_fade", { duration = chain_fade*self.heal_count, fade_id = self.fade_id, heal_count = self.heal_count } )
+			self:GetParent():AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade_fade", { duration = chain_fade, fade_id = self.fade_id } )
 		end
 		local nFlag = hAbility:GetAbilityTargetFlags() or DOTA_UNIT_TARGET_FLAG_NONE
 		local nTeam = hAbility:GetAbilityTargetTeam() or DOTA_UNIT_TARGET_TEAM_BOTH
@@ -84,25 +78,17 @@ function modifier_light_blade:OnDestroy()
 		end
 		if hTarget ~= nil and hTarget ~= self:GetParent() then
 			if ( not hTarget:TriggerSpellAbsorb( self ) ) then
-				hTarget:AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade", { duration = damage_delay, fade_id = self.fade_id , heal_count = self.heal_count} )
-				EmitSoundOnLocationWithCaster(hTarget:GetOrigin(),  "Brewmaster_Storm.DispelMagic", self:GetCaster()) 
+				hTarget:AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade", { duration = damage_delay, fade_id = self.fade_id} )
+				EmitSoundOnLocationWithCaster(hTarget:GetOrigin(),  "Hero_Phoenix.FireSpirits.Launch", self:GetCaster()) 
 			end
 	
 			local nFXIndex = ParticleManager:CreateParticle( "particles/lina_spell_laguna_chain.vpcf", PATTACH_CUSTOMORIGIN, nil );
 			ParticleManager:SetParticleControlEnt( nFXIndex, 0, self:GetParent(), PATTACH_POINT_FOLLOW, "attach_hitloc", self:GetParent():GetOrigin() + Vector( 0, 0, 96 ), true );
 			ParticleManager:SetParticleControlEnt( nFXIndex, 1, hTarget, PATTACH_POINT_FOLLOW, "attach_hitloc", hTarget:GetOrigin(), true );
-			local Colour = {200,255,150}
+			local Colour = {255,150,50}
 			ParticleManager:SetParticleControl(nFXIndex, 15, Vector(Colour[1],Colour[2],Colour[3])) 
 		end
 		
-		if self:GetParent():GetTeam() ~= hCaster:GetTeam() then
-			ApplyDamage( tDamage )
-		else
-			self:GetParent():Heal(hAbility:GetSpecialValueFor( "damage" ), hAbility )
-			if self:GetCaster():HasScepter() and GameRules:IsDaytime() then
-				self:GetParent():Heal(hAbility:GetSpecialValueFor( "damage" ), hAbility )
-			end
-		end
 		
 	end
 end

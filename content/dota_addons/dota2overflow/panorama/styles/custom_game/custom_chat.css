@@ -1,0 +1,93 @@
+.CChat_Root
+{
+    width: 600px;
+	max-height:320px;
+    vertical-align: bottom;
+    horizontal-align: left;
+    border: 0px solid black;
+    flow-children: down;
+	margin-bottom: 175px;
+	margin-left: 10px;
+	z-index:7;
+	/*transform: translatex( 530px );*/
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #444444 ) )
+	overflow: clip clip;
+	border-radius: 10px;
+	box-shadow: #ffffff80 0px 0px 8px 0px;
+}
+
+#CChat_Box
+{
+    width: 100%;
+	max-height:280px;
+    vertical-align: bottom;
+    flow-children: down;
+    vertical-align: top;
+    border: 0px solid black;
+	overflow: clip scroll;
+}
+
+
+#CChat_Input
+{
+	width: 100%;
+	height: 40px;
+    vertical-align: bottom;
+    horizontal-align: left;
+    border: 0px solid black;
+	color:#FFFFFF;
+    font-size: 15px;
+	font-family: "Lucida Console";
+	overflow: clip clip;
+}
+#CChat_Input_box
+{
+    width: 100%;
+	height:40px;
+    horizontal-align: left;
+    border: 0px solid black;
+    flow-children: right;
+	overflow: clip clip;
+}
+
+.message_cont
+{
+	margin-top: 2px;
+    vertical-align: bottom;
+    width: 100%;
+    flow-children: right;
+    border-bottom: 1px solid black;
+}
+.message_avat
+{
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+}
+.message_text
+{
+    vertical-align: top;
+	margin-left: 5px;
+	max-width:550px;
+	color:#FFFFFF;
+    font-size: 15px;
+	font-family: "Lucida Console";
+}
+#CChat_Open
+{
+    horizontal-align: right;
+    vertical-align: bottom;
+    width: 40px;
+    height: 40px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #444444 ) );
+}
+.chat_closed
+{
+	/*transform: translatex( -200px );*/
+	max-height:115px;
+}
+.chat_closed_msg
+{
+	/*transform: translatex( -200px );*/
+    height: 75px;
+}

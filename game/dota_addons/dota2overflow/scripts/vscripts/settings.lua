@@ -6,7 +6,7 @@ UNIVERSAL_SHOP_MODE = false             -- Should the main shop contain Secret S
 ALLOW_SAME_HERO_SELECTION = true        -- Should we let people select the same hero as each other
 
 HERO_SELECTION_TIME = 90.0              -- How long should we let people select their hero?
-PRE_GAME_TIME = 1.0                    -- How long after people select their heroes should the horn blow and the game start?
+PRE_GAME_TIME = 60.0                    -- How long after people select their heroes should the horn blow and the game start?
 POST_GAME_TIME = 60.0                   -- How long should we let people look at the scoreboard before closing the server automatically?
 TREE_REGROW_TIME = 60.0                 -- How long should it take individual trees to respawn after being cut down/destroyed?
 
@@ -20,7 +20,7 @@ MINIMAP_ICON_SIZE = 1                   -- What icon size should we use for our 
 MINIMAP_CREEP_ICON_SIZE = 1             -- What icon size should we use for creeps?
 MINIMAP_RUNE_ICON_SIZE = 1              -- What icon size should we use for runes?
 
-RUNE_SPAWN_TIME = 60                   -- How long in seconds should we wait between rune spawns?
+RUNE_SPAWN_TIME = 120                   -- How long in seconds should we wait between rune spawns?
 CUSTOM_BUYBACK_COST_ENABLED = false      -- Should we use a custom buyback cost setting?
 CUSTOM_BUYBACK_COOLDOWN_ENABLED = false  -- Should we use a custom buyback time?
 BUYBACK_ENABLED = true                 -- Should we allow people to buyback when they die?
@@ -88,8 +88,8 @@ ENABLED_RUNES[DOTA_RUNE_BOUNTY] = true
 
 
 MAX_NUMBER_OF_TEAMS = 2                -- How many potential teams can be in this game mode?
-USE_CUSTOM_TEAM_COLORS = true          -- Should we use custom team colors?
-USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team colors to color the players/minimap?
+USE_CUSTOM_TEAM_COLORS = false         -- Should we use custom team colors?
+USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = false          -- Should we use custom team colors to color the players/minimap?
 
 TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
 TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 52, 85, 255 }   --    Blue  

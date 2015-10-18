@@ -121,7 +121,7 @@ function shadow_walk_modifier:AttackProc(params)
 
 		if #enemies > 0 then
 			for _,enemy in pairs(enemies) do
-				if enemy ~= nil and ( not enemy:IsMagicImmune() ) and ( not enemy:IsInvulnerable() ) then
+				if enemy ~= nil and ( not enemy:IsInvulnerable() ) then
 					local damage = {
 						victim = enemy,
 						attacker = self:GetCaster(),

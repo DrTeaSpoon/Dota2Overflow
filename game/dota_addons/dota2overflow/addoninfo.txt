@@ -15,4 +15,13 @@
 //  {
 //          "MaxPlayers"                    "10"
 //  }
+  "Default_Keys"
+    {
+        "01"
+        {
+            "Key"       "RETURN"
+            "Command"   "CustomChatInput"
+            "Name"      "Open Chat"
+        }
+    }
 }
