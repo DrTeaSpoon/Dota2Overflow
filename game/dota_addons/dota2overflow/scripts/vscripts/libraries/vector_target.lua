@@ -6,11 +6,6 @@
 --]]
 
 DEFAULT_VECTOR_TARGET_PARTICLE = "particles/vector_target/vector_target_range_finder_line.vpcf"
-DEFAULT_VECTOR_TARGET_CONTROL_POINTS = {
-    [0] = "initial",
-    [1] = "initial",
-    [2] = "terminal"
-}
 
 reloaded = reloaded ~= nil
 if VectorTarget == nil then
@@ -23,7 +18,7 @@ elseif VectorTarget.initializedOrderFilter then
     VectorTarget:InitOrderFilter()
 end
 
-VectorTarget.VERSION = {0,1,3};
+VectorTarget.VERSION = {0,1,1};
 
 local queue = class({})
 
@@ -41,7 +36,7 @@ end
 function VectorTarget:Init(opts)
     print("[VECTORTARGET] initializing")
     if not self.initializedPrecache then
-        print("[VECTORTARGET] warning: VectorTarget:Precache was not called before Init.")
+        print("[VECTORTARGET] warning: PrecacheVectorTargetLib was not called.")
     end
     opts = opts or { }
     if not opts.noEventListeners then
@@ -86,7 +81,7 @@ function VectorTarget:InitEventListeners()
     end)
     CustomGameEventManager:RegisterListener("vector_target_queue_full", function(eventSource, keys)
         --print("queue full")
-        --util.printTable(keys)
+        util.printTable(keys)
     end)
     self.initializedEventListeners = true
 end
@@ -104,10 +99,9 @@ end
 function VectorTarget:LoadKV(kv)
     print("[VECTORTARGET] loading KV data")
     if type(kv) == "string" then
-        local kvFile = kv
-        kv = LoadKeyValues(kvFile)
+        kv = LoadKeyValues(kv)
         if kv == nil then
-            error("[VECTORTARGET] Error when loading KV from file: " .. kvFile)
+            error("[VECTORTARGET] Error when loading KV from file: " .. kv)
         end
     elseif type(kv) ~= "table" then
         error("[VECTORTARGET] LoadKV: expected table but got " .. type(kv) .. ": " .. tostring(kv))
@@ -208,13 +202,8 @@ function VectorTarget:OrderFilter(data)
                 elseif data.queue == 0 then -- if not shift queued, clear cast queue before we add to it
                     self.castQueues:clearQueuesForUnits(units)
                 end
-                
                 inProgress.terminalPosition = targetPos
-                
-                --temporarily set initial/terminal on the ability so we can all (a possibly overriden) abil:GetPointOfCast
-                local p = VectorTarget._WithPoints(abil, inProgress.initialPosition, inProgress.terminalPosition, function() 
-                        return abil:GetPointOfCast()
-                end)
+                local p = VectorTarget._CalcPointOfCast(abil._vectorTargetKeys.pointOfCast, inProgress.initialPosition, inProgress.terminalPosition)
                 data.position_x = p.x
                 data.position_y = p.y
                 data.position_z = p.z
@@ -264,7 +253,7 @@ function VectorTarget:WrapAbility(abil, keys)
         maxDistance = keys.MaxDistance,
         pointOfCast = keys.PointOfCast or "initial",
         particleName = keys.ParticleName or DEFAULT_VECTOR_TARGET_PARTICLE,
-        cpMap = keys.ControlPoints or DEFAULT_VECTOR_TARGET_CONTROL_POINTS
+        cpMap = keys.ControlPoints
     }
     
     function abil:GetInitialPosition()
@@ -318,7 +307,7 @@ function VectorTarget:WrapAbility(abil, keys)
     
     if not abil.GetPointOfCast then
         function abil:GetPointOfCast()
-            return VectorTarget._CalcPointOfCast(abil._vectorTargetKeys.pointOfCast, abil:GetInitialPosition(), abil:GetTerminalPosition())
+            return VectorTarget._CalcPointOfCast(abil._VectorTargetKeys.pointOfCast, abil:GetInitialPosition(), abil:GetTerminalPosition())
         end
     end
     
@@ -368,22 +357,6 @@ end
 function VectorTarget._CalcMidPoint(a, b)
     return Vector((a.x + b.x)/2, (a.y + b.y)/2, (a.z + b.z)/2)
 end
-
---helper to temporarily set targeting information
-function VectorTarget._WithPoints(abil, initial, terminal, func, ...)
-    local initialOld, terminalOld = abil:GetInitialPosition(), abil:GetTerminalPosition()
-    abil:SetInitialPosition(initial)
-    abil:SetTerminalPosition(terminal)
-    local status, res = pcall(func, ...)
-    abil:SetInitialPosition(initialOld)
-    abil:SetTerminalPosition(terminalOld)
-    if status then
-        return res
-    else
-        error(res)
-    end
-end
-
 -- a sparse queue implementation
 function queue.constructor(q)
     q.first = 0

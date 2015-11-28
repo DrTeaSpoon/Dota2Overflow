@@ -18,15 +18,17 @@ function ult_burrow:GetBehavior()
 end
 
 function ult_burrow:GetManaCost(iLevel)
-	local cost = 150
-	if iLevel < 1 or self:GetCaster():HasModifier("ult_burrow_modifier") then cost = 0 end
+	local cost = self.BaseClass.GetManaCost( self, iLevel )
+	if self:GetCaster():HasModifier("ult_burrow_modifier") then cost = 0 end
+	if self:GetCaster():HasScepter() then cost = 0 end
 	return cost
 end
 
-function ult_burrow:GetManaCost(iLevel)
-	local cost = 150
-	if self:GetCaster():HasModifier("ult_burrow_modifier") then cost = 0 end
-	return cost
+function ult_burrow:GetCooldown(iLevel)
+	local cooldown = self.BaseClass.GetCooldown( self, iLevel )
+	if not self:GetCaster():HasModifier("ult_burrow_modifier") then cooldown = 0 end
+	if self:GetCaster():HasScepter() then cooldown = 0 end
+	return cooldown
 end
 
 function ult_burrow:OnSpellStart()
@@ -35,6 +37,7 @@ function ult_burrow:OnSpellStart()
 	self:GetCaster():RemoveModifierByName("ult_burrow_modifier")
 	EmitSoundOnLocationWithCaster( self:GetCaster():GetOrigin(), "Hero_NyxAssassin.Burrow.Out", self:GetCaster() )
 	self:GetCaster():NotifyWearablesOfModelChange(true)
+	if self:GetCaster():HasScepter() then self:EndCooldown() end
 	else
 	self:GetCaster():AddNewModifier( self:GetCaster(), self, "ult_burrow_modifier", {} )
 	EmitSoundOnLocationWithCaster( self:GetCaster():GetOrigin(), "Hero_NyxAssassin.Burrow.In", self:GetCaster() )

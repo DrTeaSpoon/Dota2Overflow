@@ -27,9 +27,13 @@
 
 "21" "vampiric"
 "22" "chi_strike"
-
 "23" "day_mana"
-"24" "night_mana"	
+"24" "night_mana"
+"25" "spell_resistance"
+
+"26" "armored"
+"27" "shock_weapon"
+"28" "fire_weapon"
 }
 
  

@@ -9,6 +9,7 @@ function element_fire:OnCreated( kv )
 		ParticleManager:SetParticleControl( self.nFXIndex, 14, Vector( 1, 1, 1 ) )
 		ParticleManager:SetParticleControl( self.nFXIndex, 15, Vector( 255, 50, 0 ) )
 		self:AddParticle( self.nFXIndex, false, false, -1, false, false )
+		self:CalculateDuration()
 		self:StartIntervalThink(0.5)
 	end
 end
@@ -16,9 +17,14 @@ end
 function element_fire:OnRefresh( kv )	
 	if IsServer() then
 		local stacks = self:GetStackCount() + kv.stacks
-		if stacks > 200 then stacks = 200 end
+		if stacks > 999 then stacks = 999 end
 		self:SetStackCount(stacks)
+		self:CalculateDuration()
 	end
+end
+
+function element_fire:CalculateDuration()
+	self:SetDuration( self:GetStackCount()*0.5, true )
 end
 
 function element_fire:GetTexture()
@@ -27,22 +33,23 @@ end
 
 function element_fire:OnIntervalThink()
 	if IsServer() then
+		local nDamageCalc = self:GetStackCount()
+		if not self:GetParent():HasModifier("element_water") then nDamageCalc = nDamageCalc*2 end
 		local damageTable = {
 			victim = self:GetParent(),
 			attacker = self:GetCaster(),
-			damage = 2*self:GetStackCount(),
+			damage = nDamageCalc,
 			damage_type = DAMAGE_TYPE_MAGICAL,
 		}
 		--print("Fire Damage: " .. 2*self:GetStackCount())
 		local hAbility = self:GetAbility()
 		if hAbility and hAbility.DamageReport then
-		hAbility.DamageReport = hAbility.DamageReport + 2*self:GetStackCount()
+		hAbility.DamageReport = hAbility.DamageReport + nDamageCalc
 		end
 		ApplyDamage(damageTable)
 		self:DecrementStackCount()
-		if self:GetStackCount() > 0 then
-			self:SetDuration( 0.5, true )
-		else
+		if self:GetParent():HasModifier("element_water") and self:GetStackCount() > 0 then self:DecrementStackCount() end
+		if self:GetStackCount() < 1 then
 			if hAbility and hAbility.DamageReport then
 			print("Damage report: " .. hAbility.DamageReport)
 			end

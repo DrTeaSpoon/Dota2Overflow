@@ -25,12 +25,8 @@ Label
 
 #TitleName
 {
-    color: #cccccc;
-    font-size: 64px;
-    margin-left: 16px;
-    margin-top: 16px;
-    text-transform: uppercase;
-    vertical-align: center;
+	width: 450px;
+	height: 225px;
 }
 
 #BriefDescription
@@ -49,6 +45,9 @@ Label
 #ObjectiveHeader
 {
 	margin-top: 18px;
+	font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 #ThroneRow
@@ -109,9 +108,8 @@ Label
 
 #TipsRow
 {
-	flow-children: down;
+	flow-children: right;
 	margin-right: 92px;
-	margin-top: 18px;
 }
 
 .TipText
@@ -141,4 +139,27 @@ Label .xp
 {
     color: #fcaf3d;
     font-weight: bold;
+}
+.TipAbIm
+{
+	border: 6px solid black;
+	border-radius:20px;
+	width:100px;
+	height:100px;
+}
+
+
+
+
+#Tipheader
+{
+	margin-top: 15px;
+    color: #fcaf3d;
+    font-weight: bold;
+}
+
+#Edit_wut
+{
+	width: 28px;
+	height: 28px;
 }

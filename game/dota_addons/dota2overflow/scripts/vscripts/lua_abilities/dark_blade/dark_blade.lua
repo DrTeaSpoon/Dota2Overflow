@@ -35,9 +35,6 @@ function dark_blade:OnSpellStart()
 		
 		if not absorb then
 			local damage_delay = self:GetSpecialValueFor( "damage_delay" )
-			--if self:GetCaster():HasScepter() then
-			--	damage_delay = self:GetSpecialValueFor( "scepter_delay" )
-			--end
 		
 			hTarget:AddNewModifier( self:GetCaster(), self, "modifier_dark_blade", { duration = damage_delay, fade_id = GameRules:GetGameTime() } )
 			EmitSoundOn( "Hero_Nightstalker.Void.Nihility", hTarget )
@@ -69,9 +66,5 @@ function dark_blade:GetAOERadius()
 end
 
 function dark_blade:GetAbilityDamageType()
-	if self:GetCaster():HasScepter() then
-		return DAMAGE_TYPE_PURE
-	else
 		return DAMAGE_TYPE_MAGICAL
-	end
 end

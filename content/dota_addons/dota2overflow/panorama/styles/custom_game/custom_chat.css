@@ -1,13 +1,12 @@
 .CChat_Root
 {
-    width: 600px;
+    width: 920px;
 	max-height:320px;
     vertical-align: bottom;
-    horizontal-align: left;
+    horizontal-align: center;
     border: 0px solid black;
     flow-children: down;
-	margin-bottom: 175px;
-	margin-left: 10px;
+	margin-bottom: 2px;
 	z-index:7;
 	/*transform: translatex( 530px );*/
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #444444 ) )
@@ -19,7 +18,7 @@
 #CChat_Box
 {
     width: 100%;
-	max-height:280px;
+	max-height:220px;
     vertical-align: bottom;
     flow-children: down;
     vertical-align: top;
@@ -36,7 +35,7 @@
     horizontal-align: left;
     border: 0px solid black;
 	color:#FFFFFF;
-    font-size: 15px;
+    font-size: 20px;
 	font-family: "Lucida Console";
 	overflow: clip clip;
 }
@@ -68,9 +67,8 @@
 {
     vertical-align: top;
 	margin-left: 5px;
-	max-width:550px;
 	color:#FFFFFF;
-    font-size: 15px;
+    font-size: 20px;
 	font-family: "Lucida Console";
 }
 #CChat_Open

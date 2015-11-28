@@ -68,9 +68,5 @@ function light_blade:GetAOERadius()
 end
 
 function light_blade:GetAbilityDamageType()
-	if self:GetCaster():HasScepter() then
-		return DAMAGE_TYPE_PURE
-	else
 		return DAMAGE_TYPE_MAGICAL
-	end
 end

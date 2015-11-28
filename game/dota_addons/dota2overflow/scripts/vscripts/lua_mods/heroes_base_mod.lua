@@ -22,7 +22,8 @@ function heroes_base_mod:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
-		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS
+		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
+		MODIFIER_PROPERTY_ABILITY_LAYOUT
 	}
  
 	return funcs
@@ -31,3 +32,4 @@ end
 function heroes_base_mod:GetModifierBonusStats_Intellect() return self.gain_int * (self:GetParent():GetLevel()-1) end
 function heroes_base_mod:GetModifierBonusStats_Agility()   return self.gain_agi * (self:GetParent():GetLevel()-1) end
 function heroes_base_mod:GetModifierBonusStats_Strength()  return self.gain_str * (self:GetParent():GetLevel()-1) end
+function heroes_base_mod:GetModifierAbilityLayout() return 6 end

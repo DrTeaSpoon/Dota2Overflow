@@ -1,0 +1,13 @@
+<root>
+	<styles>
+	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	<include src="file://{resources}/styles/custom_game/hero_kit_r2.css" />
+	</styles>
+	<scripts>
+	<include src="file://{resources}/scripts/custom_game/hero_kit_team_f.js" /> 
+	</scripts>
+	<Panel class="HeroKit_Team_Root" hittest="true" >
+		<Panel id="HeroKit_Team">
+		</Panel>
+	</Panel>
+</root>

@@ -4,6 +4,99 @@
 {
   /////////////
   
+	"hero_kit_random"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/random/random.lua"
+		"AbilityTextureName"			"hero_kit_random"
+		"MaxLevel"	"6"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"gold_per"			"150"
+			}
+		}
+	}
+	
+	"hero_kit_fire_dmg"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/random/random.lua"
+		"AbilityTextureName"			"element_fire"
+		"MaxLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_stack"			"2"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tick_rate"			"0.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max"			"999"
+			}
+		}
+	}
+	
+	"hero_kit_shock_dmg"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/random/random.lua"
+		"AbilityTextureName"			"element_elec"
+		"MaxLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			"1"
+			}
+		}
+	}
+	
+	"hero_kit_wet"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/random/random.lua"
+		"AbilityTextureName"			"element_water"
+		"MaxLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fire_reduction_dmg"			"50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fire_reduction_stack"			"200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"armor_per_level"			"1"
+			}
+		}
+	}
+	
+	
 	"burner"
 	{
 		// General
@@ -221,6 +314,54 @@
 		}
 	}
 	
+	"spell_resistance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/spell_resistance/passive.lua"
+		"AbilityTextureName"			"spell_resistance"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			//"model"	"models/heroes/spectre/spectre.vmdl"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus"						"10 15 20 25 30 35 40"
+			}
+		}
+	}
+	
+	"armored"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/armored/passive.lua"
+		"AbilityTextureName"			"armored"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			//"model"	"models/heroes/spectre/spectre.vmdl"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus"						"2 6 10 14 18 22 26"
+			}
+		}
+	}
+	
 	"critical"
 	{
 		// General
@@ -245,7 +386,58 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"5 15 25 35 45 65 75"
+				"chance"						"5 15 25 35 45 65 75"
+			}
+		}
+	}
+	
+	"shock_weapon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/shock_weapon/passive.lua"
+		"AbilityTextureName"			"shock_weapon"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+			"particle"					"particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus"						"10 13 16 19 22 25 28"
+			}
+		}
+	}
+	
+	"fire_weapon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/fire_weapon/passive.lua"
+		"AbilityTextureName"			"fire_weapon"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			//"model"	"models/heroes/spectre/spectre.vmdl"
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus"						"3 4 5 6 7 8 9"
 			}
 		}
 	}
@@ -269,7 +461,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"5 15 25 35 45 65 75"
+				"bonus"						"7 14 21 28 35 42 49"
 			}
 			"02"
 			{
@@ -334,7 +526,7 @@
         "01"
         {
             "var_type"                  "FIELD_INTEGER"
-            "stack_actual"              "2 3 4 5"
+            "stack_actual"              "3 5 7 9"
         }
         "02"
         {
@@ -1449,7 +1641,7 @@
 			"08"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"scepter_fade"				"0.05"
+				"fade_scepter"				"0.05"
 			}
 		}
 	}
@@ -1519,13 +1711,13 @@
 			}
 			"07"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"scepter_delay"				"0.1"
+				"var_type"					"FIELD_INTEGER"
+				"bonus_scepter"				"5"
 			}
 			"08"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"scepter_fade"				"0.05"
+				"fade_scepter"				"0.05"
 			}
 		}
 	}
@@ -1980,6 +2172,11 @@
 				"var_type"					"FIELD_FLOAT"
 				"tool_tip_duration"	"30.0 45.0 60.0"
 			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"base_damage_scepter"	"200 250 300"
+			}
 		}
 	}
 	
@@ -2077,6 +2274,11 @@
 				"var_type"					"FIELD_INTEGER"
 				"magic_weak"	"-200 -150 -100"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius_scepter"	"500"
+			}
 		}
 	}
 	"military"
@@ -2126,7 +2328,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"vamp"						"5 15 25 35 45 65 75"
+				"vamp"						"5 10 15 20 25 30 35"
 			}
 		}
 	}
@@ -2795,5 +2997,485 @@
 			}
 		}
 	}
+	
+	"unholy_rage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/unholy_rage/ability.lua"
+		"AbilityTextureName"			"unholy_rage"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed"			"50 100 150 200"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"move_speed"			"50 100 150 200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"			"10.0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"kill_extra"			"3.0"
+			}
+		}
+	}
+	
+	"soul_reaver"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/ultimates/soul_reaver/ultimate.lua"
+		"AbilityTextureName"			"soul_reaver"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+		"AbilityCastPoint"              "1.0"
+		"AbilityCooldown"               "0.0"
+		"AbilityManaCost"               "0"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"model"	"models/items/warlock/golem/hellsworn_golem/hellsworn_golem.vmdl"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts"
+		"particle"	"particles/generic_attack_buff.vpcf"
+		"particle"	"particles/burn_msg.vpcf"
+		"particle"	"particles/transformation.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"health_drain"			"5.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"treshold"			"95"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"total_damage"			"3 6 9"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_burn"			"50"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"vampiric"			"25 35 45"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"stun_chance"			"12 18 24"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"			"0.8 1.0 1.2"
+			}
+			
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_range"	"125"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"treshold_penalty"			"666"
+			}
+		}
+	}
+	
+	"night_wolf"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/ultimates/night_wolf/ultimate.lua"
+		"AbilityTextureName"			"night_wolf"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCooldown"               "0.0"
+		"AbilityManaCost"               "0"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+		"model"	"models/heroes/lycan/lycan_wolf.vmdl"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
+		"particle"	"particles/units/heroes/hero_night_stalker/nightstalker_ulti.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_range"			"165"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"move_speed"			"250"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed"			"100 200 300"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max"						"20000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_vision_scepter"				"500 700 900"
+			}
+		}
+	}
+	
+	"judgement"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/ultimates/judgement/ultimate.lua"
+		"AbilityTextureName"			"judgement"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCooldown"               "150.0"
+		"AbilityManaCost"               "200 350 500"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"               "1"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"AbilityChannelTime"      "2"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"             "200"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"fire_damage"             "15 20 25"
+			}   
+			"03"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"magic_damage"             "75 100 125"
+			}
+			"04"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"delay"             "2"
+			}   
+			"05"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"cooldown_scepter"             "75"
+			}   
+		}
+    
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			"particle"                  "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+			"particle"					"particles/units/heroes/hero_invoker/invoker_sun_strike_team.vpcf"
+			"particle"					"particles/units/heroes/hero_wisp/wisp_overcharge.vpcf"
+		}
+	}
+	
+	"double_step"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/double_step/ability.lua"
+		"AbilityTextureName"			"double_step"
+		"AbilityCooldown"               "5.0 4.0 3.0 2.0"
+		"AbilityManaCost"               "100"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+		"FightRecapLevel"               "1"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"speed"						"2000"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"					"0.25"
+			}   
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max"						"20000"
+			}
+		}
+    
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+			"particle"                  "particles/run_ghost.vpcf"
+		}
+	}
+	
+	"cursed_power"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/cursed_power/ability.lua"
+		"AbilityTextureName"			"cursed_power"
+		"AbilityCooldown"               "4.5"
+		"AbilityManaCost"               "60"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+		"FightRecapLevel"               "1"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"curse"						"50"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"bonus"						"30 40 50 60"
+			}   
+			"03"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"					"5.5"
+			}   
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"max"						"5"
+			}   
+		}
+    
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_items.vsndevts"
+			"particle"                  "particles/cursed_power.vpcf"
+		}
+	}
+	"plasma_blast"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/plasma_blast/ability.lua"
+		"AbilityTextureName"			"plasma_blast"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+		"FightRecapLevel"               "1"
+		"AbilityCooldown"               "13"
+		"AbilityManaCost"               "150 170 190 210"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"damage"						"16 24 32 40"
+			}   
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"base_damage"				"150"
+			}   
+			"03"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"channel_time"					"3.5 2.5 1.5"
+			}
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"distance"					"1500"
+			}   
+			"05"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"					"250"
+			}  
+			"06"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"speed"					"2000"
+			}
+			"07"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"chain_delay"					"0.75"
+			}
+			"08"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"chain_stack"				"1 2 3 4"
+			}
+		}
+	}
+	
+	"boulder"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/boulder/ability.lua"
+		"AbilityTextureName"			"boulder"
+		"AbilityCooldown"               "20 18 16 14"
+		"AbilityManaCost"               "150"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"health"					"100 400 700 1000"
+			}
+		}
+    
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_items.vsndevts"
+			"model"                 "soundevents/game_sounds_items.vsndevts"
+		}
+	}
+	"forced_overload"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/forced_overload/ability.lua"
+		"AbilityTextureName"			"forced_overload"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"               "1"
+		"AbilityCooldown"               "3"
+		"AbilityManaCost"               "40"
+		// Special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"stack_shock_damage"		"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"		"6.5"
+			}
+			"03"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"		"275"
+			}
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"distance"		"2200"
+			}
+			"05"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"speed"		"1200"
+			}
+			"06"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"wave_radius"		"250"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
+			"particle"                 "particles/forced_overload.vpcf"
+			"particle"					"particles/units/heroes/hero_stormspirit/stormspirit_overload_discharge.vpcf"
+			"particle"					"particles/units/heroes/hero_disruptor/disruptor_kf_wall_constant_electric_arc.vpcf"
+		}
+	}
+	
+		"lightning_rod"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/lightning_rod/ability.lua"
+		"AbilityTextureName"			"lightning_rod"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"               "1"
+		"AbilityCooldown"               "30 27 24 21"
+		"AbilityManaCost"               "80 100 120 140"
+		// Special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"shock_damage"		"5 10 15 20"
+			}
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"mdamage"		"75 100 125 150"
+			}
+			"03"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"		"200"
+			}
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"range"		"1200"
+			}
+			"05"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"		"0.75 1.0 1.25 1.5"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+			"particle"					"particles/units/heroes/hero_zuus/zuus_thundergods_wrath.vpcf"
+			"particle"					"particles/shadow_raze_gen/raze.vpcf"
+			"particle"					"particles/units/heroes/hero_zuus/zuus_thundergods_wrath_start.vpcf"
+		}
+	}
+	
 }
 

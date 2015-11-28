@@ -1,0 +1,58 @@
+﻿Tier ZERO
+branch (all +1)	($100)
+gauntlets (str +3)	($200)
+slippers (agi +3)	($200)
+mantle (int +3)	($200)
+Enchantment Scroll (misc)	($1500)
+
+
+Tier ONE
+belt str (str)			branch * 3 + gauntlets * 3					( +11 str )						($900)
+elven band (agi)		branch * 3 + slippers * 3					( +11 agi )						($900)
+robe int (int)			branch * 3 + mantle * 3						( +11 int )						($900)
+ring (all)				gauntlets * 2 + slippers * 2 + mantle * 2	( +9 all )						($1200)
+Staff (all)				branch * 6									( +6 all )						($600)
+
+Tier Enhanced ONE +Enchantment Scroll
+belt str (str)			(health regen +16 out of combat, +11 str )
+elven band (agi)		(hides from minimap, +11 agi )
+robe int (int)			(blink, +11 int )
+ring (all)				(+1 to all stats when enemy hero dies nearby, +9 all )
+Staff (all)				(c5% to stun 0.1s, +6 all )
+
+
+Tier TWO
+Vampiric Mask				belt * 2 + band + ring					( 15% attack vamp, +22 str, +11 agi )		($3900)
+Helm Of Iron Will			belt * 2 + robe + ring					( Silence Target 5 sec, +22 str, +11 int )	($3900)
+Warrior Axe					Staff * 2 + Ring + Belt					( Health Regen +8,+21 all, +11(32) str)		($4500)
+Chain Mail					band * 2 + belt + ring					( +10 armor, +22 agi, +11 str )				($3900)
+Elven Ring					band * 2 + robe + ring					( Movement speed +30, +22 agi, +11 int )	($3900)
+Rogue Blade					Staff * 2 + Ring + Band					( Critical d200% c15%,+21 all, +11(32) agi)	($4500)
+Magic Resist Cloak			robe * 2 + belt + ring					( 15% magic resist, +22 int, +11 str )		($3900)
+Invisibility Cloak			robe * 2 + band + ring					( Invisibility 7 sec, +22 int, +11 agi )	($3900)
+Mage Scepter				Staff * 2 + Ring + Robe					( Mana Regen +100%,+21 all, +11(32) int)	($4500)
+
+
+
+Tier Enhanced TWO +Enchantment Scroll
+Enhanced Vampiric Mask				( 25% attack vamp, +22 str, +11 agi )				($5400)
+Enhanced Helm Of Iron Will			( Silence Target 15 sec, +22 str, +11 int )         ($5400)
+Enhanced Warrior Axe				( Health Regen +16,+21 all, +11(32) str)            ($6000)
+Enhanced Chain Mail					( +20 armor, +22 agi, +11 str )                     ($5400)
+Enhanced Elven Ring					( Movement speed +50, +22 agi, +11 int )            ($5400)
+Enhanced Rogue Blade				( Critical d300% c20%,+21 all, +11(32) agi)         ($6000)
+Enhanced Magic Resist Cloak			( 30% magic resist, +22 int, +11 str )              ($5400)
+Enhanced Invisibility Cloak			( Invisibility 20 sec, +22 int, +11 agi )           ($5400)
+Enhanced Mage Scepter				( Mana Regen +250%,+21 all, +11(32) int)            ($6000)
+
+Tier THREE
+Heart Of Vampire					Vampiric Mask + Helm Of Iron Will + Warrior Axe	( Health Regen 2%, Silence AoE on Spell Cast, 20% attack vamp, +55 str, +32 agi , +32 int)	($12300)
+Hunters Armor						Chain Mail + Elven Ring + Rogue Blade ( +15 Armor, Modeswap (+80Mspeed >< +100Apeed), Critical d200% c30%, +55 agi, +32 str , +32 int)		($12300)
+Gown Of Arch-Mage					Magic Resist Cloak + Invisibility Cloak + Mage Scepter ( Grant ally buff:(invis, magic resist and mana regen), +55 int, +32 agi , +32 int)	($12300)
+The Deep Sword						Warrior Axe + Rogue Blade + Mage Scepter (+72 to all, Every kill heals you 20% of targets max health and 20% of targets maxmana is also granted.) ($13500)
+
+Tier Enhanced THREE +Enchantment Scroll
+Enhanced Heart Of Vampire					Vampiric Mask + Helm Of Iron Will + Warrior Axe	( Health Regen 3%, Silence AoE on Spell Cast, 20% damage vamp, +55 str, +32 agi , +32 int)
+Enhanced Hunters Armor						Chain Mail + Elven Ring + Rogue Blade ( +15 Armor, Modeswap (+100Mspeed >< +150Apeed), Critical d200% c30%, +55 agi, +32 str , +32 int)
+Enhanced Gown Of Arch-Mage					Magic Resist Cloak + Invisibility Cloak + Mage Scepter ( Grant ally buff to allies in aoe:(invis, magic resist and mana regen), +55 int, +32 agi , +32 int)
+Enhanced The Deep Sword						Warrior Axe + Rogue Blade + Mage Scepter (+72 to all, Every kill heals you 20% of targets max health and 20% of targets maxmana is also granted. Creates also explosion of those values combined.)

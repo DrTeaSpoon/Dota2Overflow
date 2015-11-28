@@ -62,6 +62,13 @@ function metamorphosis_mod:GetModifierModelChange() return "models/creeps/roshan
 function metamorphosis_mod:GetModifierModelScale() return self:GetAbility():GetLevel()*0.5 end
 function metamorphosis_mod:GetModifierMoveSpeedBonus_Constant() return self:GetAbility():GetSpecialValueFor("move_speed") end
 function metamorphosis_mod:GetModifierAttackRangeBonus() return self.AttackBonus end
-function metamorphosis_mod:GetModifierBaseAttack_BonusDamage() return self:GetAbility():GetSpecialValueFor("base_damage") end
+
+function metamorphosis_mod:GetModifierBaseAttack_BonusDamage()
+if self:GetParent():HasScepter() then 
+return self:GetAbility():GetSpecialValueFor("base_damage_scepter")
+else
+ return self:GetAbility():GetSpecialValueFor("base_damage")
+ end
+ end
 
 

@@ -253,25 +253,23 @@
 	}
 	"item_ctf_red"
 	{
-		"ID"							"1255"
+		"ID"							"1356"
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"lua_items/gamemode/flag_red.lua"
-		"AbilityTextureName"			"item_glass"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ITEM"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		
-		"AbilityCastRange"				"100"
-		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"0.3"
-		"AbilityManaCost"				"0"
+		"AbilityTextureName"			"item_flag_team3"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"Model" "models/particle/legion_duel_banner.vmdl"
+		"Effect" "particles/generic_gameplay/dropped_item.vpcf"
 		"ItemPurchasable" "0"
+		"ItemKillable" "0" 
+		"ItemSellable" "0"
+		"ItemDroppable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"10"
-		"ItemShopTags"					"glass"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"glass"
+		"ItemShopTags"					"flag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"flag"
         //
 		"AbilitySpecial"
 		{
@@ -280,6 +278,89 @@
 				"var_type"				"FIELD_INTEGER"
 				"move_slow"				"-200"
 			}
+		}
+	}
+	"item_ctf_blue"
+	{
+		"ID"							"1357"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/gamemode/flag_blue.lua"
+		"AbilityTextureName"			"item_flag_team2"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"Model" "models/props_teams/banner_radiant.vmdl"
+		"Effect" "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemPurchasable" "0"
+		"ItemKillable" "0" 
+		"ItemSellable" "0"
+		"ItemDroppable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10"
+		"ItemShopTags"					"flag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"flag"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_slow"				"-200"
+			}
+		}
+	}
+	
+	"item_overflow_rapier"
+	{
+		"ID"							"1257"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/override/rapier.lua"
+		"AbilityTextureName"			"item_rapier"
+		"ItemPurchasable" "0"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"rapier dmg damage"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"rapier"
+		"MaxUpgradeLevel"				"10"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_bonus"				"300"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_mult"				"100 200 300 400 500 600 700 800 900 1000"
+			}
+		}
+	}
+	
+	"item_recipe_overflow_rapier"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1258"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_overflow_rapier"
+		"ItemPurchasable" "0"
+		"ItemRequirements"
+		{
+			"01"						"item_relic;item_relic"
+			"02"						"item_overflow_rapier;item_overflow_rapier"
 		}
 	}
 }

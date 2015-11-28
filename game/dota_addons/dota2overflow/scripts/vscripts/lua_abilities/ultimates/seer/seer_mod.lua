@@ -20,7 +20,8 @@ function seer_mod:CheckState()
 	return state
 end
 function seer_mod:IsHidden()
-	return true
+	if self:GetCaster():HasScepter() then return true end
+	return false
 end
 
 function seer_mod:GetAttributes()

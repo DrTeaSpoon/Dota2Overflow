@@ -14,7 +14,7 @@
 //
 "11" "holy_word" //Aoe heal, more heal at day time
 "12" "summon_basic"
-//"13" "power_leap"
+"13" "double_step"
 //"14" "land_mine"
 "15" "zombie_ambush"
 //
@@ -24,11 +24,11 @@
 "19" "vortex_blink"
 "20" "sun_ray"
 //
-//"21" "chi_strike"
-//"22" "ice_trap" //trip wire!!!
+"21" "cursed_power"
+"22" "forced_overload"
 "23" "spike_hide"
-//"24" "holy_rage"
-//"25" "unholy_rage"
+//"24" "plasma_blast"
+"25" "lightning_rod"
 //
 //"26" "natures_wall"
 //"27" "demand_silence"

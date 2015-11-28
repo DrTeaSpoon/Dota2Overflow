@@ -1,0 +1,716 @@
+
+@define team_lay_scale: 30px;
+.HeroKit_Root
+{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    horizontal-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    border: 0px solid black;
+    /*background-color: #111111;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #666666 ), to( #222222 ) );*/
+	background-image: url("file://{images}/custom_game/overflow_v09.png");
+	background-size: 100% 100%;
+   /* border-radius: 5px; */
+    flow-children: down;
+	z-index:5;
+}
+.ab_button
+{
+    width: 64px;
+    height: 64px;
+    border: 2px solid black;
+	margin:2px;
+	border-radius: 5px;
+}
+.ab_button:hover
+{
+    border: 2px solid white;
+	border-radius: 5px;
+}
+.ab_button_selection
+{
+    width: 80px;
+    height: 80px;
+    border: 0px solid black;
+    horizontal-align: center;
+	margin:2px;
+	border-radius: 5px;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
+}
+
+.ab_button_done
+{
+	width:300px;
+	height:55px;
+    border-radius: 5px;
+    border: 0px solid black;
+    horizontal-align: center;
+}
+
+.ab_button_selection:hover
+{
+    border: 4px solid white;
+	border-radius: 5px;
+}
+.ab_button_done:hover
+{
+	wash-color: #00ff00;
+}
+
+#HeroKit_Listing_All
+{
+    width: 100%;
+    height: 600px;
+	overflow: clip clip;
+    border: 0px solid black;
+    flow-children: right;
+    horizontal-align: right;
+}
+#HeroKit_Abilities
+{
+   /* vertical-align: bottom;
+    horizontal-align: left; */
+    border: 4px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #22222255 ), to( #22226655 ) );
+    border-radius: 5px;
+    flow-children: down;
+    width: 23%;
+    height: 550px;
+	padding-top:10px;
+	margin-top:15px;
+    margin-left:15px;
+    margin-right:0px;
+	overflow: clip scroll;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
+}
+
+#HeroKit_Traits
+{
+   /* vertical-align: bottom;
+    horizontal-align: left; */
+    border: 4px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #55555555 ), to( #11111155 ) );
+    border-radius: 5px;
+    flow-children: down;
+    width: 23%;
+    height: 550px;
+	padding-top:10px;
+	margin-top:15px;
+    margin-left:5px;
+    margin-right:0px;
+	overflow: clip scroll;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
+}
+
+#HeroKit_UltsList
+{
+   /* vertical-align: bottom;
+    horizontal-align: left; */
+    border: 4px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #22222255 ), to( #66222255 ) );
+    border-radius: 5px;
+    flow-children: down;
+    width: 23%;
+    height: 550px;
+	padding-top:10px;
+	margin-top:15px;
+    margin-left:5px;
+    margin-right:15px;
+	overflow: clip scroll;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
+}
+.Ability_row
+{
+    flow-children: right;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.ab_span
+{
+    width: 10px;
+}
+
+#HeroKit_Selection
+{
+    vertical-align: bottom;
+    horizontal-align: center;
+    border: 0px solid black;
+    border-radius: 5px;
+    flow-children: right;
+	margin-top:5px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.kit_labels
+{
+	width:200px;
+    vertical-align: center;
+    horizontal-align: center;
+    margin-left: 30px;
+}
+
+.WhatA_Drag
+{
+	wash-color: #39b0d325;
+    border: 2px solid red;
+}
+
+.lable_text
+{
+	color:#ffffff;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+    horizontal-align: center;
+	text-shadow: 2px 2px 4px 4.0 #000000ff;
+}
+
+#HeroKit_AbSelect
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
+    border-radius: 5px;
+    flow-children: right;
+	padding:10px;
+}
+#HeroKit_TrSelect
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222222 ) );
+    border-radius: 5px;
+    flow-children: right;
+	padding:10px;
+}
+#HeroKit_UlSelect
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #662222 ) );
+    border-radius: 5px;
+    flow-children: right;
+	padding:10px;
+}
+
+.lable_text_p
+{
+    vertical-align: top;
+    horizontal-align: center;
+    border: 0px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #888888 ), to( #333333 ) );
+    border-radius: 5px;
+    flow-children: down;
+	margin-left:20px;
+	padding-left:7px;
+	padding-right:7px;
+	padding-bottom:7px;
+}
+#HeroKit_Tooltip
+{
+    border: 2px solid black;
+	width:80%;
+	height:200px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #222222 ) );
+    border-radius: 5px;
+    horizontal-align: center;
+	margin-left:15px;
+	margin-bottom:15px;
+    flow-children: down;
+}
+
+#HeroKit_Tooltip_Ab_Name
+{
+	width:99%;
+    border-radius: 5px;
+    horizontal-align: center;
+	margin-left:15px;
+}
+
+#HeroKit_Tooltip_Ab_Desc
+{
+	width:99%;
+	height:100%;
+    border-radius: 5px;
+    horizontal-align: center;
+	margin-left:5px;
+    flow-children: down;
+}
+
+#tool_tip_name
+{
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+}
+#tool_tip_desc
+{
+	color:#FFFFFF;
+    font-size: 20px;
+	font-family: "Lucida Console";
+}
+
+#tool_tip_bot_wrap
+{
+	vertical-align: bottom;
+	width:100%;
+    flow-children: right;
+	margin-bottom:4px;
+}
+#tool_tip_cd
+{
+    background-color: #000000;
+    border-radius: 10px;
+	padding-left:7px;
+	padding-right:7px;
+    horizontal-align: left;
+	color:#FFFFFF;
+    font-size: 25px;
+	font-family: "Lucida Console";
+	width:400px;
+	text-align:left;
+	box-shadow: #ffffff80 4px 4px 8px 0px;
+	margin:6px;
+	box-shadow: #ffffff80 0px 0px 6px 0px;
+}
+
+#tool_tip_mana
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #000066 ) );
+    border-radius: 10px;
+	padding-left:7px;
+	padding-right:7px;
+    horizontal-align: right;
+	color:#FFFFFF;
+    font-size: 25px;
+	font-family: "Lucida Console";
+	width:400px;
+	text-align:left;
+	margin:6px;
+	box-shadow: #ffffff80 0px 0px 6px 0px;
+}
+
+
+ /* ATTRIBUTES */
+#HeroKit_Attributes
+{
+   /* vertical-align: bottom;
+    horizontal-align: left; */
+	width:250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    flow-children: down;
+	padding-top:10px;
+	margin-top:5px;
+    margin-left:50px;
+    margin-right:15px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #333333 ) );
+    horizontal-align: center;
+	
+}
+#HeroKit_AttPoints
+{
+	width:100px;
+	height:50px;
+    border-radius: 5px;
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #777700 ), to( #444400 ) );*/
+	background-image: url("file://{images}/custom_game/gold_vak.png");
+    horizontal-align: center;
+}
+
+#HeroKit_Attributes_Info
+{
+	width:100%;
+	margin-bottom:15px;
+    horizontal-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	/*font-weight: bold;*/
+}
+#atr_info
+{
+	color:#FFFFFF;
+    font-size: 16px;
+	font-family: "Lucida Console";
+	text-align:center;
+}
+
+#point_val
+{
+	
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+}
+
+
+.atr_plus
+{
+	
+	width:50px;
+	height:50px;
+    border: 1px solid black;
+    border-radius: 5px 20px 20px 5px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+.atr_minus
+{
+	
+	width:50px;
+	height:50px;
+    border: 1px solid black;
+    border-radius: 20px 5px 5px 20px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+.atr_point
+{
+	width:100px;
+	height:50px;
+    border-radius: 5px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.atr_val
+{
+	width:100px;
+	height:50px;
+    border-radius: 5px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.prime
+{
+    border: 4px solid yellow;
+    border-radius: 0px;
+    padding-top:5px;
+	text-align:center;
+	width:100%;
+	height:100%;
+}
+
+
+
+    /* Str */
+#HeroKit_StrStat
+{
+    flow-children: right;
+    horizontal-align: center;
+}
+#HeroKit_StrMinus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
+	
+}
+#HeroKit_StrVal
+{
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	*/
+	background-image: url("file://{images}/custom_game/str_vak.png");
+	
+}
+#HeroKit_StrPlus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
+	
+}
+#str_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+    /* Agi */
+#HeroKit_AgiStat
+{
+    flow-children: right;
+    horizontal-align: center;
+	
+}
+#HeroKit_AgiMinus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #00ff00 ), to( #000000 ) );
+	
+}
+#HeroKit_AgiVal
+{
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	*/
+	background-image: url("file://{images}/custom_game/agi_vak.png");
+	
+}
+#HeroKit_AgiPlus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #00ff00 ), to( #000000 ) );
+	
+}
+#agi_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+
+
+    /* Int */
+#HeroKit_IntStat
+{
+    flow-children: right;
+    horizontal-align: center;
+	
+}
+#HeroKit_IntMinus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #016dff ), to( #000000 ) );
+	
+}
+#HeroKit_IntVal
+{
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #000055 ), to( #000000 ) );
+	*/
+	background-image: url("file://{images}/custom_game/int_vak.png");
+}
+#HeroKit_IntPlus
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #016dff ), to( #000000 ) );
+	
+}
+#int_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+
+#HeroKit_Compiled
+{
+    flow-children: down;
+    horizontal-align: center;
+}
+#HeroKit_HpVal
+{
+	width:200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flow-children: down;
+    horizontal-align: center;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
+}
+#HeroKit_ManaVal
+{
+	width:200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flow-children: down;
+    horizontal-align: center;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #016dff ), to( #000000 ) );
+}
+
+#hp_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+#mp_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	
+}
+
+.HeroKit_Team_Root
+{
+    flow-children: down;
+    horizontal-align: left;
+	margin-left:1px;
+	margin-right:5px;
+    vertical-align: bottom;
+	z-index:8;
+}
+
+#HeroKit_Team
+{
+    flow-children: down;
+	margin:0px;
+}
+
+.PlayerWrap
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000 ), to( #666666 ) );
+	border-radius:5px 5px 5px 5px;
+    flow-children: right;
+    horizontal-align: center;
+	margin:0px;
+}
+.ability_slot_team
+{
+	width:team_lay_scale;
+	height:team_lay_scale;
+	border:2px solid black;
+    border-radius: 5px;
+}
+#TeamAbWrap
+{
+    flow-children: right;
+}
+#TeamStWrap
+{
+    flow-children: right;
+}
+.team_stat
+{
+	width:team_lay_scale;
+	height:team_lay_scale;
+    border-radius: 5px;
+    vertical-align: center;
+    horizontal-align: center;
+	border:2px solid black;
+}
+#TeamStr
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff0000 ), to( #000000 ) );
+}
+#TeamAgi
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #00ff00 ), to( #000000 ) );
+}
+#TeamInt
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #0000ff ), to( #000000 ) );
+}
+#TeamGoldVal
+{
+}
+#player_gold
+{
+    border-radius: 5px;
+	width:45px;
+	height:team_lay_scale;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ff6600 ), to( #000000 ) );
+	border:2px solid black;
+}
+.team_stat_val
+{
+    horizontal-align: center;
+    vertical-align: center;
+	color:#FFFFFF;
+    font-size: 15px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+}
+#player_steam_profile_wrap
+{
+	height:team_lay_scale;
+    flow-children: right;
+}
+#player_steam_profile
+{
+	width:team_lay_scale;
+	height:team_lay_scale;
+	border:2px solid black;
+    border-radius: 5px;
+}
+
+#HeroKit_Time
+{
+    horizontal-align: center;
+	width:300px;
+	height:55px;
+	border:2px solid black;
+    border-radius: 5px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #777777 ), to( #ffffff ) );
+}
+
+#kit_timer
+{
+    border-radius: 5px;
+    horizontal-align: center;
+    vertical-align: center;
+	color:#000000;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	text-align:left;
+}
+
+#HeroKit_Portrait
+{
+    horizontal-align: center;
+    flow-children: right;
+	margin-bottom:15px;
+    border-radius: 5px;
+	border:2px solid black;
+}
+#portrait_mid
+{
+	width:71px;
+	height:94px;
+	border:3px solid yellow;
+    border-radius: 5px;
+}
+#portrait_left
+{
+	width:35px;
+	height:94px;
+	desaturation: 1;
+	wash-color: #ffff00;
+}
+#portrait_right
+{
+	width:35px;
+	height:94px;
+	desaturation: 1;
+	wash-color: #ffff00;
+}
+
+#HeroKit_Done_Wrap
+{
+    flow-children: right;
+    horizontal-align: center;
+}

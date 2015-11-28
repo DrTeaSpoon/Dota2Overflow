@@ -8,8 +8,8 @@
 "5"	"seer"
 //
 "6" "ult_burrow"
-//"7" "hell_gate"
+"7" "judgement"
 "8" "spectral_form"
-//"9" "essence_swap"
-//"10" "soul_reaver"
+"9" "night_wolf"
+"10" "soul_reaver"
 }

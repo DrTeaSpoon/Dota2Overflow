@@ -1,7 +1,7 @@
 <root>
 	<styles>
 	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
-	<include src="file://{resources}/styles/custom_game/hero_kit.css" />
+	<include src="file://{resources}/styles/custom_game/hero_kit_r2.css" />
 	</styles>
 	<scripts>
 	<include src="file://{resources}/scripts/custom_game/hero_buttons_kit.js" /> 
@@ -38,6 +38,13 @@
 			<Panel id="HeroKit_Attributes_Info">
 				<Label text="#Dota_Atr_Info" id="atr_info"/>
 			</Panel>
+			<!--
+			<Panel id="HeroKit_Portrait">
+			<DOTAHeroImage id="portrait_left" heroname="npc_dota_hero_slark" heroimagestyle="portrait" />
+			<DOTAHeroImage id="portrait_mid" heroname="npc_dota_hero_nevermore" heroimagestyle="portrait" />
+			<DOTAHeroImage id="portrait_right" heroname="npc_dota_hero_pudge" heroimagestyle="portrait" />
+			</Panel>
+			-->
 			
 		</Panel>
 		<Panel id="HeroKit_Abilities"></Panel> <Panel id="HeroKit_Traits"> </Panel> <Panel id="HeroKit_UltsList"> </Panel>
@@ -49,32 +56,34 @@
 			<Panel id="HeroKit_AbSelect_A" class="lable_text_p">
 				<Label text="Actives" id="traits_label" class="lable_text"/>
 				<Panel id="HeroKit_AbSelect">
-					<Button id="HeroKit_Ability_Q" onactivate="OnRemoveSkill(1)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
-					<Button id="HeroKit_Ability_W" onactivate="OnRemoveSkill(2)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
-					<Button id="HeroKit_Ability_E" onactivate="OnRemoveSkill(3)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
+					<Button id="HeroKit_Ability_Q" onactivate="OnRemoveSkill(1)" onmouseover="RandomHoverIn('hero_kit_random',1)" onmouseout="RandomHoverOut(1)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
+					<Button id="HeroKit_Ability_W" onactivate="OnRemoveSkill(2)" onmouseover="RandomHoverIn('hero_kit_random',2)" onmouseout="RandomHoverOut(2)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
+					<Button id="HeroKit_Ability_E" onactivate="OnRemoveSkill(3)" onmouseover="RandomHoverIn('hero_kit_random',3)" onmouseout="RandomHoverOut(3)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
 				</Panel>
 			</Panel>
 			
 			<Panel id="HeroKit_AbSelect_B" class="lable_text_p">
 				<Label text="Passives" id="traits_label" class="lable_text"/>
 				<Panel id="HeroKit_TrSelect">
-					<Button id="HeroKit_Ability_D" onactivate="OnRemoveSkill(4)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
-					<Button id="HeroKit_Ability_F" onactivate="OnRemoveSkill(5)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
+					<Button id="HeroKit_Ability_D" onactivate="OnRemoveSkill(4)" onmouseover="RandomHoverIn('hero_kit_random',4)" onmouseout="RandomHoverOut(4)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
+					<Button id="HeroKit_Ability_F" onactivate="OnRemoveSkill(5)" onmouseover="RandomHoverIn('hero_kit_random',5)" onmouseout="RandomHoverOut(5)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
 				</Panel>
 			</Panel>
 			
 			<Panel id="HeroKit_AbSelect_C" class="lable_text_p">
 				<Label text="Ultimate" id="traits_label" class="lable_text"/>
 				<Panel id="HeroKit_UlSelect">
-					<Button id="HeroKit_Ability_R" onactivate="OnRemoveSkill(6)" class="ab_button_selection"><DOTAAbilityImage abilityname="rubick_empty1" /></Button>
+					<Button id="HeroKit_Ability_R" onactivate="OnRemoveSkill(6)" onmouseover="RandomHoverIn('hero_kit_random',6)" onmouseout="RandomHoverOut(6)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
 				</Panel>
 			</Panel>
 		</Panel>
-		
-		
-		<Button id="HeroKit_Done" onactivate="OnDone()" class="ab_button_done"><Image src="file://{images}/custom_game/done.png" /></Button>
+		<Panel id="HeroKit_Done_Wrap">
 		<Panel id="HeroKit_Time"><Label text="00:00" id="kit_timer"/></Panel>
+		<Button id="HeroKit_Done" onactivate="OnDone()" class="ab_button_done"><Image src="file://{images}/custom_game/done.png" /></Button>
+		</Panel>
+			<!--
 		<Panel id="HeroKit_Team">
 		</Panel>
+		-->
 	</Panel>
 </root>

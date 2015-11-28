@@ -208,6 +208,28 @@ function AddSkill(abilityName,type)
 }
 
 
+function RandomHoverIn(name,id){ 
+	var AbilitySelection = {};
+		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_Q');
+		AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_W');
+		AbilitySelection[3] = $.FindChildInContext('#HeroKit_Ability_E');
+		AbilitySelection[4] = $.FindChildInContext('#HeroKit_Ability_D');
+		AbilitySelection[5] = $.FindChildInContext('#HeroKit_Ability_F');
+		AbilitySelection[6] = $.FindChildInContext('#HeroKit_Ability_R');
+	Tooltip(name,AbilitySelection[id]);
+}
+function RandomHoverOut(id) {
+	var AbilitySelection = {};
+		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_Q');
+		AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_W');
+		AbilitySelection[3] = $.FindChildInContext('#HeroKit_Ability_E');
+		AbilitySelection[4] = $.FindChildInContext('#HeroKit_Ability_D');
+		AbilitySelection[5] = $.FindChildInContext('#HeroKit_Ability_F');
+		AbilitySelection[6] = $.FindChildInContext('#HeroKit_Ability_R');
+	HideTooltip(AbilitySelection[id]);
+}
+
+
 function PutToSlot(abilityName,slot){
 	var AbilitySelection = {};
 		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_Q');
@@ -264,9 +286,10 @@ function OnRemoveSkill(slot)
 	{
 		Slot.data().ability = null;
 		var SelectionImage = Slot.GetChild(0);
-		SelectionImage.abilityname = "rubick_empty1";
-		SendSkill("rubick_empty1",slot)
-		Slot.SetPanelEvent( 'onmouseover', function(){})
+		SelectionImage.abilityname = "hero_kit_random";
+		SendSkill("hero_kit_random",slot)
+		Slot.SetPanelEvent( 'onmouseover', function(){ return RandomHoverIn("hero_kit_random",slot)});
+		Slot.SetPanelEvent( 'onmouseout', function(){ return RandomHoverOut(slot) } );
 		Game.EmitSound("compendium_levelup");
 		HideTooltip(Slot)
 	}
@@ -401,14 +424,12 @@ function OnDone(){
 	
 	if (RanN > 5) {
 		Game.EmitSound("Hero_OgreMagi.Fireblast.x3");
-		PointsVal = PointsVal + 400;
 	} else if (RanN > 3) {
 		Game.EmitSound("Hero_OgreMagi.Fireblast.x2");
-		PointsVal = PointsVal + 200;
 	} else if (RanN > 1) {
 		Game.EmitSound("Hero_OgreMagi.Fireblast.x1");
-		PointsVal = PointsVal + 100;
 	}
+	PointsVal = PointsVal + RanN*150;
 	var HStat = {};
 	HStat[0] = {};
 	HStat[1] = {};
@@ -546,6 +567,6 @@ function UpdateTimer() {
 	}
 	tUlListS.sort();
 	Ult_Listing(tUlListS);
-	ShowTeam();
+	/*ShowTeam();*/
 	$.Schedule(0.5,UpdateTimer);
 })();

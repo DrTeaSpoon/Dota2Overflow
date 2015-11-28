@@ -35,14 +35,17 @@ function modifier_light_blade:OnDestroy()
 		--	damage_type = nDamageType,
 		--	ability = hAbility
 		--}
+		local nFireDamage = hAbility:GetSpecialValueFor( "damage" )
+		local nScepterBonus = hAbility:GetSpecialValueFor( "bonus_scepter" )
+		if self:GetCaster():HasScepter() and GameRules.IsDayTime() then nFireDamage = nFireDamage + nScepterBonus end
 		self:GetParent():AddNewModifier(self:GetCaster(), self:GetAbility(), "element_fire", {
-			stacks = hAbility:GetSpecialValueFor( "damage" )
+			stacks = nFireDamage
 		})
 		local chain_fade = hAbility:GetSpecialValueFor( "chain_fade" )
 		local damage_delay = hAbility:GetSpecialValueFor( "damage_delay" )
 		
 		if self:GetCaster():HasScepter() then
-			chain_fade = hAbility:GetSpecialValueFor( "scepter_fade" )
+			chain_fade = hAbility:GetSpecialValueFor( "fade_scepter" )
 		--	damage_delay = hAbility:GetSpecialValueFor( "scepter_delay" )
 		end
 		

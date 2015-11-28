@@ -59,6 +59,23 @@ end
   This function is called once and only once as soon as the first player (almost certain to be the server in local lobbies) loads in.
   It can be used to initialize state that isn't initializeable in InitGameMode() but needs to be done before everyone loads in.
 ]]
+function GameMode:CtFGameMode()
+	print("ctf mode")
+	GameRules.Caps = {}
+	GameRules.Caps[DOTA_TEAM_BADGUYS] = 0
+	GameRules.Caps[DOTA_TEAM_GOODGUYS] = 0
+	local hGoalRed = Entities:FindByName(nil, "gamemode_ctf_red")
+	local hGoalBlue = Entities:FindByName(nil, "gamemode_ctf_blue")
+	local sRedFlag = "item_ctf_red"
+	local sBlueFlag = "item_ctf_blue"
+	if hGoalRed and hGoalBlue then
+	local hRedFlag = CreateItem(sRedFlag, nil, nil) 
+	CreateItemOnPositionSync(hGoalRed:GetAbsOrigin(), hRedFlag) 
+	local hBlueFlag = CreateItem(sBlueFlag, nil, nil) 
+	CreateItemOnPositionSync(hGoalBlue:GetAbsOrigin(), hBlueFlag) 
+	end
+	print("ctf mode: Done")
+end
 
 function GameMode:BallGameMode()
 	LinkLuaModifier( "ball_mod", "lua_mods/ball_mod.lua", LUA_MODIFIER_MOTION_NONE )
@@ -79,6 +96,8 @@ end
 
 function GameMode:OnFirstPlayerLoaded()
 	Physics:GenerateAngleGrid()
+	LinkLuaModifier( "flag_goal_blue_mod", "lua_mods/ctf_mod_blue.lua", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "flag_goal_red_mod", "lua_mods/ctf_mod_red.lua", LUA_MODIFIER_MOTION_NONE )
 	
 	---CUSTOM SHOP :
 	
@@ -182,6 +201,7 @@ end
 ]]
 function GameMode:OnGameInProgress()
 --self:BallGameMode()
+self:CtFGameMode()
  -- --DebugPrint("[BAREBONES] The game has officially begun")
  --
  -- Timers:CreateTimer(30, -- Start this timer 30 game-time seconds later

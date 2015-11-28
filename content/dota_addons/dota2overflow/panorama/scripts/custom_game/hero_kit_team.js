@@ -52,7 +52,7 @@ function SkillsHandler(keys) {
 					HideTooltip(name);
 				}
 			});
-		if (change == "rubick_empty1"){
+		if (change == "hero_kit_random"){
 		Targets[target].SetPanelEvent( 'onmouseover', function(){});
 		Targets[target].SetPanelEvent( 'onmouseout', HoverOut(Targets[target]));
 		} else {

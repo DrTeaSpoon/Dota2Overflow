@@ -33,7 +33,7 @@ function modifier_dark_blade:OnDestroy()
 		local damage_delay = hAbility:GetSpecialValueFor( "damage_delay" )
 		
 		if self:GetCaster():HasScepter() then
-			chain_fade = hAbility:GetSpecialValueFor( "scepter_fade" )
+			chain_fade = hAbility:GetSpecialValueFor( "fade_scepter" )
 		--	damage_delay = hAbility:GetSpecialValueFor( "scepter_delay" )
 		end
 		

@@ -7,16 +7,25 @@
 		"addon_game_name"			"Overflow"
 		
 		"addonname"			"Overflow"
-		"info_header_objective"	"Dota 2 with twists."
+		"info_header_objective"	"Custom Hero Dota."
 		"overflow_brief_description"	"Create your hero from three active abilities, two passives and one ultimate.\nYou can also define your base stats and stat gain."
 		"header_how_to_play"	""
 		"tips_header"	"Notable features:"
-		"tip01"	"<font color='#FF7800'>Fire damage</font>: Fire damage is magical damage that stacks up to 100. Every 0.5 second the stack deals damage equal to stack count multiplied by two and then stack is reduced by one."
+		"tip01"	"<font color='#FF7800'>Fire damage</font>: Fire damage is magical damage that stacks up to 200. Every 0.5 second the stack deals damage equal to stack count multiplied by two and then stack is reduced by one."
 		"tip02"	"<font color='#0078FF'>Shock damage</font>: Deals magic damage equal to target's armor multiplied by the shock damage. If ammor is lower than 1 then it defaults to 1 for the damage calculation."
-		"tip03"	""
+		"tip03"	"<font color='#00c7ff'>Wet</font>: Being in water applies 'Wet' Buff to units and heroes giving them armor bonus based on unit's level and reducing <font color='#FF7800'>Fire damage</font> by half and decrementing it twice as fast."
 		"tip04"	""
 		"tip05"	""
+		"tips_tittle"	"Some of the new features:"
 		"Dota_Atr_Info" "Here you set your base stats.\nUnspent gold is given at start.\nStat Gain: (Stat/10)\nStat cost increase by 50g for every 10 points."
+		
+		"DOTA_HeroKit_Gold"				"Here is your starting gold. This is your only change to improve\nyour base stats and their scaling when levelling.\nSpend gold wisely but remember to leave some for those starting items."
+		"DOTA_HeroKit_Stat_0"				"Strenght gives you bigger hp pool and health regen."
+		"DOTA_HeroKit_Stat_0_gain"			"With this value your Strenght gain per level is: "
+		"DOTA_HeroKit_Stat_1"				"Agility gives you attack speed and armour."
+		"DOTA_HeroKit_Stat_1_gain"			"With this value your Agility gain per level is: "
+		"DOTA_HeroKit_Stat_2"				"Intellect gives greater you mana pool and mana regen."
+		"DOTA_HeroKit_Stat_2_gain"			"With this value your Intellect gain per level is: "
 		//"DOTA_Basics"							"ABILITIES"
 		//"DOTA_Upgrades"							"ITEMS"
 		//"DOTA_Shop_Category_Basics"				"ABILITIES"
@@ -297,17 +306,17 @@
 
 		// ******************** ABILITIES ********************
 		"DOTA_Tooltip_ability_burner"                                                     "Burner"
-		"DOTA_Tooltip_ability_burner_Description"                                         "Deals <font color='#FF7800'>Fire damage</font> every second to enemies in radius."
+		"DOTA_Tooltip_ability_burner_Description"                                         "Deals <font color='#FF7800'>Fire Damage</font> every second to enemies in radius.\nDamage is halved with illusions."
 		"DOTA_Tooltip_ability_burner_radius"                                              "Radius:"
-		"DOTA_Tooltip_ability_burner_damage"                                              "<font color='#FF7800'>Fire damage</font>:"
+		"DOTA_Tooltip_ability_burner_damage"                                              "<font color='#FF7800'>Fire Damage</font>:"
 
 		"DOTA_Tooltip_ability_healer"                                                     "Healer"
-		"DOTA_Tooltip_ability_healer_Description"                                         "Heals allies every second in radius."
+		"DOTA_Tooltip_ability_healer_Description"                                         "Heals allies every second in radius.\nHeal is halved with illusions."
 		"DOTA_Tooltip_ability_healer_radius"                                              "Radius:"
 		"DOTA_Tooltip_ability_healer_heal"                                                "Heal:"
 
 		"DOTA_Tooltip_ability_mana_well"                                                  "Mana Well"
-		"DOTA_Tooltip_ability_mana_well_Description"                                      "Provides mana to allies every second in radius."
+		"DOTA_Tooltip_ability_mana_well_Description"                                      "Provides mana to allies every second in radius.\nMana gain is halved with illusions."
 		"DOTA_Tooltip_ability_mana_well_radius"                                           "Radius:"
 		"DOTA_Tooltip_ability_mana_well_mana"                                             "Mana:"
 
@@ -367,10 +376,10 @@
 		"DOTA_Tooltip_ability_illusion_lua_speed_bonus"                                   "SPEED BONUS:"
 
 		"DOTA_Tooltip_ability_nth_attack"                                                 "Quake Strike"
-		"DOTA_Tooltip_ability_nth_attack_Description"                                     "Every X attacks causes small tremor."
+		"DOTA_Tooltip_ability_nth_attack_Description"                                     "Every 5 attacks causes small tremor causing a mini stun and damage./nWorks with illusions."
 		"DOTA_Tooltip_ability_nth_attack_radius"                                          "Radius:"
 		"DOTA_Tooltip_ability_nth_attack_stun_duration"                                   "Stun Duration:"
-		"DOTA_Tooltip_ability_nth_attack_attacks_to_proc"                                 "X:"
+		"DOTA_Tooltip_ability_nth_attack_attacks_to_proc"                                 "Attacks:"
 
 		"DOTA_Tooltip_ability_dummy_unit"                                                 "Dummy Unit"
 		"DOTA_Tooltip_ability_dummy_unit_Description"                                     ""
@@ -417,6 +426,7 @@
 		"DOTA_Tooltip_ability_earthshaker_echo_slam_lua_echo_slam_damage_range"           "Initial Damage Radius:"
 		"DOTA_Tooltip_ability_earthshaker_echo_slam_lua_echo_slam_echo_range"             "Echo Search Radius:"
 		"DOTA_Tooltip_ability_earthshaker_echo_slam_lua_echo_slam_echo_damage"            "Echo Damage:"
+		"DOTA_Tooltip_ability_earthshaker_echo_slam_lua_aghanim_description"				"Causes each initial hero hit to echo twice."
 
 		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua"                              "Enchant Weapon"
 		"DOTA_Tooltip_ability_earthshaker_enchant_totem_lua_Description"                  "Empowers your weapon of choise, causing it to deal extra damage on the next attack."
@@ -435,12 +445,13 @@
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_radius"                              "Bounce Distance:"
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_jump_count"                          "Number Of Bounces:"
 		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_magic_damage"                        "Magic Damage:"
+		"DOTA_Tooltip_ability_zuus_arc_lightning_lua_damage"                        "<font color='#0078FF'>Shock Damage</font>:"
 
 		"DOTA_Tooltip_ability_zuus_static_field_lua_magic_damage"                         "Magic Damage:"
 		"DOTA_Tooltip_ability_zuus_static_field_lua"                                      "Static Field"
 		"DOTA_Tooltip_ability_zuus_static_field_lua_Description"                          "You shock all nearby enemy units whenever you casts a spell. Deals <font color='#0078FF'>Shock damage</font> and Magic Damge."
 		"DOTA_Tooltip_ability_zuus_static_field_lua_radius"                               "Radius:"
-		"DOTA_Tooltip_ability_zuus_static_field_lua_damage"									"<font color='#0078FF'>Shock damage</font>:"
+		"DOTA_Tooltip_ability_zuus_static_field_lua_damage"									"<font color='#0078FF'>Shock Damage</font>:"
 
 		"DOTA_Tooltip_ability_mult_dummy_unit"                                            "Mult Dummy Unit"
 		"DOTA_Tooltip_ability_mult_dummy_unit_Description"                                ""
@@ -467,14 +478,17 @@
 		"DOTA_Tooltip_ability_dark_blade_chain_fade"                                      "Safe Time:"
 		"DOTA_Tooltip_ability_dark_blade_magic_armor"                                     "Magic Resistance Reduction:"
 		"DOTA_Tooltip_ability_dark_blade_curse_duration"                                  "Curse duration:"
-		"DOTA_Tooltip_ability_dark_blade_scepter_fade"                                    "Scepter Safe Time:"
+		"DOTA_Tooltip_ability_dark_blade_fade_scepter"                                    "Scepter Safe Time:"
+		"DOTA_Tooltip_ability_dark_blade_aghanim_description"								"Lowers Safe Time and Doubles the Curse in night time."
 
-		"DOTA_Tooltip_ability_light_blade"                                                "Light Spell Blade"
-		"DOTA_Tooltip_ability_light_blade_Description"                                    "Bouncing magic that deals damage to enemies and heals allies. Victims recieve safe time that makes them immune to bounce from this instance of spell. The safe time is increased with each ally bounce. The increased safe time is reduced on enemy bounces."
-		"DOTA_Tooltip_ability_light_blade_damage"                                         "Damage/Heal:"
+		"DOTA_Tooltip_ability_light_blade"                                                "Burning Spell Blade"
+		"DOTA_Tooltip_ability_light_blade_Description"                                    "Bouncing magic that deals <font color='#FF7800'>Fire Damage</font> to enemies. Victims recieve safe time that makes them immune to bounce from this instance of spell."
+		"DOTA_Tooltip_ability_light_blade_damage"                                         "<font color='#FF7800'>Fire Damage</font>:"
 		"DOTA_Tooltip_ability_light_blade_aoe_range"                                      "Jump Radius:"
 		"DOTA_Tooltip_ability_light_blade_chain_fade"                                     "Safe Time:"
-		"DOTA_Tooltip_ability_light_blade_scepter_fade"                                   "Scepter Safe Time:"
+		"DOTA_Tooltip_ability_light_blade_fade_scepter"                                   "Scepter Safe Time:"
+		"DOTA_Tooltip_ability_light_blade_bonus_scepter"                                   "Scepter Bonus Damage:"
+		"DOTA_Tooltip_ability_light_blade_aghanim_description"								"Lowers Safe Time and Bonus damage in day time."
 
 		"DOTA_Tooltip_ability_shadow_blade"                                               "Shadow Blade"
 		"DOTA_Tooltip_ability_shadow_blade_Description"                                   ""
@@ -551,7 +565,7 @@
 		"DOTA_Tooltip_ability_summon_basic_Description"                                   "Summons group of fire demons with only one goal: Blow up in magnificent fire!\nDeals <font color='#FF7800'>Fire damage</font>."
 		"DOTA_Tooltip_ability_summon_basic_duration"                                      "Duration:"
 		"DOTA_Tooltip_ability_summon_basic_radius"                                        "Radius:"
-		"DOTA_Tooltip_ability_summon_basic_damage"                                        "<font color='#FF7800'>Fire damage</font>:"
+		"DOTA_Tooltip_ability_summon_basic_damage"                                        "<font color='#FF7800'>Fire Damage</font>:"
 		"DOTA_Tooltip_ability_summon_basic_m_damage"                                      "Magic Damage:"
 		"DOTA_Tooltip_ability_summon_basic_units"                                         "Units:"
 		
@@ -575,6 +589,8 @@
 		"DOTA_Tooltip_modifier_dark_blade_curse_Description"  		"Reduced magic resistance."
 		"DOTA_Tooltip_element_fire"					"Fire Damage"
 		"DOTA_Tooltip_element_fire_Description"  		"2 Damage per stack every 0.5 seconds. Stack reduced by 1 after the damage."
+		"DOTA_Tooltip_element_water"					"Wet"
+		"DOTA_Tooltip_element_water_Description"  		"Reduces Effects of Fire Damage and provides +1 armor per level."
 		"DOTA_Tooltip_hex_6_gon_effect_modifier"                             "Hexed"
 		"DOTA_Tooltip_ice_path_stun"                                         "Stun"
 		"DOTA_Tooltip_modifer_abaddon_soul_rip_lift"                         "Stun"
@@ -589,17 +605,22 @@
 		"DOTA_Tooltip_metamorphosis_mod_Description"                                 "May Roshan be with you."
 		
 		"DOTA_Tooltip_ability_metamorphosis"                                              "Roshanify"
-		"DOTA_Tooltip_ability_metamorphosis_Description"                                  "For the limited duration you take form of Mighty Roshan! Provides base damage bonus and chance to stun on every attack."
+		"DOTA_Tooltip_ability_metamorphosis_Description"                                  "For the limited duration you take form of Mighty Roshan! Provides base damage bonus and chance to stun on every attack. You do move a bit slower though."
 		"DOTA_Tooltip_ability_metamorphosis_base_damage"                                  "Base Damage Bonus:"
 		"DOTA_Tooltip_ability_metamorphosis_stun_chance"                                  "Bash Chance:"
 		"DOTA_Tooltip_ability_metamorphosis_stun_duration"                                "Bash Duration:"
 		"DOTA_Tooltip_ability_metamorphosis_attack_range"                                 "Attack Range:"
-		"DOTA_Tooltip_ability_metamorphosis_move_speed"                                   "Move Speed:"
+		"DOTA_Tooltip_ability_metamorphosis_move_speed"                                   "Move Speed Penalty:"
 		"DOTA_Tooltip_ability_metamorphosis_tool_tip_duration"                            "Duration:"
+		"DOTA_Tooltip_ability_metamorphosis_base_damage_scepter"						"Scepter Damage:"
+		"DOTA_Tooltip_ability_metamorphosis_aghanim_description"								"Improves Base Damage bonus."
+		
+		
 		"DOTA_Tooltip_ability_zuus_static_field_lua_Duration"							"Duration:"
 		
 		"DOTA_Tooltip_ability_seer"                                                       "Seer"
 		"DOTA_Tooltip_ability_seer_Description"                                           "While channelling gain vision of all enemy heroes.\nDoes not include enemies who are invisible or dead at the start of the channel."
+		"DOTA_Tooltip_ability_seer_aghanim_description"								"Hides the modifier of being seen by seer."
 
 		"DOTA_Tooltip_ability_spectral_form"                                              "Spectral Form"
 		"DOTA_Tooltip_ability_spectral_form_Description"                                  "You wrap the etheral around you becoming difficult to physically strike but weak against magic. While spectral you regenerate health and mana. Also you basic attack deals magic damage instead of physical."
@@ -607,6 +628,8 @@
 		"DOTA_Tooltip_ability_spectral_form_mana_regen"                                   "Mana regen:"
 		"DOTA_Tooltip_ability_spectral_form_evasion"                                      "%Evasion"
 		"DOTA_Tooltip_ability_spectral_form_magic_weak"                                   "Magic weakness:"
+		"DOTA_Tooltip_ability_spectral_form_radius_scepter"						"Scepter Radius:"
+		"DOTA_Tooltip_ability_spectral_form_aghanim_description"								"Applies the buff to allies in radius."
 		
 		"DOTA_Tooltip_spectral_form_mod"                                              "Spectral Form"
 		"DOTA_Tooltip_spectral_form_mod_Description"                                  "You wrap the etheral around you."
@@ -620,50 +643,211 @@
 		"DOTA_Tooltip_ability_vampiric_Description"                                       "Gain percentage of all damage you deal as healing.\nStacks with other sources of lifesteal."
 		"DOTA_Tooltip_ability_vampiric_vamp"       "%+Vampirisim"
 		
-"DOTA_HeroKit_abaddon_soul_rip_ManaCost" "140"
-"DOTA_HeroKit_ice_path_ManaCost" "80/100/120/140"
-"DOTA_HeroKit_earthshaker_enchant_totem_lua_ManaCost" "50"
-"DOTA_HeroKit_zuus_arc_lightning_lua_ManaCost" "65/70/75/80"
-"DOTA_HeroKit_blink_support_ManaCost" "175"
-"DOTA_HeroKit_hex_6_gon_ManaCost" "75"
-"DOTA_HeroKit_fire_wall_ManaCost" "200/250/300/350"
-"DOTA_HeroKit_winds_ManaCost" "150"
-"DOTA_HeroKit_teleport_basic_ManaCost" "50"
-"DOTA_HeroKit_summon_basic_ManaCost" "350"
-"DOTA_HeroKit_earthshaker_echo_slam_lua_ManaCost" "145/205/265"
-"DOTA_HeroKit_light_blade_ManaCost" "200/250/300"
-"DOTA_HeroKit_dark_blade_ManaCost" "200/250/300"
-"DOTA_HeroKit_metamorphosis_ManaCost" "0"
-"DOTA_HeroKit_seer_ManaCost" "140"
-"DOTA_HeroKit_spectral_form_ManaCost" "140"
-
-"DOTA_HeroKit_abaddon_soul_rip_Cooldown" "18/16/14/12"
-"DOTA_HeroKit_ice_path_Cooldown" "10"
-"DOTA_HeroKit_earthshaker_enchant_totem_lua_Cooldown" "5"
-"DOTA_HeroKit_zuus_arc_lightning_lua_Cooldown" "2"
-"DOTA_HeroKit_blink_support_Cooldown" "10"
-"DOTA_HeroKit_hex_6_gon_Cooldown" "20/18/16/14"
-"DOTA_HeroKit_fire_wall_Cooldown" "35"
-"DOTA_HeroKit_winds_Cooldown" "30/25/20/15"
-"DOTA_HeroKit_teleport_basic_Cooldown" "120/90/60/30"
-"DOTA_HeroKit_summon_basic_Cooldown" "60"
-"DOTA_HeroKit_earthshaker_echo_slam_lua_Cooldown" "150/130/110"
-"DOTA_HeroKit_light_blade_Cooldown" "100/80/60"
-"DOTA_HeroKit_dark_blade_Cooldown" "100/80/60"
-"DOTA_HeroKit_metamorphosis_Cooldown" "120"
-"DOTA_HeroKit_seer_Cooldown" "60/40/20"
-"DOTA_HeroKit_spectral_form_Cooldown" "60/40/20"
 
 		
 		"DOTA_Tooltip_ability_shadow_walk"                                                "Dark Path"
-		"DOTA_Tooltip_ability_shadow_walk_Description"                                    "You become instantly invisible.\nAlso your next attack deals pure damage in small area around the target.\nIf the ability is ended by spell cast, you deal the damage to yourself and to foes around you instead.\nYou can deny yourself with this ability."
+		"DOTA_Tooltip_ability_shadow_walk_Description"                                    "You become invisible.\nAlso your next attack deals pure damage in small area around the target.\nIf the ability is ended by spell cast, you deal the damage to yourself and to foes around you instead.\nYou can deny yourself with this ability.\n<font color='#8844ff'>In night time</font> dark path doesn't have fade time and doesn't break on spell cast."
 		"DOTA_Tooltip_ability_shadow_walk_duration"                                       "Duration:"
 		"DOTA_Tooltip_ability_shadow_walk_poison_damage"                                  "Pure Damage:"
 		"DOTA_Tooltip_ability_shadow_walk_radius"                                         "Blast Radius:"
-"DOTA_HeroKit_shadow_walk_ManaCost" "60"
-"DOTA_HeroKit_shadow_walk_Cooldown" "20"
+		
 		"DOTA_Tooltip_shadow_walk_modifier"                                              "Dark Path"
 		"DOTA_Tooltip_shadow_walk_modifier_Description"                                  "Invisible."
 		
+		
+		"DOTA_Tooltip_ability_holy_word"                                                  "Holy Word"
+		"DOTA_Tooltip_ability_holy_word_Description"                                      "Heal all allies in radius instantly. In <font color='#dddd99'>Day Time</font> the heal is doubled."
+		"DOTA_Tooltip_ability_holy_word_heal"                                             "Heal:"
+		"DOTA_Tooltip_ability_holy_word_radius"                                           "Radius:"
+		
+		"DOTA_Tooltip_ability_magic_missile"                                                  "Phase Missle"
+		"DOTA_Tooltip_ability_magic_missile_Description"                                      "Fires a phase missile at an enemy unit, stunning and dealing damage. All nearby enemies are also dealt damage and teleported with slight delay to the target of the spell."
+		"DOTA_Tooltip_ability_magic_missile_damage"                                             "Damage:"
+		"DOTA_Tooltip_ability_magic_missile_radius"                                           "Radius:"
+		"DOTA_Tooltip_ability_magic_missile_stun"                                           "Stun:"
+		
+		
+		"DOTA_Tooltip_ability_vortex_blink"                                              "Vortex Blink"
+		"DOTA_Tooltip_ability_vortex_blink_Description"                                  "Short distance teleportation that allows you to move in and out of combat. This crude version of blink creates vortex that pulls all your allies with you."
+		"DOTA_Tooltip_ability_vortex_blink_max_blink"                                    "Max Blink Distance:"
+		"DOTA_Tooltip_ability_vortex_blink_radius"										"Vortex Radius:"
+		"DOTA_Tooltip_ability_vortex_blink_cooldown_scepter"                             "Cooldown Scepter:"
+		
+		
+		"DOTA_Tooltip_ability_sun_ray"                                                  "Sun Ray"
+		"DOTA_Tooltip_ability_sun_ray_Description"                                      "Channel the power of the sun to strike at target location. Deals both <font color='#FF7800'>Fire damage</font> and Magic damage.\nThe longer you channel the more powerful the strike. The seconds channelled act as direct multiplier."
+		"DOTA_Tooltip_ability_sun_ray_magic_damage"                                             "Magic Damage:"
+		"DOTA_Tooltip_ability_sun_ray_radius"                                           "Radius:"
+		"DOTA_Tooltip_ability_sun_ray_delay"                                           "Max Channel Time:"
+		"DOTA_Tooltip_ability_sun_ray_fire_damage"                                           "<font color='#FF7800'>Fire Damage</font>:"
+		
+		"DOTA_Tooltip_ability_zombie_ambush"                                                  "Circle of Dryad"
+		"DOTA_Tooltip_ability_zombie_ambush_Description"                                      "Create wall of trees with hostile treant. The treant remains even if tree is killed but not vice-versa."
+		"DOTA_Tooltip_ability_zombie_ambush_zombie_damage_tooltip"                            "Treant Damage:"
+		"DOTA_Tooltip_ability_zombie_ambush_radius"                                           "Radius:"
+		"DOTA_Tooltip_ability_zombie_ambush_duration"                                           "Duration:"
+		
+		"DOTA_Tooltip_ability_ult_burrow"                                                  "Burrow"
+		"DOTA_Tooltip_ability_ult_burrow_Description"                                      "Burrow to ground rendering you invisible and resistant to damage. You cannot attack while burrowed but all your spells deal more damage. Cooldown starts when you unburrow. Unburrowing doesn't cost mana."
+		"DOTA_Tooltip_ability_ult_burrow_Note0"                                                  "Has 0.7 Cast Point."
+		"DOTA_Tooltip_ability_ult_burrow_fade_time"											"Fade Time:"
+		"DOTA_Tooltip_ability_ult_burrow_damage_out"                                       "%Outgoing Damage Bonus:"
+		"DOTA_Tooltip_ability_ult_burrow_damage_in"                                           "%Incoming Damage Reduction:"
+		"DOTA_Tooltip_ability_ult_burrow_aghanim_description"								"Removes mana cost and cooldown."
+		
+		"DOTA_Tooltip_ult_burrow_modifier"                                             "Burrowed"
+		"DOTA_Tooltip_ult_burrow_modifier_Description"                                 ""
+		
+		"DOTA_Tooltip_ability_spike_hide"                                                  "Shock Guard"
+		"DOTA_Tooltip_ability_spike_hide_Description"                                      "When active, all basic attacks are immidietly retributed with <font color='#0078FF'>Shock Damage</font> based on your primary attribute and brief stun."
+		"DOTA_Tooltip_ability_spike_hide_Note0"                                                  "Does not work against buildings or magic immune units."
+		"DOTA_Tooltip_ability_spike_hide_damage_return"											"%Percentage as <font color='#0078FF'>Shock Damage</font>:"
+		"DOTA_Tooltip_ability_spike_hide_stun"                                       "Stun Duration:"
+		"DOTA_Tooltip_ability_spike_hide_duration"                                           "Ability Duration:"
+		
+		"DOTA_Tooltip_spike_hide_mod"                                             "Shock Guard Active"
+		"DOTA_Tooltip_spike_hide_mod_Description"                                 "I dare you to attack me!"
+	
+	
+		"DOTA_Tooltip_ability_black_dust"                                                  "Black Dust"
+		"DOTA_Tooltip_ability_black_dust_Description"                                      "Black Dust curses your foes to stuble in darkness. Slows, Blinds and disables any healing."
+		"DOTA_Tooltip_ability_black_dust_Note0"                                                  "Does not work against buildings or magic immune units."
+		"DOTA_Tooltip_ability_black_dust_duration"											"Duration:"
+		"DOTA_Tooltip_ability_black_dust_slow"                                       "Slow:"
+		"DOTA_Tooltip_ability_black_dust_radius"                                           "Radius:"
+		
+		"DOTA_Tooltip_black_dust_mod"                                             "Black Dust"
+		"DOTA_Tooltip_black_dust_mod_Description"                                 "Slowed, blinded and healing disabled."
+		
+		"DOTA_Tooltip_ability_chi_strike"                                                  "Chi Strike"
+		"DOTA_Tooltip_ability_chi_strike_Description"                                      "Your basic attack grants shockwave of effect in front of you for a single strike. Procs a melee attack against all targets hit.\nAlso gives you true strike."
+		"DOTA_Tooltip_ability_chi_strike_Note0"                                                  "Does not work against buildings.\nMay have strange effects... @_@"
+		"DOTA_Tooltip_ability_chi_strike_range"											"Range:"
+		
+		"DOTA_Tooltip_ability_day_mana"                                                  "Cleric of Sun"
+		"DOTA_Tooltip_ability_day_mana_Description"                                      "In <font color='#dddd99'>Day Time</font> your mana regens faster but durring <font color='#8844ff'>Night Time</font> the effects are reversed."
+		"DOTA_Tooltip_ability_day_mana_mana"											"%Day Regen:"
+		"DOTA_Tooltip_ability_day_mana_penalty"											"%Night Regen Penalty:"
+		
+		"DOTA_Tooltip_ability_night_mana"                                                  "Cleric of Moon"
+		"DOTA_Tooltip_ability_night_mana_Description"                                      "In <font color='#8844ff'>Night Time</font> your mana regens faster but durring <font color='#dddd99'>Day Time</font> the effects are reversed."
+		"DOTA_Tooltip_ability_night_mana_mana"											"%Night Regen:"
+		"DOTA_Tooltip_ability_night_mana_penalty"											"%Day Regen Penalty:"
+		
+		"DOTA_Tooltip_ability_spell_resistance"                                                  "Troll Disciple"
+		"DOTA_Tooltip_ability_spell_resistance_Description"                                      "Trolls are known for their magic resistant hide. You dream one day to be like your masters."
+		"DOTA_Tooltip_ability_spell_resistance_bonus"											"%Magic Resistance:"
+		
+		"DOTA_Tooltip_ability_armored"                                                  "Knights Armour"
+		"DOTA_Tooltip_ability_armored_Description"                                      "You killed a Knight. Now you wear his skin. With practice you may learn to be as resiliant bastard as he was."
+		"DOTA_Tooltip_ability_armored_bonus"											"Armor Bonus:"
+		
+		"DOTA_Tooltip_ability_shock_weapon"                                                  "Shock Weapon"
+		"DOTA_Tooltip_ability_shock_weapon_Description"                                      "You have enhanced your weapon with lightning that punishes even the most armoured foes."
+		"DOTA_Tooltip_ability_shock_weapon_bonus"											"<font color='#0078FF'>Shock Damage</font>:"
+		"DOTA_Tooltip_ability_fire_weapon"                                                  "Fire Weapon"
+		"DOTA_Tooltip_ability_fire_weapon_Description"                                      "You have enhanced your weapon with eternal flame that makes your foes burn out faster."
+		"DOTA_Tooltip_ability_fire_weapon_bonus"											"<font color='#FF7800'>Fire Damage</font>:"
+		
+		
+		
+		"DOTA_Tooltip_ability_hero_kit_random"                                                  "Random Skill"
+		"DOTA_Tooltip_ability_hero_kit_random_Description"                                      "If you choose not to select a ability then you are assigned random and you gain small amount of bonus gold."
+		"DOTA_Tooltip_ability_hero_kit_random_gold_per"											"Gold Bonus For Each Random:"
+		
+		"DOTA_Tooltip_ability_item_overflow_rapier"                                       "Overflow Rapier"
+		"DOTA_Tooltip_ability_item_overflow_rapier_Description"                           ""
+		"DOTA_Tooltip_ability_item_overflow_rapier_damage_bonus"                          "DAMAGE BONUS:"
+		"DOTA_Tooltip_ability_item_overflow_rapier_damage_mult"                           "DAMAGE MULT:"
+
+
+		
+		"DOTA_Tooltip_ability_soul_reaver"                                                "Soul Reaver"
+		"DOTA_Tooltip_ability_soul_reaver_Description"                                    "Taking the form of Soul Reaver. This Demon has ability to reap life and mana from souls of his foes. But this power comes at price. Any show of weakness (your health getting bellow treshold) gives it leverage to start draining life from you (Percentage of your current health). Without decent will power (Mana) you cannot voluntarily turn back when demon has control. The damage you deal to enemies with a soul is percentage of your Maximum Mana and Health combined. Half of the damage done is dealt to mana pool. If target has less mana than would be reaped the damage is done to health instead. If mana pool of opponent is empty you also have chance to stun."
+		"DOTA_Tooltip_ability_soul_reaver_health_drain"                                   "%Health Drain:"
+		"DOTA_Tooltip_ability_soul_reaver_treshold"                                       "%Health Treshold:"
+		"DOTA_Tooltip_ability_soul_reaver_total_damage"                                   "%Damage:"
+		"DOTA_Tooltip_ability_soul_reaver_mana_burn"                                      "%Damage To Mana:"
+		"DOTA_Tooltip_ability_soul_reaver_vampiric"                                       "%Life Steal:"
+		"DOTA_Tooltip_ability_soul_reaver_stun_chance"                                    "%Stun Chance:"
+		"DOTA_Tooltip_ability_soul_reaver_stun_duration"                                  "Stun Duration:"
+		"DOTA_Tooltip_ability_soul_reaver_attack_range"                                   "Attack Range:"
+		"DOTA_Tooltip_ability_soul_reaver_treshold_penalty"                               "Treshold Mana Cost:"
+		"DOTA_Tooltip_ability_soul_reaver_aghanim_description"								"Health bellow treshold no longer stops you from reverting to normal."
+		
+		"DOTA_Tooltip_soul_reaver_mod"                                             "Soul Reaver"
+		"DOTA_Tooltip_soul_reaver_mod_Description"                                 ""
+		
+		"DOTA_Tooltip_ability_item_ctf_red"                                               "Dire Flag"
+		"DOTA_Tooltip_ability_item_ctf_red_Description"                                   "Game Objective! Radiant must get this flag to their base. Travelling more than 350 units in 0.25 seconds causes the flag to be dropped."
+
+		"DOTA_Tooltip_ability_item_ctf_blue"                                              "Radiant Flag"
+		"DOTA_Tooltip_ability_item_ctf_blue_Description"                                  "Game Objective! Dire must get this flag to their base. Travelling more than 350 units in 0.25 seconds causes the flag to be dropped."
+		
+		"DOTA_Tooltip_ability_night_wolf"                                                 "Werewolf"
+		"DOTA_Tooltip_ability_night_wolf_Description"                                     "In night you take the from of large wolf. Greater movement and attack speed makes your efficient hunter."
+		"DOTA_Tooltip_ability_night_wolf_attack_range"                                    "Attack Range:"
+		"DOTA_Tooltip_ability_night_wolf_move_speed"                                      "%Movement Speed Bonus:"
+		"DOTA_Tooltip_ability_night_wolf_attack_speed"                                    "Attack Speed Bonus:"
+		"DOTA_Tooltip_ability_night_wolf_bonus_vision_scepter"                                    "Scepter Vision Bonus:"
+		"DOTA_Tooltip_ability_night_wolf_aghanim_description"								"Better sight at night."
+		
+		"DOTA_Tooltip_night_wolf_mod"                                             "Werewolf"
+		"DOTA_Tooltip_night_wolf_mod_Description"                                 "Night is yours."
+		
+		"DOTA_Tooltip_ability_judgement"                                                  "Judgement"
+		"DOTA_Tooltip_ability_judgement_Description"                                      "From sky above your Judgement rains down. Casts A Sunray at location of every enemy hero. Longer channel multiplies the damage. (1 + seconds channeled.)"
+		"DOTA_Tooltip_ability_judgement_Note0"										"Every blast damage is calculated individually. Meaning if heroes are clumped together every hero can be hit by each blast."
+		"DOTA_Tooltip_ability_judgement_radius"                                           "Radius:"
+		"DOTA_Tooltip_ability_judgement_fire_damage"                                      "Fire Damage:"
+		"DOTA_Tooltip_ability_judgement_magic_damage"                                     "Magic Damage:"
+		"DOTA_Tooltip_ability_judgement_delay"                                            "Max Channel:"
+		"DOTA_Tooltip_ability_judgement_cooldown_scepter"                                 "Scepter Cooldown:"
+		"DOTA_Tooltip_ability_judgement_aghanim_description"								"Reduces Cooldown."
+		
+		
+		"DOTA_Tooltip_ability_double_step"                                                "Time Shave"
+		"DOTA_Tooltip_ability_double_step_Description"                                    "You shave some of your time. You move at immense speeds disjointing any incoming projectiles and escaping grasp of magic."
+		"DOTA_Tooltip_ability_double_step_speed"                                          "Bonus Speed:"
+		"DOTA_Tooltip_ability_double_step_duration"                                       "Duration:"
+		
+
+		"DOTA_Tooltip_ability_cursed_power"                                               "Cursed Power"
+		"DOTA_Tooltip_ability_cursed_power_Description"                                   "You harness your own pain into power dealing %curse%%% of your current health to your self as physical damage and gaining bonus damage to your attacks. If used again while the buff remains it stacks and refreshes the duration.\n\nFor the duration of the buff you cannot be healed."
+		"DOTA_Tooltip_ability_cursed_power_curse"                                         "%Self Damage:"
+		"DOTA_Tooltip_ability_cursed_power_bonus"                                         "+Bonus Damage:"
+		"DOTA_Tooltip_ability_cursed_power_duration"                                      "Duration:"
+		"DOTA_Tooltip_ability_cursed_power_max"                                           "Max Stacks:"
+		
+		"DOTA_Tooltip_cursed_power_mod"                                             "Cursed Power"
+		"DOTA_Tooltip_cursed_power_mod_Description"                                 "Sacrificed health for +%dMODIFIER_PROPERTY_TOOLTIP% bonus damage"
+		
+		"DOTA_Tooltip_ability_hero_kit_fire_dmg"                                          "<font color='#FF7800'>Fire Damage</font>"
+		"DOTA_Tooltip_ability_hero_kit_fire_dmg_Description"                              "<font color='#FF7800'>Fire damage</font> stacks from all sources and deals two Magic Damage per stack and then reduces the stack by one."
+		"DOTA_Tooltip_ability_hero_kit_fire_dmg_damage_stack"                             "Damage per Stack:"
+		"DOTA_Tooltip_ability_hero_kit_fire_dmg_tick_rate"                                "Tick Rate:"
+		"DOTA_Tooltip_ability_hero_kit_fire_dmg_max"                                      "Max Stacks:"
+
+		"DOTA_Tooltip_ability_hero_kit_shock_dmg"                                         "<font color='#0078FF'>Shock Damage</font>"
+		"DOTA_Tooltip_ability_hero_kit_shock_dmg_Description"                             "<font color='#0078FF'>Shock damage</font> is calculated as magic damage multiplied by the victim's armor value. Perfect for destroying heroes who focus on agility or high armor."
+		"DOTA_Tooltip_ability_hero_kit_shock_dmg_damage"                                  "Damage per Armor:"
+
+		"DOTA_Tooltip_ability_hero_kit_wet"                                               "<font color='#00c7ff'>Wet</font>"
+		"DOTA_Tooltip_ability_hero_kit_wet_Description"                                   "<font color='#00c7ff'>Wet</font> is double edged buff. When unit is effected by <font color='#00c7ff'>Wet</font> they gain armor bonus based on their current level. Also unit effected by <font color='#FF7800'>Fire damage</font> takes reduced damage and the <font color='#FF7800'>Fire damage</font> stacks are removed at faster rate.\nNatural occurence of this buff is at the map's river."
+		"DOTA_Tooltip_ability_hero_kit_wet_fire_reduction_dmg"                            "%<font color='#FF7800'>Fire damage</font> reduction:"
+		"DOTA_Tooltip_ability_hero_kit_wet_fire_reduction_stack"                          "%<font color='#FF7800'>Fire damage</font> stack reduction:"
+		"DOTA_Tooltip_ability_hero_kit_wet_armor_per_level"                               "Armor per Level:"
+		
+		"DOTA_Tooltip_ability_forced_overload"                                            "Wave of Static Load"
+		"DOTA_Tooltip_ability_forced_overload_Description"                                "Cast a wave of electric energy that can be stacked to eventually become unstable and explode outwards in shock damage. <font color='#0078FF'>Shock Damage</font> is multiplied by stacks in power of two. When new stack is applied the duration is reset."
+		"DOTA_Tooltip_ability_forced_overload_stack_shock_damage"                         "<font color='#0078FF'>Shock Damage</font>:"
+		"DOTA_Tooltip_ability_forced_overload_duration"                                   "Stack Duration:"
+		"DOTA_Tooltip_ability_forced_overload_radius"                                     "Explosion Radius:"
+		"DOTA_Tooltip_ability_forced_overload_distance"                                   "Wave Distance:"
+		"DOTA_Tooltip_ability_forced_overload_speed"                                      "Wave Speed:"
+		"DOTA_Tooltip_ability_forced_overload_wave_radius"                                "Wave Radius:"
+		
+		"DOTA_Tooltip_forced_overload_mod"                                             "Static Load"
+		"DOTA_Tooltip_forced_overload_mod_Description"                                 "You are going to discharge in a moment."
 	}
 }

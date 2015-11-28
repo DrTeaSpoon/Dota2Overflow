@@ -36,12 +36,20 @@ function Precache( context )
   --PrecacheItemByNameSync("example_ability", context)
   --PrecacheItemByNameSync("item_multicast", context)
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts", context)
   PrecacheResource("particle", "particles/units/heroes/hero_chaos_knight/chaos_knight_bolt_msg.vpcf", context)
   PrecacheResource("particle", "particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012.vpcf", context)
 	PrecacheResource("particle", "particles/base_attacks/generic_projectile.vpcf", context)
 	PrecacheResource("particle","particles/econ/generic/generic_buff_1/generic_buff_1.vpcf", context)
 	PrecacheResource("model","models/heroes/oracle/crystal_ball.vmdl",context)
+	PrecacheResource("model","models/props_teams/banner_radiant.vmdl",context)
+	PrecacheResource("model","models/particle/legion_duel_banner.vmdl",context)
 	PrecacheResource("particle","particles/dark_smoke_test.vpcf", context)
+	PrecacheResource("particle","particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_water.vpcf",context)
+	PrecacheResource("particle","particles/flag_carry_blue.vpcf", context)
+	PrecacheResource("particle","particles/flag_carry_red.vpcf", context)
+	
+	
   
 
     VectorTarget:Precache( context )

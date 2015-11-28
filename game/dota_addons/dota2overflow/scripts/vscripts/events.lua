@@ -30,8 +30,43 @@ function GameMode:OnNPCSpawned(keys)
 
   -- This internal handling is used to set up main barebones functions
   GameMode:_OnNPCSpawned(keys)
-
+  
   local npc = EntIndexToHScript(keys.entindex)
+  local name = npc:GetName()
+  local iTeam = -1
+  local iType = -1
+	if string.find(name,"badguys") then
+		iTeam = DOTA_TEAM_BADGUYS
+	elseif string.find(name,"goodguys") then
+		iTeam = DOTA_TEAM_GOODGUYS
+	end
+	
+	if string.find(name,"melee") then
+		iType = DOTA_UNIT_CAP_MELEE_ATTACK
+	elseif string.find(name,"ranged") then
+		iType = DOTA_UNIT_CAP_RANGED_ATTACK
+	end
+	
+	if iTeam ~= -1 and iType ~= -1 then
+		--self:EnhanceCreep(iTeam, iType, npc)
+	end
+end
+
+function GameMode:EnhanceCreep(iTeam, iType, hTarget)
+	local sModifier = GameRules.EnhanceTactics[iTeam][iType][self:GetMoonPhase()].Modifier
+	local nLevel = GameRules.EnhanceTactics[iTeam][iType][self:GetMoonPhase()].Level
+	hTarget:AddNewModifier( hTarget, nil, sModifier, {lvl = nLevel} )
+end
+
+function GameMode:GetMoonPhase()
+	local nTime = GetDOTATime(false, false)
+	local phase = 1
+	while nTime > 240 do
+	phase = phase + 1
+	if phase > 5 then phase = 1 end
+	nTime = nTime - 240
+	end
+	return phase
 end
 
 -- An entity somewhere has been hurt.  This event fires very often with many units so don't do too many expensive
@@ -58,10 +93,15 @@ end
 function GameMode:OnItemPickedUp(keys)
   DebugPrint( '[BAREBONES] OnItemPickedUp' )
   DebugPrintTable(keys)
-
-  local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
+  local player = false
+  local heroEntity = false
+  if keys.HeroEntityIndex then
+  heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
+  end
   local itemEntity = EntIndexToHScript(keys.ItemEntityIndex)
-  local player = PlayerResource:GetPlayer(keys.PlayerID)
+  if keys.PlayerID then
+  player = PlayerResource:GetPlayer(keys.PlayerID)
+  end
   local itemname = keys.itemname
 end
 
