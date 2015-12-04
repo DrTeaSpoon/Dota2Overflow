@@ -15,7 +15,7 @@
 
 "11" "evasion" // effects needed
 "12" "critical" // effects needed
-//"13" "toxic_blood"
+"13" "cleave"
 //"14" "greed_m"
 //"15" "greed_s"
 //

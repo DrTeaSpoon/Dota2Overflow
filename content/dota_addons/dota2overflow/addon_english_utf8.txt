@@ -838,6 +838,11 @@
 		"DOTA_Tooltip_ability_hero_kit_wet_fire_reduction_stack"                          "%<font color='#FF7800'>Fire damage</font> stack reduction:"
 		"DOTA_Tooltip_ability_hero_kit_wet_armor_per_level"                               "Armor per Level:"
 		
+		"DOTA_Tooltip_ability_hero_kit_traps"                                         "Traps"
+		"DOTA_Tooltip_ability_hero_kit_traps_Description"                             "Traps around the map deal massive damage against high level heroes. They deal physical damage multiplied by the victim's current level"
+		"DOTA_Tooltip_ability_hero_kit_traps_Note0"										"Dying to trap is counted as deny."
+		"DOTA_Tooltip_ability_hero_kit_traps_damage"                                  "Damage per Hero Level:"
+		
 		"DOTA_Tooltip_ability_forced_overload"                                            "Wave of Static Load"
 		"DOTA_Tooltip_ability_forced_overload_Description"                                "Cast a wave of electric energy that can be stacked to eventually become unstable and explode outwards in shock damage. <font color='#0078FF'>Shock Damage</font> is multiplied by stacks in power of two. When new stack is applied the duration is reset."
 		"DOTA_Tooltip_ability_forced_overload_stack_shock_damage"                         "<font color='#0078FF'>Shock Damage</font>:"
@@ -849,5 +854,13 @@
 		
 		"DOTA_Tooltip_forced_overload_mod"                                             "Static Load"
 		"DOTA_Tooltip_forced_overload_mod_Description"                                 "You are going to discharge in a moment."
+		
+		"DOTA_Tooltip_ability_lightning_rod"                                              "Lightning Call"
+		"DOTA_Tooltip_ability_lightning_rod_Description"                                  "Summon bolts of lightning to summon all foes within large search range. Every bolt will Stun and cause <font color='#0078FF'>Shock Damage</font> and Magic Damage in small radius"
+		"DOTA_Tooltip_ability_lightning_rod_shock_damage"                                	"<font color='#0078FF'>Shock Damage</font>:"
+		"DOTA_Tooltip_ability_lightning_rod_mdamage"                                      "Magic Damage:"
+		"DOTA_Tooltip_ability_lightning_rod_radius"                                       "Bolt Radius:"
+		"DOTA_Tooltip_ability_lightning_rod_range"                                        "Search Range:"
+		"DOTA_Tooltip_ability_lightning_rod_duration"                                     "Stun Duration:"
 	}
 }

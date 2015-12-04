@@ -201,7 +201,7 @@ end
 ]]
 function GameMode:OnGameInProgress()
 --self:BallGameMode()
-self:CtFGameMode()
+--self:CtFGameMode()
  -- --DebugPrint("[BAREBONES] The game has officially begun")
  --
  -- Timers:CreateTimer(30, -- Start this timer 30 game-time seconds later

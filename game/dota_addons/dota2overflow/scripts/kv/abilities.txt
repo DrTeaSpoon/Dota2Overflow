@@ -30,7 +30,7 @@
 //"24" "plasma_blast"
 "25" "lightning_rod"
 //
-//"26" "natures_wall"
+"26" "grow_beard"
 //"27" "demand_silence"
 //"28" "totem"
 "29" "black_dust"

@@ -7,7 +7,7 @@ function sun_ray:OnSpellStart()
 	self.point = self:GetCursorPosition() 
 	local hCaster = self:GetCaster()
 	local particleName = "particles/units/heroes/hero_invoker/invoker_sun_strike_team.vpcf"
-	self.end_fx = ParticleManager:CreateParticleForTeam( particleName, PATTACH_ABSORIGIN, hCaster, hCaster:GetTeam() )
+	self.end_fx = ParticleManager:CreateParticleForTeam( particleName, PATTACH_WORLDORIGIN, hCaster, hCaster:GetTeam() )
 	ParticleManager:SetParticleControl( self.end_fx, 0, self.point )
 	ParticleManager:SetParticleControl( self.end_fx, 1, Vector(self:GetSpecialValueFor("radius"),0,0) )
 	EmitSoundOnLocationForAllies(self:GetCursorPosition() , "Hero_Invoker.SunStrike.Charge", hCaster)
@@ -31,9 +31,10 @@ function sun_ray:OnChannelFinish( bInterrupted )
 		--print(mult)
 		local hCaster = self:GetCaster()
 		local particleName = "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
-		local expl = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN, hCaster )
+		local expl = ParticleManager:CreateParticle( particleName, PATTACH_WORLDORIGIN, hCaster )
 		ParticleManager:SetParticleControl( expl, 0, self.point )
 	ParticleManager:SetParticleControl( expl, 1, Vector(self:GetSpecialValueFor("radius"),0,0) )
+		ParticleManager:ReleaseParticleIndex(expl) 
 		EmitSoundOnLocationWithCaster(self.point, "Hero_Invoker.SunStrike.Ignite", hCaster )
 		local dmg = math.floor(self:GetSpecialValueFor("fire_damage") * mult)
 		local aoe = self:GetSpecialValueFor("radius")
@@ -57,5 +58,6 @@ function sun_ray:OnChannelFinish( bInterrupted )
 			end
 		end
 	ParticleManager:DestroyParticle(self.end_fx, false) 
+	ParticleManager:ReleaseParticleIndex(self.end_fx) 
 	self.point = nil
 end

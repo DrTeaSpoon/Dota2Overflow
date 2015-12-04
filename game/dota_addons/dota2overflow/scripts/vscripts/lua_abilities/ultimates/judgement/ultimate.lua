@@ -26,11 +26,11 @@ function judgement:OnSpellStart()
 	if #self.points < 1 then return end
 	
 	local channel_particleName = "particles/units/heroes/hero_wisp/wisp_overcharge.vpcf"
-	self.ChfxIndex = ParticleManager:CreateParticle( channel_particleName, PATTACH_ABSORIGIN, hCaster )
+	self.ChfxIndex = ParticleManager:CreateParticle( channel_particleName, PATTACH_WORLDORIGIN, hCaster )
 	ParticleManager:SetParticleControl( self.ChfxIndex, 0, hCaster:GetAbsOrigin() + Vector(0,0,100) )
 	
 	for k,v in pairs(self.points) do
-	local fxIndex = ParticleManager:CreateParticleForTeam( particleName, PATTACH_ABSORIGIN, hCaster, hCaster:GetTeam() )
+	local fxIndex = ParticleManager:CreateParticleForTeam( particleName, PATTACH_WORLDORIGIN, hCaster, hCaster:GetTeam() )
 	ParticleManager:SetParticleControl( fxIndex, 0, v )
 	ParticleManager:SetParticleControl( fxIndex, 1, Vector(self:GetSpecialValueFor("radius"),0,0) )
 	EmitSoundOnLocationForAllies(v , "Hero_Invoker.SunStrike.Charge", hCaster)
@@ -58,9 +58,10 @@ function judgement:OnChannelFinish( bInterrupted )
 		local hCaster = self:GetCaster()
 		local particleName = "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 		for k,v in pairs(self.points) do
-			local expl = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN, hCaster )
+			local expl = ParticleManager:CreateParticle( particleName, PATTACH_WORLDORIGIN, hCaster )
 			ParticleManager:SetParticleControl( expl, 0, v )
 			ParticleManager:SetParticleControl( expl, 1, Vector(self:GetSpecialValueFor("radius"),0,0) )
+			ParticleManager:ReleaseParticleIndex(expl) 
 			local dmg = math.floor(self:GetSpecialValueFor("fire_damage") * mult)
 			local aoe = self:GetSpecialValueFor("radius")
 						local damage = {

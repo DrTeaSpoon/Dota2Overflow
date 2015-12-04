@@ -96,6 +96,25 @@
 		}
 	}
 	
+	"hero_kit_traps"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/random/random.lua"
+		"AbilityTextureName"			"element_trap"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			"150"
+			}
+		}
+	}
+	
 	
 	"burner"
 	{
@@ -205,17 +224,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max"			"10"
+				"max"			"3 4 5 6 7 8 10"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"p_bonus"			"1 2 3 4 5 6 7"
+				"p_bonus"			"7"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"m_bonus"			"1 2 3 4 5 6 7"
+				"m_bonus"			"7"
 			}
 		}
 	}
@@ -246,7 +265,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"p_bonus"			"1 2 3 4 5 6 7"
+				"p_bonus"			"1 3 5 7 9 11 13"
 			}
 			"03"
 			{
@@ -309,7 +328,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"5 15 25 35 45 65 75"
+				"bonus"						"5 10 15 20 25 30 35"
 			}
 		}
 	}
@@ -381,12 +400,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"250"
+				"bonus"						"250 250 250 250 300 350 400"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"chance"						"5 15 25 35 45 65 75"
+				"chance"						"5 15 25 35 35 35 35"
 			}
 		}
 	}
@@ -412,7 +431,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"10 13 16 19 22 25 28"
+				"bonus"						"3 6 9 12 15 18 21"
 			}
 		}
 	}
@@ -437,7 +456,36 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus"						"3 4 5 6 7 8 9"
+				"bonus"						"1 2 3 4 5 6 7"
+			}
+		}
+	}
+	
+	"cleave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/passives/cleave/passive.lua"
+		"AbilityTextureName"			"cleave"
+		"MaxLevel"	"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"			"particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cleave"						"5 10 15 20 25 30 35"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"						"200"
 			}
 		}
 	}
@@ -1225,7 +1273,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"850"
+		"AbilityCastRange"				"750"
 		"AbilityCastPoint"				"0.2"
 	
 		// Damage.
@@ -1233,7 +1281,7 @@
 	
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"2"
+		"AbilityCooldown"				"3"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -1266,12 +1314,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_damage"				"80 100 120 140"
+				"magic_damage"				"60 80 100 120"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"8 12 16 20"
+				"damage"				"7 10 13 16"
 			}
 		}
 	}
@@ -1382,7 +1430,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_damage"				"20 30 40 50 60 70 80"
+				"magic_damage"				"10 15 20 25 30 35 40"
 			}
 		}
 	}
@@ -2328,7 +2376,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"vamp"						"5 10 15 20 25 30 35"
+				"vamp"						"2 4 7 10 14 19 25"
 			}
 		}
 	}
@@ -3064,7 +3112,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"treshold"			"95"
+				"treshold"			"90"
 			}
 			"03"
 			{
@@ -3269,7 +3317,7 @@
 			"01"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"curse"						"50"
+				"curse"						"30"
 			}   
 			"02"
 			{
@@ -3407,17 +3455,17 @@
 			"04"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"distance"		"2200"
+				"distance"		"1800"
 			}
 			"05"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"speed"		"1200"
+				"speed"		"600"
 			}
 			"06"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"wave_radius"		"250"
+				"wave_radius"		"220"
 			}
 		}
 		"precache"
@@ -3436,8 +3484,9 @@
 		"ScriptFile"					"lua_abilities/basic_abilities/lightning_rod/ability.lua"
 		"AbilityTextureName"			"lightning_rod"
 		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+		"AbilityCastPoint"              "0.6"
 		"FightRecapLevel"               "1"
-		"AbilityCooldown"               "30 27 24 21"
+		"AbilityCooldown"               "30"
 		"AbilityManaCost"               "80 100 120 140"
 		// Special
 		"AbilitySpecial"
@@ -3445,17 +3494,17 @@
 			"01"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"shock_damage"		"5 10 15 20"
+				"shock_damage"		"5 8 13 16"
 			}
-			"01"
+			"02"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"mdamage"		"75 100 125 150"
+				"mdamage"		"65 80 95 110"
 			}
 			"03"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"radius"		"200"
+				"radius"		"170"
 			}
 			"04"
 			{
@@ -3477,5 +3526,104 @@
 		}
 	}
 	
+		"rage_gas"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/rage_gas/ability.lua"
+		"AbilityTextureName"			"rage_gas"
+		"AbilityCastPoint"              "0.1"
+		"FightRecapLevel"               "1"
+		"AbilityCooldown"               "25"
+		"AbilityManaCost"               "90"
+		// Special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"		"300"
+			}
+			"02"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"		"2 2.5 3 3.5"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+			"particle"					"particles/units/heroes/hero_zuus/zuus_thundergods_wrath.vpcf"
+			"particle"					"particles/shadow_raze_gen/raze.vpcf"
+			"particle"					"particles/units/heroes/hero_zuus/zuus_thundergods_wrath_start.vpcf"
+		}
+	}
+	"wield_flame"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/wield_flame/ability.lua"
+		"AbilityTextureName"			"wield_flame"
+		"AbilityCooldown"               "10.0"
+		"AbilityManaCost"               "150"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+		"FightRecapLevel"               "1"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"buff"						"1.0 1.5 2.0 2.5"
+			}
+		}
+    
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_items.vsndevts"
+			"particle"                  "particles/wield_flame.vpcf"
+		}
+	}
+	"grow_beard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/grow_beard/ability.lua"
+		"AbilityTextureName"			"grow_beard"
+		"AbilityCooldown"               "30.0 25.0 20.0 15.0"
+		"AbilityManaCost"               "0"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+		"FightRecapLevel"               "1"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"grow_time"					"30.0 25.0 20.0 15.0"
+			}
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"gold"					"2"
+			}
+			"03"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"speed"					"-4"
+			}
+			"04"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"block"					"3"
+			}
+		}
+	}
 }
 
