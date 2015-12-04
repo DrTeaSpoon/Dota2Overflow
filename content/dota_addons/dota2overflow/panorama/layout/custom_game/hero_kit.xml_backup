@@ -58,12 +58,6 @@
 				<Panel id="HeroKit_AbSelect">
 					<Button id="HeroKit_Ability_Q" onactivate="OnRemoveSkill(1)" onmouseover="RandomHoverIn('hero_kit_random',1)" onmouseout="RandomHoverOut(1)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
 					<Button id="HeroKit_Ability_W" onactivate="OnRemoveSkill(2)" onmouseover="RandomHoverIn('hero_kit_random',2)" onmouseout="RandomHoverOut(2)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
-				</Panel>
-			</Panel>
-			
-			<Panel id="HeroKit_AbSelect_E" class="lable_text_p">
-				<Label text="Either" id="either_label" class="lable_text"/>
-				<Panel id="HeroKit_ESelect">
 					<Button id="HeroKit_Ability_E" onactivate="OnRemoveSkill(3)" onmouseover="RandomHoverIn('hero_kit_random',3)" onmouseout="RandomHoverOut(3)" class="ab_button_selection"><DOTAAbilityImage abilityname="hero_kit_random" /></Button>
 				</Panel>
 			</Panel>

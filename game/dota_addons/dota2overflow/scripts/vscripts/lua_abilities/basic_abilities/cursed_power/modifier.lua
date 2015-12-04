@@ -5,8 +5,7 @@ end
 function cursed_power_mod:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
-		MODIFIER_PROPERTY_TOOLTIP,
-		MODIFIER_PROPERTY_DISABLE_HEALING
+		MODIFIER_PROPERTY_TOOLTIP
 	}
 	return funcs
 end
@@ -37,10 +36,6 @@ end
 
 function cursed_power_mod:OnTooltip()
 	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("bonus")
-end
-
-function cursed_power_mod:GetDisableHealing()
-	return 1
 end
 
 function cursed_power_mod:GetEffectName()

@@ -5,7 +5,6 @@ end
 function black_dust_mod:DeclareFunctions()
 	local funcs = {
 	MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
-	MODIFIER_PROPERTY_DISABLE_HEALING,
 	MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE
 	}
  
@@ -32,7 +31,6 @@ function black_dust_mod:GetEffectName()
 	return "particles/black_dust_debuff.vpcf"
 end
 function black_dust_mod:GetBonusVisionPercentage() return -100 end
-function black_dust_mod:GetDisableHealing() return 1 end 
 --------------------------------------------------------------------------------
  
 function black_dust_mod:GetEffectAttachType()

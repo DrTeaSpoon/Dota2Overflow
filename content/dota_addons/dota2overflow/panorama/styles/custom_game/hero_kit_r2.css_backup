@@ -38,7 +38,7 @@
     horizontal-align: center;
 	margin:2px;
 	border-radius: 5px;
-	/*box-shadow: #ffffff80 4px 4px 8px 0px;*/
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 
 .ab_button_done
@@ -85,7 +85,7 @@
     margin-left:15px;
     margin-right:0px;
 	overflow: clip scroll;
-	/*box-shadow: #ffffff80 4px 4px 8px 0px;*/
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 
 #HeroKit_Traits
@@ -94,7 +94,7 @@
     horizontal-align: left; */
     border: 4px solid black;
     background-color: #333553;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #22222255 ), to( #66662255 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #55555555 ), to( #11111155 ) );
     border-radius: 5px;
     flow-children: down;
     width: 23%;
@@ -104,7 +104,7 @@
     margin-left:5px;
     margin-right:0px;
 	overflow: clip scroll;
-	/*box-shadow: #ffffff80 4px 4px 8px 0px;*/
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 
 #HeroKit_UltsList
@@ -123,7 +123,7 @@
     margin-left:5px;
     margin-right:15px;
 	overflow: clip scroll;
-	/*box-shadow: #ffffff80 4px 4px 8px 0px;*/
+	box-shadow: #ffffff80 4px 4px 8px 0px;
 }
 .Ability_row
 {
@@ -178,18 +178,7 @@
     vertical-align: top;
     horizontal-align: center;
     border: 0px solid black;
-    background-color: gradient( linear, 0% 0%, 100% 0%, from( #2222ff ), to( #222288 ) );
-    border-radius: 5px;
-    flow-children: right;
-	padding:10px;
-}
-#HeroKit_ESelect
-{
-    vertical-align: top;
-    horizontal-align: center;
-    border: 0px solid black;
-    background-color: #333553;
-    background-color: gradient( linear, 0% 0%, 100% 0%, from( #222288 ), to( #886622 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222266 ) );
     border-radius: 5px;
     flow-children: right;
 	padding:10px;
@@ -200,7 +189,7 @@
     horizontal-align: center;
     border: 0px solid black;
     background-color: #333553;
-    background-color: gradient( linear, 0% 0%, 100% 0%, from( #886622 ), to( #888822 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #222222 ) );
     border-radius: 5px;
     flow-children: right;
 	padding:10px;

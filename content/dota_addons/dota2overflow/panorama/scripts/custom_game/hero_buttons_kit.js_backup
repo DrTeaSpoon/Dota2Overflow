@@ -177,10 +177,9 @@ function AddSkill(abilityName,type)
 			}
 		}
 	} else if(type == 2) {
-		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_F');
-		AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_D');
-		AbilitySelection[3] = $.FindChildInContext('#HeroKit_Ability_E');
-		for (i = 1; i < 4; i++) { 
+		AbilitySelection[1] = $.FindChildInContext('#HeroKit_Ability_D');
+		AbilitySelection[2] = $.FindChildInContext('#HeroKit_Ability_F');
+		for (i = 1; i < 3; i++) { 
 			if (AbilitySelection[i].data().ability == null)
 			{
 			AbilitySelection[i].data().ability = abilityName;

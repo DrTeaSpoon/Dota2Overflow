@@ -87,11 +87,20 @@ function GameMode:TeamComSkill(keys)
 	CustomGameEventManager:Send_ServerToTeam(team ,"team_hero_kit_skills", {player=pID, change=keys.change, target=keys.target}) 
 end
 
+function tableMerge(ta,tb)
+	for k,v in pairs(tb) do
+	ta[#ta+k] = v
+	end
+	return ta
+end
+
 function GameMode:RandomSkill(pID,slot)
 	local tList = {}
 	local found = false
-	if slot < 4 then
+	if slot < 3 then
 		tList = GameRules.AbilityListing
+	elseif slot < 4 then
+		tList = tableMerge(GameRules.AbilityListing,GameRules.TraitListing)
 	elseif slot < 6 then
 		tList = GameRules.TraitListing
 	else
