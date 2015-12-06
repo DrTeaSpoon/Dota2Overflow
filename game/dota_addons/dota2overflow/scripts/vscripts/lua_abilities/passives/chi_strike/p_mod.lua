@@ -12,16 +12,6 @@ function chi_strike_mod:DeclareFunctions()
 	return funcs
 end
 
-function chi_strike_mod:CheckState()
-		local hAbility = self:GetAbility()
-		local miss = true
-		if hAbility:GetLevel() < 1 then miss = false end
-	local states = {
-		[MODIFIER_STATE_CANNOT_MISS] = miss
-	}
-	return states
-	end
-
 function chi_strike_mod:IsHidden()
 	return true
 end

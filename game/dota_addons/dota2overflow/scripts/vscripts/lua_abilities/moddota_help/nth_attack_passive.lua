@@ -44,7 +44,7 @@ function nth_attack_modifier:ProcSpecial(hTarget)
 		--Hero_Abaddon.DeathCoil.Cast
 		local iAoE = hAbility:GetSpecialValueFor( "radius" )
 		local fDuration = hAbility:GetSpecialValueFor( "stun_duration" )
-		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_earthshaker/earthshaker_aftershock.vpcf", PATTACH_WORLDORIGIN, nil )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_earthshaker/earthshaker_aftershock.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 		ParticleManager:SetParticleControl( nFXIndex, 0, hTarget:GetOrigin() )
 		ParticleManager:SetParticleControl( nFXIndex, 1, Vector( iAoE, 1, 1 ) )
 		ParticleManager:ReleaseParticleIndex( nFXIndex )

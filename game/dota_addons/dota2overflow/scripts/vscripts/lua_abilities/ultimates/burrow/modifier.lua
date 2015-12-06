@@ -38,6 +38,14 @@ function ult_burrow_modifier:IsHidden()
 	return false
 end
 
+function ult_burrow_modifier:IsPurgable() 
+	return false
+end
+
+function ult_burrow_modifier:IsPurgeException()
+	return false
+end
+
 function ult_burrow_modifier:GetAttributes()
 	return MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE 
 end

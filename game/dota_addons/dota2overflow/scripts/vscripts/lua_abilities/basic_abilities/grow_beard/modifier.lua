@@ -18,10 +18,14 @@ function grow_beard_mod:OnCreated()
 		self:StartIntervalThink( 1 )
 	end
 end
+function grow_beard_mod:IsPurgable() 
+	return false
+end
+
 
 function grow_beard_mod:OnIntervalThink()
 	if IsServer() then
-	if self:GetAbility():GetLevel() > 0 then
+	if self:GetAbility():GetLevel() > 0  and self:GetStackCount() < self:GetAbility():GetSpecialValueFor("max") then
 		self.seconds = self.seconds +1
 		if self.seconds > self:GetAbility():GetSpecialValueFor("grow_time") then
 		self.seconds = 0

@@ -43,6 +43,14 @@ function night_wolf_mod:IsHidden()
 	return false
 end
 
+function night_wolf_mod:IsPurgable() 
+	return false
+end
+
+function night_wolf_mod:IsPurgeException()
+	return false
+end
+
 function night_wolf_mod:GetAttributes()
 	return MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE 
 end

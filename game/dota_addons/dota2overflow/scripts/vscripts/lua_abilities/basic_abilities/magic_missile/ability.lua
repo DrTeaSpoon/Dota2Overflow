@@ -4,6 +4,8 @@ end
 LinkLuaModifier( "generic_lua_stun", "lua_abilities/moddota_help/generic_stun.lua", LUA_MODIFIER_MOTION_NONE )
 
 function magic_missile:OnSpellStart()
+	local hTarget = self:GetCursorTarget()
+	--hTarget:TriggerSpellReflect( self )
 	local info = {
 			EffectName = "particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf",
 			Ability = self,

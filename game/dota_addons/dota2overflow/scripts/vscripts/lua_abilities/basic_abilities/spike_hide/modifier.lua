@@ -13,7 +13,9 @@ end
 function spike_hide_mod:IsHidden()
 	return false
 end
-
+function spike_hide_mod:IsPurgable() 
+	return true
+end
 function spike_hide_mod:GetEffectName()
 	return "particles/spike_shield_rock.vpcf"
 end

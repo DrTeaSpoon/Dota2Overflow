@@ -3,6 +3,44 @@
 @define IterationCount: 1;
 @define AnimationDelay: 0s;
 
+
+.credit_lable
+{
+	color:#ffffff;
+    font-size: 30px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+    horizontal-align: center;
+	text-shadow: 2px 2px 4px 4.0 #000000ff;
+}
+.credit_avatar
+{
+	width:30px;
+	height:30px;
+	border:2px solid black;
+    border-radius: 5px;
+}
+.credit_div
+{
+	width:100%;
+	flow-children:right;
+}
+
+#Credits
+{
+  flow-children: down;
+  width:25%;
+  margin-top:100px;
+  margin-left:100px;
+  padding:7px;
+  horizontal-align: left;
+  vertical-align: top;
+    border: 4px solid black;
+    background-color: #333553;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #22222255 ), to( #22226655 ) );
+    border-radius: 5px;
+}
+
 #HiddenPrecompiler
 {
   horizontal-align: left;

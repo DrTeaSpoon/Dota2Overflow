@@ -8,7 +8,7 @@
 		
 		"addonname"			"Overflow"
 		"info_header_objective"	"Custom Hero Dota."
-		"overflow_brief_description"	"Create your hero from three active abilities, two passives and one ultimate.\nYou can also define your base stats and stat gain."
+		"overflow_brief_description"	"Create your hero from two active abilities, two passives, one from either type and one ultimate.\nYou can also define your base stats and stat gain."
 		"header_how_to_play"	""
 		"tips_header"	"Notable features:"
 		"tip01"	"<font color='#FF7800'>Fire damage</font>: Fire damage is magical damage that stacks up to 200. Every 0.5 second the stack deals damage equal to stack count multiplied by two and then stack is reduced by one."
@@ -19,6 +19,12 @@
 		"tips_tittle"	"Some of the new features:"
 		"Dota_Atr_Info" "Here you set your base stats.\nUnspent gold is given at start.\nStat Gain: (Stat/10)\nStat cost increase by 50g for every 10 points."
 		
+		///CREDITS
+		"Credits_Author"	"Mod Author:"
+		"Credits_Trans"		"Russian Translation:"
+		"Credits_Beta"		"Beta Testers:"
+		
+		"DOTA_HeroKit_Pro"				"Advanced mode: Lets you set your starting gold as low as you want and have less than 15 on any stat."
 		"DOTA_HeroKit_Gold"				"Here is your starting gold. This is your only change to improve\nyour base stats and their scaling when levelling.\nSpend gold wisely but remember to leave some for those starting items."
 		"DOTA_HeroKit_Stat_0"				"Strenght gives you bigger hp pool and health regen."
 		"DOTA_HeroKit_Stat_0_gain"			"With this value your Strenght gain per level is: "
@@ -621,13 +627,16 @@
 		"DOTA_Tooltip_ability_seer"                                                       "Seer"
 		"DOTA_Tooltip_ability_seer_Description"                                           "While channelling gain vision of all enemy heroes.\nDoes not include enemies who are invisible or dead at the start of the channel."
 		"DOTA_Tooltip_ability_seer_aghanim_description"								"Hides the modifier of being seen by seer."
-
+		"DOTA_Tooltip_seer_mod"												"Spotted!"
+		"DOTA_Tooltip_seer_mod_Description"									"Enemy Seer can see you."
+		
 		"DOTA_Tooltip_ability_spectral_form"                                              "Spectral Form"
 		"DOTA_Tooltip_ability_spectral_form_Description"                                  "You wrap the etheral around you becoming difficult to physically strike but weak against magic. While spectral you regenerate health and mana. Also you basic attack deals magic damage instead of physical."
 		"DOTA_Tooltip_ability_spectral_form_health_regen"                                 "Health regen:"
 		"DOTA_Tooltip_ability_spectral_form_mana_regen"                                   "Mana regen:"
 		"DOTA_Tooltip_ability_spectral_form_evasion"                                      "%Evasion"
-		"DOTA_Tooltip_ability_spectral_form_magic_weak"                                   "Magic weakness:"
+		"DOTA_Tooltip_ability_spectral_form_magic_weak"                                   "%Magic weakness:"
+		"DOTA_Tooltip_ability_spectral_form_duration"                                     "Duration:"
 		"DOTA_Tooltip_ability_spectral_form_radius_scepter"						"Scepter Radius:"
 		"DOTA_Tooltip_ability_spectral_form_aghanim_description"								"Applies the buff to allies in radius."
 		
@@ -710,7 +719,7 @@
 	
 	
 		"DOTA_Tooltip_ability_black_dust"                                                  "Black Dust"
-		"DOTA_Tooltip_ability_black_dust_Description"                                      "Black Dust curses your foes to stuble in darkness. Slows, Blinds and disables any healing."
+		"DOTA_Tooltip_ability_black_dust_Description"                                      "Black Dust curses your foes to stuble in darkness. Slows and Blinds"
 		"DOTA_Tooltip_ability_black_dust_Note0"                                                  "Does not work against buildings or magic immune units."
 		"DOTA_Tooltip_ability_black_dust_duration"											"Duration:"
 		"DOTA_Tooltip_ability_black_dust_slow"                                       "Slow:"
@@ -720,7 +729,7 @@
 		"DOTA_Tooltip_black_dust_mod_Description"                                 "Slowed, blinded and healing disabled."
 		
 		"DOTA_Tooltip_ability_chi_strike"                                                  "Chi Strike"
-		"DOTA_Tooltip_ability_chi_strike_Description"                                      "Your basic attack grants shockwave of effect in front of you for a single strike. Procs a melee attack against all targets hit.\nAlso gives you true strike."
+		"DOTA_Tooltip_ability_chi_strike_Description"                                      "Your basic attack grants shockwave of effect in front of you for a single strike. Procs a melee attack against all targets hit."
 		"DOTA_Tooltip_ability_chi_strike_Note0"                                                  "Does not work against buildings.\nMay have strange effects... @_@"
 		"DOTA_Tooltip_ability_chi_strike_range"											"Range:"
 		
@@ -813,7 +822,7 @@
 		
 
 		"DOTA_Tooltip_ability_cursed_power"                                               "Cursed Power"
-		"DOTA_Tooltip_ability_cursed_power_Description"                                   "You harness your own pain into power dealing %curse%%% of your current health to your self as physical damage and gaining bonus damage to your attacks. If used again while the buff remains it stacks and refreshes the duration.\n\nFor the duration of the buff you cannot be healed."
+		"DOTA_Tooltip_ability_cursed_power_Description"                                   "You harness your own pain into power dealing %curse%%% of your current health to your self as physical damage and gaining bonus damage to your attacks. If used again while the buff remains it stacks and refreshes the duration.\n"
 		"DOTA_Tooltip_ability_cursed_power_curse"                                         "%Self Damage:"
 		"DOTA_Tooltip_ability_cursed_power_bonus"                                         "+Bonus Damage:"
 		"DOTA_Tooltip_ability_cursed_power_duration"                                      "Duration:"
@@ -862,5 +871,21 @@
 		"DOTA_Tooltip_ability_lightning_rod_radius"                                       "Bolt Radius:"
 		"DOTA_Tooltip_ability_lightning_rod_range"                                        "Search Range:"
 		"DOTA_Tooltip_ability_lightning_rod_duration"                                     "Stun Duration:"
+		
+		
+		"DOTA_Tooltip_ability_grow_beard"                                                 "Golden Beard"
+		"DOTA_Tooltip_ability_grow_beard_Description"                                     "Periodically your glorious beard grows. But everything so glorious has a price. Every stack blocks damage and slows you down. When activated you cut your beard and gain gold multiplied by current stack count in power of two."
+		"DOTA_Tooltip_ability_grow_beard_grow_time"                                       "Grow Time:"
+		"DOTA_Tooltip_ability_grow_beard_gold"                                            "Gold:"
+		"DOTA_Tooltip_ability_grow_beard_speed"                                           "%Move Slow:"
+		"DOTA_Tooltip_ability_grow_beard_block"                                           "Damage Block:"
+		"DOTA_Tooltip_ability_grow_beard_max"                                             "Max Stacks:"
+		"DOTA_Tooltip_grow_beard_mod"                                             "Beard"
+		"DOTA_Tooltip_grow_beard_mod_Description"                                 "It's Glorious! Cutting it now earns you %dMODIFIER_PROPERTY_TOOLTIP% gold."
+		
+		"DOTA_Tooltip_ability_cleave"                                                     "Cleave"
+		"DOTA_Tooltip_ability_cleave_Description"                                         "Cleaves on basic attacks."
+		"DOTA_Tooltip_ability_cleave_cleave"                                              "%Cleave Damage:"
+		"DOTA_Tooltip_ability_cleave_radius"                                              "Cleave Radius:"
 	}
 }

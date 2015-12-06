@@ -35,6 +35,13 @@ function element_water:GetModifierPhysicalArmorBonus()
 	return self:GetParent():GetLevel()
 end
 
+function element_water:IsPurgable() 
+	return false
+end
+
+function element_water:IsPurgeException()
+	return false
+end
 
 function element_water:GetTexture()
 	return "element_water"

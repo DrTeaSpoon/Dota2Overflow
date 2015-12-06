@@ -19,7 +19,7 @@ function teleport_basic:OnSpellStart()
 end
 
 function teleport_basic:GetBehavior() 
-	local behav = DOTA_ABILITY_BEHAVIOR_POINT
+	local behav = DOTA_ABILITY_BEHAVIOR_POINT + DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES
 	return behav
 end
 

@@ -25,7 +25,7 @@ function zuus_arc_lightning_lua:OnSpellStart()
 		hTarget = self:GetCursorTarget()
 	end
 	if hTarget then
-		hTarget:TriggerSpellReflect( self )
+		--hTarget:TriggerSpellReflect( self )
 		local absorb = hTarget:TriggerSpellAbsorb( self )
 		if not absorb then
 			local nFXIndex = ParticleManager:CreateParticle( self.Effect, PATTACH_CUSTOMORIGIN, nil );

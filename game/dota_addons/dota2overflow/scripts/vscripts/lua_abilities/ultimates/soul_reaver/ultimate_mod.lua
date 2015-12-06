@@ -78,6 +78,14 @@ function soul_reaver_mod:IsHidden()
 	return false
 end
 
+function soul_reaver_mod:IsPurgable() 
+	return false
+end
+
+function soul_reaver_mod:IsPurgeException()
+	return false
+end
+
 function soul_reaver_mod:GetAttributes()
 	return MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE 
 end

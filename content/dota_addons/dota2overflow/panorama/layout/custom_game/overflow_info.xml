@@ -18,6 +18,7 @@
 			<DOTAAbilityImage class="TipAbIm" id="fire" abilityname="hero_kit_fire_dmg" onmouseover="DOTAShowAbilityTooltip('hero_kit_fire_dmg')" onmouseout="DOTAHideAbilityTooltip()"/>
 			<DOTAAbilityImage class="TipAbIm" id="shock" abilityname="hero_kit_shock_dmg" onmouseover="DOTAShowAbilityTooltip('hero_kit_shock_dmg')" onmouseout="DOTAHideAbilityTooltip()"/>
 			<DOTAAbilityImage class="TipAbIm" id="water" abilityname="hero_kit_wet" onmouseover="DOTAShowAbilityTooltip('hero_kit_wet')" onmouseout="DOTAHideAbilityTooltip()"/>
+			<DOTAAbilityImage class="TipAbIm" id="traps" abilityname="hero_kit_traps" onmouseover="DOTAShowAbilityTooltip('hero_kit_traps')" onmouseout="DOTAHideAbilityTooltip()"/>
 			
 			<!--
 			<Label id="TipText01" class="TipText" html="true" text="#tip01" />

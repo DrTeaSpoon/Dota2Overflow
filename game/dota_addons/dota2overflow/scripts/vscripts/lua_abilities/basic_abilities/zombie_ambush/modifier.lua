@@ -32,6 +32,10 @@ function zombie_ambush_modifier:CheckState()
 	return state
 end
 
+function zombie_ambush_modifier:IsPurgable() 
+	return false
+end
+
 function zombie_ambush_modifier:OnCreated( kv )	
 end
 

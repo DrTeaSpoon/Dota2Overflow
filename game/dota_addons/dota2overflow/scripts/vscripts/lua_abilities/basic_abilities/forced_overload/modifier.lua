@@ -19,6 +19,10 @@ function forced_overload_mod:IsHidden()
 	return false
 end
 
+function forced_overload_mod:IsPurgable() 
+	return true
+end
+
 function forced_overload_mod:GetEffectName()
 	return "particles/units/heroes/hero_disruptor/disruptor_kf_wall_constant_electric_arc.vpcf"
 end
@@ -44,7 +48,7 @@ end
 function forced_overload_mod:NearbyShock(shk_dmg)
 	local hAbility = self:GetAbility()
 	local hTarget = self:GetParent()
-		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_stormspirit/stormspirit_overload_discharge.vpcf", PATTACH_WORLDORIGIN, nil )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_stormspirit/stormspirit_overload_discharge.vpcf", PATTACH_ABSORIGIN, hTarget )
 		ParticleManager:SetParticleControl( nFXIndex, 0, hTarget:GetAbsOrigin() )
 		local enemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), hTarget:GetOrigin(), nil, hAbility:GetSpecialValueFor("radius"), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
 

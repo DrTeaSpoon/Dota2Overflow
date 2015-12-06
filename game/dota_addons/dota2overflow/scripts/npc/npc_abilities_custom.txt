@@ -4,6 +4,38 @@
 {
   /////////////
   
+	"dev_test"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/dev_test/ability.lua"
+		"AbilityTextureName"			"dev_test"
+		"AbilityCooldown"               "1.0"
+		"AbilityManaCost"               "0"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"FightRecapLevel"               "1"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"gold"						"111 222 444 666"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_items.vsndevts"
+			"particle"                  "particles/blink_staff.vpcf"
+		}
+		
+	}
+	
+	
+	////
 	"hero_kit_random"
 	{
 		// General
@@ -3583,7 +3615,7 @@
 		"BaseClass"				"ability_lua"
 		"ScriptFile"					"lua_abilities/basic_abilities/grow_beard/ability.lua"
 		"AbilityTextureName"			"grow_beard"
-		"AbilityCooldown"               "30.0 25.0 20.0 15.0"
+		"AbilityCooldown"               "15.0"
 		"AbilityManaCost"               "0"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
 		"FightRecapLevel"               "1"
@@ -3595,12 +3627,12 @@
 			"01"
 			{
 				"var_type"                  "FIELD_FLOAT"
-				"grow_time"					"30.0 25.0 20.0 15.0"
+				"grow_time"					"15.0"
 			}
 			"02"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"gold"					"2"
+				"gold"					"1 2 3 4"
 			}
 			"03"
 			{
@@ -3610,9 +3642,53 @@
 			"04"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"block"					"3"
+				"block"					"1 2 3 4"
+			}
+			"05"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"max"					"10"
 			}
 		}
+	}
+	"purge_burn"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"lua_abilities/basic_abilities/purge_burn/ability.lua"
+		"AbilityTextureName"			"purge_burn"
+		"AbilityCooldown"               "60.0 50.0 40.0 30.0"
+		"AbilityManaCost"               "0"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"FightRecapLevel"               "1"
+    
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"duration"						"1.2"
+			}
+			"02"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"radius"						"350"
+			}
+			"03"
+			{
+				"var_type"                  "FIELD_INTEGER"
+				"damage"						"3 4 5 6"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
+			"particle"                  "particles/shadow_raze_gen/raze.vpcf"
+		}
+		
 	}
 }
 

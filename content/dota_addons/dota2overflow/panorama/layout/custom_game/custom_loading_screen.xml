@@ -9,8 +9,24 @@
     <Panel id="CustomBg" >
       <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/overflow_tagline.png" />
     </Panel>
+	<Panel id="Credits">
+		<Panel id="Credits_Author" class="credit_div">
+		<Label text="#Credits_Author" class="credit_lable"/>
+		<DOTAAvatarImage steamid="76561197975484185" class="credit_avatar"/>
+		</Panel>
+		<!--
+		<Panel id="Credits_Translation" class="credit_div">
+		<Label text="#Credits_Trans" class="credit_lable"/>
+		<DOTAAvatarImage steamid="76561198089872954" class="credit_avatar"/>
+		</Panel>
+		-->
+		<Panel id="Credits_Beta" class="credit_div">
+		<Label text="#Credits_Beta" class="credit_lable"/>
+		<DOTAAvatarImage steamid="76561198087803933" class="credit_avatar"/>
+		</Panel>
+	</Panel>
 	<Panel id="HiddenPrecompiler">
-<Image src="file://{images}/spellicons/grow_beard.png" />
+<Image src="file://{images}/spellicons/purge_burn.png" />
 	</Panel>
   </Panel>
 </root>

@@ -187,7 +187,7 @@ function AddSkill(abilityName,type)
 			var SelectionImage = AbilitySelection[i].GetChild(0);
 			SelectionImage.abilityname = abilityName
 			PutToSlot(SelectionImage.abilityname,AbilitySelection[i])
-			SendSkill(SelectionImage.abilityname,3+i);
+			SendSkill(SelectionImage.abilityname,6-i);
 			break;
 			}
 		}
@@ -313,7 +313,7 @@ function StatTooltip(stat){
 
 function StatPlus(stat)
 {
-	
+	var IsPro = $.FindChildInContext('#proTection').checked;
 	var PointsPanel = $.FindChildInContext('#point_val');
 	var PointsVal = Number(PointsPanel.text);
 	var HStat = {};
@@ -331,7 +331,7 @@ function StatPlus(stat)
 	if (HStat[stat].Val + 1 > 20) { PCost = 150 }
 	if (HStat[stat].Val + 1 > 30) { PCost = 200 }
 	if (HStat[stat].Val + 1 > 40) { PCost = 250 }
-	if (PointsVal > PCost - 1) {
+	if (PointsVal > PCost - 1 && (IsPro || PointsVal > 650)) {
 		if (HStat[0].Val + HStat[1].Val + HStat[2].Val < 100 ) {
 			HStat[stat].Val = HStat[stat].Val + 1
 			HStat[stat].Panel.text = String(HStat[stat].Val)
@@ -351,11 +351,11 @@ function StatPlus(stat)
 		Game.EmitSound("Tutorial.Next");
 	SendStat(HStat[stat].Val,stat,Number(PointsPanel.text));
 	
-	
 }
 //
 function StatMinus(stat)
 {
+	var IsPro = $.FindChildInContext('#proTection').checked;
 	var PointsPanel = $.FindChildInContext('#point_val');
 	var PointsVal = Number(PointsPanel.text);
 	var HStat = {};
@@ -373,7 +373,7 @@ function StatMinus(stat)
 	if (HStat[stat].Val > 20) { PCost = 150 }
 	if (HStat[stat].Val > 30) { PCost = 200 }
 	if (HStat[stat].Val > 40) { PCost = 250 }
-	if (HStat[stat].Val > 1) {
+	if (HStat[stat].Val > 1 && (HStat[stat].Val > 15 || IsPro)) {
 		if (HStat[0].Val + HStat[1].Val + HStat[2].Val < 100 ) {
 			HStat[stat].Val = HStat[stat].Val - 1
 		HStat[stat].Panel.text = String(HStat[stat].Val)

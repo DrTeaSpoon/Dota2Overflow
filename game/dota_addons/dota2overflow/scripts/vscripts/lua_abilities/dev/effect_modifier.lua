@@ -37,6 +37,9 @@ function hex_6_gon_effect_modifier:IsHidden()
 	return false
 end
 
+function hex_6_gon_effect_modifier:IsPurgable() 
+	return true
+end
 
 function hex_6_gon_effect_modifier:GetModifierMoveSpeedOverride() return self:GetAbility():GetSpecialValueFor("move_speed") end
 function hex_6_gon_effect_modifier:GetModifierMoveSpeedMax() return self:GetAbility():GetSpecialValueFor("move_speed") end

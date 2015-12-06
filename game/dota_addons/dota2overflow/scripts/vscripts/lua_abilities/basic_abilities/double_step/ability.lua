@@ -5,7 +5,7 @@ end
 LinkLuaModifier("double_step_modifier", "lua_abilities/basic_abilities/double_step/modifier.lua", LUA_MODIFIER_MOTION_NONE)
 
 function double_step:GetBehavior() 
-	local behav = DOTA_ABILITY_BEHAVIOR_NO_TARGET + DOTA_ABILITY_BEHAVIOR_IMMEDIATE + DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT
+	local behav = DOTA_ABILITY_BEHAVIOR_NO_TARGET + DOTA_ABILITY_BEHAVIOR_IMMEDIATE + DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT + DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL
 	return behav
 end
 

@@ -23,7 +23,7 @@ function shadow_walk_modifier:OnAbilityExecuted(params)
 	EmitSoundOnLocationWithCaster( self:GetCaster():GetOrigin(), "Hero_Nevermore.Pick", self:GetCaster() )
 	local hAbility = self:GetAbility()
 	local hTarget = self:GetParent()
-		local nFXIndex = ParticleManager:CreateParticle( "particles/shadow_raze_gen/raze.vpcf", PATTACH_WORLDORIGIN, nil )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/shadow_raze_gen/raze.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 		ParticleManager:SetParticleControl( nFXIndex, 0, hTarget:GetAbsOrigin() )
 		ParticleManager:SetParticleControl( nFXIndex, 15, Vector( 133, 0, 162 ) )
 		local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), hTarget:GetOrigin(), nil, hAbility:GetSpecialValueFor("radius"), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
@@ -97,7 +97,9 @@ end
 function shadow_walk_modifier:AllowIllusionDuplicate() 
 	return false
 end
-
+function shadow_walk_modifier:IsPurgable() 
+	return true
+end
 
 function shadow_walk_modifier:GetEffectName()
 	return "particles/items_fx/ghost.vpcf"
@@ -114,7 +116,7 @@ end
 function shadow_walk_modifier:AttackProc(params)
 	local hAbility = self:GetAbility()
 	local hTarget = params.target
-		local nFXIndex = ParticleManager:CreateParticle( "particles/shadow_raze_gen/raze.vpcf", PATTACH_WORLDORIGIN, nil )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/shadow_raze_gen/raze.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 		ParticleManager:SetParticleControl( nFXIndex, 0, hTarget:GetAbsOrigin() )
 		ParticleManager:SetParticleControl( nFXIndex, 15, Vector( 133, 0, 162 ) )
 		local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), hTarget:GetOrigin(), nil, hAbility:GetSpecialValueFor("radius"), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )

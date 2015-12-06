@@ -43,6 +43,10 @@ function spectral_form_mod:IsHidden()
 	return false
 end
 
+function spectral_form_mod:IsPurgable() 
+	return true
+end
+
 function spectral_form_mod:GetAttributes()
 	return MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE 
 end

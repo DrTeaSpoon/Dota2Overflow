@@ -16,7 +16,7 @@ function holy_word:OnSpellStart()
 
 	EmitSoundOnLocationWithCaster( self:GetCaster():GetOrigin(), "Hero_Omniknight.Purification", self:GetCaster() )
 
-		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", PATTACH_WORLDORIGIN, nil )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 		ParticleManager:SetParticleControl( nFXIndex, 0, self:GetCaster():GetAbsOrigin() )
 		local AoE = self:GetSpecialValueFor("radius")
 		ParticleManager:SetParticleControl( nFXIndex, 1, Vector( AoE*2.5, AoE, AoE/1.5 ) )

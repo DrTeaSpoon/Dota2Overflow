@@ -83,10 +83,10 @@ function modifier_dark_blade:OnDestroy()
 			end
 		end
 		if hTarget ~= nil and hTarget ~= self:GetParent() then
-			if ( not hTarget:TriggerSpellAbsorb( self ) ) then
+			--if ( not hTarget:TriggerSpellAbsorb( self ) ) then
 				hTarget:AddNewModifier( self:GetCaster(), hAbility, "modifier_dark_blade", { duration = damage_delay, fade_id = self.fade_id } )
 				EmitSoundOn( "Hero_Nightstalker.Void.Nihility", hTarget )
-			end
+			--end
 	
 			local nFXIndex = ParticleManager:CreateParticle( "particles/lina_spell_laguna_chain.vpcf", PATTACH_CUSTOMORIGIN, nil );
 			ParticleManager:SetParticleControlEnt( nFXIndex, 0, self:GetParent(), PATTACH_POINT_FOLLOW, "attach_hitloc", self:GetParent():GetOrigin() + Vector( 0, 0, 96 ), true );

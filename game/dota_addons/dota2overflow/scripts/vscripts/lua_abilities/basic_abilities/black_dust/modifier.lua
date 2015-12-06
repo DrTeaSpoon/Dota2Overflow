@@ -22,6 +22,9 @@ end
 function black_dust_mod:IsHidden()
 	return false
 end
+function black_dust_mod:IsPurgable() 
+	return true
+end
 
 function black_dust_mod:GetModifierMoveSpeedBonus_Constant()
 	return self:GetAbility():GetSpecialValueFor("slow")

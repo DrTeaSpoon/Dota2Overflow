@@ -37,6 +37,9 @@ end
 function earthshaker_enchant_totem_lua_modifier:IsHidden()
 	return false
 end
+function earthshaker_enchant_totem_lua_modifier:IsPurgable() 
+	return true
+end
 
 function earthshaker_enchant_totem_lua_modifier:GetModifierBaseDamageOutgoing_Percentage()
 	return self:GetAbility():GetSpecialValueFor( "totem_damage_percentage" )

@@ -12,7 +12,7 @@ end
 function black_dust:OnSpellStart()
 
 	EmitSoundOnLocationWithCaster( self:GetCaster():GetOrigin(), "DOTA_Item.SmokeOfDeceit.Activate", self:GetCaster() )
-		local nFXIndex = ParticleManager:CreateParticle( "particles/black_dust.vpcf", PATTACH_WORLDORIGIN, nil )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/black_dust.vpcf", PATTACH_ABSORIGIN, self:GetCaster())
 		ParticleManager:SetParticleControl( nFXIndex, 0, self:GetCaster():GetAbsOrigin() )
 		local AoE = self:GetSpecialValueFor("radius")
 		ParticleManager:SetParticleControl( nFXIndex, 1, Vector( AoE, 1, AoE ) )

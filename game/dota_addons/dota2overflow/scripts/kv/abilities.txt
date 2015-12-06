@@ -20,7 +20,7 @@
 //
 //"16" "alertillery" //target half way point. friendly fire possible.
 "17" "magic_missile"
-//"18" "power_purge" //Random effect more likely to be positive if at low health. Hidden extra if lot of players pray at same time.
+"18" "purge_burn" //Random effect more likely to be positive if at low health. Hidden extra if lot of players pray at same time.
 "19" "vortex_blink"
 "20" "sun_ray"
 //
@@ -35,4 +35,6 @@
 //"28" "totem"
 "29" "black_dust"
 //"30" "war_drum"
+
+//"42" "dev_test"
 }

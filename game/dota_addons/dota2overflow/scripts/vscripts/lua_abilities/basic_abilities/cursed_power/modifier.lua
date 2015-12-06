@@ -30,6 +30,10 @@ function cursed_power_mod:IsHidden()
 	return false
 end
 
+function cursed_power_mod:IsPurgable() 
+	return true
+end
+
 function cursed_power_mod:GetModifierPreAttack_BonusDamage()
 	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("bonus")
 end

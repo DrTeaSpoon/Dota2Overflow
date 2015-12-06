@@ -62,6 +62,10 @@ function element_fire:IsHidden()
 	return false
 end
 
+function element_fire:IsPurgable() 
+	return true
+end
+
 function element_fire:DestroyOnExpire()
 	return false
 end

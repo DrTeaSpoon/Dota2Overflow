@@ -28,7 +28,14 @@ end
 function generic_lua_stun:IsStunDebuff()
 	return true
 end
- 
+
+ function generic_lua_stun:IsPurgable() 
+	return false
+end
+
+function generic_lua_stun:IsPurgeException()
+	return true
+end
 --------------------------------------------------------------------------------
  
 function generic_lua_stun:GetEffectName()

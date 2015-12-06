@@ -30,7 +30,7 @@ end
 function dark_blade:OnSpellStart()
 	local hTarget = self:GetCursorTarget()
 	if hTarget ~= nil then
-		hTarget:TriggerSpellReflect( self )
+		--hTarget:TriggerSpellReflect( self )
 		local absorb = hTarget:TriggerSpellAbsorb( self )
 		
 		if not absorb then

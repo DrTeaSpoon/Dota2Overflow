@@ -64,7 +64,7 @@ end
 function vortex_blink:Blink(hTarget, vPoint, nMaxBlink, nClamp)
 	local vOrigin = hTarget:GetAbsOrigin() --Our units's location
 	ProjectileManager:ProjectileDodge(hTarget)  --We disjoint disjointable incoming projectiles.
-	local nFXIndex = ParticleManager:CreateParticle("particles/units/heroes/hero_riki/riki_blink_strike.vpcf", PATTACH_WORLDORIGIN, hTarget) --Create particle effect at our caster.
+	local nFXIndex = ParticleManager:CreateParticle("particles/units/heroes/hero_riki/riki_blink_strike.vpcf", PATTACH_ABSORIGIN, hTarget) --Create particle effect at our caster.
 			ParticleManager:SetParticleControl(nFXIndex, 0, hTarget:GetOrigin() + Vector(0,0,90))
 	local vDiff = vPoint - vOrigin --Difference between the points
 	if vDiff:Length2D() > nMaxBlink then  --Check caster is over reaching.

@@ -9,8 +9,8 @@
 	<Panel class="HeroKit_Root">
 	
 		<Panel id="HeroKit_Listing_All">
-		
 		<Panel id="HeroKit_Attributes">
+		<ToggleButton text="Advanced" id="proTection" onmouseover="DOTAShowTextTooltip(#DOTA_HeroKit_Pro)" onmouseout="DOTAHideTextTooltip()"/>
 			<Panel id="HeroKit_AttPoints" class="atr_point" onmouseover="DOTAShowTextTooltip(#DOTA_HeroKit_Gold)" onmouseout="DOTAHideTextTooltip()"><Label text="750" id="point_val"/></Panel>
 			<Panel id="HeroKit_StrStat">
 				<Button id="HeroKit_StrMinus" onactivate="StatMinus(0)" class="atr_minus"><Image src="file://{images}/custom_game/minus.png" /></Button>

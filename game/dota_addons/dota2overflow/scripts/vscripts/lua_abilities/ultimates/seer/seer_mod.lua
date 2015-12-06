@@ -24,6 +24,14 @@ function seer_mod:IsHidden()
 	return false
 end
 
+function seer_mod:IsPurgable() 
+	return false
+end
+
+function seer_mod:IsPurgeException()
+	return false
+end
+
 function seer_mod:GetAttributes()
 	return MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE + MODIFIER_ATTRIBUTE_MULTIPLE
 end

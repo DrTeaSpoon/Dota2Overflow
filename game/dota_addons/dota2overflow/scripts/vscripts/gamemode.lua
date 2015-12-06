@@ -113,11 +113,13 @@ function GameMode:OnFirstPlayerLoaded()
 	
 	---HeroKit : 
 	
+  GameRules.EitherListing = {}
   GameRules.AbilityListing = {}
   local tAbilityListTemp = LoadKeyValues("scripts/kv/abilities.txt")
   local n = 1
   for k,v in pairs(tAbilityListTemp) do
 	GameRules.AbilityListing[n] = v
+	table.insert(GameRules.EitherListing, v)
 	CustomNetTables:SetTableValue( "ability_list", tostring(k), { name = tostring(v) } )
 	n = n + 1
   end
@@ -127,6 +129,7 @@ function GameMode:OnFirstPlayerLoaded()
   n = 1
   for k,v in pairs(tTraitsListTemp) do
 	GameRules.TraitListing[n] = v
+	table.insert(GameRules.EitherListing, v)
 	CustomNetTables:SetTableValue( "trait_list", tostring(k), { name = tostring(v) } )
 	n = n + 1
   end

@@ -80,10 +80,10 @@ function modifier_light_blade:OnDestroy()
 			end
 		end
 		if hTarget ~= nil and hTarget ~= self:GetParent() then
-			if ( not hTarget:TriggerSpellAbsorb( self ) ) then
+			--if ( not hTarget:TriggerSpellAbsorb( self ) ) then
 				hTarget:AddNewModifier( self:GetCaster(), hAbility, "modifier_light_blade", { duration = damage_delay, fade_id = self.fade_id} )
 				EmitSoundOnLocationWithCaster(hTarget:GetOrigin(),  "Hero_Phoenix.FireSpirits.Launch", self:GetCaster()) 
-			end
+			--end
 	
 			local nFXIndex = ParticleManager:CreateParticle( "particles/lina_spell_laguna_chain.vpcf", PATTACH_CUSTOMORIGIN, nil );
 			ParticleManager:SetParticleControlEnt( nFXIndex, 0, self:GetParent(), PATTACH_POINT_FOLLOW, "attach_hitloc", self:GetParent():GetOrigin() + Vector( 0, 0, 96 ), true );

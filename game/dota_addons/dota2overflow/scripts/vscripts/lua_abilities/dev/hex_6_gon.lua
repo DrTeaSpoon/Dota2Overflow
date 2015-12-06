@@ -24,6 +24,9 @@ function hex_6_gon:OnSpellStart()
 	end
 	local mod = "hex_6_gon_effect_modifier"
 	if hTarget then
+		--hTarget:TriggerSpellReflect( self )
+		local absorb = hTarget:TriggerSpellAbsorb( self )
+		if absorb then return end
 		local fDuration = self:GetSpecialValueFor("duration")
 		local sModel = self:GetRandomModel()
 		hTarget:AddNewModifier( hCaster, self, mod, {duration = fDuration, model = sModel} ) 

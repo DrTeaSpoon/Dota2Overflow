@@ -9,7 +9,7 @@ function lightning_rod:GetBehavior()
 end
 
 function lightning_rod:OnSpellStart()
-	local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_zuus/zuus_thundergods_wrath_start.vpcf", PATTACH_WORLDORIGIN, nil )
+	local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_zuus/zuus_thundergods_wrath_start.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 	ParticleManager:SetParticleControl( nFXIndex, 0, self:GetCaster():GetAbsOrigin() + Vector(0,0,65)  )
 	ParticleManager:SetParticleControl( nFXIndex, 1, self:GetCaster():GetAbsOrigin() + Vector(0,0,65)  )
 	ParticleManager:SetParticleControl( nFXIndex, 2, self:GetCaster():GetAbsOrigin() + Vector(0,0,2000)  )
