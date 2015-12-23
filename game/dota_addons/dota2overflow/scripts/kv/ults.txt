@@ -12,4 +12,6 @@
 "8" "spectral_form"
 "9" "night_wolf"
 "10" "soul_reaver"
+
+"11" "master_magic"
 }

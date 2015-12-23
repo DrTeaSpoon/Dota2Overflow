@@ -33,8 +33,7 @@ end
 
 function element_fire:OnIntervalThink()
 	if IsServer() then
-		local nDamageCalc = self:GetStackCount()
-		if not self:GetParent():HasModifier("element_water") then nDamageCalc = nDamageCalc*2 end
+		local nDamageCalc = self:GetStackCount() * 2
 		local damageTable = {
 			victim = self:GetParent(),
 			attacker = self:GetCaster(),
@@ -46,7 +45,9 @@ function element_fire:OnIntervalThink()
 		if hAbility and hAbility.DamageReport then
 		hAbility.DamageReport = hAbility.DamageReport + nDamageCalc
 		end
-		ApplyDamage(damageTable)
+		
+		if not self:GetParent():HasModifier("element_water") then ApplyDamage(damageTable) end
+		
 		self:DecrementStackCount()
 		if self:GetParent():HasModifier("element_water") and self:GetStackCount() > 0 then self:DecrementStackCount() end
 		if self:GetStackCount() < 1 then

@@ -21,7 +21,7 @@
 		
 		///CREDITS
 		"Credits_Author"	"Mod Author:"
-		"Credits_Trans"		"Russian Translation:"
+		"Credits_Trans"		"Russian Translation: Google Translate (help needed!)"
 		"Credits_Beta"		"Beta Testers:"
 		
 		"DOTA_HeroKit_Pro"				"Advanced mode: Lets you set your starting gold as low as you want and have less than 15 on any stat."
@@ -842,7 +842,7 @@
 		"DOTA_Tooltip_ability_hero_kit_shock_dmg_damage"                                  "Damage per Armor:"
 
 		"DOTA_Tooltip_ability_hero_kit_wet"                                               "<font color='#00c7ff'>Wet</font>"
-		"DOTA_Tooltip_ability_hero_kit_wet_Description"                                   "<font color='#00c7ff'>Wet</font> is double edged buff. When unit is effected by <font color='#00c7ff'>Wet</font> they gain armor bonus based on their current level. Also unit effected by <font color='#FF7800'>Fire damage</font> takes reduced damage and the <font color='#FF7800'>Fire damage</font> stacks are removed at faster rate.\nNatural occurence of this buff is at the map's river."
+		"DOTA_Tooltip_ability_hero_kit_wet_Description"                                   "<font color='#00c7ff'>Wet</font> is double edged buff. When unit is effected by <font color='#00c7ff'>Wet</font> they gain armor bonus based on their current level. Also unit effected by <font color='#FF7800'>Fire damage</font> takes no fire damage and the <font color='#FF7800'>Fire damage</font> stacks are removed at faster rate.\nNatural occurence of this buff is at the map's river and bottle regen."
 		"DOTA_Tooltip_ability_hero_kit_wet_fire_reduction_dmg"                            "%<font color='#FF7800'>Fire damage</font> reduction:"
 		"DOTA_Tooltip_ability_hero_kit_wet_fire_reduction_stack"                          "%<font color='#FF7800'>Fire damage</font> stack reduction:"
 		"DOTA_Tooltip_ability_hero_kit_wet_armor_per_level"                               "Armor per Level:"
@@ -887,5 +887,78 @@
 		"DOTA_Tooltip_ability_cleave_Description"                                         "Cleaves on basic attacks."
 		"DOTA_Tooltip_ability_cleave_cleave"                                              "%Cleave Damage:"
 		"DOTA_Tooltip_ability_cleave_radius"                                              "Cleave Radius:"
+		
+		"DOTA_Tooltip_ability_purge_burn"                                                 "Burning Purge"
+		"DOTA_Tooltip_ability_purge_burn_Description"                                     "When activated you get protection from full resistance to magical damage and blocks most targeted spells while active. At the end Burning Purge enemies in radius suffer <font color='#FF7800'>Fire Damage</font>.\nEvery targeted spell blocked multiplies the <font color='#FF7800'>Fire Damage</font> dealt to nearby enemies at the end of this protection, purges you and adds one second to the current duration of this buff.\nBurning Purge can be used while stunned and silenced."
+		"DOTA_Tooltip_ability_purge_burn_duration"                                        "Duration:"
+		"DOTA_Tooltip_ability_purge_burn_radius"                                          "Radius:"
+		"DOTA_Tooltip_ability_purge_burn_damage"                                          "<font color='#FF7800'>Fire Damage</font>:"
+		
+		"DOTA_Tooltip_purge_burn_mod"                                             "Burning Purge"
+		"DOTA_Tooltip_purge_burn_mod_Description"                                 "Blocking most targeted spells."
+		
+		
+		"DOTA_Tooltip_ability_omni_immunity"                                              "Divine Blessing"
+		"DOTA_Tooltip_ability_omni_immunity_Description"                                  "Target Ally becomes Magic Immune. If this spell is cast in <font color='#dddd99'>Day Time</font> the target is healed."
+		"DOTA_Tooltip_ability_omni_immunity_duration"                                     "Duration:"
+		"DOTA_Tooltip_ability_omni_immunity_heal"                                         "Heal:"
+		
+		"DOTA_Tooltip_omni_immunity_mod"		"Magic Immunity"
+		"DOTA_Tooltip_omni_immunity_mod_Description"	"Immune to most spells and Magical Damage"
+		
+		"DOTA_Tooltip_ability_missile_fire"                                               "Fire Missle"
+		"DOTA_Tooltip_ability_missile_fire_Description"                                   "Fire Missle stuns and sets the target on fire."
+		"DOTA_Tooltip_ability_missile_fire_duration"                                      "Duration:"
+		"DOTA_Tooltip_ability_missile_fire_fire_damage"                                   "<font color='#FF7800'>Fire Damage</font>:"
+		"DOTA_Tooltip_ability_missile_fire_m_damage"                                      "Magic Damage:"
+
+		"DOTA_Tooltip_ability_missile_shock"                                              "Lightning Missile"
+		"DOTA_Tooltip_ability_missile_shock_Description"                                  "Lightning Missle stuns and shocks the target."
+		"DOTA_Tooltip_ability_missile_shock_duration"                                     "Duration:"
+		"DOTA_Tooltip_ability_missile_shock_shock_damage"                                 "<font color='#0078FF'>Shock Damage</font>:"
+		"DOTA_Tooltip_ability_missile_shock_m_damage"                                     "Magic Damage:"
+		
+		"DOTA_Tooltip_ability_master_magic"                                               "Master of Magic"
+		"DOTA_Tooltip_ability_master_magic_Description"                                   "Lets you cast spells without without going to cooldown. When cast, provides with number of charges to spend on casting spells."
+		"DOTA_Tooltip_ability_master_magic_Note0"                                   "Cannot be used with Refresher Orb or Hand Of Midas."
+		"DOTA_Tooltip_ability_master_magic_stacks"                                        "Spells:"
+		"DOTA_Tooltip_ability_master_magic_duration"                                      "Duration:"
+		"DOTA_Tooltip_ability_master_magic_chance_scepter"                                "%Scepter Extra Chance:"
+		"DOTA_Tooltip_ability_master_magic_aghanim_description"							"Chance to not consume a charge."
+		
+		
+		"DOTA_Tooltip_ability_defence_stun"                                               "Hard Exterior"
+		"DOTA_Tooltip_ability_defence_stun_Description"                                   "Your exterior is so hard that sometimes opponents attacking closeby get stunned and damaged."
+		"DOTA_Tooltip_ability_defence_stun_chance"                                        "%Chance:"
+		"DOTA_Tooltip_ability_defence_stun_duration"                                      "Duration:"
+		"DOTA_Tooltip_ability_defence_stun_range"                                         "Range:"
+		"DOTA_Tooltip_ability_defence_stun_damage"                                        "Damage:"
+
+		"DOTA_Tooltip_ability_attack_stun"                                                "Bash"
+		"DOTA_Tooltip_ability_attack_stun_Description"                                    "Your basic attacks have chance to stun and deal extra damage."
+		"DOTA_Tooltip_ability_attack_stun_chance"                                         "%Chance:"
+		"DOTA_Tooltip_ability_attack_stun_duration"                                       "Duration:"
+		"DOTA_Tooltip_ability_attack_stun_damage"                                         "Damage:"
+		
+		"DOTA_Tooltip_ability_aura_vampire"                                               "Vampire"
+		"DOTA_Tooltip_ability_aura_vampire_Description"                                   "Your basic attacks return percentage as healing. The Effect is stronger in <font color='#8844ff'>Night Time</font>. In your precence your allies get minor benefit too (the day time bonus).\nVampires have serious draw back as they recieve <font color='#ff0000'>PURE</font> damage every 0.5 seconds when wet."
+		"DOTA_Tooltip_ability_aura_vampire_Note0"                                       "Vampire aura does not effect other heroes with same passive(even if it is not leveled)"
+		"DOTA_Tooltip_ability_aura_vampire_vamp"                                          "%Life Steal <font color='#8844ff'>Night</font>:"
+		"DOTA_Tooltip_ability_aura_vampire_vamp_day"                                      "%Life Steal <font color='#dddd99'>Day</font>:"
+		"DOTA_Tooltip_ability_aura_vampire_radius"                                        "Aura Radius:"
+		"DOTA_Tooltip_ability_aura_vampire_water_damage"                                  "Damage From Water:"
+		
+		"DOTA_Tooltip_aura_vampire_mod"		"Vampire"
+		"DOTA_Tooltip_aura_vampire_mod_Description"	"Ally vampire provides you with life steal."
+		
+		"DOTA_Tooltip_ability_aura_speed"                                                 "Commander"
+		"DOTA_Tooltip_ability_aura_speed_Description"                                     "Your Precence inspires your allies to move and attack faster."
+		"DOTA_Tooltip_ability_aura_speed_Note0"                                       "Commander aura does not effect other heroes with same passive(even if it is not leveled)"
+		"DOTA_Tooltip_ability_aura_speed_move_speed"                                      "%Move Speed:"
+		"DOTA_Tooltip_ability_aura_speed_attack_speed"                                    "Attack Speed:"
+		"DOTA_Tooltip_ability_aura_speed_radius"                                          "Aura Radius:"
+		
+		"DOTA_Tooltip_aura_speed_mod"		"Commander: Inspired"
+		"DOTA_Tooltip_aura_speed_mod_Description"	"Commander inspires you to move and attack faster."
 	}
 }

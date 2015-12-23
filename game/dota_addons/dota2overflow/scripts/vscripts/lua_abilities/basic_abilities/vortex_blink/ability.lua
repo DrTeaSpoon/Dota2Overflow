@@ -70,8 +70,8 @@ function vortex_blink:Blink(hTarget, vPoint, nMaxBlink, nClamp)
 	if vDiff:Length2D() > nMaxBlink then  --Check caster is over reaching.
 		vPoint = vOrigin + (vPoint - vOrigin):Normalized() * nClamp -- Recalculation of the target point.
 	end
-	hTarget:SetAbsOrigin(vPoint) --We move the caster instantly to the location
-	FindClearSpaceForUnit(hTarget, vPoint, false) --This makes sure our caster does not get stuck
 			ParticleManager:SetParticleControl(nFXIndex, 1, vPoint + Vector(0,0,90))
 			ParticleManager:ReleaseParticleIndex( nFXIndex );
+	hTarget:SetAbsOrigin(vPoint) --We move the caster instantly to the location
+	FindClearSpaceForUnit(hTarget, vPoint, false) --This makes sure our caster does not get stuck
 end

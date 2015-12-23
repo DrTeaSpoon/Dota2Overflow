@@ -36,5 +36,10 @@
 "29" "black_dust"
 //"30" "war_drum"
 
+"31"	"omni_immunity"
+"32"	"missile_fire"
+"33"	"missile_shock"
+"34"	"channel_earthquake"
+//"35"	"meat_hook"
 //"42" "dev_test"
 }

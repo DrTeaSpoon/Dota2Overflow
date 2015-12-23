@@ -9,22 +9,30 @@
     
 */
 'use strict';
-var VECTOR_TARGET_VERSION = [0, 1, 1];
+var VECTOR_TARGET_VERSION = [0, 3, 0]; //version data
+
+var VectorTarget = {} // public API
+
+VectorTarget.SetFastClickDragMode = function(flag) {
+    /* Enables fast click-drag mode, where releasing the mouse button will complete the cast. */
+    VectorTarget.fastClickDragMode = flag;
+};
+
+VectorTarget.IsFastClickDragMode = function() {
+    /* Checks whether or not we're in fast click-drag mode */
+    return VectorTarget.fastClickDragMode;
+};
+
+
 (function() {
     //constants
     var UPDATE_RANGE_FINDER_RATE = 1/30; // rate in seconds to update range finder control points
-    var CANCEL_ORDER_DELAY = 0.01 // number of seconds to wait before the UI senda the cancel order event (prevents some race conditons between client/server handling)
-    var DEFAULT_PARTICLE = "particles/vector_target/vector_target_range_finder_line.vpcf"
-    var DEFAULT_CONTROL_POINTS = {
-        0 : "initial",
-        1 : "initial",
-        2 : "terminal"
-    }
+    var INACTIVE_CANCEL_DELAY = 0.1 // number of seconds to wait before the UI senda the cancel order event (prevents some race conditons between client/server handling)
     //state variables
     var rangeFinderParticle;
     var eventKeys = { };
     var prevEventKeys = { };
-    var updatingRangeFinder = false;
+    var inactiveTimer = Game.GetGameTime(); // amount of time that no ability has been active 
     
     GameEvents.Subscribe("vector_target_order_start", function(keys) {
         //$.Msg("vector_target_order_start event");
@@ -33,10 +41,6 @@ var VECTOR_TARGET_VERSION = [0, 1, 1];
         eventKeys = keys;
         var p = keys.initialPosition;
         keys.initialPosition = [p.x, p.y, p.z];
-        //set defaults
-        keys.cpMap = keys.cpMap || DEFAULT_CONTROL_POINTS;
-        keys.particleName = keys.particleName || DEFAULT_PARTICLE;
-        
         Abilities.ExecuteAbility(keys.abilId, keys.unitId, false); //make ability our active ability so that a left-click will complete cast
         showRangeFinder();
     });
@@ -44,9 +48,10 @@ var VECTOR_TARGET_VERSION = [0, 1, 1];
     function showRangeFinder() {
         if(!rangeFinderParticle && eventKeys.particleName) {
             rangeFinderParticle = Particles.CreateParticle(eventKeys.particleName, ParticleAttachment_t.PATTACH_ABSORIGIN, eventKeys.unitId);
-            mapToControlPoints({"initial": eventKeys.initialPosition});
-            if (!updatingRangeFinder)
-                updateRangeFinder();
+            mapToControlPoints({
+                "initial": eventKeys.initialPosition,
+                "terminal": [eventKeys.initialPosition[0] + 1, eventKeys.initialPosition[1], eventKeys.initialPosition[2]]
+            });
         };
     }
     
@@ -69,16 +74,31 @@ var VECTOR_TARGET_VERSION = [0, 1, 1];
             }
             else {
                 var pos = GameUI.GetScreenWorldPosition(GameUI.GetCursorPosition());
-                if(pos != null)
-                    mapToControlPoints({"terminal" : pos}, true);
+                if(pos != null) {
+                    var start = eventKeys.initialPosition;
+                    var keys = { }
+                    if (pos[0] != start[0] || pos[1] != start[1] || pos[2] != start[2]) {
+                        keys.terminal = pos;
+                        keys.midpoint = vMidPoint(start, pos);
+                        keys.maxdistancedelta = 
+                        mapToControlPoints(keys, true);
+                    }
+                }
             }
         }
-        /*if(activeAbil === -1) {
-            updatingRangeFinder = false;
-            cancelVectorTargetOrder()
-        }*/
+        if(eventKeys.abilId != null && activeAbil === -1) {
+            var now = Game.GetGameTime();
+            inactiveTimer = inactiveTimer || now;
+            if (now - inactiveTimer >= INACTIVE_CANCEL_DELAY ) {
+                cancelVectorTargetOrder()
+            }
+        }
+        else {
+            inactiveTimer = null;
+        }
         $.Schedule(UPDATE_RANGE_FINDER_RATE, updateRangeFinder);
     }
+    updateRangeFinder();
     
     function cancelVectorTargetOrder() {
         if(eventKeys.abilId === undefined) return;
@@ -114,6 +134,7 @@ var VECTOR_TARGET_VERSION = [0, 1, 1];
                 }
             }
             if(shouldSet) {
+                //$.Msg(cp, vector)
                 Particles.SetParticleControl(rangeFinderParticle, parseInt(cp), vector);
             }
         }
@@ -123,6 +144,12 @@ var VECTOR_TARGET_VERSION = [0, 1, 1];
         //$.Msg("finalizer called");
         hideRangeFinder();
         prevEventKeys = eventKeys;
+        /*
+        if(Abilities.GetLocalPlayerActiveAbility() == eventKeys.abilId) {
+            $.Msg("re-execute");
+            Abilities.ExecuteAbility(eventKeys.abilId, eventKeys.unitId, false);
+        }
+        */
         eventKeys = { };
     }
     
@@ -153,6 +180,53 @@ var VECTOR_TARGET_VERSION = [0, 1, 1];
             GameEvents.SendCustomGameEventToServer("vector_target_queue_full", prevEventKeys);
         }
     });
+    
+    //fast click-drag handling
+    GameUI.SetMouseCallback(function(eventName, button) {
+        if (eventKeys.abilId && VectorTarget.IsFastClickDragMode() && eventName == "released" && button == 0) {
+            Abilities.ExecuteAbility(eventKeys.abilId, eventKeys.unitId, true);
+        }
+    });
+    
+    //VectorTarget.SetFastClickDragMode(true);
+
+    /* functional programming helpers */
+
+    function zipWith(f, a, b) {
+        return a.map(function(x, i) { return f(x, b[i]); });
+    }
+
+    /* vector math */
+
+    function vMidPoint(a, b) {
+        return zipWith(function(a,b) { return (a + b) / 2; }, a, b)
+        //return [ (a[0] + b[0])/2, (a[1] + b[1])/2, (a[2] + b[2])/2 ];
+    }
+
+    function vLength(v) {
+        return Math.sqrt(v.reduce(function(a,b) { return a + Math.pow(b, 2); }, 0));
+        //return Math.sqrt(Math.pow(v[0], 2), Math.pow(v[1], 2), Math.pow(v[2], 2));
+    }
+
+    function vNormalize(v) {
+        var d = vLength(v);
+        return vScalarDiv(v, d);
+        //return [v[0] / d, v[1] / d, v[2] / d];
+    }
+
+    function vScalarMul(v, s) {
+        return v.map(function(x) { return x * s; });
+        //return [v[0] * s, v[1] * s, v[2] * s];
+    }
+
+    function vScalarDiv(v, s) {
+        return v.map(function(x) { return x / s; });
+    }
+
+    function vDiff(a, b) {
+        return zipWith(function(a,b){return a-b;}, a, b);
+    }
+    
 })();
 
 $.Msg("vector_target.js loaded");

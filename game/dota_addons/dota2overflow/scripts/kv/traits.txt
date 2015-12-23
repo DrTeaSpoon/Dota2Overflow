@@ -34,6 +34,11 @@
 "26" "armored"
 "27" "shock_weapon"
 "28" "fire_weapon"
+"29" "attack_stun"
+"30" "defence_stun"
+
+"31" "aura_vampire"
+"32" "aura_speed"
 }
 
  

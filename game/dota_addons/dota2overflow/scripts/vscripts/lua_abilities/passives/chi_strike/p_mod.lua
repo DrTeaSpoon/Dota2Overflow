@@ -6,7 +6,8 @@ function chi_strike_mod:DeclareFunctions()
 	local funcs = {
 		MODIFIER_EVENT_ON_ATTACK,
 		MODIFIER_EVENT_ON_ATTACK_START,
-		MODIFIER_EVENT_ON_ATTACK_LANDED
+		MODIFIER_EVENT_ON_ATTACK_LANDED,
+		MODIFIER_PROPERTY_MAX_ATTACK_RANGE
 	}
  
 	return funcs
@@ -25,6 +26,11 @@ function chi_strike_mod:OnAttackStart( keys )
 			end
 		end
 	end
+end
+
+function chi_strike_mod:GetModifierMaxAttackRange()
+	local hAbility = self:GetAbility()
+	return hAbility:GetSpecialValueFor("range") + 100
 end
 
 function chi_strike_mod:OnAttack (keys)

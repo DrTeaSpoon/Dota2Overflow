@@ -17,3 +17,4 @@ end
 function military_mod:GetModifierAttackSpeedBonus_Constant()
 	return self:GetAbility():GetSpecialValueFor("attack_speed")
 end
+

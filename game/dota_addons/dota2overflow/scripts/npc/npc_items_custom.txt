@@ -363,4 +363,186 @@
 			"02"						"item_overflow_rapier;item_overflow_rapier"
 		}
 	}
+	
+	"item_radiance_ovf"
+	{
+		"ID"							"1259"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/override/radiance/item.lua"
+		"AbilityTextureName"			"item_radiance_ovf"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"radiance dmg damage fire"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"radiance ovf"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_bonus"				"90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fire_damage"				"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"500"
+			}
+		}
+	}
+	
+	"item_recipe_radiance_ovf"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1260"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1600"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_radiance_ovf"
+		"ItemPurchasable" "1"
+		"ItemRequirements"
+		{
+			"01"						"item_relic"
+		}
+	}
+	
+	"item_maelstrom_ovf"
+	{
+		"ID"							"1261"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/override/maelstrom/item.lua"
+		"AbilityTextureName"			"item_maelstrom_ovf"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"ItemPurchasable" "0"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"rapier dmg damage"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"maelstrom ovf"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"jump_count"			"7"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"jump_delay"			"0.25"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_damage"				"60"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"10"
+			}
+		}
+	}
+	
+	"item_recipe_maelstrom_ovf"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1262"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"900"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_maelstrom_ovf"
+		"ItemPurchasable" "0"
+		"ItemRequirements"
+		{
+			"01"						"item_mithril_hammer;item_gloves"
+		}
+	}
+	
+	"item_mjollnir_ovf"
+	{
+		"ID"							"1263"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/override/mjollnir/item.lua"
+		"AbilityTextureName"			"item_mjollnir_ovf"
+		"ItemPurchasable" "0"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"rapier dmg damage"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mjollnir ovf"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_bonus"				"90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fire_damage"				"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"500"
+			}
+		}
+	}
+	
+	"item_recipe_mjollnir_ovf"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1261"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"900"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjollnir_ovf"
+		"ItemPurchasable" "0"
+		"ItemRequirements"
+		{
+			"01"						"item_maelstrom_ovf;item_hyperstone"
+		}
+	}
 }

@@ -19,7 +19,7 @@ function chi_strike:OnProjectileHit(hTarget, vLocation)
 	local acq = self:GetCaster():GetAcquisitionRange()
 	self:GetCaster():SetAttackCapability(DOTA_UNIT_CAP_MELEE_ATTACK)
 	self:GetCaster():SetAcquisitionRange(99999)
-	self:GetCaster():PerformAttack(hTarget, true, true, true, true) 
+	self:GetCaster():PerformAttack(hTarget, true, true, true, true,false) 
 	self:GetCaster():SetAcquisitionRange(acq)
 	self:GetCaster():SetAttackCapability(cap) 
 	return false

@@ -1,0 +1,11 @@
+
+"DOTAAbilities"
+{
+	"Version"		"1"
+	"item_radiance" "REMOVE"
+	"item_recipe_radiance" "REMOVE"
+	//"item_maelstrom" "REMOVE"
+	//"item_recipe_maelstrom" "REMOVE"
+	//"item_mjollnir" "REMOVE"
+	//"item_recipe_mjollnir" "REMOVE"
+}

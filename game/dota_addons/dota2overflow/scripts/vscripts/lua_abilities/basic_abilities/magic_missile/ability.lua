@@ -3,6 +3,10 @@ if magic_missile == nil then
 end
 LinkLuaModifier( "generic_lua_stun", "lua_abilities/moddota_help/generic_stun.lua", LUA_MODIFIER_MOTION_NONE )
 
+function magic_missile:GetCastAnimation()
+	return ACT_DOTA_CAST_ABILITY_1
+end
+
 function magic_missile:OnSpellStart()
 	local hTarget = self:GetCursorTarget()
 	--hTarget:TriggerSpellReflect( self )
@@ -12,7 +16,7 @@ function magic_missile:OnSpellStart()
 			iMoveSpeed = self:GetSpecialValueFor( "speed" ),
 			Source = self:GetCaster(),
 			Target = self:GetCursorTarget(),
-			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_2
+			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
 		}
 	ProjectileManager:CreateTrackingProjectile( info )
 	EmitSoundOn( "Hero_VengefulSpirit.MagicMissile", self:GetCaster() )

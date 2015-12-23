@@ -1,0 +1,9 @@
+ult: destroy non-hero units in AoE. Summon X lvl Flesh Golem with it's owners abilities randomly from their basic abilities and passives. number of abilities besed on this ult's lvl. where X is each consumed creatures level - 1 and + this ultimate's lvl.
+
+basic ability: Revive dead units in radius as zombies. zombies apply stack of magic damage weakness, on 10 stacks target is rooted. zombie duration 7/10/13/16
+basic ability: Sacrifice target non-hero/magic immune unit. Gain 10/20/30/40% of its health as hp and mana.
+
+passive: when unit dies nearby you gain outgoing damage percentage buff
+
+passive: aura - vamprisim
+passive: aura - movement/attack speed

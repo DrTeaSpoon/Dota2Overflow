@@ -119,6 +119,7 @@ function ice_path:OnProjectileHit( hTarget, vLocation )
 	end
 end
 
+
 --function ice_path:ApplyDummyModifier()
 --	local hCaster		= self:GetCaster()
 --	local target = event.target

@@ -8,8 +8,9 @@ function holy_word:GetBehavior()
 	return behav
 end
 
+
 function holy_word:GetAOERadius()
-	return self:GetSpecialValueFor("radius")
+	return self.BaseClass.GetCastRange( self, self:GetCaster():GetAbsOrigin(), self:GetCaster() )
 end
 
 function holy_word:OnSpellStart()
@@ -18,9 +19,9 @@ function holy_word:OnSpellStart()
 
 		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", PATTACH_ABSORIGIN, self:GetCaster() )
 		ParticleManager:SetParticleControl( nFXIndex, 0, self:GetCaster():GetAbsOrigin() )
-		local AoE = self:GetSpecialValueFor("radius")
+		local AoE = self:GetAOERadius()
 		ParticleManager:SetParticleControl( nFXIndex, 1, Vector( AoE*2.5, AoE, AoE/1.5 ) )
-		local allies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), self:GetCaster():GetOrigin(), nil, self:GetSpecialValueFor("radius"), DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
+		local allies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), self:GetCaster():GetOrigin(), nil, AoE, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
 		local heal_n = self:GetSpecialValueFor("heal")
 		if GameRules:IsDaytime() then heal_n = heal_n * 2 end
 		if #allies > 0 then
