@@ -206,7 +206,7 @@ end
 function VectorTarget:WrapUnit(unit)
     for i=0, unit:GetAbilityCount()-1 do
         local abil = unit:GetAbilityByIndex(i)
-        if abil ~= nil then
+        if abil ~= nil and abil.GetAbilityName ~= nil then
             self:WrapAbility(abil)
         end
     end
@@ -391,7 +391,7 @@ function VectorTarget:OrderFilter(data)
     --print("seq num: ", seqNum, "order type: ", data.order_type, "queue: ", data.queue)
     if abilId ~= nil and abilId > 0 then
         local abil = EntIndexToHScript(abilId)
-        if abil ~= nil then
+        if abil ~= nil and abil.GetAbilityName ~= nil then
             self:WrapAbility(abil)
             if abil.isVectorTarget and data.order_type == DOTA_UNIT_ORDER_CAST_POSITION then
                 local unitId = units["0"] or units[0]
@@ -492,7 +492,9 @@ function VectorTarget:_OnScriptReload()
     --reload existing abilities
     for _, ents in ipairs({Entities:FindAllByClassname("ability_lua"), Entities:FindAllByClassname("item_lua")}) do
         for _, abil in pairs(ents) do
-            self:WrapAbility(abil, true)
+			if abil ~= nil and abil.GetAbilityName ~= nil then
+				self:WrapAbility(abil, true)
+			end
         end
     end
 end

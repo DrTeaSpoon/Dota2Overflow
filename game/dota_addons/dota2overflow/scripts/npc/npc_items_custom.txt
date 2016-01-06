@@ -1,352 +1,352 @@
 "DOTAAbilities"
 {
-	"item_blink_staff"
+	"item_ovf_branch"
 	{
-		"ID"							"1250"
+		"ID"							"1240"
 		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/blink_staff/blink_staff.lua"
-		"AbilityTextureName"			"item_blink_staff"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.3"
-		"ItemPurchasable" "0"
-		"AbilityCooldown"				"10.0"
-		"AbilityManaCost"				"50"
-		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
-		"MaxLevel"	"5"
-		//// Item Info
-		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3900"
-		"ItemShopTags"					"blink;staff"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"blink;staff"
-        //
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_blink"				"1200"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"blink_clamp"			"960"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"help_range"			"3000 2500 2000 1500 1000"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"help_duration"			"5.0"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"hurt_cooldown"			"3.0"
-			}
-			
-			// Stats from the recipe items
-			
-			"06" // Quarterstaff
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"10"
-			}
-			
-			"07" // Quarterstaff
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"			"10"
-			}
-			
-			"08" // Robe Of Magi
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_int"			"6"
-			}
-			
-			// extra testing
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_level"				"5"
-			}
-			
-			"10"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"cooldown_scepter"		"7.0"
-			}
-		}
-	}
-	
-	"item_recipe_blink_staff"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"                     "item_datadriven"
-		"ID"							"1251"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"325"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_blink_staff"
-		"ItemPurchasable" "0"
-		"ItemRequirements"
-		{
-			"01"						"item_quarterstaff;item_robe;item_blink"
-			"02"						"item_blink_staff"
-		}
-	}
-	
-	"item_multicast"
-	{
-		"ID"							"1252"  //Valve's version of this item uses the ID "171".
-		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/multicast/multicast.lua"
-		"AbilityTextureName"			"item_multicast"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ScriptFile"					"lua_items/overflow/basics/branch.lua"
+		"AbilityTextureName"			"item_ovf_branch"
 		"ItemPurchasable" "1"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"7000"
-		"ItemShopTags"					"multicast;scepter"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"multicast;scepter"
-		"ItemPurchasable" "0"
-		"precache"
-		{
-		}
-		
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					"all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"branch plant it basic"
+        //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mult_x2"			"50"
+				"all"				"1"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mult_x3"			"30"
+				"str"				"0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mult_x4"			"10"
+				"agi"				"0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"			"300"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"delay"			"0.1"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"delay"			"0.1"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"all_stats"			"25"
+				"int"				"0"
 			}
 		}
 	}
-	"item_recipe_multicast"
+	"item_ovf_gauntlets"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"                     "item_datadriven"
-		"ID"							"1253"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1300"	
-		"ItemShopTags"					""
-		"ItemPurchasable" "0"
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_multicast"
-		"ItemRequirements"
-		{
-			"01"						"item_ultimate_orb;item_ultimate_orb;item_ghost"
-		}
-	}
-	
-	
-	"item_balls"
-	{
-		"ID"							"1254"
+		"ID"							"1241"
 		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/balls/balls.lua"
-		"AbilityTextureName"			"item_balls"
-		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"5.0"
-		"AbilityManaCost"				"50"
-		"ItemPurchasable" "0"
+		"ScriptFile"					"lua_items/overflow/basics/gauntlets.lua"
+		"AbilityTextureName"			"item_ovf_gauntlets"
+		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"10"
-		"ItemShopTags"					"balls"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"balls"
+		"ItemCost"						"200"
+		"ItemShopTags"					"str stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"str basic"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"				"1200"
+				"all"				"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
 			}
 		}
 	}
-	
-	"item_glass"
+	"item_ovf_slippers"
 	{
-		"ID"							"1255"
+		"ID"							"1242"
 		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/glass/glass.lua"
-		"AbilityTextureName"			"item_glass"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_RUNE_TARGET | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		
-		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"0.3"
-		"AbilityManaCost"				"0"
-		"ItemPurchasable" "0"
+		"ScriptFile"					"lua_items/overflow/basics/slippers.lua"
+		"AbilityTextureName"			"item_ovf_slippers"
+		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"10"
-		"ItemShopTags"					"glass"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"glass"
+		"ItemCost"						"200"
+		"ItemShopTags"					"agi stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"agi basic"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"				"1200"
+				"all"				"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
 			}
 		}
 	}
-	"item_ctf_red"
+	"item_ovf_mantle"
 	{
-		"ID"							"1356"
+		"ID"							"1243"
 		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/gamemode/flag_red.lua"
-		"AbilityTextureName"			"item_flag_team3"
-		"ItemShareability" "ITEM_FULLY_SHAREABLE"
-		"Model" "models/particle/legion_duel_banner.vmdl"
-		"Effect" "particles/generic_gameplay/dropped_item.vpcf"
-		"ItemPurchasable" "0"
-		"ItemKillable" "0" 
-		"ItemSellable" "0"
-		"ItemDroppable" "1"
+		"ScriptFile"					"lua_items/overflow/basics/mantle.lua"
+		"AbilityTextureName"			"item_ovf_mantle"
+		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"10"
-		"ItemShopTags"					"flag"
-		"ItemQuality"					"artifact"
-		"ItemAliases"					"flag"
+		"ItemCost"						"200"
+		"ItemShopTags"					"int stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"int basic"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"move_slow"				"-200"
+				"all"				"0"
 			}
-		}
-	}
-	"item_ctf_blue"
-	{
-		"ID"							"1357"
-		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/gamemode/flag_blue.lua"
-		"AbilityTextureName"			"item_flag_team2"
-		"ItemShareability" "ITEM_FULLY_SHAREABLE"
-		"Model" "models/props_teams/banner_radiant.vmdl"
-		"Effect" "particles/generic_gameplay/dropped_item.vpcf"
-		"ItemPurchasable" "0"
-		"ItemKillable" "0" 
-		"ItemSellable" "0"
-		"ItemDroppable" "1"
-		//// Item Info
-		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"10"
-		"ItemShopTags"					"flag"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"flag"
-        //
-		"AbilitySpecial"
-		{
-			"01"
+			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"move_slow"				"-200"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"3"
 			}
 		}
 	}
-	
-	"item_overflow_rapier"
+	"item_ovf_helm"
 	{
-		"ID"							"1257"
+		"ID"							"1244"
 		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/override/rapier.lua"
-		"AbilityTextureName"			"item_rapier"
-		"ItemPurchasable" "0"
+		"ScriptFile"					"lua_items/overflow/basics/helm.lua"
+		"AbilityTextureName"			"item_ovf_helm"
+		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"
-		"ItemShopTags"					"rapier dmg damage"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"rapier"
-		"MaxUpgradeLevel"				"10"
+		"ItemShopTags"					"str all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"str tier one"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_bonus"				"300"
+				"all"				"3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_mult"				"100 200 300 400 500 600 700 800 900 1000"
+				"str"				"9"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
 			}
 		}
 	}
-	
-	"item_recipe_overflow_rapier"
+	"item_ovf_band"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1245"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/band.lua"
+		"AbilityTextureName"			"item_ovf_band"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"agi all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"agi tier one"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"9"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+		}
+	}
+	"item_ovf_robe"
+	{
+		"ID"							"1246"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/robe.lua"
+		"AbilityTextureName"			"item_ovf_robe"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"int all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"int tier one"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"9"
+			}
+		}
+	}
+	"item_ovf_staff"
+	{
+		"ID"							"1247"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/staff.lua"
+		"AbilityTextureName"			"item_ovf_staff"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"all tier one"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+		}
+	}
+	"item_ovf_ring"
+	{
+		"ID"							"1248"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/ring.lua"
+		"AbilityTextureName"			"item_ovf_ring"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemQuality"					"common"
+		"ItemAliases"					""
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"9"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+		}
+	}
+	"item_recipe_ovf_helm"
+	{
 		"BaseClass"                     "item_datadriven"
-		"ID"							"1258"
-		
+		"ID"							"1249"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
@@ -355,194 +355,550 @@
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_overflow_rapier"
-		"ItemPurchasable" "0"
+		"ItemResult"					"item_ovf_helm"
 		"ItemRequirements"
 		{
-			"01"						"item_relic;item_relic"
-			"02"						"item_overflow_rapier;item_overflow_rapier"
+			"01"						"item_ovf_gauntlets;item_ovf_gauntlets;item_ovf_gauntlets;item_ovf_branch;item_ovf_branch"
 		}
 	}
-	
-	"item_radiance_ovf"
+	"item_recipe_ovf_band"
 	{
-		"ID"							"1259"
-		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/override/radiance/item.lua"
-		"AbilityTextureName"			"item_radiance_ovf"
-		"ItemPurchasable" "1"
-		//// Item Info
-		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
-		"ItemShopTags"					"radiance dmg damage fire"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"radiance ovf"
-        //
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_bonus"				"90"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"fire_damage"				"3"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"500"
-			}
-		}
-	}
-	
-	"item_recipe_radiance_ovf"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"                     "item_datadriven"
-		"ID"							"1260"
-		
+		"ID"							"1250"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1600"	
+		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_radiance_ovf"
-		"ItemPurchasable" "1"
+		"ItemResult"					"item_ovf_band"
 		"ItemRequirements"
 		{
-			"01"						"item_relic"
+			"01"						"item_ovf_slippers;item_ovf_slippers;item_ovf_slippers;item_ovf_branch;item_ovf_branch"
 		}
 	}
-	
-	"item_maelstrom_ovf"
+	"item_recipe_ovf_robe"
 	{
-		"ID"							"1261"
-		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/override/maelstrom/item.lua"
-		"AbilityTextureName"			"item_maelstrom_ovf"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"ID"							"1251"
+		"BaseClass"                     "item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ovf_robe"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_mantle;item_ovf_mantle;item_ovf_mantle;item_ovf_branch;item_ovf_branch"
+		}
+	}
+	"item_recipe_ovf_staff"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1252"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ovf_staff"
 		"ItemPurchasable" "0"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_branch;item_ovf_branch;item_ovf_branch;item_ovf_branch;item_ovf_branch"
+		}
+	}
+	"item_recipe_ovf_ring"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1253"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ovf_ring"
+		"ItemPurchasable" "0"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_staff;item_ovf_slippers;item_ovf_mantle;item_ovf_gauntlets"
+		}
+	}
+	"item_ovf_book_bless"
+	{
+		"ID"							"1254"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/book_bless.lua"
+		"AbilityTextureName"			"item_ovf_book_bless"
+		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
-		"ItemShopTags"					"rapier dmg damage"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"maelstrom ovf"
+		"ItemCost"						"1500"
+		"ItemShopTags"					"bless book"
+		"ItemQuality"					"common"
+		"ItemAliases"					"book"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"500"
+				"mana_bonus"			"250"
+			}
+		}
+	}
+	
+	"item_blessed_helm"
+	{
+		"ID"							"1255"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/blessed/helm/item.lua"
+		"AbilityTextureName"			"item_blessed_helm"
+		"AbilityCooldown"               "10.0"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"str all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"str tier one blessed"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"jump_count"			"7"
+				"str"				"9"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"jump_delay"			"0.25"
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_damage"				"60"
+				"int"				"0"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"10"
+				"regen"				"16"
 			}
 		}
 	}
 	
-	"item_recipe_maelstrom_ovf"
+	"item_blessed_band"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"                     "item_datadriven"
-		"ID"							"1262"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"900"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_maelstrom_ovf"
-		"ItemPurchasable" "0"
-		"ItemRequirements"
-		{
-			"01"						"item_mithril_hammer;item_gloves"
-		}
-	}
-	
-	"item_mjollnir_ovf"
-	{
-		"ID"							"1263"
+		"ID"							"1256"
 		"BaseClass"						"item_lua"
-		"ScriptFile"					"lua_items/override/mjollnir/item.lua"
-		"AbilityTextureName"			"item_mjollnir_ovf"
-		"ItemPurchasable" "0"
+		"ScriptFile"					"lua_items/overflow/blessed/band/item.lua"
+		"AbilityTextureName"			"item_blessed_band"
+		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"
-		"ItemShopTags"					"rapier dmg damage"
-		"ItemQuality"					"rare"
-		"ItemAliases"					"mjollnir ovf"
+		"ItemShopTags"					"agi all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"agi tier one blessed"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_bonus"				"90"
+				"all"				"3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"fire_damage"				"3"
+				"str"				"0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"500"
+				"agi"				"9"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
 			}
 		}
 	}
 	
-	"item_recipe_mjollnir_ovf"
+	"item_blessed_robe"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1257"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/blessed/robe/item.lua"
+		"AbilityTextureName"			"item_blessed_robe"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"int all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"int tier one blessed"
+		"AbilityCooldown"               "30.0"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"9"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_blink"				"1000"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_clamp"			"850"
+			}
+		}
+	}
+	
+	"item_blessed_staff"
+	{
+		"ID"							"1258"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/blessed/staff/item.lua"
+		"AbilityTextureName"			"item_blessed_staff"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"tier one blessed"
+		"AbilityCooldown"               "2.0"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"chance"			"12"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"			"0.5"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
+		}
+	}
+	
+	"item_blessed_ring"
+	{
+		"ID"							"1259"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/blessed/ring/item.lua"
+		"AbilityTextureName"			"item_blessed_ring"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"tier one blessed"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"9"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"distance"				"1200"
+			}
+		}
+	}
+	
+	"item_recipe_blessed_helm"
+	{
 		"BaseClass"                     "item_datadriven"
-		"ID"							"1261"
-		
+		"ID"							"1260"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"900"	
+		"ItemCost"						"150"	
 		"ItemShopTags"					""
 		
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_mjollnir_ovf"
-		"ItemPurchasable" "0"
+		"SecretShop" "1"
+		"ItemResult"					"item_blessed_helm"
 		"ItemRequirements"
 		{
-			"01"						"item_maelstrom_ovf;item_hyperstone"
+			"01"						"item_ovf_helm;item_ovf_book_bless"
+		}
+	}
+	
+	"item_recipe_blessed_band"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1261"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"150"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_blessed_band"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_band;item_ovf_book_bless"
+		}
+	}
+	
+	"item_recipe_blessed_robe"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1262"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"150"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_blessed_robe"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_robe;item_ovf_book_bless"
+		}
+	}
+	
+	"item_recipe_blessed_staff"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1263"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"150"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_blessed_staff"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_staff;item_ovf_book_bless"
+		}
+	}
+	
+	"item_recipe_blessed_ring"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1264"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"150"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_blessed_ring"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_ring;item_ovf_book_bless"
+		}
+	}
+	
+	"item_ovf_book_curse"
+	{
+		"ID"							"1265"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/book_curse.lua"
+		"AbilityTextureName"			"item_ovf_book_curse"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4500"
+		"ItemShopTags"					"curse book"
+		"ItemQuality"					"common"
+		"ItemAliases"					"book"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_out"			"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_in"			"15"
+			}
+		}
+	}
+	
+	"item_ovf_book_eldri"
+	{
+		"ID"							"1266"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/basics/book_eldri.lua"
+		"AbilityTextureName"			"item_ovf_book_eldri"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"curse book"
+		"ItemQuality"					"common"
+		"ItemAliases"					"book"
+		"AbilityCooldown"               "30.0"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold"			"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"immunity"			"15.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"invisible"			"30.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun"			"5.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health"			"50"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana"			"50"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"			"666"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed"			"1337"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor"			"42"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health_pnlt"			"1"
+			}
 		}
 	}
 }

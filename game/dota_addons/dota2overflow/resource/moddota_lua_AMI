@@ -1,0 +1,127 @@
+###Lua Ability/Item/Modifier Breakdown
+
+
+##Modifiers
+I start with modifiers as they can be used outside of lua abilities.
+#Init Syntrax<br>
+There are two important things to remember when creating lua modifiers. Keep the name unique! Don't use default modifier names like modifier_invisibility. Second thing to remember is make sure your script checks if the modifier exists. If you have two heroes with same ability and they both try to recreate the modifiers involved, some very nasty bugs may appear. 
+~~~
+if my_cool_modifier == nil then
+	--if this modifier class has not been created yet then we do so.
+	my_cool_modifier = class({})
+end
+~~~
+#Clientside VS Serverside
+Hardest thing with lua modifiers is the segregation of client and server. Some of the API does not work on client side but most of the modifier functions are ran on both client and the server.
+~~~
+function my_cool_modifier:OnCreated()
+	if IsServer() then
+		if GameRules:IsDaytime() then
+			print("Day!");
+		else
+			print("Night!");
+		end
+	end
+	if IsClient() then
+		----the code bellow would cause error.
+		--if GameRules:IsDaytime() then
+		--	print("Day!");
+		--else
+		--	print("Night!");
+		--end
+	end
+end
+~~~
+Good rule of thumb is: If you need to display something for the player then you need to figure out how to get it to clientside. There is console command `cl_script_help2` it should give list of all client side API.
+#LinkModifier
+There are two syntraxes for linking modifiers. Also I would like to point out that you can link modifiers from anyfile (even your gamemode files). After modifier is linked they behave very much like the built-in modifiers and should be possible to use with data-driven abilities/items as well.
+~~~
+LinkLuaModifier( "my_cool_modifier", LUA_MODIFIER_MOTION_NONE ) --tries to find my_cool_modifier.lua from vscripts folder.
+LinkLuaModifier( "my_cool_modifier", "lua_abilities/cool_stuff/my_cool_ability/modifier.lua", LUA_MODIFIER_MOTION_NONE ) --Much better method.
+~~~
+#Interval Think
+With lua modifiers the think interval can be exactly what you like.
+~~~
+function my_cool_modifier:OnCreated()
+	if IsServer() then
+		self:StartIntervalThink( 1 )
+	end
+end
+
+function my_cool_modifier:OnIntervalThink()
+	if IsServer() then
+		local next = RandomInt(1, 10)
+		print("See you in " .. next .. " seconds!")
+		self:StartIntervalThink(next)
+		--self:StartIntervalThink(-1)
+		--You can stop the think with value of -1
+	end
+end
+~~~
+#Storing Data
+There are two methods of storing data. The most client friendly way of doing things is using stack count.
+~~~
+--server only:
+self:SetStackCount(999)
+self:IncrementStackCount()
+self:DecrementStackCount()
+--client & server:
+self:GetStackCount()
+~~~
+The second method is storing values to the instance of the modifier. This is most commonly used with key value table when applying the modifier. Problem with this method is that the values don't keep in synch between server and client.
+~~~
+function my_cool_modifier:OnCreated(kv)
+	if IsServer() then
+		self.stuff = kv.stuff
+	end
+end
+~~~
+#Passives
+Passive modifiers have the issue of being applied even if the ability is not leveled up. Thats why you should always check with following method:
+~~~
+function my_cool_modifier:GetModifierHealthBonus()
+	if self:GetAbility():GetLevel() > 0 then
+		return self:GetAbility():GetSpecialValueFor("health_bonus")
+	else
+		return 0
+	end
+end
+~~~
+#Auras
+#Attributes
+#Particles
+#Effects
+#Purge
+#OnCreate / OnRefresh
+
+##Abilities
+#Init Syntrax
+~~~
+"my_cool_ability"
+{
+	"BaseClass"                     "ability_lua"
+	"AbilityTextureName"            "my_cool_ability"
+	"ScriptFile"                    "lua_abilities/cool_stuff/my_cool_ability/ability.lua"
+}
+~~~
+~~~
+if my_cool_ability == nil then
+	my_cool_ability = class({})
+end
+~~~
+#Clientside VS Serverside
+#KV vs Script
+#Cast Behaviours
+#Cast Filter
+#Intrinsict Modifier
+#Channelling
+#Storing Data
+#Calling Modifiers
+#Linken/Lotus
+#Phases
+
+##Items
+-Init Syntrax
+-Clientside VS Serverside
+-KV vs Script
+-Differences to Compared to abilities

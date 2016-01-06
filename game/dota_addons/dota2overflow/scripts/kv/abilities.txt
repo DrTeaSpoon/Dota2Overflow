@@ -41,5 +41,5 @@
 "33"	"missile_shock"
 "34"	"channel_earthquake"
 //"35"	"meat_hook"
-//"42" "dev_test"
+"42" "dev_test"
 }

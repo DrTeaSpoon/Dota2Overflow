@@ -23,7 +23,7 @@
 			"01"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"gold"						"111 222 444 666"
+				"bonus"						"50 75 100 125"
 			}
 		}
 		"precache"
@@ -3774,7 +3774,7 @@
 			"03"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"fire_damage"						"5 7 9 11"
+				"fire_damage"						"11 13 15 17"
 			}
 			"04"
 			{
@@ -3869,7 +3869,7 @@
 			"03"
 			{
 				"var_type"                  "FIELD_FLOAT"
-				"duration"			"4.0 8.0 12.0"
+				"duration"			"20.0"
 			}
 		}
     
@@ -4044,7 +4044,7 @@
 			"01"
 			{
 				"var_type"                  "FIELD_INTEGER"
-				"radius"             "450"
+				"radius"             "350"
 			}
 			"02"
 			{
@@ -4065,6 +4065,11 @@
 			{
 				"var_type"                  "FIELD_FLOAT"
 				"think_interval"             "0.5"
+			}
+			"06"
+			{
+				"var_type"                  "FIELD_FLOAT"
+				"tooltip_channel"             "10 14 18 22"
 			}
 		}
 		

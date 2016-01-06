@@ -37,6 +37,14 @@
 		//"DOTA_Shop_Category_Basics"				"ABILITIES"
 		//"DOTA_Shop_Category_Upgrades"			"ITEMS"
 		
+		
+		"DOTA_OVF_HUD_AttackSpeed"           "Attack Speed:  "
+		"DOTA_OVF_HUD_AttackRange"           "Attack Range:  "
+		"DOTA_OVF_HUD_AttackDamage"          "Attack Damage:  "
+		"DOTA_OVF_HUD_ArmorPhysical"         "Physical Armor:  "
+		"DOTA_OVF_HUD_ArmorMagical"          "Magic Resistance:  "
+		"DOTA_OVF_HUD_MoveSpeed"             "Move Speed:  "
+		"DOTA_OVF_HUD_MoveSpeed"             "Move Speed:  "
 		//--------------------
 		//Abilities
 		//--------------------
@@ -83,6 +91,20 @@
 		"DOTA_Tooltip_ability_item_multicast_radius"                                      "Multicast Radius:"
 		"DOTA_Tooltip_ability_item_multicast_all_stats"                                   "+$all"
 		
+		
+		"DOTA_SUBSHOP_CONSUMABLES"			"Consumables"
+		"DOTA_SUBSHOP_ATTRIBUTES"			"Attributes"
+		"DOTA_SUBSHOP_WEAPONS_ARMOR"		"Equipment"
+		"DOTA_SUBSHOP_MISC"					"Miscellaneous"
+		"DOTA_SUBSHOP_RECIPE_BASICS"		"Accessories"
+		"DOTA_SUBSHOP_RECIPE_SUPPORT"		"Support"
+		"DOTA_SUBSHOP_RECIPE_MAGICS"		"Magical"
+		"DOTA_SUBSHOP_RECIPE_DEFENSE"		"Armor"
+		"DOTA_SUBSHOP_RECIPE_WEAPONS"		"Weapons"
+		"DOTA_SUBSHOP_RECIPE_ARTIFACTS"		"Artifacts"
+		"DOTA_SUBSHOP_SECRET"				"Secret Shop"
+		"DOTA_SUBSHOP_SIDE_PAGE_1"			"Page 1"
+		"DOTA_SUBSHOP_SIDE_PAGE_2"			"Page 2"
 				// DOTA 2 MODKIT GENERATED TOOLTIPS FOR: dota2overflow
 		// Keys already defined in addon_english.txt are not listed, nor are Modifiers with the property "IsHidden" "1".
 
@@ -960,5 +982,87 @@
 		
 		"DOTA_Tooltip_aura_speed_mod"		"Commander: Inspired"
 		"DOTA_Tooltip_aura_speed_mod_Description"	"Commander inspires you to move and attack faster."
+		
+		"DOTA_Tooltip_ability_channel_earthquake"                                         "Earthsunder"
+		"DOTA_Tooltip_ability_channel_earthquake_Description"                             "You channel your magic through earth causing underground explosions at target area."
+		"DOTA_Tooltip_ability_channel_earthquake_radius"                                  "Radius:"
+		"DOTA_Tooltip_ability_channel_earthquake_spot_radius"                             "Explosion Radius:"
+		"DOTA_Tooltip_ability_channel_earthquake_damage"                                  "Explosion Damage:"
+		"DOTA_Tooltip_ability_channel_earthquake_stun_duration"                           "Stun Duration:"
+		"DOTA_Tooltip_ability_channel_earthquake_think_interval"                          "Inverval:"
+		"DOTA_Tooltip_ability_channel_earthquake_tooltip_channel"                         "Channel Time:"
+		
+		
+		"DOTA_Tooltip_ability_item_ovf_branch"                                            "Elderwood Branch"
+		"DOTA_Tooltip_ability_item_ovf_branch_Description"                                "Basic component for creating artifacts. Elderwood enhances every aspect of you."
+		"DOTA_Tooltip_ability_item_ovf_branch_all"                                        "+$all"
+
+		"DOTA_Tooltip_ability_item_ovf_gauntlets"                                         "Mithril Ore"
+		"DOTA_Tooltip_ability_item_ovf_gauntlets_Description"                             "Basic component for creating artifacts. Mithril enhances aspects of strenght."
+		"DOTA_Tooltip_ability_item_ovf_gauntlets_str"                                     "+$str"
+
+		"DOTA_Tooltip_ability_item_ovf_slippers"                                          "Raven Leather"
+		"DOTA_Tooltip_ability_item_ovf_slippers_Description"                              "Basic component for creating artifacts. Reaven Leather enhances aspects of speed."
+		"DOTA_Tooltip_ability_item_ovf_slippers_agi"                                      "+$agi"
+
+		"DOTA_Tooltip_ability_item_ovf_mantle"                                            "Metis Scripts"
+		"DOTA_Tooltip_ability_item_ovf_mantle_Description"                                "Basic component for creating artifacts. Metis Scripts enhances aspects of wisdom."
+		"DOTA_Tooltip_ability_item_ovf_mantle_int"                                        "+$int"
+		
+		"DOTA_Tooltip_ability_item_ovf_helm"                                              "Mithril Helm"
+		"DOTA_Tooltip_ability_item_ovf_helm_Description"                                  "Mithril Helm enhances your strenght."
+		"DOTA_Tooltip_ability_item_ovf_helm_all"                                        	"+$all"
+		"DOTA_Tooltip_ability_item_ovf_helm_str"                                          	"+$str"
+
+		"DOTA_Tooltip_ability_item_ovf_band"                                              "Raven Band"
+		"DOTA_Tooltip_ability_item_ovf_band_Description"                                  "Raven Band enhances your agility."
+		"DOTA_Tooltip_ability_item_ovf_band_all"                                        "+$all"
+		"DOTA_Tooltip_ability_item_ovf_band_agi"                                          "+$agi"
+
+		"DOTA_Tooltip_ability_item_ovf_robe"                                              "Robes of Magi"
+		"DOTA_Tooltip_ability_item_ovf_robe_Description"                                  "Robes of Magi enhances your intellect."
+		"DOTA_Tooltip_ability_item_ovf_robe_all"                                        "+$all"
+		"DOTA_Tooltip_ability_item_ovf_robe_int"                                          "+$int"
+
+		"DOTA_Tooltip_ability_item_ovf_staff"                                             "Elderwood Staff"
+		"DOTA_Tooltip_ability_item_ovf_staff_Description"                                 "Elderwood Staff enhances every aspect of you."
+		"DOTA_Tooltip_ability_item_ovf_staff_all"                                         "+$all"
+
+		"DOTA_Tooltip_ability_item_ovf_ring"                                              "Omni Ring"
+		"DOTA_Tooltip_ability_item_ovf_ring_Description"                                  "Omni Ring enhances every aspect of you."
+		"DOTA_Tooltip_ability_item_ovf_ring_all"                                          "+$all"
+		
+
+		"DOTA_Tooltip_ability_item_ovf_book_bless"                                        "Book of Blessing"
+		"DOTA_Tooltip_ability_item_ovf_book_bless_Description"                            "Can be used to bless item with new properties. Helps you store mana."
+		"DOTA_Tooltip_ability_item_ovf_book_bless_mana_bonus"                             "Mana Bonus:"
+
+		"DOTA_Tooltip_ability_item_blessed_helm"                                          "Blessed Mithril Helm"
+		"DOTA_Tooltip_ability_item_blessed_helm_Description"                              "Mithril Helm enhances your strenght.\n<font color='#4444ff'>Blessing regenerates health out of combat.</font>"
+		"DOTA_Tooltip_ability_item_blessed_helm_all"                                      "+$all"
+		"DOTA_Tooltip_ability_item_blessed_helm_str"                                      "+$str"
+		"DOTA_Tooltip_ability_item_blessed_helm_regen"                                    "Health Regen:"
+
+		"DOTA_Tooltip_ability_item_blessed_band"                                          "Blessed Raven Band"
+		"DOTA_Tooltip_ability_item_blessed_band_Description"                              "Raven Band enhances your agility.\n<font color='#4444ff'>Blessing hides you from the map.</font>"
+		"DOTA_Tooltip_ability_item_blessed_band_all"                                      "+$all"
+		"DOTA_Tooltip_ability_item_blessed_band_agi"                                      "+$agi"
+
+		"DOTA_Tooltip_ability_item_blessed_robe"                                          "Blessed Robes of Magi"
+		"DOTA_Tooltip_ability_item_blessed_robe_Description"                              "Robes of Magi enhances your intellect.\n<font color='#4444ff'>Blessing allows you to blink.</font>"
+		"DOTA_Tooltip_ability_item_blessed_robe_all"                                      "+$all"
+		"DOTA_Tooltip_ability_item_blessed_robe_int"                                      "+$int"
+		"DOTA_Tooltip_ability_item_blessed_robe_max_blink"                                "Blink Distance:"
+
+		"DOTA_Tooltip_ability_item_blessed_staff"                                         "Blessed Elderwood Staff"
+		"DOTA_Tooltip_ability_item_blessed_staff_Description"                             "Elderwood Staff enhances every aspect of you.\n<font color='#4444ff'>Blessing gives chance to mini-stun on attack.</font>"
+		"DOTA_Tooltip_ability_item_blessed_staff_all"                                     "+$all"
+		"DOTA_Tooltip_ability_item_blessed_staff_chance"                                  "Chance:"
+		"DOTA_Tooltip_ability_item_blessed_staff_duration"                                "Stun Duration:"
+
+		"DOTA_Tooltip_ability_item_blessed_ring"                                          "Blessed Omni Ring"
+		"DOTA_Tooltip_ability_item_blessed_ring_Description"                              "Omni Ring enhances every aspect of you.\n<font color='#4444ff'>Blessing boosts random stat when enemy hero dies nearby.</font>"
+		"DOTA_Tooltip_ability_item_blessed_ring_all"                                      "+$all"
+		"DOTA_Tooltip_ability_item_blessed_ring_distance"                                 "Range:"
 	}
 }

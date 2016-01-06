@@ -1,0 +1,57 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/OverflowHud/unit_info.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/OverflowHud/unit_info.js" />
+	</scripts>
+	<Panel class="UnitInfo" hittest="false">
+		<Panel id="UnitHPMANA" hittest="false">                               
+			<Panel id="HealthB" hittest="false">                              
+				<Panel id="Health" hittest="false" />                         
+				<Label id="HealthNum" text="0/0" hittest="false" />           
+			</Panel>                                          
+			<Panel id="ManaB" hittest="false" >                                
+				<Panel id="Mana"  hittest="false" />                            
+				<Label id="ManaNum" text="0/0"  hittest="false" />             
+			</Panel>                                          
+		</Panel>                                           
+		<Panel id="UnitDetailStats_Border" hittest="false" >                           
+			<Panel id="UnitImage"  hittest="false" >
+			<DOTAHeroImage heroname="" heroimagestyle="landscape" id="char_portrait"  hittest="false" />
+			</Panel>
+			<Panel id="UnitDetailStats" hittest="false" >                       
+				<Panel class="unit_stat_gen" >                     
+					<Label id="L_Damage" text="#DOTA_OVF_HUD_AttackDamage"  hittest="false" /><Label id="Damage" text="0"  hittest="false" />        
+				</Panel>                                             
+				<Panel class="unit_stat_gen" >          
+					<Label id="L_AttackR" text="#DOTA_OVF_HUD_AttackRange"  hittest="false"/><Label id="AttackR" text="0"  hittest="false" />         
+				</Panel>                                             
+				<Panel class="unit_stat_gen" >                        
+					<Label id="L_AttackS" text="#DOTA_OVF_HUD_AttackSpeed" hittest="false" /><Label id="AttackS" text="0" hittest="false"  />          
+				</Panel>                                             
+				<Panel class="unit_stat_gen" >                        
+					<Label id="L_ArmorP" text="#DOTA_OVF_HUD_ArmorPhysical" hittest="false"  /><Label id="ArmorP" text="0" hittest="false"  />           
+				</Panel>                                             
+				<Panel class="unit_stat_gen" >                       
+					<Label id="L_ArmorM" text="#DOTA_OVF_HUD_ArmorMagical" hittest="false"  /><Label id="ArmorM" text="0" hittest="false"  />          
+				</Panel>                                             
+				<Panel class="unit_stat_gen" >                         
+					<Label id="L_MoveSp" text="#DOTA_OVF_HUD_MoveSpeed"  hittest="false" /><Label id="MoveSp" text="0"  hittest="false" />            
+				</Panel>                                               
+			</Panel>                  
+		</Panel>      
+		<Panel id="UnitDetailAttributes" hittest="false" >                       
+			<Panel class="unit_stat_gen" >                     
+				<Image id="L_Str" src="file://{images}/custom_game/Icon_Str.png" hittest="false" /><Label id="Str" text="0"  hittest="false" />        
+			</Panel>                                             
+			<Panel class="unit_stat_gen" >          
+				<Image id="L_Agi" src="file://{images}/custom_game/Icon_Agi.png" hittest="false" /><Label id="Agi" text="0"  hittest="false" />          
+			</Panel>                                             
+			<Panel class="unit_stat_gen" >                        
+				<Image id="L_Int" src="file://{images}/custom_game/Icon_Int.png" hittest="false" /><Label id="Int" text="0"  hittest="false" />          
+			</Panel>                                             
+		</Panel>       
+	</Panel>
+</root>

@@ -62,18 +62,17 @@
 
   <Panel>
     <!-- CustomUIElements go here.  They are not provided currently as valve's parser reads commented lines and attempts to link them in.-->
-    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/custom_shop.xml" /> -->
-    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/custom_chat.xml" /> -->
 	<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/barebones_hud_base.xml" />
-    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hud_base.xml" />
     <CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/custom_chat.xml" />
     <CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/hero_kit_fteam.xml" />
-		<!--<CustomUIElement type="HudTopBar"			layoutfile="file://{resources}/layout/custom_game/custom_top_scoreboard.xml" />
-		<CustomUIElement type="HeroSelection" 		layoutfile="file://{resources}/layout/custom_game/multiteam_hero_select_overlay.xml" />
-		<CustomUIElement type="EndScreen" 			layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
-		<CustomUIElement type="FlyoutScoreboard"	layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml" />-->
 		<CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/hero_kit.xml" />
 		<CustomUIElement type="GameInfo" 			layoutfile="file://{resources}/layout/custom_game/overflow_info.xml" />
-		<!--<CustomUIElement type="GameSetup" layoutfile="file://{resources}/layout/custom_game/voting.xml" />-->
+    <!--
+	<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hud_base.xml" />
+		
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/action_bar.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/OverflowHud/unit_info.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/OverflowHud/inventory.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/OverflowHud/buff_list.xml" />-->
   </Panel>
 </root>
