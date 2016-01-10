@@ -5,10 +5,10 @@
 	m_nMaxParticles = 96
 	m_flConstantRadius = 64.000000
 	m_ConstantColor =
-	[
-		0,
-		85,
-		255,
+[
+0,
+140,
+255,
 		255,
 	]
 	m_Renderers =
@@ -47,10 +47,10 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
-			[
-				170,
-				255,
-				255,
+[
+0,
+140,
+255,
 				255,
 			]
 		},

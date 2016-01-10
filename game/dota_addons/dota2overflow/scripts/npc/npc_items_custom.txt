@@ -9,7 +9,7 @@
 		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
+		"ItemCost"						"50"
 		"ItemShopTags"					"all stats"
 		"ItemQuality"					"common"
 		"ItemAliases"					"branch plant it basic"
@@ -447,7 +447,7 @@
 		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1500"
+		"ItemCost"						"2000"
 		"ItemShopTags"					"bless book"
 		"ItemQuality"					"common"
 		"ItemAliases"					"book"
@@ -482,7 +482,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"all"				"3"
+				"all"				"6"
 			}
 			"02"
 			{
@@ -526,7 +526,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"all"				"3"
+				"all"				"6"
 			}
 			"02"
 			{
@@ -542,6 +542,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"int"				"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed"				"40"
 			}
 		}
 	}
@@ -570,7 +575,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"all"				"3"
+				"all"				"6"
 			}
 			"02"
 			{
@@ -620,7 +625,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"all"				"6"
+				"all"				"10"
 			}
 			"02"
 			{
@@ -673,7 +678,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"all"				"9"
+				"all"				"15"
 			}
 			"02"
 			{
@@ -705,7 +710,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"150"	
+		"ItemCost"						"50"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -726,7 +731,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"150"	
+		"ItemCost"						"50"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -747,7 +752,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"150"	
+		"ItemCost"						"50"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -768,7 +773,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"150"	
+		"ItemCost"						"50"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -789,7 +794,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"150"	
+		"ItemCost"						"50"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -812,7 +817,7 @@
 		"ItemPurchasable" "1"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4500"
+		"ItemCost"						"2000"
 		"ItemShopTags"					"curse book"
 		"ItemQuality"					"common"
 		"ItemAliases"					"book"
@@ -838,67 +843,474 @@
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"lua_items/overflow/basics/book_eldri.lua"
 		"AbilityTextureName"			"item_ovf_book_eldri"
-		"ItemPurchasable" "1"
+		"ItemPurchasable" "0"
 		//// Item Info
 		////-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"
 		"ItemShopTags"					"curse book"
 		"ItemQuality"					"common"
 		"ItemAliases"					"book"
-		"AbilityCooldown"               "30.0"
+		"AbilityCooldown"               "120.0"
+		"AbilityChannelTime"			"15.0"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"think_interval"			"0.5"
+			}
+		}
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		}
+	}
+	
+	
+	"item_cursed_helm"
+	{
+		"ID"							"1267"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/cursed/helm/item.lua"
+		"AbilityTextureName"			"item_cursed_helm"
+		"AbilityCooldown"               "10.0"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"str all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"str tier one cursed"
         //
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold"			"500"
+				"all"				"6"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"immunity"			"15.0"
+				"var_type"				"FIELD_INTEGER"
+				"str"				"18"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"invisible"			"30.0"
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
 			}
 			"04"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"stun"			"5.0"
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"health"			"50"
+				"regen"				"-2"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"			"50"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"			"666"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"speed"			"1337"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor"			"42"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"health_pnlt"			"1"
+				"radius"				"950"
 			}
 		}
 	}
+	
+	"item_cursed_band"
+	{
+		"ID"							"1267"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/cursed/band/item.lua"
+		"AbilityTextureName"			"item_cursed_band"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"agi all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"agi tier one cursed"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"18"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+		}
+	}
+	
+	"item_cursed_robe"
+	{
+		"ID"							"1268"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/cursed/robe/item.lua"
+		"AbilityTextureName"			"item_cursed_robe"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"int all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"int tier one cursed"
+		"AbilityCooldown"               "25.0"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"7.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_time"				"0.2"
+			}
+		}
+	}
+	
+	"item_cursed_staff"
+	{
+		"ID"							"1269"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/cursed/staff/item.lua"
+		"AbilityTextureName"			"item_cursed_staff"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"tier one cursed"
+		"AbilityCooldown"               "20.0"
+		 "AbilityCastRange"              "750"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"              "0.1"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magic_weak"			"-75"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"			"3.5"
+			}
+		}
+		"precache"
+		{
+			"soundfile"                 "soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
+		}
+	}
+	
+	"item_cursed_ring"
+	{
+		"ID"							"1270"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"lua_items/overflow/cursed/ring/item.lua"
+		"AbilityTextureName"			"item_cursed_ring"
+		"ItemPurchasable" "1"
+		//// Item Info
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"all stats"
+		"ItemQuality"					"common"
+		"ItemAliases"					"tier one cursed"
+        //
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all"				"18"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str"				"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi"				"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"				"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"900"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fire_damage"				"5"
+			}
+		}
+	}
+	
+	"item_recipe_cursed_helm"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1271"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_cursed_helm"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_helm;item_ovf_book_curse"
+		}
+	}
+	
+	"item_recipe_cursed_band"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1272"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_cursed_band"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_band;item_ovf_book_curse"
+		}
+	}
+	
+	"item_recipe_cursed_robe"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1273"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_cursed_robe"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_robe;item_ovf_book_curse"
+		}
+	}
+	
+	"item_recipe_cursed_staff"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1274"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_cursed_staff"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_staff;item_ovf_book_curse"
+		}
+	}
+	
+	"item_recipe_cursed_ring"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1275"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"SecretShop" "1"
+		"ItemResult"					"item_cursed_ring"
+		"ItemRequirements"
+		{
+			"01"						"item_ovf_ring;item_ovf_book_curse"
+		}
+	}
+	
+	"item_recipe_ovf_book_eldri"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"							"1276"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ovf_book_eldri"
+		"ItemRequirements"
+		{
+			//"01"						"item_ovf_book_curse;item_ovf_book_bless"
+			"01"						"item_ovf_book_curse;item_ovf_book_bless;item_aegis"
+		}
+	}
+	
+	//"item_recipe_ovf_book_god"
+	//{
+	//	"BaseClass"                     "item_datadriven"
+	//	"ID"							"1277"
+    //
+	//	// Item Info
+	//	//-------------------------------------------------------------------------------------------------------------
+	//	"ItemCost"						"0"	
+	//	"ItemShopTags"					""
+	//	
+	//	// Recipe
+	//	//-------------------------------------------------------------------------------------------------------------
+	//	"ItemRecipe"					"1"
+	//	"ItemResult"					"item_ovf_book_god"
+	//	"ItemRequirements"
+	//	{
+	//		//"01"						"item_ovf_book_bless;item_ovf_book_bless"
+	//		"01"						"item_ovf_book_bless;item_ovf_book_bless;item_aegis"
+	//	}
+	//}
+	//
+	//"item_recipe_ovf_book_devil"
+	//{
+	//	"BaseClass"                     "item_datadriven"
+	//	"ID"							"1278"
+    //
+	//	// Item Info
+	//	//-------------------------------------------------------------------------------------------------------------
+	//	"ItemCost"						"0"	
+	//	"ItemShopTags"					""
+	//	
+	//	// Recipe
+	//	//-------------------------------------------------------------------------------------------------------------
+	//	"ItemRecipe"					"1"
+	//	"ItemResult"					"item_ovf_book_devil"
+	//	"ItemRequirements"
+	//	{
+	//		//"01"						"item_ovf_book_curse;item_ovf_book_curse"
+	//		"01"						"item_ovf_book_curse;item_ovf_book_curse;item_aegis"
+	//	}
+	//}
+	//
+	//"item_ovf_book_god"
+	//{
+	//	"ID"							"1279"
+	//	"BaseClass"						"item_lua"
+	//	"ScriptFile"					"lua_items/overflow/basics/book_god.lua"
+	//	"AbilityTextureName"			"item_ovf_book_god"
+	//	"ItemPurchasable" "1"
+	//	//// Item Info
+	//	////-------------------------------------------------------------------------------------------------------------
+	//	"ItemCost"						"0"
+	//	"ItemShopTags"					"god book"
+	//	"ItemQuality"					"common"
+	//	"ItemAliases"					"book"
+	//}
+	//"item_ovf_book_devil"
+	//{
+	//	"ID"							"1280"
+	//	"BaseClass"						"item_lua"
+	//	"ScriptFile"					"lua_items/overflow/basics/book_devil.lua"
+	//	"AbilityTextureName"			"item_ovf_book_devil"
+	//	"ItemPurchasable" "1"
+	//	//// Item Info
+	//	////-------------------------------------------------------------------------------------------------------------
+	//	"ItemCost"						"0"
+	//	"ItemShopTags"					"devil book"
+	//	"ItemQuality"					"common"
+	//	"ItemAliases"					"book"
+	//}
 }

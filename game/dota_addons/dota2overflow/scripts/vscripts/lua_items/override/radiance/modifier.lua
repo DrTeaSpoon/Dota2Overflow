@@ -3,7 +3,7 @@ if item_radiance_ovf_mod == nil then
 end
 
 function item_radiance_ovf_mod:DeclareFunctions()
-	local funcs = {-
+	local funcs = {
 MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 	}
 	return funcs

@@ -5,10 +5,10 @@
 	m_nMaxParticles = 256
 	m_nInitialParticles = 4
 	m_ConstantColor =
-	[
-		0,
-		85,
-		255,
+[
+0,
+140,
+255,
 		255,
 	]
 	m_Renderers =
@@ -80,10 +80,10 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
-			[
-				170,
-				255,
-				255,
+[
+0,
+140,
+255,
 				255,
 			]
 		},
@@ -122,17 +122,17 @@
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMax =
-			[
-				0,
-				0,
-				255,
+[
+0,
+140,
+255,
 				255,
 			]
 			m_ColorMin =
-			[
-				170,
-				255,
-				255,
+[
+0,
+140,
+255,
 				255,
 			]
 		},

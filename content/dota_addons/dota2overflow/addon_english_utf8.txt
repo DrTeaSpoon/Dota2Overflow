@@ -993,6 +993,52 @@
 		"DOTA_Tooltip_ability_channel_earthquake_tooltip_channel"                         "Channel Time:"
 		
 		
+		"DOTA_Tooltip_book_eldri_modifier"		"Eldritch Devotion"
+		"DOTA_Tooltip_book_eldri_modifier_Description"	"<font color='#88ff00'>Devotion</font> is primary attribute of proper cultist. You basic attacks are magical and spending mana hurts you physically."
+		
+		"DOTA_Tooltip_eat_tree_eldri_mod"		"Tree Eater"
+		"DOTA_Tooltip_eat_tree_eldri_mod_Description"	"Consumption of trees give you bonus damage and health regen per stack."
+		
+		"DOTA_Tooltip_custom_invisibility_modifier"	"Invisible"
+		"DOTA_Tooltip_item_cursed_helm_modifier_aura" "Cursed Mithril Helm Aura"
+		"DOTA_Tooltip_item_cursed_staff_modifier_curse" "Curse of Elderwood Staff"
+		"DOTA_Tooltip_custom_invisibility_modifier_Description" ""
+		"DOTA_Tooltip_item_cursed_helm_modifier_aura_Description" "Negative health regen. Does not kill you."
+		"DOTA_Tooltip_item_cursed_staff_modifier_curse_Description" "Your magic resistance is lowered. You are disarmed and immune to attacks."
+		
+
+		"DOTA_Tooltip_ability_eat_tree_eldri"                                             "Eldritch: Tree Eater"
+		"DOTA_Tooltip_ability_eat_tree_eldri_Description"                                 "Devoted cultist knows how to consume trees for vitality. Gain bonuses for each stack. Maximum stack count is ammount of <font color='#88ff00'>Devotion</font> you have.\n<font color='#88ff00'>Eldritch:</font>You gain +2 <font color='#88ff00'>Devotion</font> when you level up this ability"
+		"DOTA_Tooltip_ability_eat_tree_eldri_duration"                                    "Duration:"
+		"DOTA_Tooltip_ability_eat_tree_eldri_bonus"                                       "+$damage"
+		"DOTA_Tooltip_ability_eat_tree_eldri_regen"                                       "%+$hp_regen"
+
+		"DOTA_Tooltip_ability_missile_eldri"                                              "Eldritch: Missile"
+		"DOTA_Tooltip_ability_missile_eldri_Description"                                  "Using one's Intellect is key part of being devoted cultist. Deals damage based on your Intellect. Base damage is improved with every stack of <font color='#88ff00'>Devotion</font>\n<font color='#88ff00'>Eldritch:</font>You gain +2 <font color='#88ff00'>Devotion</font> when you level up this ability"
+		"DOTA_Tooltip_ability_missile_eldri_duration"                                     "Stun Duration:"
+		"DOTA_Tooltip_ability_missile_eldri_m_damage"                                     "Intellect Multiplier:"
+		"DOTA_Tooltip_ability_missile_eldri_d_damage"                                     "Damage per <font color='#88ff00'>Devotion</font>:"
+
+		"DOTA_Tooltip_ability_bomb_eldri"                                                 "Bomb Eldri"
+		"DOTA_Tooltip_ability_bomb_eldri_Description"                                     ""
+		"DOTA_Tooltip_ability_bomb_eldri_delay"                                           "DELAY:"
+		"DOTA_Tooltip_ability_bomb_eldri_radius"                                          "RADIUS:"
+		"DOTA_Tooltip_ability_bomb_eldri_m_damage"                                        "M DAMAGE:"
+
+		"DOTA_Tooltip_ability_eldri_step"                                                 "Eldritch: Time Shave"
+		"DOTA_Tooltip_ability_eldri_step_Description"                                     "The cultists can become so intelligent (insane) that it changes their perspective on time and their perspective must be right. Move Speed is multiplied by their devotion to elder gods. Water for some reason improves their speed."
+		"DOTA_Tooltip_ability_eldri_step_speed"                                           "Move Speed:"
+		"DOTA_Tooltip_ability_eldri_step_duration"                                        "Duration:"
+
+		"DOTA_Tooltip_ability_master_eldri"                                               "Eldritch: Mastery"
+		"DOTA_Tooltip_ability_master_eldri_Description"                                   "Master Cultist sing without pause. Duration is multiplied by the devotion."
+		"DOTA_Tooltip_ability_master_eldri_duration"                                      "Duration:"
+
+		"DOTA_Tooltip_ability_eldri_6_gon"                                                "Eldritch: Transform"
+		"DOTA_Tooltip_ability_eldri_6_gon_Description"                                    "Turning your foes into weird creatures is quite fun."
+		"DOTA_Tooltip_ability_eldri_6_gon_duration"                                       "Duration:"
+		
+		
 		"DOTA_Tooltip_ability_item_ovf_branch"                                            "Elderwood Branch"
 		"DOTA_Tooltip_ability_item_ovf_branch_Description"                                "Basic component for creating artifacts. Elderwood enhances every aspect of you."
 		"DOTA_Tooltip_ability_item_ovf_branch_all"                                        "+$all"
@@ -1044,9 +1090,10 @@
 		"DOTA_Tooltip_ability_item_blessed_helm_regen"                                    "Health Regen:"
 
 		"DOTA_Tooltip_ability_item_blessed_band"                                          "Blessed Raven Band"
-		"DOTA_Tooltip_ability_item_blessed_band_Description"                              "Raven Band enhances your agility.\n<font color='#4444ff'>Blessing hides you from the map.</font>"
+		"DOTA_Tooltip_ability_item_blessed_band_Description"                              "Raven Band enhances your agility.\n<font color='#4444ff'>Gives extra attack speed.</font>"
 		"DOTA_Tooltip_ability_item_blessed_band_all"                                      "+$all"
 		"DOTA_Tooltip_ability_item_blessed_band_agi"                                      "+$agi"
+		"DOTA_Tooltip_ability_item_blessed_band_attack_speed"                             "Attack Speed:"
 
 		"DOTA_Tooltip_ability_item_blessed_robe"                                          "Blessed Robes of Magi"
 		"DOTA_Tooltip_ability_item_blessed_robe_Description"                              "Robes of Magi enhances your intellect.\n<font color='#4444ff'>Blessing allows you to blink.</font>"
@@ -1064,5 +1111,42 @@
 		"DOTA_Tooltip_ability_item_blessed_ring_Description"                              "Omni Ring enhances every aspect of you.\n<font color='#4444ff'>Blessing boosts random stat when enemy hero dies nearby.</font>"
 		"DOTA_Tooltip_ability_item_blessed_ring_all"                                      "+$all"
 		"DOTA_Tooltip_ability_item_blessed_ring_distance"                                 "Range:"
+		
+		"DOTA_Tooltip_ability_item_ovf_book_curse"                                        "Book of Curses"
+		"DOTA_Tooltip_ability_item_ovf_book_curse_Description"                            "Can be used to curse item with new properties. Boosts In- and Out-going damage."
+		"DOTA_Tooltip_ability_item_ovf_book_curse_damage_out"                             "Damage Boost:"
+
+		"DOTA_Tooltip_ability_item_ovf_book_eldri"                                        "Eldritch Book"
+		"DOTA_Tooltip_ability_item_ovf_book_eldri_Description"                            "Reading it has terrible consiquences."
+		
+		"DOTA_Tooltip_ability_item_cursed_helm"                                           "Cursed Mithril Helm"
+		"DOTA_Tooltip_ability_item_cursed_helm_Description"                               "Mithril Helm enhances your strenght.\n<font color='#ff4444'>Curse gives negative health regen to your enemies. Based on their maximum health. Cannot kill!</font>\n<font color='#ff4444'>Cursed item drops on death.</font>"
+		"DOTA_Tooltip_ability_item_cursed_helm_all"                                       "+$all"
+		"DOTA_Tooltip_ability_item_cursed_helm_str"                                       "+$str"
+		"DOTA_Tooltip_ability_item_cursed_helm_regen"                                     "%Negative Regen:"
+		"DOTA_Tooltip_ability_item_cursed_helm_radius"                                    "Radius:"
+
+		"DOTA_Tooltip_ability_item_cursed_band"                                           "Cursed Raven Band"
+		"DOTA_Tooltip_ability_item_cursed_band_Description"                               "Raven Band enhances your agility.\n<font color='#ff4444'>Hides you from the map.</font>\n<font color='#ff4444'>Cursed item drops on death.</font>"
+		"DOTA_Tooltip_ability_item_cursed_band_all"                                       "+$all"
+		"DOTA_Tooltip_ability_item_cursed_band_agi"                                       "+$agi"
+
+		"DOTA_Tooltip_ability_item_cursed_robe"                                           "Cursed Robes of Magi"
+		"DOTA_Tooltip_ability_item_cursed_robe_Description"                               "Robes of Magi enhances your intellect.\n<font color='#ff4444'>Turns you invisible when you use an ability. The effect has cooldown.</font>\n<font color='#ff4444'>Cursed item drops on death.</font>"
+		"DOTA_Tooltip_ability_item_cursed_robe_all"                                       "+$all"
+		"DOTA_Tooltip_ability_item_cursed_robe_int"                                       "+$int"
+		"DOTA_Tooltip_ability_item_cursed_robe_duration"                                  "Duration:"
+
+		"DOTA_Tooltip_ability_item_cursed_staff"                                          "Cursed Elderwood Staff"
+		"DOTA_Tooltip_ability_item_cursed_staff_Description"                              "Elderwood Staff enhances every aspect of you.\n<font color='#ff4444'>Curse target with magic damage weakness, Target cannot attack or be attacked with basic attacks.</font>\n<font color='#ff4444'>Cursed item drops on death.</font>"
+		"DOTA_Tooltip_ability_item_cursed_staff_all"                                      "+$all"
+		"DOTA_Tooltip_ability_item_cursed_staff_magic_weak"                               "%Magic Weakness:"
+		"DOTA_Tooltip_ability_item_cursed_staff_duration"                                 "Duration:"
+
+		"DOTA_Tooltip_ability_item_cursed_ring"                                           "Cursed Omni Ring"
+		"DOTA_Tooltip_ability_item_cursed_ring_Description"                               "Omni Ring enhances every aspect of you.\n<font color='#ff4444'>Deals </font><font color='#FF7800'>Fire Damage</font> <font color='#ff4444'>to nearby enemies.</font>\n<font color='#ff4444'>Cursed item drops on death.</font>"
+		"DOTA_Tooltip_ability_item_cursed_ring_all"                                      "+$all"
+		"DOTA_Tooltip_ability_item_cursed_ring_radius"                                    "Radius:"
+		"DOTA_Tooltip_ability_item_cursed_ring_fire_damage"                               "<font color='#FF7800'>Fire Damage</font>:"
 	}
 }

@@ -23,6 +23,8 @@
   "weapons_armor"
   {
 	"item"	"item_ovf_book_bless"
+	"item"	"item_ovf_book_curse"
+	//"item"	"item_ovf_book_eldri"
   }
       
   "misc"
@@ -55,11 +57,11 @@
         
   "magics"      
   {
-	//"item"	"item_cursed_staff"
-	//"item"	"item_cursed_helm"
-	//"item"	"item_cursed_band"
-	//"item"	"item_cursed_robe"
-	//"item"	"item_cursed_ring"
+	"item"	"item_cursed_helm"
+	"item"	"item_cursed_band"
+	"item"	"item_cursed_robe"
+	"item"	"item_cursed_staff"
+	"item"	"item_cursed_ring"
   }
     
   // Level 3 - Purple Recipes 

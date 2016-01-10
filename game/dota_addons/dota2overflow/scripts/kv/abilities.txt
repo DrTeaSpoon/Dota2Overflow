@@ -15,7 +15,7 @@
 "11" "holy_word" //Aoe heal, more heal at day time
 "12" "summon_basic"
 "13" "double_step"
-//"14" "land_mine"
+"14" "eldri_anti_magic"
 "15" "zombie_ambush"
 //
 //"16" "alertillery" //target half way point. friendly fire possible.
@@ -27,7 +27,7 @@
 "21" "cursed_power"
 "22" "forced_overload"
 "23" "spike_hide"
-//"24" "plasma_blast"
+"24" "eat_tree_eldri"
 "25" "lightning_rod"
 //
 "26" "grow_beard"
@@ -40,6 +40,6 @@
 "32"	"missile_fire"
 "33"	"missile_shock"
 "34"	"channel_earthquake"
-//"35"	"meat_hook"
-"42" "dev_test"
+"35"	"missile_eldri"
+//"42" "dev_test"
 }

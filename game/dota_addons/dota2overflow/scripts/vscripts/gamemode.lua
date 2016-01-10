@@ -145,7 +145,6 @@ function GameMode:OnFirstPlayerLoaded()
   end
 	LinkLuaModifier( "heroes_base_mod", "lua_mods/heroes_base_mod.lua", LUA_MODIFIER_MOTION_NONE )
 end
-
 --[[
   This function is called once and only once after all players have loaded into the game, right as the hero selection time begins.
   It can be used to initialize non-hero player state or adjust the hero selection (i.e. force random etc)

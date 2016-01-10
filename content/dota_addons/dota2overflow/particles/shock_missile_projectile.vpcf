@@ -5,10 +5,10 @@
 	m_nMaxParticles = 256
 	m_nInitialParticles = 4
 	m_ConstantColor =
-	[
-		0,
-		85,
-		255,
+[
+0,
+140,
+255,
 		255,
 	]
 	m_Renderers =
