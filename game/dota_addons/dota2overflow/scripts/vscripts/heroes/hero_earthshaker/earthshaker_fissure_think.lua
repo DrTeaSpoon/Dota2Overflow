@@ -4,6 +4,7 @@ end
  
 function earthshaker_fissure_lua_thinker:OnCreated( kv )	
 	if IsServer() then
+	self:GetParent():SetHullRadius(kv.radius) 
 	end
 end
 

@@ -57,6 +57,6 @@ end
 
 function earthshaker_fissure_lua:SpawnBoulder(vPos,nDuration)
 	local hCaster = self:GetCaster()
-	--DebugDrawCircle(vPos, Vector(255,255,255), 1, 50, true, nDuration) 
-	CreateModifierThinker(hCaster, self, "earthshaker_fissure_lua_thinker", {duration = nDuration}, vPos, hCaster:GetTeam(), true) 
+	DebugDrawCircle(vPos, Vector(255,255,255), 1, 32, true, nDuration) 
+	CreateModifierThinker(hCaster, self, "earthshaker_fissure_lua_thinker", {duration = nDuration , radius = 46}, vPos, hCaster:GetTeam(), true) 
 end

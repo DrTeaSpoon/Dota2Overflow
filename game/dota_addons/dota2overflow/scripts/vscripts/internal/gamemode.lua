@@ -16,7 +16,7 @@ function GameMode:AbilityChoise(choises)
 	GameRules.PlayerAbs[pID][6] = choises.ability_r
 	GameRules.PlayerCustomHero[pID] = {}
 	GameRules.PlayerCustomHero[pID].points =	choises.hero_points
-	--GameRules.PlayerCustomHero[pID].pri =	choises.hero_pri
+	GameRules.PlayerCustomHero[pID].pri =	choises.hero_pri
 	GameRules.PlayerCustomHero[pID].str =	choises.hero_str
 	GameRules.PlayerCustomHero[pID].str_g =	choises.hero_str_g
 	GameRules.PlayerCustomHero[pID].agi =	choises.hero_agi

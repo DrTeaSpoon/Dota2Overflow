@@ -394,6 +394,17 @@ function StatMinus(stat)
 }
 
 function StatPrimeChoose(stat){
+	//var HPrime = {};
+	//HPrime[0] = $.FindChildInContext('#str_val');
+	//HPrime[1] = $.FindChildInContext('#agi_val');
+	//HPrime[2] = $.FindChildInContext('#int_val');
+	//var Prime = 0;
+	//for (i = 0; i < 3; i++) {
+	//	if (HPrime[i].BHasClass("prime")){
+	//		HPrime[i].RemoveClass( "prime" )
+	//	}
+	//}
+	//HPrime[stat].AddClass( "prime" )
 }
 
 function OnDone(){
