@@ -32,7 +32,7 @@
 //
 "26" "grow_beard"
 //"27" "demand_silence"
-//"28" "totem"
+"28"	"earthshaker_fissure_lua"
 "29" "black_dust"
 //"30" "war_drum"
 
